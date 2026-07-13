@@ -1,0 +1,80 @@
+/* ------------------------------------------------------------
+   VARIABLES – Design Tokens (RFC‑0003)
+   ------------------------------------------------------------ */
+:root {
+  /* Primary palette */
+  --color-primary-h: 210;   /* Blue */
+  --color-primary-s: 60%;
+  --color-primary-l: 55%;
+  --color-primary: hsl(var(--color-primary-h), var(--color-primary-s), var(--color-primary-l));
+
+  --color-primary-light-h: 210;
+  --color-primary-light-s: 55%;
+  --color-primary-light-l: 70%;
+  --color-primary-light: hsl(var(--color-primary-light-h), var(--color-primary-light-s), var(--color-primary-light-l));
+
+  --color-primary-dark-h: 210;
+  --color-primary-dark-s: 65%;
+  --color-primary-dark-l: 35%;
+  --color-primary-dark: hsl(var(--color-primary-dark-h), var(--color-primary-dark-s), var(--color-primary-dark-l));
+
+  /* Secondary palette */
+  --color-secondary-h: 340;   /* Vibrant magenta */
+  --color-secondary-s: 65%;
+  --color-secondary-l: 55%;
+  --color-secondary: hsl(var(--color-secondary-h), var(--color-secondary-s), var(--color-secondary-l));
+
+  /* Accent palette */
+  --color-accent-h: 50;   /* Warm gold */
+  --color-accent-s: 70%;
+  --color-accent-l: 55%;
+  --color-accent: hsl(var(--color-accent-h), var(--color-accent-s), var(--color-accent-l));
+
+  /* Neutrals */
+  --color-background: hsl(0, 0%, 10%);   /* Dark background for premium look */
+  --color-surface: hsl(0, 0%, 15%);
+  --color-surface-light: hsl(0, 0%, 20%);
+  --color-text-primary: hsl(0, 0%, 90%);
+  --color-text-secondary: hsl(0, 0%, 70%);
+
+  /* Typography */
+  --font-primary: 'Inter', 'Roboto', sans-serif;
+  --font-size-base: 1rem;          /* 16px */
+  --font-size-lg: 1.125rem;      /* 18px */
+  --font-size-xl: 1.5rem;        /* 24px */
+  --line-height-base: 1.6;
+
+  /* Spacing scale (8‑point) */
+  --space-0: 0;
+  --space-1: 0.25rem;   /* 4px */
+  --space-2: 0.5rem;    /* 8px */
+  --space-3: 0.75rem;   /* 12px */
+  --space-4: 1rem;      /* 16px */
+  --space-5: 1.5rem;    /* 24px */
+  --space-6: 2rem;      /* 32px */
+  --space-7: 3rem;      /* 48px */
+  --space-8: 4rem;      /* 64px */
+
+  /* Elevation / shadows */
+  --shadow-elev-1: 0 2px 4px rgba(0, 0, 0, 0.15);
+  --shadow-elev-2: 0 4px 8px rgba(0, 0, 0, 0.20);
+  --shadow-elev-3: 0 8px 16px rgba(0, 0, 0, 0.25);
+
+  /* Border radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+
+  /* Transition */
+  --transition-medium: 0.3s ease;
+}
+
+/* Dark mode toggle (future) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: hsl(0, 0%, 8%);
+    --color-surface: hsl(0, 0%, 12%);
+    --color-text-primary: hsl(0, 0%, 95%);
+    --color-text-secondary: hsl(0, 0%, 75%);
+  }
+}
