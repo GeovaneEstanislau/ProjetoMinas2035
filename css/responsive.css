@@ -1,0 +1,44 @@
+/* ------------------------------------------------------------
+   RESPONSIVE – Grid layout for card sections (glassmorphism compatible)
+   ------------------------------------------------------------ */
+
+/* Generic card grid – used in "Nossos Princípios" and other sections */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-4);
+  width: 100%;
+}
+
+/* Specific grid for large "Grandes Áreas" cards (area-card) */
+.card-grid-sm {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--space-3);
+  width: 100%;
+}
+
+/* Ensure area cards fill the grid cell and have consistent styling */
+.area-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--space-3);
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-elev-1);
+  transition: box-shadow var(--transition-medium), transform var(--transition-medium);
+}
+
+.area-card:hover {
+  box-shadow: var(--shadow-elev-2);
+  transform: translateY(-4px);
+}
+
+/* Adjust heading spacing on small screens */
+@media (max-width: 640px) {
+  .section h2 {
+    font-size: var(--font-size-lg);
+  }
+}
