@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Projeto Minas 2035 – Home</title>
+  <title>Projeto Minas 2035 – Observatório de Futuro</title>
   <link rel="stylesheet" href="css/variables.css" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/components.css" />
@@ -15,26 +15,192 @@
   <script defer src="js/charts.js"></script>
 </head>
 <body>
-  <header class="site-header">
-    <h1>Projeto Minas 2035</h1>
-    <nav class="main-nav">
-      <ul>
-        <li><a href="manifesto.html">Manifesto</a></li>
-        <li><a href="pilares.html">Pilares</a></li>
-        <li><a href="indicadores.html">Indicadores</a></li>
-        <li><a href="participar.html">Participar</a></li>
-        <li><a href="sobre.html">Sobre</a></li>
-      </ul>
-    </nav>
+  <!-- Header / Hero -->
+  <header class="site-header hero-section">
+    <div class="container">
+      <img src="assets/logo.svg" alt="Projeto Minas 2035" class="logo" />
+      <h1>Projeto Minas 2035</h1>
+      <p class="tagline">Pensando hoje o futuro de Minas Gerais</p>
+      <div class="hero-cta">
+        <a href="#sobre" class="btn btn-primary">Conheça o Projeto</a>
+        <a href="#areas" class="btn btn-outline">Explorar Estudos</a>
+      </div>
+    </div>
   </header>
-  <main>
-    <section class="hero">
-      <h2>Bem‑vindo ao futuro de Minas Gerais</h2>
-      <p>Explore ideias, dados e propostas para transformar o estado até 2035.</p>
-    </section>
-  </main>
+
+  <!-- Panorama Image -->
+  <section class="panorama">
+    <div class="container">
+      <picture>
+        <source media="(min-width: 960px)" srcset="assets/panorama-wide.jpg" />
+        <img src="assets/panorama-mobile.jpg" alt="Panorama de Minas Gerais – Serra do Curral, Inhotim, Praça da Liberdade, Ouro Preto" class="responsive-img" />
+      </picture>
+    </div>
+  </section>
+
+  <!-- Section 1 – O Projeto -->
+  <section id="sobre" class="section section-1">
+    <div class="container">
+      <h2>O Projeto</h2>
+      <p>O Projeto Minas 2035 nasceu da ideia de reunir conhecimento, experiências e estudos capazes de estimular reflexões sobre o desenvolvimento econômico, social, científico e tecnológico de Minas Gerais.</p>
+      <h3>O futuro é construído antes de acontecer.</h3>
+      <p>Mais do que apresentar respostas prontas, a plataforma busca organizar perguntas importantes:</p>
+      <ul>
+        <li>Como gerar mais oportunidades?</li>
+        <li>Como tornar nossas cidades mais competitivas?</li>
+        <li>Como fortalecer universidades?</li>
+        <li>Como incentivar inovação?</li>
+        <li>Como transformar riqueza natural em prosperidade para toda a população?</li>
+      </ul>
+      <p>Estas páginas reúnem ideias abertas à discussão, fundamentadas em planejamento de longo prazo e inspiradas em experiências nacionais e internacionais. O objetivo é construir conhecimento.</p>
+    </div>
+  </section>
+
+  <!-- Section 2 – Nossos Princípios -->
+  <section id="principios" class="section section-2">
+    <div class="container">
+      <h2>Nossos Princípios</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>Desenvolvimento baseado em evidências</h3>
+          <p>As ideias apresentadas procuram dialogar com dados, pesquisas e experiências práticas.</p>
+        </div>
+        <div class="card">
+          <h3>Planejamento de longo prazo</h3>
+          <p>Grandes transformações exigem continuidade e visão estratégica.</p>
+        </div>
+        <div class="card">
+          <h3>Desenvolvimento Regional</h3>
+          <p>Cada região possui características próprias que merecem soluções específicas.</p>
+        </div>
+        <div class="card">
+          <h3>Conhecimento</h3>
+          <p>Educação, ciência e tecnologia são pilares para o desenvolvimento sustentável.</p>
+        </div>
+        <div class="card">
+          <h3>Inovação</h3>
+          <p>O crescimento econômico depende da capacidade de criar novas soluções.</p>
+        </div>
+        <div class="card">
+          <h3>Qualidade de Vida</h3>
+          <p>O desenvolvimento deve refletir na melhoria das condições de vida das pessoas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3 – Grandes Áreas -->
+  <section id="areas" class="section section-3">
+    <div class="container">
+      <h2>Grandes Áreas</h2>
+      <div class="card-grid">
+        <a href="pages/economia.html" class="card area-card">Economia</a>
+        <a href="pages/educacao.html" class="card area-card">Educação</a>
+        <a href="pages/infraestrutura.html" class="card area-card">Infraestrutura</a>
+        <a href="pages/ciencia.html" class="card area-card">Ciência</a>
+        <a href="pages/tecnologia.html" class="card area-card">Tecnologia</a>
+        <a href="pages/industria.html" class="card area-card">Indústria</a>
+        <a href="pages/agricultura.html" class="card area-card">Agricultura</a>
+        <a href="pages/trabalho.html" class="card area-card">Trabalho</a>
+        <a href="pages/saude.html" class="card area-card">Saúde</a>
+        <a href="pages/energia.html" class="card area-card">Energia</a>
+        <a href="pages/meio-ambiente.html" class="card area-card">Meio Ambiente</a>
+        <a href="pages/turismo.html" class="card area-card">Turismo</a>
+        <a href="pages/seguranca-juridica.html" class="card area-card">Segurança Jurídica</a>
+        <a href="pages/governo-digital.html" class="card area-card">Governo Digital</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4 – Como pensamos o desenvolvimento -->
+  <section id="ciclo" class="section section-4">
+    <div class="container">
+      <h2>Como pensamos o desenvolvimento</h2>
+      <pre class="flowchart">
+Conhecimento
+↓
+Pesquisa
+↓
+Inovação
+↓
+Empresas
+↓
+Empregos
+↓
+Renda
+↓
+Qualidade de Vida
+↓
+Mais Educação
+↓
+Mais Conhecimento
+      </pre>
+    </div>
+  </section>
+
+  <!-- Section 5 – Minas em números -->
+  <section id="numeros" class="section section-5">
+    <div class="container">
+      <h2>Minas em números</h2>
+      <div class="card-grid">
+        <div class="card placeholder">População</div>
+        <div class="card placeholder">Municípios</div>
+        <div class="card placeholder">Participação no PIB nacional</div>
+        <div class="card placeholder">Extensão territorial</div>
+        <div class="card placeholder">Principais setores econômicos</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 6 – Como o portal está organizado -->
+  <section id="organizacao" class="section section-6">
+    <div class="container">
+      <h2>Como o portal está organizado</h2>
+      <pre class="tree">
+Projeto Minas 2035
+│
+├── Economia
+├── Educação
+├── Saúde
+├── Tecnologia
+├── Indústria
+├── Agricultura
+├── Infraestrutura
+├── Ciência
+├── Trabalho
+├── Governo Digital
+└── Desenvolvimento Regional
+      </pre>
+    </div>
+  </section>
+
+  <!-- Section 7 – Laboratório de Ideias -->
+  <section id="laboratorio" class="section section-7">
+    <div class="container">
+      <h2>Laboratório de Ideias</h2>
+      <blockquote>
+        “Toda grande transformação começa como uma ideia.”
+      </blockquote>
+      <p>O Projeto Minas 2035 não pretende apresentar verdades definitivas. Seu propósito é reunir propostas, experiências, pesquisas e cenários que possam inspirar discussões qualificadas sobre o futuro de Minas Gerais.</p>
+      <p>As ideias aqui publicadas são convites ao diálogo, ao aperfeiçoamento e à construção coletiva.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer class="site-footer">
-    <p>&copy; 2026 Projeto Minas 2035 – Todos os direitos reservados.</p>
+    <div class="container">
+      <nav class="footer-nav">
+        <a href="sobre.html">Sobre o Projeto</a>
+        <a href="manifesto.html">Manifesto</a>
+        <a href="#areas">Áreas de estudo</a>
+        <a href="indicadores.html">Indicadores</a>
+        <a href="#principios">Princípios</a>
+        <a href="#contact">Contato</a>
+        <a href="#privacy">Política de Privacidade</a>
+        <a href="#license">Licença de uso</a>
+      </nav>
+      <p class="footer-note">© 2026 Projeto Minas 2035 – Todos os direitos reservados. O conteúdo representa estudos e ideias para debate público e citará fontes quando utilizar dados estatísticos ou pesquisas.</p>
+    </div>
   </footer>
 </body>
 </html>
