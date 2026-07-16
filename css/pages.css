@@ -37,6 +37,12 @@
   position: relative;
   z-index: 2;
   max-width: 760px;
+  margin-inline: auto;
+}
+
+.page-hero .page-subtitle {
+  max-width: 640px;
+  margin-inline: auto;
 }
 
 /* Breadcrumb */
@@ -125,7 +131,7 @@
 /* ── PAGE LAYOUT (conteúdo + sidebar TOC) ───────────────── */
 .page-layout {
   display: grid;
-  grid-template-columns: 1fr 260px;
+  grid-template-columns: 1fr;
   gap: var(--sp-16);
   align-items: start;
   padding-block: var(--sp-16);
@@ -139,6 +145,40 @@
   border: 1px solid var(--border);
   border-radius: var(--radius-xl);
   padding: var(--sp-6);
+  width: min(100%, 420px);
+  margin-inline: auto;
+  margin-bottom: var(--sp-8);
+}
+
+.article-content {
+  max-width: min(760px, 100%);
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: var(--sp-4);
+  font-size: var(--text-base);
+}
+
+.content-section {
+  max-width: 700px;
+  margin-inline: auto;
+  padding-inline: 0;
+}
+
+.content-section p,
+.content-section ul,
+.content-section ol,
+.content-section table {
+  max-width: 660px;
+  margin-inline: auto;
+}
+
+.content-section p {
+  font-size: clamp(1rem, 1.05vw, 1.08rem);
+  line-height: 1.95;
+}
+
+.content-section li {
+  margin-bottom: var(--sp-2);
 }
 
 .toc-title {
@@ -660,13 +700,30 @@
 @media (max-width: 1024px) {
   .page-layout {
     grid-template-columns: 1fr;
+    padding-inline: var(--sp-4);
   }
-  .toc { display: none; }
+  .toc {
+    position: static;
+    width: 100%;
+    margin-bottom: var(--sp-8);
+  }
+  .page-hero-content {
+    padding-inline: var(--sp-4);
+  }
+  .page-hero .page-subtitle {
+    max-width: 100%;
+  }
+  .article-content {
+    padding-inline: 0;
+  }
 }
 
 @media (max-width: 768px) {
   .page-hero h1 {
     font-size: var(--text-3xl);
+  }
+  .page-hero .page-subtitle {
+    font-size: var(--text-base);
   }
   .page-stats {
     gap: var(--sp-5);
@@ -678,5 +735,12 @@
     display: block;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+  }
+  .content-section {
+    padding-inline: var(--sp-0);
+  }
+  .toc {
+    border-radius: var(--radius-lg);
+    padding: var(--sp-5);
   }
 }

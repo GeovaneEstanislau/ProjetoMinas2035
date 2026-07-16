@@ -1,41 +1,274 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Renda – Projeto Minas 2035</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' https://unpkg.com 'unsafe-inline'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https:; object-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self';" />
+  <meta name="description" content="Centro TemÃ¡tico de Renda e InclusÃ£o EconÃ´mica â€“ EstratÃ©gias para reduzir desigualdades regionais e aumentar a renda mÃ©dia das famÃ­lias mineiras atÃ© 2035." />
+  <title>Renda â€“ Projeto Minas 2035</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="../css/variables.css" />
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="stylesheet" href="../css/components.css" />
-  <link rel="stylesheet" href="../css/responsive.css" />
   <link rel="stylesheet" href="../css/animations.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+  <link rel="stylesheet" href="../css/pages.css" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
   <script defer src="../js/app.js"></script>
   <script defer src="../js/menu.js"></script>
   <script defer src="../js/animations.js"></script>
-  <script defer src="../js/charts.js"></script>
+  <script defer src="../js/counters.js"></script>
 </head>
 <body>
-  <header class="site-header">
-    <h1>Projeto Minas 2035</h1>
-    <nav class="main-nav">
-      <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../manifesto.html">Manifesto</a></li>
-        <li><a href="../pilares.html">Pilares</a></li>
-        <li><a href="../indicadores.html">Indicadores</a></li>
-        <li><a href="../participar.html">Participar</a></li>
-        <li><a href="../sobre.html">Sobre</a></li>
-      </ul>
-    </nav>
+  <header class="navbar" id="navbar">
+    <div class="container">
+      <a href="../index.html" class="navbar-brand">
+        <svg class="navbar-logo" viewBox="0 0 36 36" fill="none">
+          <rect width="36" height="36" rx="8" fill="url(#grad-nav-renda)"/>
+          <path d="M10 24 L10 13 L18 20 L26 13 L26 24" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <defs><linearGradient id="grad-nav-renda" x1="0" y1="0" x2="36" y2="36" gradientUnits="userSpaceOnUse"><stop stop-color="#6366F1"/><stop offset="1" stop-color="#EC4899"/></linearGradient></defs>
+        </svg>
+        <span class="navbar-name">Minas <span>2035</span></span>
+      </a>
+      <nav class="navbar-nav" id="main-nav">
+        <a href="../index.html#sobre">O Projeto</a>
+        <a href="../index.html#areas">Ãreas</a>
+        <a href="../index.html#principios">PrincÃ­pios</a>
+        <a href="../indicadores.html">Indicadores</a>
+        <a href="../manifesto.html">Manifesto</a>
+      </nav>
+      <div class="navbar-cta">
+        <a href="../participar.html" class="btn btn-outline">Participar</a>
+        <a href="../index.html#areas" class="btn btn-primary">Explorar</a>
+      </div>
+      <button class="hamburger" id="hamburger-btn" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </header>
-  <main>
-    <section class="content">
-      <h2>Renda</h2>
-      <p>Conteúdo introdutório sobre a estratégia de renda para Minas até 2035.</p>
-    </section>
-  </main>
+
+  <section class="page-hero">
+    <div class="page-hero-grid"></div>
+    <div class="container">
+      <div class="page-hero-content fade-in-section">
+        <div class="breadcrumb">
+          <a href="../index.html">InÃ­cio</a>
+          <span class="breadcrumb-sep">/</span>
+          <a href="../index.html#areas">Ãreas</a>
+          <span class="breadcrumb-sep">/</span>
+          <span class="breadcrumb-current">Renda</span>
+        </div>
+        <div class="section-label">Centro TemÃ¡tico</div>
+        <h1>Centro de Renda e InclusÃ£o EconÃ´mica</h1>
+        <p class="page-subtitle">
+          Construir uma Minas Gerais onde renda e oportunidades cresÃ§am de forma equitativa para todas as regiÃµes e faixas sociais.
+        </p>
+        <div class="page-stats">
+          <div class="page-stat">
+            <span class="page-stat-value">0,49</span>
+            <span class="page-stat-label">Ãndice de Gini estadual</span>
+          </div>
+          <div class="page-stat-divider"></div>
+          <div class="page-stat">
+            <span class="page-stat-value">18%</span>
+            <span class="page-stat-label">populaÃ§Ã£o em situaÃ§Ã£o de pobreza</span>
+          </div>
+          <div class="page-stat-divider"></div>
+          <div class="page-stat">
+            <span class="page-stat-value">7%</span>
+            <span class="page-stat-label">desemprego regional mÃ©dio</span>
+          </div>
+        </div>
+        <div class="tag-list" style="margin-top: var(--sp-6);">
+          <span class="tag">Desigualdade</span>
+          <span class="tag">Emprego</span>
+          <span class="tag">Fiscal</span>
+          <span class="tag">Renda BÃ¡sica</span>
+          <span class="tag">InovaÃ§Ã£o Social</span>
+          <span class="tag">TerritÃ³rios</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="page-layout">
+      <aside>
+        <nav class="toc" aria-label="Ãndice do conteÃºdo">
+          <div class="toc-title">Neste Centro</div>
+          <ul class="toc-list">
+            <li><a href="#resumo">01 Â· Resumo Executivo</a></li>
+            <li><a href="#situacao">02 Â· SituaÃ§Ã£o Atual</a></li>
+            <li><a href="#desafios">03 Â· Desafios Estruturais</a></li>
+            <li><a href="#oportunidades">04 Â· Oportunidades</a></li>
+            <li><a href="#benchmarking">05 Â· Benchmarking Internacional</a></li>
+            <li><a href="#objetivos">06 Â· Objetivos 2035</a></li>
+            <li><a href="#metas">07 Â· Metas 2050</a></li>
+            <li><a href="#projetos">08 Â· Projetos EstratÃ©gicos</a></li>
+            <li><a href="#indicadores">09 Â· Indicadores-Chave</a></li>
+            <li><a href="#debate">10 Â· QuestÃµes para Debate</a></li>
+            <li><a href="#referencias">11 Â· ReferÃªncias</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <article class="article-content">
+        <section id="resumo" class="content-section fade-in-section">
+          <div class="section-label">01</div>
+          <h2>Resumo Executivo</h2>
+          <p>O desafio de renda em Minas Gerais Ã© tambÃ©m uma questÃ£o territorial: algumas regiÃµes concentram altos salÃ¡rios e investimentos, enquanto outras convivem com trabalho informal e baixa produtividade.</p>
+          <p>O projeto propÃµe polÃ­ticas de renda que ampliem oportunidades de emprego qualificado, tornem o mercado de trabalho mais inclusivo e reduzam a distÃ¢ncia entre regiÃµes urbanas e rurais atÃ© 2035.</p>
+        </section>
+
+        <section id="situacao" class="content-section fade-in-section">
+          <div class="section-label">02</div>
+          <h2>SituaÃ§Ã£o Atual</h2>
+          <p>Minas tem forte heterogeneidade interna: a RegiÃ£o Metropolitana de Belo Horizonte apresenta renda per capita prÃ³xima Ã  mÃ©dia nacional, enquanto o Norte de Minas e o Jequitinhonha registram rendas inferiores em mais de 40%.</p>
+          <p>Grande parte dos trabalhadores mineiros atua em setores de baixa remuneraÃ§Ã£o, com alta informalidade e poucas oportunidades de qualificaÃ§Ã£o contÃ­nua.</p>
+        </section>
+
+        <section id="desafios" class="content-section fade-in-section">
+          <div class="section-label">03</div>
+          <h2>Desafios Estruturais</h2>
+          <ul>
+            <li><strong>Informalidade elevada</strong> â€” A economia informal restringe acesso a direitos trabalhistas, crÃ©dito e proteÃ§Ã£o social, deixando muitos trabalhadores vulnerÃ¡veis.</li>
+            <li><strong>CapacitaÃ§Ã£o desigual</strong> â€” A oferta de formaÃ§Ã£o tÃ©cnica e profissional Ã© concentrada em Ã¡reas urbanas e nÃ£o atende plenamente as demandas regionais.</li>
+            <li><strong>DependÃªncia de mercados volÃ¡teis</strong> â€” MunicÃ­pios com economia dependente de commodities ou serviÃ§os de baixa tecnologia ficam sujeitos a choques externos.</li>
+            <li><strong>PolÃ­ticas de transferÃªncia insuficientes</strong> â€” Os programas sociais sÃ£o importantes, mas precisam ser mais bem articulados com aÃ§Ãµes produtivas para promover autonomia.</li>
+          </ul>
+        </section>
+
+        <section id="oportunidades" class="content-section fade-in-section">
+          <div class="section-label">04</div>
+          <h2>Oportunidades</h2>
+          <ul>
+            <li><strong>Mercado de trabalho digital</strong> â€” Plataformas e serviÃ§os digitais podem criar empregos remotos e reduzir a dependÃªncia do local onde o trabalhador vive.</li>
+            <li><strong>Economia criativa</strong> â€” Minas possui potencial em cultura, turismo e tecnologia criativa para gerar renda complementar Ã s atividades tradicionais.</li>
+            <li><strong>EducaÃ§Ã£o tÃ©cnica regional</strong> â€” Parcerias entre SENAI, universidades e empresas podem formar talentos adaptados aos polos produtivos locais.</li>
+            <li><strong>Renda bÃ¡sica e inclusÃ£o</strong> â€” Renda mÃ­nima temporÃ¡ria associada a programas de qualificaÃ§Ã£o pode acelerar a transiÃ§Ã£o para emprego formal.</li>
+          </ul>
+        </section>
+
+        <section id="benchmarking" class="content-section fade-in-section">
+          <div class="section-label">05</div>
+          <h2>Benchmarking Internacional</h2>
+          <p>Modelos de inclusÃ£o produtiva e renda mÃ­nima em outras regiÃµes mostram como promover estabilidade sem reduzir incentivos ao trabalho.</p>
+          <table class="bench-table">
+            <thead>
+              <tr>
+                <th>RegiÃ£o / PaÃ­s</th>
+                <th>Foco</th>
+                <th>LiÃ§Ã£o para Minas</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="td-highlight">FinlÃ¢ndia</td>
+                <td class="td-accent">Renda bÃ¡sica mÃ­nima e formaÃ§Ã£o continuada.</td>
+                <td>Garantir renda mÃ­nima enquanto amplia qualificaÃ§Ãµes reduz a vulnerabilidade sem desincentivar o trabalho.</td>
+              </tr>
+              <tr>
+                <td class="td-highlight">Chile</td>
+                <td class="td-accent">Programas de vouchers e digitalizaÃ§Ã£o de serviÃ§os.</td>
+                <td>Usar tecnologia para ampliar o acesso a cursos, emprego e benefÃ­cios, conectando trabalhadores ao mercado.</td>
+              </tr>
+              <tr>
+                <td class="td-highlight">CanadÃ¡</td>
+                <td class="td-accent">Desenvolvimento regional orientado a clusters.</td>
+                <td>Investir em polos de alta tecnologia e serviÃ§os qualificados fora das metrÃ³poles para reduzir desigualdade territorial.</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section id="objetivos" class="content-section fade-in-section">
+          <div class="section-label">06</div>
+          <h2>Objetivos 2035</h2>
+          <ul>
+            <li>Reduzir a distÃ¢ncia de renda per capita entre as cinco maiores e as cinco menores regiÃµes de Minas em 50%.</li>
+            <li>Diminuir a taxa de informalidade trabalhista para menos de 20%.</li>
+            <li>Ampliar o emprego formal em setores de conhecimento e serviÃ§os qualificados em pelo menos 30%.</li>
+          </ul>
+        </section>
+
+        <section id="metas" class="content-section fade-in-section">
+          <div class="section-label">07</div>
+          <h2>Metas 2050</h2>
+          <ul>
+            <li>Renda mÃ©dia municipal acima do salÃ¡rio mÃ­nimo em todos os 853 municÃ­pios.</li>
+            <li>ReduÃ§Ã£o do Ã­ndice de Gini abaixo de 0,35.</li>
+            <li>Plena ocupaÃ§Ã£o qualificada nas regiÃµes de maior atraso econÃ´mico.</li>
+          </ul>
+        </section>
+
+        <section id="projetos" class="content-section fade-in-section">
+          <div class="section-label">08</div>
+          <h2>Projetos EstratÃ©gicos</h2>
+          <ul>
+            <li><strong>Plataforma de mercado de trabalho aberto</strong> â€” Interligar oferta de vagas, qualificaÃ§Ã£o e programas sociais para reduzir o tempo de desemprego.</li>
+            <li><strong>Rede de microcrÃ©dito e capacitaÃ§Ã£o</strong> â€” Apoiar empreendedores locais e autÃ´nomos com crÃ©dito de baixo custo e mentorias para formalizaÃ§Ã£o.</li>
+            <li><strong>Programa de transiÃ§Ã£o profissional</strong> â€” Combinando renda bÃ¡sica temporÃ¡ria, formaÃ§Ã£o tÃ©cnica e estÃ¡gio em empresas pÃºblicas e privadas.</li>
+          </ul>
+        </section>
+
+        <section id="indicadores" class="content-section fade-in-section">
+          <div class="section-label">09</div>
+          <h2>Indicadores-Chave</h2>
+          <ul>
+            <li>Taxa de informalidade por regiÃ£o.</li>
+            <li>VariaÃ§Ã£o da renda mÃ©dia domiciliar per capita.</li>
+            <li>ProporÃ§Ã£o de trabalhadores formados em cursos tÃ©cnicos e superiores.</li>
+          </ul>
+        </section>
+
+        <section id="debate" class="content-section fade-in-section">
+          <div class="section-label">10</div>
+          <h2>QuestÃµes para Debate</h2>
+          <ul>
+            <li>Como equilibrar transferÃªncia de renda e estÃ­mulo Ã  formalizaÃ§Ã£o de trabalho?</li>
+            <li>Quais instrumentos fiscais podem apoiar a geraÃ§Ã£o de trabalho qualificado no interior?</li>
+            <li>Que papel os mecanismos de economia solidÃ¡ria podem ter na reduÃ§Ã£o da desigualdade de renda?</li>
+          </ul>
+        </section>
+
+        <section id="referencias" class="content-section fade-in-section">
+          <div class="section-label">11</div>
+          <h2>ReferÃªncias</h2>
+          <div class="reference-item"><span class="reference-num">01</span><span>IBGE. <em>PNAD ContÃ­nua 2024</em>. Rio de Janeiro: IBGE, 2025.</span></div>
+          <div class="reference-item"><span class="reference-num">02</span><span>OCDE. <em>Employment Outlook 2023</em>. Paris: OECD, 2023.</span></div>
+          <div class="reference-item"><span class="reference-num">03</span><span>IPEA. <em>Desigualdade e Pobreza no Brasil</em>. BrasÃ­lia: IPEA, 2024.</span></div>
+        </section>
+      </article>
+    </div>
+  </div>
+
   <footer class="site-footer">
-    <p>&copy; 2026 Projeto Minas 2035 – Todos os direitos reservados.</p>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="navbar-brand">
+            <svg class="navbar-logo" viewBox="0 0 36 36" fill="none">
+              <rect width="36" height="36" rx="8" fill="url(#grad-footer-renda)"/>
+              <path d="M10 24 L10 13 L18 20 L26 13 L26 24" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              <defs><linearGradient id="grad-footer-renda" x1="0" y1="0" x2="36" y2="36" gradientUnits="userSpaceOnUse"><stop stop-color="#6366F1"/><stop offset="1" stop-color="#EC4899"/></linearGradient></defs>
+            </svg>
+            <span class="navbar-name">Minas <span>2035</span></span>
+          </a>
+          <p>Propostas de polÃ­ticas para reduzir desigualdades e ampliar a qualidade de vida em todas as regiÃµes mineiras.</p>
+        </div>
+        <div class="footer-col"><h5>Projeto</h5><ul><li><a href="../sobre.html">Sobre</a></li><li><a href="../manifesto.html">Manifesto</a></li><li><a href="../pilares.html">Pilares</a></li><li><a href="../participar.html">Participar</a></li></ul></div>
+        <div class="footer-col"><h5>Outras Ãreas</h5><ul><li><a href="economia.html">Economia</a></li><li><a href="saude.html">SaÃºde</a></li><li><a href="educacao.html">EducaÃ§Ã£o</a></li><li><a href="tecnologia.html">Tecnologia</a></li></ul></div>
+        <div class="footer-col"><h5>Legal</h5><ul><li><a href="#">PolÃ­tica de privacidade</a></li><li><a href="#">LicenÃ§a de uso</a></li><li><a href="#">Contato</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">
+        <p>Â© 2026 Projeto Minas 2035. Fontes: IBGE, IPEA, OCDE.</p>
+        <a href="../manifesto.html">Manifesto â†’</a>
+      </div>
+    </div>
   </footer>
+
+  <script>lucide.createIcons();</script>
 </body>
 </html>
+

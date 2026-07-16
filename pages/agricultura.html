@@ -1,43 +1,274 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Agricultura – Projeto Minas 2035</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' https://unpkg.com 'unsafe-inline'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https:; object-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self';" />
+  <meta name="description" content="Centro TemÃ¡tico de Agricultura â€“ EstratÃ©gias para ampliar produtividade rural, sustentabilidade e inclusÃ£o no campo mineiro atÃ© 2035." />
+  <title>Agricultura â€“ Projeto Minas 2035</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="../css/variables.css" />
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="stylesheet" href="../css/components.css" />
-  <link rel="stylesheet" href="../css/responsive.css" />
   <link rel="stylesheet" href="../css/animations.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+  <link rel="stylesheet" href="../css/pages.css" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
   <script defer src="../js/app.js"></script>
   <script defer src="../js/menu.js"></script>
   <script defer src="../js/animations.js"></script>
-  <script defer src="../js/charts.js"></script>
+  <script defer src="../js/counters.js"></script>
 </head>
 <body>
-  <header class="site-header">
-    <h1>Projeto Minas 2035</h1>
-    <nav class="main-nav">
-      <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../manifesto.html">Manifesto</a></li>
-        <li><a href="../pilares.html">Pilares</a></li>
-        <li><a href="../indicadores.html">Indicadores</a></li>
-        <li><a href="../participar.html">Participar</a></li>
-        <li><a href="../sobre.html">Sobre</a></li>
-      </ul>
-    </nav>
+  <header class="navbar" id="navbar">
+    <div class="container">
+      <a href="../index.html" class="navbar-brand">
+        <svg class="navbar-logo" viewBox="0 0 36 36" fill="none">
+          <rect width="36" height="36" rx="8" fill="url(#grad-nav-agro)"/>
+          <path d="M10 24 L10 13 L18 20 L26 13 L26 24" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <defs><linearGradient id="grad-nav-agro" x1="0" y1="0" x2="36" y2="36" gradientUnits="userSpaceOnUse"><stop stop-color="#0EA5E9"/><stop offset="1" stop-color="#10B981"/></linearGradient></defs>
+        </svg>
+        <span class="navbar-name">Minas <span>2035</span></span>
+      </a>
+      <nav class="navbar-nav" id="main-nav">
+        <a href="../index.html#sobre">O Projeto</a>
+        <a href="../index.html#areas">Ãreas</a>
+        <a href="../index.html#principios">PrincÃ­pios</a>
+        <a href="../indicadores.html">Indicadores</a>
+        <a href="../manifesto.html">Manifesto</a>
+      </nav>
+      <div class="navbar-cta">
+        <a href="../participar.html" class="btn btn-outline">Participar</a>
+        <a href="../index.html#areas" class="btn btn-primary">Explorar</a>
+      </div>
+      <button class="hamburger" id="hamburger-btn" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </header>
-  <main>
-    <section class="content">
-      <h2>Agricultura</h2>
-      <p>Conteúdo introdutório sobre a estratégia agrícola para Minas até 2035.</p>
-      <!-- Placeholder for charts -->
-      <div id="chart-agricultura"></div>
-    </section>
-  </main>
+
+  <section class="page-hero">
+    <div class="page-hero-grid"></div>
+    <div class="container">
+      <div class="page-hero-content fade-in-section">
+        <div class="breadcrumb">
+          <a href="../index.html">InÃ­cio</a>
+          <span class="breadcrumb-sep">/</span>
+          <a href="../index.html#areas">Ãreas</a>
+          <span class="breadcrumb-sep">/</span>
+          <span class="breadcrumb-current">Agricultura</span>
+        </div>
+        <div class="section-label">Centro TemÃ¡tico</div>
+        <h1>Centro de Agricultura e Cadeias Agroindustriais</h1>
+        <p class="page-subtitle">
+          Fortalecer a agricultura familiar, valorizar a produÃ§Ã£o de alto valor e transformar Minas Gerais em referÃªncia de sustentabilidade rural atÃ© 2035.
+        </p>
+        <div class="page-stats">
+          <div class="page-stat">
+            <span class="page-stat-value">89%</span>
+            <span class="page-stat-label">do territÃ³rio Ã© rural</span>
+          </div>
+          <div class="page-stat-divider"></div>
+          <div class="page-stat">
+            <span class="page-stat-value">42%</span>
+            <span class="page-stat-label">das exportaÃ§Ãµes mineiras</span>
+          </div>
+          <div class="page-stat-divider"></div>
+          <div class="page-stat">
+            <span class="page-stat-value">85%</span>
+            <span class="page-stat-label">das propriedades sÃ£o familiares</span>
+          </div>
+        </div>
+        <div class="tag-list" style="margin-top: var(--sp-6);">
+          <span class="tag">Agro</span>
+          <span class="tag">Sustentabilidade</span>
+          <span class="tag">FamÃ­lia</span>
+          <span class="tag">Bioeconomia</span>
+          <span class="tag">InovaÃ§Ã£o</span>
+          <span class="tag">RegiÃµes</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="page-layout">
+      <aside>
+        <nav class="toc" aria-label="Ãndice do conteÃºdo">
+          <div class="toc-title">Neste Centro</div>
+          <ul class="toc-list">
+            <li><a href="#resumo">01 Â· Resumo Executivo</a></li>
+            <li><a href="#situacao">02 Â· SituaÃ§Ã£o Atual</a></li>
+            <li><a href="#desafios">03 Â· Desafios Estruturais</a></li>
+            <li><a href="#oportunidades">04 Â· Oportunidades</a></li>
+            <li><a href="#benchmarking">05 Â· Benchmarking Internacional</a></li>
+            <li><a href="#objetivos">06 Â· Objetivos 2035</a></li>
+            <li><a href="#metas">07 Â· Metas 2050</a></li>
+            <li><a href="#projetos">08 Â· Projetos EstratÃ©gicos</a></li>
+            <li><a href="#indicadores">09 Â· Indicadores-Chave</a></li>
+            <li><a href="#debate">10 Â· QuestÃµes para Debate</a></li>
+            <li><a href="#referencias">11 Â· ReferÃªncias</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <article class="article-content">
+        <section id="resumo" class="content-section fade-in-section">
+          <div class="section-label">01</div>
+          <h2>Resumo Executivo</h2>
+          <p>Minas Gerais tem um potFencial Ãºnico para consolidar uma agricultura resiliente e de alto valor agregado. O Estado combina solos fÃ©rteis, climas diversos e uma extensa base de produtores familiares que podem ser incorporados a cadeias agroindustriais sustentÃ¡veis.</p>
+          <p>A plataforma de desenvolvimento rural do Projeto Minas 2035 prioriza trÃªs pilares: inclusÃ£o produtiva, transiÃ§Ã£o para agroecologia e agregaÃ§Ã£o de valor na origem. O objetivo Ã© aumentar renda rural, reduzir emissÃµes e ampliar a participaÃ§Ã£o mineira nas cadeias globais de alimentos e bioeconomia.</p>
+        </section>
+
+        <section id="situacao" class="content-section fade-in-section">
+          <div class="section-label">02</div>
+          <h2>SituaÃ§Ã£o Atual</h2>
+          <p>A agricultura mineira Ã© uma das mais diversificadas do Brasil, com destaque para cafÃ©, milho, frutas, hortaliÃ§as e pecuÃ¡ria de leite. Ainda assim, uma grande parcela da produÃ§Ã£o permanece em cadeias de baixo valor e depende de intermediÃ¡rios para comercializaÃ§Ã£o.</p>
+          <p>As propriedades familiares, embora numerosas, enfrentam acesso limitado a crÃ©dito, assistÃªncia tÃ©cnica e infraestrutura de armazenamento e transporte, o que reduz sua competitividade e expÃµe os produtores a choques climÃ¡ticos e de preÃ§o.</p>
+        </section>
+
+        <section id="desafios" class="content-section fade-in-section">
+          <div class="section-label">03</div>
+          <h2>Desafios Estruturais</h2>
+          <ul>
+            <li><strong>LogÃ­stica rural insuficiente</strong> â€” O transporte de produtos frescos enfrenta estradas precÃ¡rias e falta de cadeia fria, o que aumenta perdas pÃ³s-colheita e reduz a margem dos produtores.</li>
+            <li><strong>Financiamento de longo prazo</strong> â€” A oferta de crÃ©dito para investimentos em irrigaÃ§Ã£o, energias renovÃ¡veis e agroindÃºstria Ã© limitada e concentrada nos grandes produtores.</li>
+            <li><strong>Uso excessivo de insumos</strong> â€” A dependÃªncia de fertilizantes e defensivos quÃ­micos aumenta custos e degrada solos, tornando vulnerÃ¡vel a mudanÃ§as climÃ¡ticas e variaÃ§Ãµes de preÃ§o.</li>
+            <li><strong>ConcentraÃ§Ã£o de mercado</strong> â€” A comercializaÃ§Ã£o ainda depende de poucos canais de distribuiÃ§Ã£o, reduzindo o poder de negociaÃ§Ã£o dos pequenos produtores.</li>
+          </ul>
+        </section>
+
+        <section id="oportunidades" class="content-section fade-in-section">
+          <div class="section-label">04</div>
+          <h2>Oportunidades</h2>
+          <ul>
+            <li><strong>Agroecologia e produtividade sustentÃ¡vel</strong> â€” PrÃ¡ticas regenerativas podem aumentar rendimentos e reduzir custos ao mesmo tempo, fortalecendo a resiliÃªncia dos sistemas agrÃ­colas.</li>
+            <li><strong>Mercado de alimentos premium</strong> â€” Produtos como cafÃ©s especiais, cacau de alta qualidade e frutas exÃ³ticas tÃªm demanda crescente e podem gerar maior valor agregado.</li>
+            <li><strong>Bioeconomia</strong> â€” O aproveitamento de resÃ­duos agrÃ­colas para biogÃ¡s, biomateriais e fertilizantes orgÃ¢nicos pode transformar passivos em ativos econÃ´micos locais.</li>
+            <li><strong>DigitalizaÃ§Ã£o rural</strong> â€” Plataformas de gestÃ£o e assistÃªncia tÃ©cnica remota podem ampliar a produtividade e a inclusÃ£o dos pequenos produtores.</li>
+          </ul>
+        </section>
+
+        <section id="benchmarking" class="content-section fade-in-section">
+          <div class="section-label">05</div>
+          <h2>Benchmarking Internacional</h2>
+          <p>RegiÃµes agrÃ­colas que combinaram sustentabilidade e valor agregado mostram caminhos adaptÃ¡veis a Minas Gerais.</p>
+          <table class="bench-table">
+            <thead>
+              <tr>
+                <th>RegiÃ£o / PaÃ­s</th>
+                <th>Foco</th>
+                <th>LiÃ§Ã£o para Minas</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="td-highlight">Andaluzia (Espanha)</td>
+                <td class="td-accent">Agroenergia e irrigaÃ§Ã£o de precisÃ£o.</td>
+                <td>Uso eficiente da Ã¡gua e integraÃ§Ã£o entre cooperativas para acessar mercados internacionais.</td>
+              </tr>
+              <tr>
+                <td class="td-highlight">VallÃ©e du RhÃ´ne (FranÃ§a)</td>
+                <td class="td-accent">Produtos premium com denominaÃ§Ã£o de origem.</td>
+                <td>ProteÃ§Ã£o de identidade e valor de marca como alavanca de preÃ§os mais altos.</td>
+              </tr>
+              <tr>
+                <td class="td-highlight">Oregon (EUA)</td>
+                <td class="td-accent">Agricultura orgÃ¢nica e alimentos processados.</td>
+                <td>CertificaÃ§Ã£o e conectividade com mercados especializados sustentam margens maiores.</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section id="objetivos" class="content-section fade-in-section">
+          <div class="section-label">06</div>
+          <h2>Objetivos 2035</h2>
+          <ul>
+            <li>Garantir assistÃªncia tÃ©cnica e financiamento de baixo custo a 100% das propriedades familiares.</li>
+            <li>Transformar Minas em referÃªncia nacional em produÃ§Ã£o agroecolÃ³gica e de alto valor.</li>
+            <li>Conectar 500 municÃ­pios a cadeias de frio e centros de agregaÃ§Ã£o de valor.</li>
+          </ul>
+        </section>
+
+        <section id="metas" class="content-section fade-in-section">
+          <div class="section-label">07</div>
+          <h2>Metas 2050</h2>
+          <ul>
+            <li>Dobrar a participaÃ§Ã£o da agricultura mineira em produtos processados com maior valor agregado.</li>
+            <li>Reduzir em 40% as perdas pÃ³s-colheita em hortifrÃºti e grÃ£os.</li>
+            <li>Aumentar em 3x a Ã¡rea de produÃ§Ã£o certificada como orgÃ¢nica ou regenerativa.</li>
+          </ul>
+        </section>
+
+        <section id="projetos" class="content-section fade-in-section">
+          <div class="section-label">08</div>
+          <h2>Projetos EstratÃ©gicos</h2>
+          <ul>
+            <li><strong>Rede de centros de agregaÃ§Ã£o de valor</strong> â€” Estruturar pequenas agroindÃºstrias regionais para processamento de cafÃ©s especiais, frutas, lÃ¡cteos e proteÃ­nas vegetais.</li>
+            <li><strong>Plataforma de comercializaÃ§Ã£o digital</strong> â€” Criar um marketplace mineiro para aproximar produtores familiares de compradores institucionais e exportadores.</li>
+            <li><strong>Programa de modernizaÃ§Ã£o rural</strong> â€” Incentivar irrigaÃ§Ã£o de precisÃ£o, sombreamento inteligente e sistemas agroflorestais de baixa emissÃ£o.</li>
+          </ul>
+        </section>
+
+        <section id="indicadores" class="content-section fade-in-section">
+          <div class="section-label">09</div>
+          <h2>Indicadores-Chave</h2>
+          <ul>
+            <li>Percentual de propriedades familiares com acesso a assistÃªncia tÃ©cnica especializada.</li>
+            <li>Taxa de reduÃ§Ã£o de perdas pÃ³s-colheita.</li>
+            <li>Quota de exportaÃ§Ãµes de produtos agrÃ­colas de alto valor agregado.</li>
+          </ul>
+        </section>
+
+        <section id="debate" class="content-section fade-in-section">
+          <div class="section-label">10</div>
+          <h2>QuestÃµes para Debate</h2>
+          <ul>
+            <li>Como alinhar polÃ­ticas de crÃ©dito aos critÃ©rios de sustentabilidade sem excluir pequenos produtores?</li>
+            <li>Quais incentivos sÃ£o necessÃ¡rios para que a agroindÃºstria de base familiar ocupe posiÃ§Ãµes mais relevantes nas exportaÃ§Ãµes?</li>
+            <li>Qual Ã© a melhor forma de combinar agricultura familiar e agronegÃ³cio de alta tecnologia em Minas?</li>
+          </ul>
+        </section>
+
+        <section id="referencias" class="content-section fade-in-section">
+          <div class="section-label">11</div>
+          <h2>ReferÃªncias</h2>
+          <div class="reference-item"><span class="reference-num">01</span><span>IBGE. <em>Censo AgropecuÃ¡rio 2022</em>. Rio de Janeiro: IBGE, 2023.</span></div>
+          <div class="reference-item"><span class="reference-num">02</span><span>FAO. <em>State of Food and Agriculture 2024</em>. Roma: FAO, 2024.</span></div>
+          <div class="reference-item"><span class="reference-num">03</span><span>EMATER-MG. <em>RelatÃ³rio de AssistÃªncia TÃ©cnica Rural 2023</em>. Belo Horizonte: EMATER, 2023.</span></div>
+        </section>
+      </article>
+    </div>
+  </div>
+
   <footer class="site-footer">
-    <p>&copy; 2026 Projeto Minas 2035 – Todos os direitos reservados.</p>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="navbar-brand">
+            <svg class="navbar-logo" viewBox="0 0 36 36" fill="none">
+              <rect width="36" height="36" rx="8" fill="url(#grad-footer-agro)"/>
+              <path d="M10 24 L10 13 L18 20 L26 13 L26 24" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              <defs><linearGradient id="grad-footer-agro" x1="0" y1="0" x2="36" y2="36" gradientUnits="userSpaceOnUse"><stop stop-color="#0EA5E9"/><stop offset="1" stop-color="#10B981"/></linearGradient></defs>
+            </svg>
+            <span class="navbar-name">Minas <span>2035</span></span>
+          </a>
+          <p>Estudos de polÃ­ticas pÃºblicas para um campo mineiro mais prÃ³spero, sustentÃ¡vel e conectado.</p>
+        </div>
+        <div class="footer-col"><h5>Projeto</h5><ul><li><a href="../sobre.html">Sobre</a></li><li><a href="../manifesto.html">Manifesto</a></li><li><a href="../pilares.html">Pilares</a></li><li><a href="../participar.html">Participar</a></li></ul></div>
+        <div class="footer-col"><h5>Outras Ãreas</h5><ul><li><a href="economia.html">Economia</a></li><li><a href="educacao.html">EducaÃ§Ã£o</a></li><li><a href="tecnologia.html">Tecnologia</a></li><li><a href="meio-ambiente.html">Meio Ambiente</a></li></ul></div>
+        <div class="footer-col"><h5>Legal</h5><ul><li><a href="#">PolÃ­tica de privacidade</a></li><li><a href="#">LicenÃ§a de uso</a></li><li><a href="#">Contato</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">
+        <p>Â© 2026 Projeto Minas 2035. Fontes: IBGE, EMATER-MG, FAO, OCDE.</p>
+        <a href="../manifesto.html">Manifesto â†’</a>
+      </div>
+    </div>
   </footer>
+
+  <script>lucide.createIcons();</script>
 </body>
 </html>
+
