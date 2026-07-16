@@ -211,10 +211,10 @@
         <div class="tag-list" style="margin-top:var(--sp-6);">
 
 
-          <span class="tag">IDEB</span><span class="tag">Ensino Médio</span><span class="tag">Universidades</span>
+          <span class="tag">IDEB</span><span class="tag">Ensino M—dio</span><span class="tag">Universidades</span>
 
 
-          <span class="tag">Formação Técnica</span><span class="tag">Capital Humano</span><span class="tag">Evasão Escolar</span>
+          <span class="tag">Formação T—cnica</span><span class="tag">Capital Humano</span><span class="tag">Evasão Escolar</span>
 
 
         </div>
@@ -310,13 +310,13 @@
           <h2>Resumo Executivo</h2>
 
 
-          <p>A educação — o investimento de mais longo prazo e de retorno mais consistente que uma sociedade pode fazer. Minas Gerais possui uma das maiores e mais antigas redes públicas de ensino do Brasil, com mais de 2,4 milhões de estudantes na educação básica e mais de 50 instituições de ensino superior públicas — incluindo a UFMG, considerada entre as melhores universidades da América Latina.</p>
+          <p>A educação — o investimento de mais longo prazo e de retorno mais consistente que uma sociedade pode fazer. Minas Gerais possui uma das maiores e mais antigas redes públicas de ensino do Brasil, com mais de 2,4 milhões de estudantes na educação b—sica e mais de 50 institui——es de ensino superior públicas — incluindo a UFMG, considerada entre as melhores universidades da América Latina.</p>
 
 
-          <p>No entanto, os indicadores de qualidade revelam um quadro heterogêneo: o IDEB dos anos finais do ensino fundamental e do ensino médio permanece abaixo das metas nacionais, a taxa de evasão no ensino médio supera 10% ao ano e o interior do Estado apresenta resultados sistematicamente inferiores — capital. A desigualdade educacional —, ao mesmo tempo, reflexo e causa da desigualdade econômica regional.</p>
+          <p>No entanto, os indicadores de qualidade revelam um quadro heterog—neo: o IDEB dos anos finais do ensino fundamental e do ensino médio permanece abaixo das metas nacionais, a taxa de evasão no ensino médio supera 10% ao ano e o interior do Estado apresenta resultados sistematicamente inferiores — capital. A desigualdade educacional —, ao mesmo tempo, reflexo e causa da desigualdade econ—mica regional.</p>
 
 
-          <p>O Projeto Minas 2035 propõe uma agenda educacional centrada em três eixos: melhoria da qualidade do ensino básico com foco em aprendizagem real, expansão da formação técnica e tecnológica alinhada —s demandas do mercado de trabalho do sáculo XXI, e fortalecimento do ecossistema de pesquisa e inovação nas universidades.</p>
+          <p>O Projeto Minas 2035 propõe uma agenda educacional centrada em três eixos: melhoria da qualidade do ensino b—sico com foco em aprendizagem real, expansão da formação técnica e tecnológica alinhada —s demandas do mercado de trabalho do s—culo XXI, e fortalecimento do ecossistema de pesquisa e inovação nas universidades.</p>
 
 
           <div class="quote-block">
@@ -346,7 +346,7 @@
           <h2>Situação Atual de Minas Gerais</h2>
 
 
-          <p>Minas Gerais tem uma rede educacional extensa, mas com qualidade desigual. Enquanto escolas da Região Metropolitana de Belo Horizonte apresentam resultados próximos —s médias das melhores redes estaduais do Brasil, municípios do Norte de Minas e Jequitinhonha registram IDEBs abaixo de 4,0 nos anos finais do ensino fundamental — equivalente a uma defasagem de aprendizagem de dois anos ou mais.</p>
+          <p>Minas Gerais tem uma rede educacional extensa, mas com qualidade desigual. Enquanto escolas da Regi—o Metropolitana de Belo Horizonte apresentam resultados pr—ximos —s médias das melhores redes estaduais do Brasil, municípios do Norte de Minas e Jequitinhonha registram IDEBs abaixo de 4,0 nos anos finais do ensino fundamental — equivalente a uma defasagem de aprendizagem de dois anos ou mais.</p>
 
 
           <div class="metric-grid">
@@ -370,13 +370,13 @@
             <div class="metric-card">
 
 
-              <div class="metric-label">IDEB Ensino Médio</div>
+              <div class="metric-label">IDEB Ensino M—dio</div>
 
 
               <div><span class="metric-value">4,2</span></div>
 
 
-              <div class="metric-description">Meta 2035: 6,0 — lacuna crética de qualidade</div>
+              <div class="metric-description">Meta 2035: 6,0 — lacuna cr—tica de qualidade</div>
 
 
             </div>
@@ -415,7 +415,7 @@
             <div class="metric-card">
 
 
-              <div class="metric-label">Matrículas Técnicas</div>
+              <div class="metric-label">Matrículas T—cnicas</div>
 
 
               <div><span class="metric-value">280</span><span class="metric-unit">mil</span></div>
@@ -463,19 +463,19 @@
           <ul>
 
 
-            <li><strong>Baixa qualidade do ensino médio</strong> — O ensino médio — o elo mais fraco da educação básica mineira. Com IDEB de 4,2 e altas taxas de evasão, esse segmento — o principal gargalo entre o ensino fundamental e a formação superior ou técnica qualificada.</li>
+            <li><strong>Baixa qualidade do ensino médio</strong> — O ensino médio — o elo mais fraco da educação b—sica mineira. Com IDEB de 4,2 e altas taxas de evasão, esse segmento — o principal gargalo entre o ensino fundamental e a formação superior ou técnica qualificada.</li>
 
 
-            <li><strong>Desigualdade regional profunda</strong> — O IDEB médio dos municípios do Vale do Jequitinhonha — 38% inferior ao da RMBH. Essa disparidade se reflete em diferenças dramáticas de renda, produtividade e oportunidades ao longo da vida.</li>
+            <li><strong>Desigualdade regional profunda</strong> — O IDEB médio dos municípios do Vale do Jequitinhonha — 38% inferior ao da RMBH. Essa disparidade se reflete em diferen—as dram—ticas de renda, produtividade e oportunidades ao longo da vida.</li>
 
 
-            <li><strong>Subfinanciamento da educação estadual</strong> — O Estado de Minas Gerais destina cerca de 25% da receita líquida — educação — o mínimo constitucional — mas a crise fiscal limita investimentos em infraestrutura escolar, formação de professores e tecnologia educacional.</li>
+            <li><strong>Subfinanciamento da educação estadual</strong> — O Estado de Minas Gerais destina cerca de 25% da receita l—quida — educação — o mínimo constitucional — mas a crise fiscal limita investimentos em infraestrutura escolar, formação de professores e tecnologia educacional.</li>
 
 
-            <li><strong>Déficit de formação técnica e tecnológica</strong> — A demanda por profissionais técnicos em TI, automação, enfermagem e agronegócio supera em muito a oferta das redes SENAI, CEFET e estadual. Há um descompasso crescente entre o perfil da formação e as necessidades do mercado.</li>
+            <li><strong>D—ficit de formação técnica e tecnológica</strong> — A demanda por profissionais técnicos em TI, automação, enfermagem e agronegócio supera em muito a oferta das redes SENAI, CEFET e estadual. H— um descompasso crescente entre o perfil da formação e as necessidades do mercado.</li>
 
 
-            <li><strong>Evasão universitária e brain drain</strong> — Minas forma um grande contingente de profissionais altamente qualificados, mas parcela significativa migra para São Paulo, Rio de Janeiro ou para o exterior em busca de melhores oportunidades profissionais e salariais.</li>
+            <li><strong>Evasão universit—ria e brain drain</strong> — Minas forma um grande contingente de profissionais altamente qualificados, mas parcela significativa migra para São Paulo, Rio de Janeiro ou para o exterior em busca de melhores oportunidades profissionais e salariais.</li>
 
 
           </ul>
@@ -487,7 +487,7 @@
             <span class="callout-icon"><i data-lucide="alert-triangle"></i></span>
 
 
-            <p><strong>Alerta:</strong> Estudos da FJP estimam que a defasagem educacional entre o norte e o sul de Minas Gerais perpetua uma diferença de renda per capita de até 400% entre municípios. Sem intervenção sistêmica na qualidade educacional, essa desigualdade tende a se aprofundar nas próximas décadas.</p>
+            <p><strong>Alerta:</strong> Estudos da FJP estimam que a defasagem educacional entre o norte e o sul de Minas Gerais perpetua uma diferen—a de renda per capita de até 400% entre municípios. Sem interven——o sistêmica na qualidade educacional, essa desigualdade tende a se aprofundar nas pr—ximas d—cadas.</p>
 
 
           </div>
@@ -511,16 +511,16 @@
           <ul>
 
 
-            <li><strong>Tecnologia educacional (EdTech)</strong> — O ensino híbrido e as plataformas digitais permitem levar conteúdo de qualidade a municípios distantes sem o custo de infraestrutura física. Minas pode usar sua rede de universidades para produzir conteúdo de referência nacional.</li>
+            <li><strong>Tecnologia educacional (EdTech)</strong> — O ensino h—brido e as plataformas digitais permitem levar conteúdo de qualidade a municípios distantes sem o custo de infraestrutura física. Minas pode usar sua rede de universidades para produzir conteúdo de referência nacional.</li>
 
 
-            <li><strong>Parceria escola-empresa</strong> — O modelo dual alemão, no qual estudantes alternam entre escola e empresa desde o ensino médio, demonstrou reduzir drasticamente o desemprego jovem e a desconexão entre formação e mercado. Adaptações desse modelo ao contexto mineiro são viáveis e urgentes.</li>
+            <li><strong>Parceria escola-empresa</strong> — O modelo dual alem—o, no qual estudantes alternam entre escola e empresa desde o ensino médio, demonstrou reduzir drasticamente o desemprego jovem e a desconex—o entre formação e mercado. Adaptações desse modelo ao contexto mineiro são vi—veis e urgentes.</li>
 
 
-            <li><strong>UFMG e rede federal como polo</strong> — A UFMG — a principal universidade de pesquisa de Minas Gerais e uma das 10 melhores da América Latina (QS 2023). Fortalecer sua conexão com o setor produtivo e expandir sua atuação regional pode multiplicar seu impacto econômico.</li>
+            <li><strong>UFMG e rede federal como polo</strong> — A UFMG — a principal universidade de pesquisa de Minas Gerais e uma das 10 melhores da América Latina (QS 2023). Fortalecer sua conex—o com o setor produtivo e expandir sua atuação regional pode multiplicar seu impacto econômico.</li>
 
 
-            <li><strong>Escola em tempo integral</strong> — O Programa Nacional de Escolas Cívico-Militares e o novo ensino médio criam uma janela de oportunidade para reformatar a oferta educacional do ensino médio com jornada ampliada, atividades extracurriculares e itinerários formativos diversificados.</li>
+            <li><strong>Escola em tempo integral</strong> — O Programa Nacional de Escolas C—vico-Militares e o novo ensino médio criam uma janela de oportunidade para reformatar a oferta educacional do ensino médio com jornada ampliada, atividades extracurriculares e itiner—rios formativos diversificados.</li>
 
 
           </ul>
@@ -547,7 +547,7 @@
             <thead>
 
 
-              <tr><th>País / Região</th><th>PISA Score (Mádia)</th><th>Estratégia-chave</th><th>Lição para Minas</th></tr>
+              <tr><th>País / Regi—o</th><th>PISA Score (M—dia)</th><th>Estratégia-chave</th><th>Lição para Minas</th></tr>
 
 
             </thead>
@@ -559,13 +559,13 @@
               <tr>
 
 
-                <td class="td-highlight">Finlândia</td>
+                <td class="td-highlight">Finl—ndia</td>
 
 
                 <td class="td-accent">520+</td>
 
 
-                <td>Professores altamente selecionados e bem remunerados; currículo focado em competências; autonomia escolar.</td>
+                <td>Professores altamente selecionados e bem remunerados; curr—culo focado em compet—ncias; autonomia escolar.</td>
 
 
                 <td>Valorização e formação de professores como alavanca central da qualidade educacional.</td>
@@ -583,10 +583,10 @@
                 <td class="td-accent">550+</td>
 
 
-                <td>Política de meritocracia educacional rigorosa; currículo atualizado a cada 5 anos; investimento em liderança escolar.</td>
+                <td>Política de meritocracia educacional rigorosa; curr—culo atualizado a cada 5 anos; investimento em lideran—a escolar.</td>
 
 
-                <td>Gestão educacional profissional com metas claras e avaliação sistemática de resultados.</td>
+                <td>Gest—o educacional profissional com metas claras e avaliação sistem—tica de resultados.</td>
 
 
               </tr>
@@ -595,16 +595,16 @@
               <tr>
 
 
-                <td class="td-highlight">Espírito Santo (Brasil)</td>
+                <td class="td-highlight">Esp—rito Santo (Brasil)</td>
 
 
                 <td class="td-accent">5,6 IDEB EM</td>
 
 
-                <td>Bônus por desempenho para professores; escolas de referência; gestão por resultados com autonomia pedagógica.</td>
+                <td>B—nus por desempenho para professores; escolas de referência; gestão por resultados com autonomia pedag—gica.</td>
 
 
-                <td>Experiência brasileira bem-sucedida aplicável ao contexto mineiro sem necessidade de grandes reformas estruturais.</td>
+                <td>Experi—ncia brasileira bem-sucedida aplic—vel ao contexto mineiro sem necessidade de grandes reformas estruturais.</td>
 
 
               </tr>
@@ -664,7 +664,7 @@
               <div class="timeline-title">Plano Estadual de Educação reformulado</div>
 
 
-              <div class="timeline-desc">Revisão do PEE-MG com metas mensuráveis por escola e região, criação do Fundo Estadual de Qualidade Educacional e implementação do programa de bonificação por desempenho docente.</div>
+              <div class="timeline-desc">Revisão do PEE-MG com metas mensur—veis por escola e região, criação do Fundo Estadual de Qualidade Educacional e implementação do programa de bonificação por desempenho docente.</div>
 
 
             </div>
@@ -679,10 +679,10 @@
               <div class="timeline-year">2027?2030</div>
 
 
-              <div class="timeline-title">IDEB do Ensino Médio acima de 5,0</div>
+              <div class="timeline-title">IDEB do Ensino M—dio acima de 5,0</div>
 
 
-              <div class="timeline-desc">Expansão de escolas de tempo integral para 50% da rede estadual, currículo reformulado com itinerários de tecnologia e empreendedorismo, e redução da evasão para abaixo de 6%.</div>
+              <div class="timeline-desc">Expansão de escolas de tempo integral para 50% da rede estadual, curr—culo reformulado com itiner—rios de tecnologia e empreendedorismo, e redução da evasão para abaixo de 6%.</div>
 
 
             </div>
@@ -697,10 +697,10 @@
               <div class="timeline-year">2030?2033</div>
 
 
-              <div class="timeline-title">Rede de 30 Institutos Técnicos Regionais</div>
+              <div class="timeline-title">Rede de 30 Institutos T—cnicos Regionais</div>
 
 
-              <div class="timeline-desc">Implantação de uma rede de institutos técnicos nas 12 mesorregiões, em parceria com o setor produtivo, com vagas voltadas para TI, saúde, agronegócio e energias renováveis.</div>
+              <div class="timeline-desc">Implantação de uma rede de institutos técnicos nas 12 mesorregiões, em parceria com o setor produtivo, com vagas voltadas para TI, saúde, agronegócio e energias renov—veis.</div>
 
 
             </div>
@@ -718,7 +718,7 @@
               <div class="timeline-title">IDEB acima de 6,0 em todo o estado</div>
 
 
-              <div class="timeline-desc">Eliminar a diferença de IDEB entre a RMBH e o interior para menos de 0,5 ponto, com todos os municípios acima de 5,0 nos anos finais do ensino fundamental.</div>
+              <div class="timeline-desc">Eliminar a diferen—a de IDEB entre a RMBH e o interior para menos de 0,5 ponto, com todos os municípios acima de 5,0 nos anos finais do ensino fundamental.</div>
 
 
             </div>
@@ -754,7 +754,7 @@
             <li>100% dos jovens de 18 anos com ensino médio completo ou formação técnica equivalente reconhecida.</li>
 
 
-            <li>30% dos trabalhadores com nível superior — contra os atuais 17% — com diversificação regional da formação.</li>
+            <li>30% dos trabalhadores com n—vel superior — contra os atuais 17% — com diversificação regional da formação.</li>
 
 
             <li>UFMG entre as 200 melhores universidades do mundo no QS World University Rankings.</li>
@@ -790,7 +790,7 @@
               <div>
 
 
-                <h4>MG Educa 2035 — Plano de Qualidade da Educação Básica</h4>
+                <h4>MG Educa 2035 — Plano de Qualidade da Educação B—sica</h4>
 
 
                 <p>Programa de gestão por resultados para todas as 3.800 escolas estaduais, com dashboards de acompanhamento por escola, formação continuada de professores e bonificação por metas de aprendizagem.</p>
@@ -811,7 +811,7 @@
               <div>
 
 
-                <h4>Rede Mineira de Institutos Técnicos</h4>
+                <h4>Rede Mineira de Institutos T—cnicos</h4>
 
 
                 <p>30 novos institutos técnicos nas mesorregiões mineiras, em parceria público-privada com SENAI, FIEMG e empresas locais. Foco em formação para as demandas do mercado regional: TI, saúde, energia e agronegócio.</p>
@@ -853,10 +853,10 @@
               <div>
 
 
-                <h4>Bolsas de Iniciação Científica no Ensino Médio</h4>
+                <h4>Bolsas de Iniciação Cient—fica no Ensino M—dio</h4>
 
 
-                <p>Programa de iniciação científica para estudantes do ensino médio das redes pública e privada, em parceria com universidades e institutos de pesquisa. Meta: 5.000 bolsistas/ano até 2028.</p>
+                <p>Programa de iniciação cient—fica para estudantes do ensino médio das redes pública e privada, em parceria com universidades e institutos de pesquisa. Meta: 5.000 bolsistas/ano até 2028.</p>
 
 
               </div>
@@ -892,13 +892,13 @@
             <div class="metric-card">
 
 
-              <div class="metric-label">Meta IDEB Ensino Médio 2035</div>
+              <div class="metric-label">Meta IDEB Ensino M—dio 2035</div>
 
 
               <div><span class="metric-value">6,0</span></div>
 
 
-              <div class="metric-description">Atual: 4,2 — crescimento necessário: +0,18/ano</div>
+              <div class="metric-description">Atual: 4,2 — crescimento necess—rio: +0,18/ano</div>
 
 
             </div>
@@ -922,7 +922,7 @@
             <div class="metric-card">
 
 
-              <div class="metric-label">Matrículas Técnicas 2035</div>
+              <div class="metric-label">Matrículas T—cnicas 2035</div>
 
 
               <div><span class="metric-value">600</span><span class="metric-unit">mil</span></div>
@@ -943,7 +943,7 @@
               <div><span class="metric-value">7</span><span class="metric-unit">%</span></div>
 
 
-              <div class="metric-description">Meta 2035 — referência: Finlândia 6,8%</div>
+              <div class="metric-description">Meta 2035 — referência: Finl—ndia 6,8%</div>
 
 
             </div>
@@ -967,7 +967,7 @@
             <div class="metric-card">
 
 
-              <div class="metric-label">Professores com pás-graduação</div>
+              <div class="metric-label">Professores com p—s-graduação</div>
 
 
               <div><span class="metric-value">60</span><span class="metric-unit">%</span></div>
@@ -994,28 +994,28 @@
           <div class="section-label">10</div>
 
 
-          <h2>Questões para Debate Público</h2>
+          <h2>Questões para Debate P—blico</h2>
 
 
           <ol>
 
 
-            <li>Como criar incentivos reais para que professores talentosos escolham escolas nas regiões mais vulneráveis do Estado?</li>
+            <li>Como criar incentivos reais para que professores talentosos escolham escolas nas regiões mais vulner—veis do Estado?</li>
 
 
-            <li>O modelo de escola em tempo integral — viável para toda a rede estadual, ou deve ser priorizado em regiões específicas?</li>
+            <li>O modelo de escola em tempo integral — vi—vel para toda a rede estadual, ou deve ser priorizado em regiões específicas?</li>
 
 
             <li>Como estruturar parcerias público-privadas na educação técnica sem comprometer a qualidade e o acesso universal?</li>
 
 
-            <li>Qual deve ser o papel das universidades federais mineiras no desenvolvimento econômico regional dos municípios onde estão instaladas?</li>
+            <li>Qual deve ser o papel das universidades federais mineiras no desenvolvimento econômico regional dos municípios onde est—o instaladas?</li>
 
 
-            <li>Como combater a evasão escolar no ensino médio sem perder o rigor pedagógico?</li>
+            <li>Como combater a evasão escolar no ensino médio sem perder o rigor pedag—gico?</li>
 
 
-            <li>— possível adaptar o sistema dual alemão de formação técnica ao contexto social e cultural mineiro?</li>
+            <li>— poss—vel adaptar o sistema dual alem—o de formação técnica ao contexto social e cultural mineiro?</li>
 
 
             <li>Como usar tecnologia educacional para reduzir a desigualdade de qualidade entre escolas urbanas e rurais?</li>
@@ -1039,16 +1039,16 @@
           <div class="section-label">11</div>
 
 
-          <h2>Referências Bibliográficas</h2>
+          <h2>Referências Bibliogr—ficas</h2>
 
 
           <div class="reference-list">
 
 
-            <div class="reference-item"><span class="reference-num">01</span><span>INEP. <em>Índice de Desenvolvimento da Educação Básica (IDEB) — Resultados 2023</em>. Brasília: MEC/INEP, 2023.</span></div>
+            <div class="reference-item"><span class="reference-num">01</span><span>INEP. <em>Índice de Desenvolvimento da Educação B—sica (IDEB) — Resultados 2023</em>. Brasília: MEC/INEP, 2023.</span></div>
 
 
-            <div class="reference-item"><span class="reference-num">02</span><span>FJP — Fundação João Pinheiro. <em>Atlas do Desenvolvimento Humano em Minas Gerais</em>. Belo Horizonte: FJP, 2022.</span></div>
+            <div class="reference-item"><span class="reference-num">02</span><span>FJP — Fundação Jo—o Pinheiro. <em>Atlas do Desenvolvimento Humano em Minas Gerais</em>. Belo Horizonte: FJP, 2022.</span></div>
 
 
             <div class="reference-item"><span class="reference-num">03</span><span>OCDE. <em>Education at a Glance 2023: OECD Indicators</em>. Paris: OECD Publishing, 2023.</span></div>
@@ -1066,7 +1066,7 @@
             <div class="reference-item"><span class="reference-num">07</span><span>PISA 2022: <em>Results in Focus — OECD Programme for International Student Assessment</em>. Paris: OECD, 2023.</span></div>
 
 
-            <div class="reference-item"><span class="reference-num">08</span><span>TODOS PELA EDUCA——?O. <em>Anuário Brasileiro da Educação Básica 2023</em>. São Paulo: Moderna, 2023.</span></div>
+            <div class="reference-item"><span class="reference-num">08</span><span>TODOS PELA EDUCA——?O. <em>Anu—rio Brasileiro da Educação B—sica 2023</em>. São Paulo: Moderna, 2023.</span></div>
 
 
           </div>
