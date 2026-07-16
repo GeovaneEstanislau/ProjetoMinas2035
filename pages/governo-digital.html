@@ -1,1419 +1,1094 @@
-?<!DOCTYPE html>
-
-
+?
+<!DOCTYPE html>
 <html lang="pt-BR">
-
-
-<head>
-
-
-  <meta charset="UTF-8" />
-
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />  <meta name="referrer" content="strict-origin-when-cross-origin" />
-
-
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' https://unpkg.com 'unsafe-inline'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https:; object-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self';" />
-
-
-  <meta name="description" content="Centro de Governo Digital e Inovação Pública — Estratégias para transformar Minas Gerais em referência nacional em serviços digitais, transparência e gestão eficiente do Estado." />
-
-
-  <title>Governo Digital — Projeto Minas 2035</title>
-
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-
-
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-
-  <link rel="stylesheet" href="../css/variables.css" />
-
-
-  <link rel="stylesheet" href="../css/style.css" />
-
-
-  <link rel="stylesheet" href="../css/components.css" />
-
-
-  <link rel="stylesheet" href="../css/animations.css" />
-
-
-  <link rel="stylesheet" href="../css/responsive.css" />
-
-
-  <link rel="stylesheet" href="../css/pages.css" />
-
-
-  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
-
-
-  <script defer src="../js/app.js"></script>
-
-
-  <script defer src="../js/menu.js"></script>
-
-
-  <script defer src="../js/animations.js"></script>
-
-
-  <script defer src="../js/counters.js"></script>
-
-
-</head>
-
-
-<body>
-
-
-
-
-
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="strict-origin-when-cross-origin" name="referrer"/>
+  <meta content="default-src 'self' https:; script-src 'self' https://unpkg.com 'unsafe-inline'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https:; object-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self';" http-equiv="Content-Security-Policy"/>
+  <meta content="Centro de Governo Digital e Inovação Pública — Estratégias para transformar Minas Gerais em referência nacional em serviços digitais, transparência e gestão eficiente do Estado." name="description"/>
+  <title>
+   Governo Digital — Projeto Minas 2035
+  </title>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="../css/variables.css" rel="stylesheet"/>
+  <link href="../css/style.css" rel="stylesheet"/>
+  <link href="../css/components.css" rel="stylesheet"/>
+  <link href="../css/animations.css" rel="stylesheet"/>
+  <link href="../css/responsive.css" rel="stylesheet"/>
+  <link href="../css/pages.css" rel="stylesheet"/>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js">
+  </script>
+  <script defer="" src="../js/app.js">
+  </script>
+  <script defer="" src="../js/menu.js">
+  </script>
+  <script defer="" src="../js/animations.js">
+  </script>
+  <script defer="" src="../js/counters.js">
+  </script>
+ </head>
+ <body>
   <header class="navbar" id="navbar">
-
-
-    <div class="container">
-
-
-      <a href="../index.html" class="navbar-brand">
-
-
-        <svg class="navbar-logo" viewBox="0 0 36 36" fill="none">
-
-
-          <rect width="36" height="36" rx="8" fill="url(#grad-nav-gov)"/>
-
-
-          <path d="M10 24 L10 13 L18 20 L26 13 L26 24" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-
-
-          <defs><linearGradient id="grad-nav-gov" x1="0" y1="0" x2="36" y2="36" gradientUnits="userSpaceOnUse"><stop stop-color="#00E5FF"/><stop offset="1" stop-color="#4F46E5"/></linearGradient></defs>
-
-
-        </svg>
-
-
-        <span class="navbar-name">Minas <span>2035</span></span>
-
-
-      </a>
-
-
-      <nav class="navbar-nav" id="main-nav">
-
-
-        <a href="../index.html#sobre">O Projeto</a>
-
-
-        <a href="../index.html#areas">Áreas</a>
-
-
-        <a href="../index.html#principios">Princípios</a>
-
-
-        <a href="../indicadores.html">Indicadores</a>
-
-
-        <a href="../manifesto.html">Manifesto</a>
-
-
-      </nav>
-
-
-      <div class="navbar-cta">
-
-
-        <a href="../participar.html" class="btn btn-outline">Participar</a>
-
-
-        <a href="../index.html#areas" class="btn btn-primary">Explorar</a>
-
-
-      </div>
-
-
-      <button class="hamburger" id="hamburger-btn" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav">
-
-
-        <span></span><span></span><span></span>
-
-
-      </button>
-
-
+   <div class="container">
+    <a class="navbar-brand" href="../index.html">
+     <svg class="navbar-logo" fill="none" viewbox="0 0 36 36">
+      <rect fill="url(#grad-nav-gov)" height="36" rx="8" width="36">
+      </rect>
+      <path d="M10 24 L10 13 L18 20 L26 13 L26 24" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2">
+      </path>
+      <defs>
+       <lineargradient gradientunits="userSpaceOnUse" id="grad-nav-gov" x1="0" x2="36" y1="0" y2="36">
+        <stop stop-color="#00E5FF">
+        </stop>
+        <stop offset="1" stop-color="#4F46E5">
+        </stop>
+       </lineargradient>
+      </defs>
+     </svg>
+     <span class="navbar-name">
+      Minas
+      <span>
+       2035
+      </span>
+     </span>
+    </a>
+    <nav class="navbar-nav" id="main-nav">
+     <a href="../index.html#sobre">
+      O Projeto
+     </a>
+     <a href="../index.html#areas">
+      Áreas
+     </a>
+     <a href="../index.html#principios">
+      Princípios
+     </a>
+     <a href="../indicadores.html">
+      Indicadores
+     </a>
+     <a href="../manifesto.html">
+      Manifesto
+     </a>
+    </nav>
+    <div class="navbar-cta">
+     <a class="btn btn-outline" href="../participar.html">
+      Participar
+     </a>
+     <a class="btn btn-primary" href="../index.html#areas">
+      Explorar
+     </a>
     </div>
-
-
+    <button aria-controls="main-nav" aria-expanded="false" aria-label="Abrir menu" class="hamburger" id="hamburger-btn">
+     <span>
+     </span>
+     <span>
+     </span>
+     <span>
+     </span>
+    </button>
+   </div>
   </header>
-
-
-
-
-
   <!-- PAGE HERO -->
-
-
   <section class="page-hero">
-
-
-    <div class="page-hero-grid"></div>
-
-
-    <div class="container">
-
-
-      <div class="page-hero-content fade-in-section">
-
-
-        <div class="breadcrumb">
-
-
-          <a href="../index.html">Início</a>
-
-
-          <span class="breadcrumb-sep">/</span>
-
-
-          <a href="../index.html#areas">Áreas</a>
-
-
-          <span class="breadcrumb-sep">/</span>
-
-
-          <span class="breadcrumb-current">Governo Digital</span>
-
-
-        </div>
-
-
-        <div class="section-label">Centro Temático</div>
-
-
-        <h1>Centro de Governo Digital e Inovação Pública</h1>
-
-
-        <p class="page-subtitle">
-
-
-          Transformar Minas Gerais em referência nacional em serviços digitais, transparência radical e
+   <div class="page-hero-grid">
+   </div>
+   <div class="container">
+    <div class="page-hero-content fade-in-section">
+     <div class="breadcrumb">
+      <a href="../index.html">
+       Início
+      </a>
+      <span class="breadcrumb-sep">
+       /
+      </span>
+      <a href="../index.html#areas">
+       Áreas
+      </a>
+      <span class="breadcrumb-sep">
+       /
+      </span>
+      <span class="breadcrumb-current">
+       Governo Digital
+      </span>
+     </div>
+     <div class="section-label">
+      Centro Temático
+     </div>
+     <h1>
+      Centro de Governo Digital e Inovação Pública
+     </h1>
+     <p class="page-subtitle">
+      Transformar Minas Gerais em referência nacional em serviços digitais, transparência radical e
 
 
           gestão pública orientada a dados e resultados até 2035.
-
-
-        </p>
-
-
-        <div class="page-stats">
-
-
-          <div class="page-stat">
-
-
-            <span class="page-stat-value">850+</span>
-
-
-            <span class="page-stat-label">serviços digitalizados</span>
-
-
-          </div>
-
-
-          <div class="page-stat-divider"></div>
-
-
-          <div class="page-stat">
-
-
-            <span class="page-stat-value">15M</span>
-
-
-            <span class="page-stat-label">usuários de serviços online</span>
-
-
-          </div>
-
-
-          <div class="page-stat-divider"></div>
-
-
-          <div class="page-stat">
-
-
-            <span class="page-stat-value">4º</span>
-
-
-            <span class="page-stat-label">gov. digital mais avançado BR</span>
-
-
-          </div>
-
-
-        </div>
-
-
-        <div class="tag-list" style="margin-top: var(--sp-6);">
-
-
-          <span class="tag">Gov.br</span>
-
-
-          <span class="tag">Open Data</span>
-
-
-          <span class="tag">IA Pública</span>
-
-
-          <span class="tag">Transparência</span>
-
-
-          <span class="tag">Interoperabilidade</span>
-
-
-          <span class="tag">Blockchain</span>
-
-
-        </div>
-
-
+     </p>
+     <div class="page-stats">
+      <div class="page-stat">
+       <span class="page-stat-value">
+        850+
+       </span>
+       <span class="page-stat-label">
+        serviços digitalizados
+       </span>
       </div>
-
-
+      <div class="page-stat-divider">
+      </div>
+      <div class="page-stat">
+       <span class="page-stat-value">
+        15M
+       </span>
+       <span class="page-stat-label">
+        usuários de serviços online
+       </span>
+      </div>
+      <div class="page-stat-divider">
+      </div>
+      <div class="page-stat">
+       <span class="page-stat-value">
+        4º
+       </span>
+       <span class="page-stat-label">
+        gov. digital mais avançado BR
+       </span>
+      </div>
+     </div>
+     <div class="tag-list" style="margin-top: var(--sp-6);">
+      <span class="tag">
+       Gov.br
+      </span>
+      <span class="tag">
+       Open Data
+      </span>
+      <span class="tag">
+       IA Pública
+      </span>
+      <span class="tag">
+       Transparência
+      </span>
+      <span class="tag">
+       Interoperabilidade
+      </span>
+      <span class="tag">
+       Blockchain
+      </span>
+     </div>
     </div>
-
-
+   </div>
   </section>
-
-
-
-
-
   <!-- MAIN -->
-
-
   <div class="container">
-
-
-    <div class="page-layout">
-
-
-
-
-
-      <!-- TOC -->
-
-
-      <aside>
-
-
-        <nav class="toc" aria-label="Índice do conteúdo">
-
-
-          <div class="toc-title">Neste Centro</div>
-
-
-          <ul class="toc-list">
-
-
-            <li><a href="#resumo">01 — Resumo Executivo</a></li>
-
-
-            <li><a href="#situacao">02 — Situação Atual</a></li>
-
-
-            <li><a href="#desafios">03 — Desafios Estruturais</a></li>
-
-
-            <li><a href="#oportunidades">04 — Oportunidades</a></li>
-
-
-            <li><a href="#benchmarking">05 — Benchmarking Internacional</a></li>
-
-
-            <li><a href="#objetivos">06 — Objetivos 2035</a></li>
-
-
-            <li><a href="#metas">07 — Metas 2050</a></li>
-
-
-            <li><a href="#projetos">08 — Projetos Estratégicos</a></li>
-
-
-            <li><a href="#indicadores">09 — Indicadores-Chave</a></li>
-
-
-            <li><a href="#debate">10 — Questões para Debate</a></li>
-
-
-            <li><a href="#referencias">11 — Referências</a></li>
-
-
-          </ul>
-
-
-        </nav>
-
-
-      </aside>
-
-
-
-
-
-      <!-- ARTICLE -->
-
-
-      <article class="article-content">
-
-
-
-
-
-        <section id="resumo" class="content-section fade-in-section">
-
-
-          <div class="section-label">01</div>
-
-
-          <h2>Resumo Executivo</h2>
-
-
-          <p>A transformação digital do Estado — uma das alavancas mais poderosas para melhorar a qualidade dos serviços públicos, reduzir custos operacionais, combater a corrupção e ampliar o acesso dos cidadãos a direitos e benefícios. Minas Gerais, com sua escala — 21 milhões de habitantes, 853 municípios e mais de 400.000 servidores públicos estaduais e municipais — representa tanto um desafio quanto uma oportunidade singular de modernização institucional.</p>
-
-
-          <p>O Estado avanãou significativamente nos —ltimos anos, com a Secretaria de Estado de Planejamento e Gestão (SEPLAG) liderando iniciativas de desburocratização, o Portal de Serviços MG (mg.gov.br), e o uso incipiente de dados para políticas públicas. Contudo, a transformação digital governamental mineira ainda — fragmentada, com sistemas legados incompatéveis, baixa interoperabilidade entre —órgãos, e prestação de serviços que ainda exige presença física em grande parte dos casos.</p>
-
-
-          <p>O Projeto Minas 2035 propõe uma agenda de governo digital fundamentada em quatro pilares: digitalização total dos serviços públicos, interoperabilidade plena entre sistemas, uso de inteligência artificial para otimização e previsão, e radical transparência com dados abertos por padrão.</p>
-
-
-          <div class="quote-block">
-
-
-            <blockquote>"O governo digital não — sobre tecnologia — — sobre redesenhar como o Estado se relaciona com os cidadãos, com mais eficiência, mais transparência e mais humanidade."</blockquote>
-
-
-            <cite>— OCDE, Digital Government Review, 2023</cite>
-
-
-          </div>
-
-
-        </section>
-
-
-
-
-
-        <section id="situacao" class="content-section fade-in-section">
-
-
-          <div class="section-label">02</div>
-
-
-          <h2>Situação Atual de Minas Gerais</h2>
-
-
-          <p>Minas Gerais dispõe de uma estrutura crescente de governo digital. O portal mg.gov.br concentra mais de 850 serviços disponíveis online, e a Prodemge (Empresa de Tecnologia e Informação do Estado) opera a infraestrutura tecnológica central do governo estadual. A SEPLAG implementou o Programa Minas Gerais Digital, que prioriza a digitalização e a desburocratização dos serviços mais demandados pela população.</p>
-
-
-          <p>No campo da transparência, o Estado mantêm o Portal da Transparência de MG, considerado referência nacional, com dados sobre execução or—amentária, contratos, servidores e licitações disponíveis em tempo real. A Lei de Acesso — Informação — cumprida com —ndices acima da média nacional.</p>
-
-
-          <p>Entretanto, a fragmentação sistêmica — o maior obstáculo: existem mais de 600 sistemas de informação isolados no governo estadual, muitos com décadas de obsolescência, incapazes de se comunicar entre si. O resultado — redundância de dados, lentidão nos processos e incapacidade de gerar inteligência analítica integrada para a tomada de decisão.</p>
-
-
-
-
-
-          <div class="metric-grid">
-
-
-            <div class="metric-card">
-
-
-              <div class="metric-label">Serviços digitalizados</div>
-
-
-              <div><span class="metric-value">850</span><span class="metric-unit">+</span></div>
-
-
-              <div class="metric-description">No portal mg.gov.br — meta 2035: 100% dos serviços</div>
-
-
-            </div>
-
-
-            <div class="metric-card">
-
-
-              <div class="metric-label">Sistemas legados</div>
-
-
-              <div><span class="metric-value">600</span><span class="metric-unit">+</span></div>
-
-
-              <div class="metric-description">Sistemas isolados no governo estadual</div>
-
-
-            </div>
-
-
-            <div class="metric-card">
-
-
-              <div class="metric-label">Satisfação cidadão</div>
-
-
-              <div><span class="metric-value">58</span><span class="metric-unit">%</span></div>
-
-
-              <div class="metric-description">Usuários satisfeitos com serviços digitais — meta: 90%</div>
-
-
-            </div>
-
-
-            <div class="metric-card">
-
-
-              <div class="metric-label">Servidores capacitados em digital</div>
-
-
-              <div><span class="metric-value">23</span><span class="metric-unit">%</span></div>
-
-
-              <div class="metric-description">Do total de servidores estaduais — meta: 80%</div>
-
-
-            </div>
-
-
-            <div class="metric-card">
-
-
-              <div class="metric-label">Datasets abertos</div>
-
-
-              <div><span class="metric-value">1.200</span><span class="metric-unit">+</span></div>
-
-
-              <div class="metric-description">No Portal de Dados Abertos MG — meta: 5.000+</div>
-
-
-            </div>
-
-
-            <div class="metric-card">
-
-
-              <div class="metric-label">Orçamento TI/Gestão</div>
-
-
-              <div><span class="metric-value">0,8</span><span class="metric-unit">%</span></div>
-
-
-              <div class="metric-description">Do orçamento total — referência OCDE: 2,5%</div>
-
-
-            </div>
-
-
-          </div>
-
-
-        </section>
-
-
-
-
-
-        <section id="desafios" class="content-section fade-in-section">
-
-
-          <div class="section-label">03</div>
-
-
-          <h2>Desafios Estruturais</h2>
-
-
-          <ul>
-
-
-            <li>
-
-
-              <strong>Fragmentação sistêmica e legados tecnológicos</strong> — Mais de 600 sistemas isolados, muitos com 20 ou mais anos, impede a integração de dados, gera duplicação de esforços e torna inviável a automação de processos. A migração desses sistemas — custosa e politicamente complexa, pois envolve mudanças profundas nos fluxos de trabalho das secretarias.
-
-
-            </li>
-
-
-            <li>
-
-
-              <strong>Deficit de competências digitais no setor público</strong> — Menos de 25% dos servidores estaduais possuem formação mínima em ferramentas digitais avançadas. A remuneração do governo não compete com o setor privado para atrair e reter profissionais de TI, ciência de dados e design de serviços.
-
-
-            </li>
-
-
-            <li>
-
-
-              <strong>Exclusão digital dos cidadãos</strong> — Cerca de 30% da população mineira não tem acesso regular — internet banda larga, concentrados no interior e nas populações de baixa renda. Digitalizar serviços sem enfrentar a exclusão digital pode aprofundar desigualdades.
-
-
-            </li>
-
-
-            <li>
-
-
-              <strong>Resistência institucional — mudança</strong> — A transformação digital requer redesenho de processos e mudança cultural profunda. Estruturas burocráticas consolidadas e corporativismos internos frequentemente bloqueiam reformas mesmo quando tecnicamente viáveis.
-
-
-            </li>
-
-
-            <li>
-
-
-              <strong>Cibersegurança inadequada</strong> — A infraestrutura de segurança cibernética do Estado — insuficiente para o volume de dados sensíveis gerenciados. Ataques de ransomware a governos estaduais brasileiros nos —ltimos anos evidenciam a vulnerabilidade estrutural.
-
-
-            </li>
-
-
-          </ul>
-
-
-          <div class="callout callout-warning">
-
-
-            <span class="callout-icon"><i data-lucide="alert-triangle"></i></span>
-
-
-            <p><strong>Alerta crático:</strong> A digitalização fragmentada — digitalizar processos ruins sem redesenh—-los — — a principal armadilha. Governos que apenas "informatizam" burocracia ineficiente criam sistemas digitais igualmente ruins, perdendo a oportunidade de transformação real.</p>
-
-
-          </div>
-
-
-        </section>
-
-
-
-
-
-        <section id="oportunidades" class="content-section fade-in-section">
-
-
-          <div class="section-label">04</div>
-
-
-          <h2>Oportunidades</h2>
-
-
-          <ul>
-
-
-            <li>
-
-
-              <strong>Inteligência artificial para políticas públicas</strong> — IA pode revolucionar a previsão de demanda de serviços, detecção de fraudes previdenciárias, triagem de processos administrativos, manutenção preditiva de infraestrutura e personalização de serviços sociais. O custo decrescente das ferramentas de IA abre espação para adoção em escala.
-
-
-            </li>
-
-
-            <li>
-
-
-              <strong>Plataforma digital —nica (MG Gov)</strong> — Consolidar todos os serviços em uma plataforma —nica, com identidade digital unificada, eliminaria a necessidade de múltiplos cadastros e redramiria drasticamente o tempo médio de resolução de demandas dos cidadãos.
-
-
-            </li>
-
-
-            <li>
-
-
-              <strong>Open Government e dados abertos como ativo</strong> — Dados governamentais abertos alimentam ecossistemas de startups govtech, pesquisa acadêmica e jornalismo investigativo. Estados que abrem seus dados criam externalidades positivas que superam em muito o custo da abertura.
-
-
-            </li>
-
-
-            <li>
-
-
-              <strong>Compras públicas digitais e inteligentes</strong> — Modernizar o sistema de compras governamentais com leilões reversos eletrônicos, inteligência de preços e contratos inteligentes pode gerar economias de 15-20% no orçamento de compras anuais.
-
-
-            </li>
-
-
-            <li>
-
-
-              <strong>Blockchain para registros públicos</strong> — Registro de propriedade imobiliária, certidões e contratos em blockchain pode eliminar fraudes, reduzir custos cartoriais e agilizar transações, beneficiando especialmente populações de baixa renda sem acesso a serviços cartoriais tradicionais.
-
-
-            </li>
-
-
-          </ul>
-
-
-        </section>
-
-
-
-
-
-        <section id="benchmarking" class="content-section fade-in-section">
-
-
-          <div class="section-label">05</div>
-
-
-          <h2>Benchmarking Internacional</h2>
-
-
-          <p>Países e regiões líderes em governo digital oferecem modelos concretos de transformação que Minas Gerais pode adaptar — sua realidade.</p>
-
-
-          <table class="bench-table">
-
-
-            <thead>
-
-
-              <tr>
-
-
-                <th>País / Região</th>
-
-
-                <th>Índice Gov. Digital</th>
-
-
-                <th>Estratégia-chave</th>
-
-
-                <th>Lição para Minas</th>
-
-
-              </tr>
-
-
-            </thead>
-
-
-            <tbody>
-
-
-              <tr>
-
-
-                <td class="td-highlight">Estênia</td>
-
-
-                <td class="td-accent">1º mundial</td>
-
-
-                <td>X-Road: plataforma de interoperabilidade que conecta 100% dos sistemas do governo. Identidade digital —nica (e-ID) para todos os serviços.</td>
-
-
-                <td>Interoperabilidade como fundação — sem ela, nenhuma digitalização — efetiva.</td>
-
-
-              </tr>
-
-
-              <tr>
-
-
-                <td class="td-highlight">Singapura</td>
-
-
-                <td class="td-accent">2º OCDE</td>
-
-
-                <td>Smart Nation: integração de dados em tempo real, GovTech como agência permanente de inovação pública, serviços proativos (cidadão não precisa solicitar — o estado entrega).</td>
-
-
-                <td>Criação de agência de inovação pública dedicada, separada da TI convencional.</td>
-
-
-              </tr>
-
-
-              <tr>
-
-
-                <td class="td-highlight">Dinamarca</td>
-
-
-                <td class="td-accent">Top 5 UE</td>
-
-
-                <td>Digital First: todos os serviços nascidos digitais. Parceria público-privada para infraestrutura de identidade. Governo como plataforma aberta para inovadores.</td>
-
-
-                <td>Política de "digital por padrão" com isenções apenas para populações vulneráveis.</td>
-
-
-              </tr>
-
-
-              <tr>
-
-
-                <td class="td-highlight">São Paulo (Brasil)</td>
-
-
-                <td class="td-accent">1º BR</td>
-
-
-                <td>SP.gov: portal unificado, identidade digital integrada — CNH, simplificação de 800+ serviços. Parceria com SERPRO e empresas de tecnologia nacionais.</td>
-
-
-                <td>A escala de MG — comparável a SP — o modelo de portal unificado — diretamente replicável.</td>
-
-
-              </tr>
-
-
-            </tbody>
-
-
-          </table>
-
-
-        </section>
-
-
-
-
-
-        <section id="objetivos" class="content-section fade-in-section">
-
-
-          <div class="section-label">06</div>
-
-
-          <h2>Objetivos 2035</h2>
-
-
-          <div class="timeline">
-
-
-            <div class="timeline-item">
-
-
-              <div class="timeline-dot"></div>
-
-
-              <div class="timeline-year">2026?2027</div>
-
-
-              <div class="timeline-title">Fundação: interoperabilidade e identidade digital</div>
-
-
-              <div class="timeline-desc">Implantação da plataforma de interoperabilidade MG-Connect, integração dos 20 sistemas mais cráticos do governo, e lançamento da Identidade Digital Mineira vinculada ao CPF para acesso unificado a todos os serviços estaduais.</div>
-
-
-            </div>
-
-
-            <div class="timeline-item">
-
-
-              <div class="timeline-dot"></div>
-
-
-              <div class="timeline-year">2027?2030</div>
-
-
-              <div class="timeline-title">Digitalização total e redesenho de serviços</div>
-
-
-              <div class="timeline-desc">100% dos serviços estaduais disponíveis no canal digital, com redesenho de processos orientado ao usuário (UX gov). Implementação de IA para triagem de demandas, detecção de fraudes e análise preditiva de políticas sociais.</div>
-
-
-            </div>
-
-
-            <div class="timeline-item">
-
-
-              <div class="timeline-dot"></div>
-
-
-              <div class="timeline-year">2030?2033</div>
-
-
-              <div class="timeline-title">Governo orientado a dados e serviços proativos</div>
-
-
-              <div class="timeline-desc">Lançamento do MG Data Lake: repositório integrado de dados governamentais para tomada de decisão baseada em evidências. Primeiros serviços proativos (benefícios entregues sem solicitação). Abertura máxima de dados públicos.</div>
-
-
-            </div>
-
-
-            <div class="timeline-item">
-
-
-              <div class="timeline-dot"></div>
-
-
-              <div class="timeline-year">2033?2035</div>
-
-
-              <div class="timeline-title">Minas como referência nacional em govtech</div>
-
-
-              <div class="timeline-desc">Minas Gerais reconhecido como o Estado mais avançado em governo digital do Brasil. Exportação do modelo de interoperabilidade para outros estados. Hub de empresas govtech sediadas em BH com produtos para gestão pública.</div>
-
-
-            </div>
-
-
-          </div>
-
-
-        </section>
-
-
-
-
-
-        <section id="metas" class="content-section fade-in-section">
-
-
-          <div class="section-label">07</div>
-
-
-          <h2>Metas 2050</h2>
-
-
-          <ol>
-
-
-            <li>100% dos serviços públicos estaduais disponíveis digitalmente, com tempo médio de resolução inferior a 24 horas para serviços não presenciais.</li>
-
-
-            <li>Zero burocracia redundante: nenhum cidadão precisar— fornecer a mesma informação ao governo mais de uma vez (princípio "once-only").</li>
-
-
-            <li>Orçamento de TI e inovação pública acima de 2% do orçamento total do Estado, alinhado ao padrão OCDE.</li>
-
-
-            <li>Minas Gerais no top-3 mundial de transparência or—amentária e governamental, com dados abertos em tempo real e auditáveis por qualquer cidadão.</li>
-
-
-            <li>Ecossistema de 200+ empresas govtech sediadas em Minas, exportando soluções para outros estados e países da América Latina.</li>
-
-
-            <li>Redução de 30% nos custos operacionais do governo estadual, viabilizando reinvestimento em serviços essenciais.</li>
-
-
-          </ol>
-
-
-        </section>
-
-
-
-
-
-        <section id="projetos" class="content-section fade-in-section">
-
-
-          <div class="section-label">08</div>
-
-
-          <h2>Projetos Estratégicos</h2>
-
-
-          <div style="display: flex; flex-direction: column; gap: var(--sp-4);">
-
-
-            <div class="project-card">
-
-
-              <div>
-
-
-                <h4>MG-Connect: Plataforma de Interoperabilidade</h4>
-
-
-                <p>Barramento de dados inspirado no X-Road estoniano que conecta todos os sistemas do governo estadual, eliminando silos de informação e permitindo que serviços compartilhem dados em tempo real com segurança e rastreabilidade. Fase 1: 50 sistemas integrados até 2027.</p>
-
-
-              </div>
-
-
-              <span class="project-status status-active">Em desenvolvimento</span>
-
-
-            </div>
-
-
-            <div class="project-card">
-
-
-              <div>
-
-
-                <h4>IA no SUS-MG: Diagnóstico e Triagem Inteligente</h4>
-
-
-                <p>Implementação de algoritmos de IA para triagem de sintomas, priorização de atendimentos e detecção precoce de epidemias nas unidades básicas de saúde. Projeto piloto em Belo Horizonte com expansão para cidades de médio porte.</p>
-
-
-              </div>
-
-
-              <span class="project-status status-active">Piloto ativo</span>
-
-
-            </div>
-
-
-            <div class="project-card">
-
-
-              <div>
-
-
-                <h4>Portal MG Gov: Plataforma —nica de Serviços</h4>
-
-
-                <p>Consolidação de todos os serviços estaduais em um —nico portal com design centrado no usuário, integração com Gov.br federal, identidade digital unificada e suporte multicanal (web, mobile, assistente de voz e centrais telefônicas integradas).</p>
-
-
-              </div>
-
-
-              <span class="project-status status-proposal">Em licitação</span>
-
-
-            </div>
-
-
-            <div class="project-card">
-
-
-              <div>
-
-
-                <h4>MG GovTech Hub</h4>
-
-
-                <p>Programa de inovação aberta que convida startups a desenvolver soluções para desafios específicos do governo estadual, com contratos de aquisição simplificados, sandbox regulatéria e acesso a dados governamentais anonimizados para desenvolvimento de produtos.</p>
-
-
-              </div>
-
-
-              <span class="project-status status-study">Em estruturação</span>
-
-
-            </div>
-
-
-          </div>
-
-
-        </section>
-
-
-
-
-
-        <section id="indicadores" class="content-section fade-in-section">
-
-
-          <div class="section-label">09</div>
-
-
-          <h2>Indicadores-Chave (KPIs)</h2>
-
-
-          <div class="metric-grid">
-
-
-            <div class="metric-card">
-
-
-              <div class="metric-label">Serviços 100% digitais</div>
-
-
-              <div><span class="metric-value">100</span><span class="metric-unit">%</span></div>
-
-
-              <div class="metric-description">Meta 2035 — atual: 42% dos serviços totalmente digitais</div>
-
-
-            </div>
-
-
-            <div class="metric-card">
-
-
-              <div class="metric-label">Satisfação do cidadão</div>
-
-
-              <div><span class="metric-value">90</span><span class="metric-unit">%</span></div>
-
-
-              <div class="metric-description">Meta NPS gov. digital — atual: 58% satisfação</div>
-
-
-            </div>
-
-
-            <div class="metric-card">
-
-
-              <div class="metric-label">Tempo médio de resolução</div>
-
-
-              <div><span class="metric-value">&lt; 24</span><span class="metric-unit">h</span></div>
-
-
-              <div class="metric-description">Para serviços digitais — atual: 5,2 dias —teis médios</div>
-
-
-            </div>
-
-
-            <div class="metric-card">
-
-
-              <div class="metric-label">Sistemas integrados</div>
-
-
-              <div><span class="metric-value">600</span><span class="metric-unit">+</span></div>
-
-
-              <div class="metric-description">Meta interoperabilidade total — atual: &lt;50 integrados</div>
-
-
-            </div>
-
-
-            <div class="metric-card">
-
-
-              <div class="metric-label">Datasets abertos</div>
-
-
-              <div><span class="metric-value">5.000</span><span class="metric-unit">+</span></div>
-
-
-              <div class="metric-description">Meta 2035 de dados abertos — atual: 1.200</div>
-
-
-            </div>
-
-
-            <div class="metric-card">
-
-
-              <div class="metric-label">Economia em compras gov.</div>
-
-
-              <div><span class="metric-value">R$ 3</span><span class="metric-unit">bi</span></div>
-
-
-              <div class="metric-description">Economia estimada com compras inteligentes digitais</div>
-
-
-            </div>
-
-
-          </div>
-
-
-        </section>
-
-
-
-
-
-        <section id="debate" class="content-section fade-in-section">
-
-
-          <div class="section-label">10</div>
-
-
-          <h2>Questões para Debate Público</h2>
-
-
-          <ol>
-
-
-            <li>Como garantir que a digitalização dos serviços públicos não aprofunde a exclusão digital de populações de baixa renda, idosos e moradores do interior?</li>
-
-
-            <li>Qual o papel da Prodemge versus empresas privadas de tecnologia na infraestrutura digital do Estado Onde deve estar a soberania tecnológica governamental?</li>
-
-
-            <li>Como proteger os dados pessoais dos cidadãos mineiros em um ambiente de governo digital integrado, cumprindo a LGPD e além?</li>
-
-
-            <li>O governo digital deve ser construído internamente ou por parceria público-privada— Quais os riscos e benefícios de cada modelo?</li>
-
-
-            <li>Como criar uma cultura de inovação permanente no serviço público, superando a tendência de adotar tecnologia sem redesenhar processos?</li>
-
-
-            <li>Quais serviços devem permanecer com canal presencial obrigatério, mesmo em 2035 Quem decide isso?</li>
-
-
-            <li>Como usar dados governamentais abertos para combater corrupção e aumentar a responsabilização dos gestores públicos?</li>
-
-
-          </ol>
-
-
-          <div style="margin-top: var(--sp-8);">
-
-
-            <a href="../participar.html" class="btn btn-primary" id="btn-gov-debate">Participar do Debate</a>
-
-
-          </div>
-
-
-        </section>
-
-
-
-
-
-        <section id="referencias" class="content-section fade-in-section">
-
-
-          <div class="section-label">11</div>
-
-
-          <h2>Referências Bibliográficas</h2>
-
-
-          <div class="reference-list">
-
-
-            <div class="reference-item">
-
-
-              <span class="reference-num">01</span>
-
-
-              <span>OCDE. <em>Digital Government Review of Brazil: Towards the Digital Transformation of the Public Sector</em>. Paris: OECD Publishing, 2023.</span>
-
-
-            </div>
-
-
-            <div class="reference-item">
-
-
-              <span class="reference-num">02</span>
-
-
-              <span>GOVERNO DE MINAS GERAIS / SEPLAG. <em>Programa Minas Gerais Digital 2022?2026</em>. Belo Horizonte: SEPLAG, 2022.</span>
-
-
-            </div>
-
-
-            <div class="reference-item">
-
-
-              <span class="reference-num">03</span>
-
-
-              <span>EST—?NIA. <em>X-Road Architecture and Interoperability Framework</em>. Tallinn: RIA, 2023.</span>
-
-
-            </div>
-
-
-            <div class="reference-item">
-
-
-              <span class="reference-num">04</span>
-
-
-              <span>SINGAPURA. <em>Smart Nation 2025: The Next Lap</em>. Singapore: GovTech, 2023.</span>
-
-
-            </div>
-
-
-            <div class="reference-item">
-
-
-              <span class="reference-num">05</span>
-
-
-              <span>BRASIL. <em>Estratégia de Governo Digital 2024?2027</em>. Brasília: SEGES/MGI, 2024.</span>
-
-
-            </div>
-
-
-            <div class="reference-item">
-
-
-              <span class="reference-num">06</span>
-
-
-              <span>PRODEMGE. <em>Relatério de Gestão Tecnológica 2023</em>. Belo Horizonte: Prodemge, 2023.</span>
-
-
-            </div>
-
-
-            <div class="reference-item">
-
-
-              <span class="reference-num">07</span>
-
-
-              <span>WORLD BANK. <em>World Development Report 2021: Data for Better Lives</em>. Washington: World Bank Group, 2021.</span>
-
-
-            </div>
-
-
-            <div class="reference-item">
-
-
-              <span class="reference-num">08</span>
-
-
-              <span>FGV DIREITO SP. <em>Índice de Transparência dos Estados Brasileiros 2023</em>. São Paulo: FGV, 2023.</span>
-
-
-            </div>
-
-
-          </div>
-
-
-        </section>
-
-
-
-
-
-      </article>
-
-
-    </div>
-
-
-  </div>
-
-
-
-
-
-  <!-- FOOTER -->
-
-
-  <footer class="site-footer">
-
-
-    <div class="container">
-
-
-      <div class="footer-grid">
-
-
-        <div class="footer-brand">
-
-
-          <a href="../index.html" class="navbar-brand">
-
-
-            <svg class="navbar-logo" viewBox="0 0 36 36" fill="none">
-
-
-              <rect width="36" height="36" rx="8" fill="url(#grad-footer-gov)"/>
-
-
-              <path d="M10 24 L10 13 L18 20 L26 13 L26 24" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-
-
-              <defs><linearGradient id="grad-footer-gov" x1="0" y1="0" x2="36" y2="36" gradientUnits="userSpaceOnUse"><stop stop-color="#00E5FF"/><stop offset="1" stop-color="#4F46E5"/></linearGradient></defs>
-
-
-            </svg>
-
-
-            <span class="navbar-name">Minas <span>2035</span></span>
-
-
-          </a>
-
-
-          <p>Plataforma independente de estudos para o desenvolvimento de Minas Gerais com visão de longo prazo.</p>
-
-
+   <div class="page-layout">
+    <!-- TOC -->
+    <aside>
+     <nav aria-label="Índice do conteúdo" class="toc">
+      <div class="toc-title">
+       Neste Centro
+      </div>
+      <ul class="toc-list">
+       <li>
+        <a href="#resumo">
+         01 — Resumo Executivo
+        </a>
+       </li>
+       <li>
+        <a href="#situacao">
+         02 — Situação Atual
+        </a>
+       </li>
+       <li>
+        <a href="#desafios">
+         03 — Desafios Estruturais
+        </a>
+       </li>
+       <li>
+        <a href="#oportunidades">
+         04 — Oportunidades
+        </a>
+       </li>
+       <li>
+        <a href="#benchmarking">
+         05 — Benchmarking Internacional
+        </a>
+       </li>
+       <li>
+        <a href="#objetivos">
+         06 — Objetivos 2035
+        </a>
+       </li>
+       <li>
+        <a href="#metas">
+         07 — Metas 2050
+        </a>
+       </li>
+       <li>
+        <a href="#projetos">
+         08 — Projetos Estratégicos
+        </a>
+       </li>
+       <li>
+        <a href="#indicadores">
+         09 — Indicadores-Chave
+        </a>
+       </li>
+       <li>
+        <a href="#debate">
+         10 — Questões para Debate
+        </a>
+       </li>
+       <li>
+        <a href="#referencias">
+         11 — Referências
+        </a>
+       </li>
+      </ul>
+     </nav>
+    </aside>
+    <!-- ARTICLE -->
+    <article class="article-content">
+     <section class="content-section fade-in-section" id="resumo">
+      <div class="section-label">
+       01
+      </div>
+      <h2>
+       Resumo Executivo
+      </h2>
+      <p>
+       A transformação digital do Estado — uma das alavancas mais poderosas para melhorar a qualidade dos serviços públicos, reduzir custos operacionais, combater a corrupção e ampliar o acesso dos cidadãos a direitos e benefícios. Minas Gerais, com sua escala — 21 milhões de habitantes, 853 municípios e mais de 400.000 servidores públicos estaduais e municipais — representa tanto um desafio quanto uma oportunidade singular de modernização institucional.
+      </p>
+      <p>
+       O Estado avanãou significativamente nos ltimos anos, com a Secretaria de Estado de Planejamento e Gestão (SEPLAG) liderando iniciativas de desburocratização, o Portal de Serviços MG (mg.gov.br), e o uso incipiente de dados para políticas públicas. Contudo, a transformação digital governamental mineira ainda — fragmentada, com sistemas legados incompatéveis, baixa interoperabilidade entre órgãos, e prestação de serviços que ainda exige presença física em grande parte dos casos.
+      </p>
+      <p>
+       O Projeto Minas 2035 propõe uma agenda de governo digital fundamentada em quatro pilares: digitalização total dos serviços públicos, interoperabilidade plena entre sistemas, uso de inteligência artificial para otimização e previsão, e radical transparência com dados abertos por padrão.
+      </p>
+      <div class="quote-block">
+       <blockquote>
+        "O governo digital não — sobre tecnologia — — sobre redesenhar como o Estado se relaciona com os cidadãos, com mais eficiência, mais transparência e mais humanidade."
+       </blockquote>
+       <cite>
+        — OCDE, Digital Government Review, 2023
+       </cite>
+      </div>
+     </section>
+     <section class="content-section fade-in-section" id="situacao">
+      <div class="section-label">
+       02
+      </div>
+      <h2>
+       Situação Atual de Minas Gerais
+      </h2>
+      <p>
+       Minas Gerais dispõe de uma estrutura crescente de governo digital. O portal mg.gov.br concentra mais de 850 serviços disponíveis online, e a Prodemge (Empresa de Tecnologia e Informação do Estado) opera a infraestrutura tecnológica central do governo estadual. A SEPLAG implementou o Programa Minas Gerais Digital, que prioriza a digitalização e a desburocratização dos serviços mais demandados pela população.
+      </p>
+      <p>
+       No campo da transparência, o Estado mantêm o Portal da Transparência de MG, considerado referência nacional, com dados sobre execução oramentária, contratos, servidores e licitações disponíveis em tempo real. A Lei de Acesso — Informação — cumprida com ndices acima da média nacional.
+      </p>
+      <p>
+       Entretanto, a fragmentação sistêmica — o maior obstáculo: existem mais de 600 sistemas de informação isolados no governo estadual, muitos com décadas de obsolescência, incapazes de se comunicar entre si. O resultado — redundância de dados, lentidão nos processos e incapacidade de gerar inteligência analítica integrada para a tomada de decisão.
+      </p>
+      <div class="metric-grid">
+       <div class="metric-card">
+        <div class="metric-label">
+         Serviços digitalizados
         </div>
-
-
-        <div class="footer-col"><h5>Projeto</h5><ul><li><a href="../sobre.html">Sobre</a></li><li><a href="../manifesto.html">Manifesto</a></li><li><a href="../pilares.html">Pilares</a></li><li><a href="../participar.html">Participar</a></li></ul></div>
-
-
-        <div class="footer-col"><h5>Outras Áreas</h5><ul><li><a href="tecnologia.html">Tecnologia</a></li><li><a href="economia.html">Economia</a></li><li><a href="educacao.html">Educação</a></li><li><a href="energia.html">Energia</a></li></ul></div>
-
-
-        <div class="footer-col"><h5>Legal</h5><ul><li><a href="#">Política de privacidade</a></li><li><a href="#">Licença de uso</a></li><li><a href="#">Contato</a></li></ul></div>
-
-
+        <div>
+         <span class="metric-value">
+          850
+         </span>
+         <span class="metric-unit">
+          +
+         </span>
+        </div>
+        <div class="metric-description">
+         No portal mg.gov.br — meta 2035: 100% dos serviços
+        </div>
+       </div>
+       <div class="metric-card">
+        <div class="metric-label">
+         Sistemas legados
+        </div>
+        <div>
+         <span class="metric-value">
+          600
+         </span>
+         <span class="metric-unit">
+          +
+         </span>
+        </div>
+        <div class="metric-description">
+         Sistemas isolados no governo estadual
+        </div>
+       </div>
+       <div class="metric-card">
+        <div class="metric-label">
+         Satisfação cidadão
+        </div>
+        <div>
+         <span class="metric-value">
+          58
+         </span>
+         <span class="metric-unit">
+          %
+         </span>
+        </div>
+        <div class="metric-description">
+         Usuários satisfeitos com serviços digitais — meta: 90%
+        </div>
+       </div>
+       <div class="metric-card">
+        <div class="metric-label">
+         Servidores capacitados em digital
+        </div>
+        <div>
+         <span class="metric-value">
+          23
+         </span>
+         <span class="metric-unit">
+          %
+         </span>
+        </div>
+        <div class="metric-description">
+         Do total de servidores estaduais — meta: 80%
+        </div>
+       </div>
+       <div class="metric-card">
+        <div class="metric-label">
+         Datasets abertos
+        </div>
+        <div>
+         <span class="metric-value">
+          1.200
+         </span>
+         <span class="metric-unit">
+          +
+         </span>
+        </div>
+        <div class="metric-description">
+         No Portal de Dados Abertos MG — meta: 5.000+
+        </div>
+       </div>
+       <div class="metric-card">
+        <div class="metric-label">
+         Orçamento TI/Gestão
+        </div>
+        <div>
+         <span class="metric-value">
+          0,8
+         </span>
+         <span class="metric-unit">
+          %
+         </span>
+        </div>
+        <div class="metric-description">
+         Do orçamento total — referência OCDE: 2,5%
+        </div>
+       </div>
       </div>
-
-
-      <div class="footer-bottom">
-
-
-        <p>— 2026 Projeto Minas 2035. Fontes: OCDE, Prodemge, SEPLAG, Governo Digital BR.</p>
-
-
-        <a href="../manifesto.html">Manifesto —</a>
-
-
+     </section>
+     <section class="content-section fade-in-section" id="desafios">
+      <div class="section-label">
+       03
       </div>
-
-
+      <h2>
+       Desafios Estruturais
+      </h2>
+      <ul>
+       <li>
+        <strong>
+         Fragmentação sistêmica e legados tecnológicos
+        </strong>
+        — Mais de 600 sistemas isolados, muitos com 20 ou mais anos, impede a integração de dados, gera duplicação de esforços e torna inviável a automação de processos. A migração desses sistemas — custosa e politicamente complexa, pois envolve mudanças profundas nos fluxos de trabalho das secretarias.
+       </li>
+       <li>
+        <strong>
+         Deficit de competências digitais no setor público
+        </strong>
+        — Menos de 25% dos servidores estaduais possuem formação mínima em ferramentas digitais avançadas. A remuneração do governo não compete com o setor privado para atrair e reter profissionais de TI, ciência de dados e design de serviços.
+       </li>
+       <li>
+        <strong>
+         Exclusão digital dos cidadãos
+        </strong>
+        — Cerca de 30% da população mineira não tem acesso regular — internet banda larga, concentrados no interior e nas populações de baixa renda. Digitalizar serviços sem enfrentar a exclusão digital pode aprofundar desigualdades.
+       </li>
+       <li>
+        <strong>
+         Resistência institucional — mudança
+        </strong>
+        — A transformação digital requer redesenho de processos e mudança cultural profunda. Estruturas burocráticas consolidadas e corporativismos internos frequentemente bloqueiam reformas mesmo quando tecnicamente viáveis.
+       </li>
+       <li>
+        <strong>
+         Cibersegurança inadequada
+        </strong>
+        — A infraestrutura de segurança cibernética do Estado — insuficiente para o volume de dados sensíveis gerenciados. Ataques de ransomware a governos estaduais brasileiros nos ltimos anos evidenciam a vulnerabilidade estrutural.
+       </li>
+      </ul>
+      <div class="callout callout-warning">
+       <span class="callout-icon">
+        <i data-lucide="alert-triangle">
+        </i>
+       </span>
+       <p>
+        <strong>
+         Alerta crático:
+        </strong>
+        A digitalização fragmentada — digitalizar processos ruins sem redesenh—-los — — a principal armadilha. Governos que apenas "informatizam" burocracia ineficiente criam sistemas digitais igualmente ruins, perdendo a oportunidade de transformação real.
+       </p>
+      </div>
+     </section>
+     <section class="content-section fade-in-section" id="oportunidades">
+      <div class="section-label">
+       04
+      </div>
+      <h2>
+       Oportunidades
+      </h2>
+      <ul>
+       <li>
+        <strong>
+         Inteligência artificial para políticas públicas
+        </strong>
+        — IA pode revolucionar a previsão de demanda de serviços, detecção de fraudes previdenciárias, triagem de processos administrativos, manutenção preditiva de infraestrutura e personalização de serviços sociais. O custo decrescente das ferramentas de IA abre espação para adoção em escala.
+       </li>
+       <li>
+        <strong>
+         Plataforma digital nica (MG Gov)
+        </strong>
+        — Consolidar todos os serviços em uma plataforma nica, com identidade digital unificada, eliminaria a necessidade de múltiplos cadastros e redramiria drasticamente o tempo médio de resolução de demandas dos cidadãos.
+       </li>
+       <li>
+        <strong>
+         Open Government e dados abertos como ativo
+        </strong>
+        — Dados governamentais abertos alimentam ecossistemas de startups govtech, pesquisa acadêmica e jornalismo investigativo. Estados que abrem seus dados criam externalidades positivas que superam em muito o custo da abertura.
+       </li>
+       <li>
+        <strong>
+         Compras públicas digitais e inteligentes
+        </strong>
+        — Modernizar o sistema de compras governamentais com leilões reversos eletrônicos, inteligência de preços e contratos inteligentes pode gerar economias de 15-20% no orçamento de compras anuais.
+       </li>
+       <li>
+        <strong>
+         Blockchain para registros públicos
+        </strong>
+        — Registro de propriedade imobiliária, certidões e contratos em blockchain pode eliminar fraudes, reduzir custos cartoriais e agilizar transações, beneficiando especialmente populações de baixa renda sem acesso a serviços cartoriais tradicionais.
+       </li>
+      </ul>
+     </section>
+     <section class="content-section fade-in-section" id="benchmarking">
+      <div class="section-label">
+       05
+      </div>
+      <h2>
+       Benchmarking Internacional
+      </h2>
+      <p>
+       Países e regiões líderes em governo digital oferecem modelos concretos de transformação que Minas Gerais pode adaptar — sua realidade.
+      </p>
+      <table class="bench-table">
+       <thead>
+        <tr>
+         <th>
+          País / Região
+         </th>
+         <th>
+          Índice Gov. Digital
+         </th>
+         <th>
+          Estratégia-chave
+         </th>
+         <th>
+          Lição para Minas
+         </th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+         <td class="td-highlight">
+          Estênia
+         </td>
+         <td class="td-accent">
+          1º mundial
+         </td>
+         <td>
+          X-Road: plataforma de interoperabilidade que conecta 100% dos sistemas do governo. Identidade digital nica (e-ID) para todos os serviços.
+         </td>
+         <td>
+          Interoperabilidade como fundação — sem ela, nenhuma digitalização — efetiva.
+         </td>
+        </tr>
+        <tr>
+         <td class="td-highlight">
+          Singapura
+         </td>
+         <td class="td-accent">
+          2º OCDE
+         </td>
+         <td>
+          Smart Nation: integração de dados em tempo real, GovTech como agência permanente de inovação pública, serviços proativos (cidadão não precisa solicitar — o estado entrega).
+         </td>
+         <td>
+          Criação de agência de inovação pública dedicada, separada da TI convencional.
+         </td>
+        </tr>
+        <tr>
+         <td class="td-highlight">
+          Dinamarca
+         </td>
+         <td class="td-accent">
+          Top 5 UE
+         </td>
+         <td>
+          Digital First: todos os serviços nascidos digitais. Parceria público-privada para infraestrutura de identidade. Governo como plataforma aberta para inovadores.
+         </td>
+         <td>
+          Política de "digital por padrão" com isenções apenas para populações vulneráveis.
+         </td>
+        </tr>
+        <tr>
+         <td class="td-highlight">
+          São Paulo (Brasil)
+         </td>
+         <td class="td-accent">
+          1º BR
+         </td>
+         <td>
+          SP.gov: portal unificado, identidade digital integrada — CNH, simplificação de 800+ serviços. Parceria com SERPRO e empresas de tecnologia nacionais.
+         </td>
+         <td>
+          A escala de MG — comparável a SP — o modelo de portal unificado — diretamente replicável.
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </section>
+     <section class="content-section fade-in-section" id="objetivos">
+      <div class="section-label">
+       06
+      </div>
+      <h2>
+       Objetivos 2035
+      </h2>
+      <div class="timeline">
+       <div class="timeline-item">
+        <div class="timeline-dot">
+        </div>
+        <div class="timeline-year">
+         2026?2027
+        </div>
+        <div class="timeline-title">
+         Fundação: interoperabilidade e identidade digital
+        </div>
+        <div class="timeline-desc">
+         Implantação da plataforma de interoperabilidade MG-Connect, integração dos 20 sistemas mais cráticos do governo, e lançamento da Identidade Digital Mineira vinculada ao CPF para acesso unificado a todos os serviços estaduais.
+        </div>
+       </div>
+       <div class="timeline-item">
+        <div class="timeline-dot">
+        </div>
+        <div class="timeline-year">
+         2027?2030
+        </div>
+        <div class="timeline-title">
+         Digitalização total e redesenho de serviços
+        </div>
+        <div class="timeline-desc">
+         100% dos serviços estaduais disponíveis no canal digital, com redesenho de processos orientado ao usuário (UX gov). Implementação de IA para triagem de demandas, detecção de fraudes e análise preditiva de políticas sociais.
+        </div>
+       </div>
+       <div class="timeline-item">
+        <div class="timeline-dot">
+        </div>
+        <div class="timeline-year">
+         2030?2033
+        </div>
+        <div class="timeline-title">
+         Governo orientado a dados e serviços proativos
+        </div>
+        <div class="timeline-desc">
+         Lançamento do MG Data Lake: repositório integrado de dados governamentais para tomada de decisão baseada em evidências. Primeiros serviços proativos (benefícios entregues sem solicitação). Abertura máxima de dados públicos.
+        </div>
+       </div>
+       <div class="timeline-item">
+        <div class="timeline-dot">
+        </div>
+        <div class="timeline-year">
+         2033?2035
+        </div>
+        <div class="timeline-title">
+         Minas como referência nacional em govtech
+        </div>
+        <div class="timeline-desc">
+         Minas Gerais reconhecido como o Estado mais avançado em governo digital do Brasil. Exportação do modelo de interoperabilidade para outros estados. Hub de empresas govtech sediadas em BH com produtos para gestão pública.
+        </div>
+       </div>
+      </div>
+     </section>
+     <section class="content-section fade-in-section" id="metas">
+      <div class="section-label">
+       07
+      </div>
+      <h2>
+       Metas 2050
+      </h2>
+      <ol>
+       <li>
+        100% dos serviços públicos estaduais disponíveis digitalmente, com tempo médio de resolução inferior a 24 horas para serviços não presenciais.
+       </li>
+       <li>
+        Zero burocracia redundante: nenhum cidadão precisar— fornecer a mesma informação ao governo mais de uma vez (princípio "once-only").
+       </li>
+       <li>
+        Orçamento de TI e inovação pública acima de 2% do orçamento total do Estado, alinhado ao padrão OCDE.
+       </li>
+       <li>
+        Minas Gerais no top-3 mundial de transparência oramentária e governamental, com dados abertos em tempo real e auditáveis por qualquer cidadão.
+       </li>
+       <li>
+        Ecossistema de 200+ empresas govtech sediadas em Minas, exportando soluções para outros estados e países da América Latina.
+       </li>
+       <li>
+        Redução de 30% nos custos operacionais do governo estadual, viabilizando reinvestimento em serviços essenciais.
+       </li>
+      </ol>
+     </section>
+     <section class="content-section fade-in-section" id="projetos">
+      <div class="section-label">
+       08
+      </div>
+      <h2>
+       Projetos Estratégicos
+      </h2>
+      <div style="display: flex; flex-direction: column; gap: var(--sp-4);">
+       <div class="project-card">
+        <div>
+         <h4>
+          MG-Connect: Plataforma de Interoperabilidade
+         </h4>
+         <p>
+          Barramento de dados inspirado no X-Road estoniano que conecta todos os sistemas do governo estadual, eliminando silos de informação e permitindo que serviços compartilhem dados em tempo real com segurança e rastreabilidade. Fase 1: 50 sistemas integrados até 2027.
+         </p>
+        </div>
+        <span class="project-status status-active">
+         Em desenvolvimento
+        </span>
+       </div>
+       <div class="project-card">
+        <div>
+         <h4>
+          IA no SUS-MG: Diagnóstico e Triagem Inteligente
+         </h4>
+         <p>
+          Implementação de algoritmos de IA para triagem de sintomas, priorização de atendimentos e detecção precoce de epidemias nas unidades básicas de saúde. Projeto piloto em Belo Horizonte com expansão para cidades de médio porte.
+         </p>
+        </div>
+        <span class="project-status status-active">
+         Piloto ativo
+        </span>
+       </div>
+       <div class="project-card">
+        <div>
+         <h4>
+          Portal MG Gov: Plataforma nica de Serviços
+         </h4>
+         <p>
+          Consolidação de todos os serviços estaduais em um nico portal com design centrado no usuário, integração com Gov.br federal, identidade digital unificada e suporte multicanal (web, mobile, assistente de voz e centrais telefônicas integradas).
+         </p>
+        </div>
+        <span class="project-status status-proposal">
+         Em licitação
+        </span>
+       </div>
+       <div class="project-card">
+        <div>
+         <h4>
+          MG GovTech Hub
+         </h4>
+         <p>
+          Programa de inovação aberta que convida startups a desenvolver soluções para desafios específicos do governo estadual, com contratos de aquisição simplificados, sandbox regulatéria e acesso a dados governamentais anonimizados para desenvolvimento de produtos.
+         </p>
+        </div>
+        <span class="project-status status-study">
+         Em estruturação
+        </span>
+       </div>
+      </div>
+     </section>
+     <section class="content-section fade-in-section" id="indicadores">
+      <div class="section-label">
+       09
+      </div>
+      <h2>
+       Indicadores-Chave (KPIs)
+      </h2>
+      <div class="metric-grid">
+       <div class="metric-card">
+        <div class="metric-label">
+         Serviços 100% digitais
+        </div>
+        <div>
+         <span class="metric-value">
+          100
+         </span>
+         <span class="metric-unit">
+          %
+         </span>
+        </div>
+        <div class="metric-description">
+         Meta 2035 — atual: 42% dos serviços totalmente digitais
+        </div>
+       </div>
+       <div class="metric-card">
+        <div class="metric-label">
+         Satisfação do cidadão
+        </div>
+        <div>
+         <span class="metric-value">
+          90
+         </span>
+         <span class="metric-unit">
+          %
+         </span>
+        </div>
+        <div class="metric-description">
+         Meta NPS gov. digital — atual: 58% satisfação
+        </div>
+       </div>
+       <div class="metric-card">
+        <div class="metric-label">
+         Tempo médio de resolução
+        </div>
+        <div>
+         <span class="metric-value">
+          &lt; 24
+         </span>
+         <span class="metric-unit">
+          h
+         </span>
+        </div>
+        <div class="metric-description">
+         Para serviços digitais — atual: 5,2 dias teis médios
+        </div>
+       </div>
+       <div class="metric-card">
+        <div class="metric-label">
+         Sistemas integrados
+        </div>
+        <div>
+         <span class="metric-value">
+          600
+         </span>
+         <span class="metric-unit">
+          +
+         </span>
+        </div>
+        <div class="metric-description">
+         Meta interoperabilidade total — atual: &lt;50 integrados
+        </div>
+       </div>
+       <div class="metric-card">
+        <div class="metric-label">
+         Datasets abertos
+        </div>
+        <div>
+         <span class="metric-value">
+          5.000
+         </span>
+         <span class="metric-unit">
+          +
+         </span>
+        </div>
+        <div class="metric-description">
+         Meta 2035 de dados abertos — atual: 1.200
+        </div>
+       </div>
+       <div class="metric-card">
+        <div class="metric-label">
+         Economia em compras gov.
+        </div>
+        <div>
+         <span class="metric-value">
+          R$ 3
+         </span>
+         <span class="metric-unit">
+          bi
+         </span>
+        </div>
+        <div class="metric-description">
+         Economia estimada com compras inteligentes digitais
+        </div>
+       </div>
+      </div>
+     </section>
+     <section class="content-section fade-in-section" id="debate">
+      <div class="section-label">
+       10
+      </div>
+      <h2>
+       Questões para Debate Público
+      </h2>
+      <ol>
+       <li>
+        Como garantir que a digitalização dos serviços públicos não aprofunde a exclusão digital de populações de baixa renda, idosos e moradores do interior?
+       </li>
+       <li>
+        Qual o papel da Prodemge versus empresas privadas de tecnologia na infraestrutura digital do Estado Onde deve estar a soberania tecnológica governamental?
+       </li>
+       <li>
+        Como proteger os dados pessoais dos cidadãos mineiros em um ambiente de governo digital integrado, cumprindo a LGPD e além?
+       </li>
+       <li>
+        O governo digital deve ser construído internamente ou por parceria público-privada— Quais os riscos e benefícios de cada modelo?
+       </li>
+       <li>
+        Como criar uma cultura de inovação permanente no serviço público, superando a tendência de adotar tecnologia sem redesenhar processos?
+       </li>
+       <li>
+        Quais serviços devem permanecer com canal presencial obrigatério, mesmo em 2035 Quem decide isso?
+       </li>
+       <li>
+        Como usar dados governamentais abertos para combater corrupção e aumentar a responsabilização dos gestores públicos?
+       </li>
+      </ol>
+      <div style="margin-top: var(--sp-8);">
+       <a class="btn btn-primary" href="../participar.html" id="btn-gov-debate">
+        Participar do Debate
+       </a>
+      </div>
+     </section>
+     <section class="content-section fade-in-section" id="referencias">
+      <div class="section-label">
+       11
+      </div>
+      <h2>
+       Referências Bibliográficas
+      </h2>
+      <div class="reference-list">
+       <div class="reference-item">
+        <span class="reference-num">
+         01
+        </span>
+        <span>
+         OCDE.
+         <em>
+          Digital Government Review of Brazil: Towards the Digital Transformation of the Public Sector
+         </em>
+         . Paris: OECD Publishing, 2023.
+        </span>
+       </div>
+       <div class="reference-item">
+        <span class="reference-num">
+         02
+        </span>
+        <span>
+         GOVERNO DE MINAS GERAIS / SEPLAG.
+         <em>
+          Programa Minas Gerais Digital 2022?2026
+         </em>
+         . Belo Horizonte: SEPLAG, 2022.
+        </span>
+       </div>
+       <div class="reference-item">
+        <span class="reference-num">
+         03
+        </span>
+        <span>
+         EST—?NIA.
+         <em>
+          X-Road Architecture and Interoperability Framework
+         </em>
+         . Tallinn: RIA, 2023.
+        </span>
+       </div>
+       <div class="reference-item">
+        <span class="reference-num">
+         04
+        </span>
+        <span>
+         SINGAPURA.
+         <em>
+          Smart Nation 2025: The Next Lap
+         </em>
+         . Singapore: GovTech, 2023.
+        </span>
+       </div>
+       <div class="reference-item">
+        <span class="reference-num">
+         05
+        </span>
+        <span>
+         BRASIL.
+         <em>
+          Estratégia de Governo Digital 2024?2027
+         </em>
+         . Brasília: SEGES/MGI, 2024.
+        </span>
+       </div>
+       <div class="reference-item">
+        <span class="reference-num">
+         06
+        </span>
+        <span>
+         PRODEMGE.
+         <em>
+          Relatério de Gestão Tecnológica 2023
+         </em>
+         . Belo Horizonte: Prodemge, 2023.
+        </span>
+       </div>
+       <div class="reference-item">
+        <span class="reference-num">
+         07
+        </span>
+        <span>
+         WORLD BANK.
+         <em>
+          World Development Report 2021: Data for Better Lives
+         </em>
+         . Washington: World Bank Group, 2021.
+        </span>
+       </div>
+       <div class="reference-item">
+        <span class="reference-num">
+         08
+        </span>
+        <span>
+         FGV DIREITO SP.
+         <em>
+          Índice de Transparência dos Estados Brasileiros 2023
+         </em>
+         . São Paulo: FGV, 2023.
+        </span>
+       </div>
+      </div>
+     </section>
+    </article>
+   </div>
+  </div>
+  <!-- FOOTER -->
+  <footer class="site-footer">
+   <div class="container">
+    <div class="footer-grid">
+     <div class="footer-brand">
+      <a class="navbar-brand" href="../index.html">
+       <svg class="navbar-logo" fill="none" viewbox="0 0 36 36">
+        <rect fill="url(#grad-footer-gov)" height="36" rx="8" width="36">
+        </rect>
+        <path d="M10 24 L10 13 L18 20 L26 13 L26 24" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2">
+        </path>
+        <defs>
+         <lineargradient gradientunits="userSpaceOnUse" id="grad-footer-gov" x1="0" x2="36" y1="0" y2="36">
+          <stop stop-color="#00E5FF">
+          </stop>
+          <stop offset="1" stop-color="#4F46E5">
+          </stop>
+         </lineargradient>
+        </defs>
+       </svg>
+       <span class="navbar-name">
+        Minas
+        <span>
+         2035
+        </span>
+       </span>
+      </a>
+      <p>
+       Plataforma independente de estudos para o desenvolvimento de Minas Gerais com visão de longo prazo.
+      </p>
+     </div>
+     <div class="footer-col">
+      <h5>
+       Projeto
+      </h5>
+      <ul>
+       <li>
+        <a href="../sobre.html">
+         Sobre
+        </a>
+       </li>
+       <li>
+        <a href="../manifesto.html">
+         Manifesto
+        </a>
+       </li>
+       <li>
+        <a href="../pilares.html">
+         Pilares
+        </a>
+       </li>
+       <li>
+        <a href="../participar.html">
+         Participar
+        </a>
+       </li>
+      </ul>
+     </div>
+     <div class="footer-col">
+      <h5>
+       Outras Áreas
+      </h5>
+      <ul>
+       <li>
+        <a href="tecnologia.html">
+         Tecnologia
+        </a>
+       </li>
+       <li>
+        <a href="economia.html">
+         Economia
+        </a>
+       </li>
+       <li>
+        <a href="educacao.html">
+         Educação
+        </a>
+       </li>
+       <li>
+        <a href="energia.html">
+         Energia
+        </a>
+       </li>
+      </ul>
+     </div>
+     <div class="footer-col">
+      <h5>
+       Legal
+      </h5>
+      <ul>
+       <li>
+        <a href="#">
+         Política de privacidade
+        </a>
+       </li>
+       <li>
+        <a href="#">
+         Licença de uso
+        </a>
+       </li>
+       <li>
+        <a href="#">
+         Contato
+        </a>
+       </li>
+      </ul>
+     </div>
     </div>
-
-
+    <div class="footer-bottom">
+     <p>
+      — 2026 Projeto Minas 2035. Fontes: OCDE, Prodemge, SEPLAG, Governo Digital BR.
+     </p>
+     <a href="../manifesto.html">
+      Manifesto —
+     </a>
+    </div>
+   </div>
   </footer>
-
-
-
-
-
-  <script>lucide.createIcons();</script>
-
-
-</body>
-
-
+  <script>
+   lucide.createIcons();
+  </script>
+ </body>
 </html>
-
-
-
-
-

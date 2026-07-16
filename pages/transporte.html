@@ -1,1617 +1,1213 @@
-?<!DOCTYPE html>
-
-
+?
+<!DOCTYPE html>
 <html lang="pt-BR">
-
-
-<head>
-
-
-  <meta charset="UTF-8" />
-
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />  <meta name="referrer" content="strict-origin-when-cross-origin" />
-
-
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' https://unpkg.com 'unsafe-inline'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https:; object-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self';" />
-
-
-  <meta name="description" content="Centro de Mobilidade e Transporte — Projeto Minas 2035. Análise, metas e projetos para sistemas de transporte inteligentes, eficientes e sustentáveis em Minas Gerais." />
-
-
-  <title>Centro de Mobilidade e Transporte — Projeto Minas 2035</title>
-
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-
-
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-
-  <link rel="stylesheet" href="../css/variables.css" />
-
-
-  <link rel="stylesheet" href="../css/style.css" />
-
-
-  <link rel="stylesheet" href="../css/components.css" />
-
-
-  <link rel="stylesheet" href="../css/animations.css" />
-
-
-  <link rel="stylesheet" href="../css/responsive.css" />
-
-
-  <link rel="stylesheet" href="../css/pages.css" />
-
-
-  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
-
-
-  <script defer src="../js/app.js"></script>
-
-
-  <script defer src="../js/menu.js"></script>
-
-
-  <script defer src="../js/animations.js"></script>
-
-
-  <script defer src="../js/counters.js"></script>
-
-
-</head>
-
-
-<body>
-
-
-
-
-
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="strict-origin-when-cross-origin" name="referrer"/>
+  <meta content="default-src 'self' https:; script-src 'self' https://unpkg.com 'unsafe-inline'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https:; object-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self';" http-equiv="Content-Security-Policy"/>
+  <meta content="Centro de Mobilidade e Transporte — Projeto Minas 2035. Análise, metas e projetos para sistemas de transporte inteligentes, eficientes e sustentáveis em Minas Gerais." name="description"/>
+  <title>
+   Centro de Mobilidade e Transporte — Projeto Minas 2035
+  </title>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="../css/variables.css" rel="stylesheet"/>
+  <link href="../css/style.css" rel="stylesheet"/>
+  <link href="../css/components.css" rel="stylesheet"/>
+  <link href="../css/animations.css" rel="stylesheet"/>
+  <link href="../css/responsive.css" rel="stylesheet"/>
+  <link href="../css/pages.css" rel="stylesheet"/>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js">
+  </script>
+  <script defer="" src="../js/app.js">
+  </script>
+  <script defer="" src="../js/menu.js">
+  </script>
+  <script defer="" src="../js/animations.js">
+  </script>
+  <script defer="" src="../js/counters.js">
+  </script>
+ </head>
+ <body>
   <!-- NAVBAR -->
-
-
   <header class="navbar" id="navbar">
-
-
-    <div class="container">
-
-
-      <a href="../index.html" class="navbar-brand">
-
-
-        <svg class="navbar-logo" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-
-
-          <rect width="36" height="36" rx="8" fill="url(#grad-nav-transporte)"/>
-
-
-          <path d="M10 24 L10 13 L18 20 L26 13 L26 24" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-
-
-          <defs>
-
-
-            <linearGradient id="grad-nav-transporte" x1="0" y1="0" x2="36" y2="36" gradientUnits="userSpaceOnUse">
-
-
-              <stop stop-color="#00E5FF"/><stop offset="1" stop-color="#4F46E5"/>
-
-
-            </linearGradient>
-
-
-          </defs>
-
-
-        </svg>
-
-
-        <span class="navbar-name">Minas <span>2035</span></span>
-
-
-      </a>
-
-
-      <nav class="navbar-nav" id="main-nav">
-
-
-        <a href="../index.html#sobre">O Projeto</a>
-
-
-        <a href="../index.html#areas">Áreas</a>
-
-
-        <a href="../index.html#principios">Princípios</a>
-
-
-        <a href="../index.html#numeros">Indicadores</a>
-
-
-        <a href="../manifesto.html">Manifesto</a>
-
-
-      </nav>
-
-
-      <div class="navbar-cta">
-
-
-        <a href="../participar.html" class="btn btn-outline">Participar</a>
-
-
-        <a href="../index.html#areas" class="btn btn-primary">Explorar</a>
-
-
-      </div>
-
-
-      <button class="hamburger" id="hamburger-btn" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav">
-
-
-        <span></span><span></span><span></span>
-
-
-      </button>
-
-
+   <div class="container">
+    <a class="navbar-brand" href="../index.html">
+     <svg class="navbar-logo" fill="none" viewbox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+      <rect fill="url(#grad-nav-transporte)" height="36" rx="8" width="36">
+      </rect>
+      <path d="M10 24 L10 13 L18 20 L26 13 L26 24" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2">
+      </path>
+      <defs>
+       <lineargradient gradientunits="userSpaceOnUse" id="grad-nav-transporte" x1="0" x2="36" y1="0" y2="36">
+        <stop stop-color="#00E5FF">
+        </stop>
+        <stop offset="1" stop-color="#4F46E5">
+        </stop>
+       </lineargradient>
+      </defs>
+     </svg>
+     <span class="navbar-name">
+      Minas
+      <span>
+       2035
+      </span>
+     </span>
+    </a>
+    <nav class="navbar-nav" id="main-nav">
+     <a href="../index.html#sobre">
+      O Projeto
+     </a>
+     <a href="../index.html#areas">
+      Áreas
+     </a>
+     <a href="../index.html#principios">
+      Princípios
+     </a>
+     <a href="../index.html#numeros">
+      Indicadores
+     </a>
+     <a href="../manifesto.html">
+      Manifesto
+     </a>
+    </nav>
+    <div class="navbar-cta">
+     <a class="btn btn-outline" href="../participar.html">
+      Participar
+     </a>
+     <a class="btn btn-primary" href="../index.html#areas">
+      Explorar
+     </a>
     </div>
-
-
+    <button aria-controls="main-nav" aria-expanded="false" aria-label="Abrir menu" class="hamburger" id="hamburger-btn">
+     <span>
+     </span>
+     <span>
+     </span>
+     <span>
+     </span>
+    </button>
+   </div>
   </header>
-
-
-
-
-
   <!-- PAGE HERO -->
-
-
   <section class="page-hero">
-
-
-    <div class="page-hero-grid"></div>
-
-
-    <div class="container">
-
-
-      <div class="page-hero-content fade-in-section">
-
-
-        <div class="breadcrumb">
-
-
-          <a href="../index.html">Início</a>
-
-
-          <span class="breadcrumb-sep">/</span>
-
-
-          <a href="../index.html#areas">Áreas</a>
-
-
-          <span class="breadcrumb-sep">/</span>
-
-
-          <span class="breadcrumb-current">Mobilidade e Transporte</span>
-
-
-        </div>
-
-
-        <div class="section-label">Centro Temático</div>
-
-
-        <h1>Centro de Mobilidade e Transporte</h1>
-
-
-        <p class="page-subtitle">Criando sistemas de transporte inteligentes, eficientes e sustentáveis que integrem os 853 municípios de Minas Gerais em uma rede logística e humana de nível internacional.</p>
-
-
-        <div class="page-stats">
-
-
-          <div class="page-stat">
-
-
-            <span class="page-stat-value">5,8M</span>
-
-
-            <span class="page-stat-label">Habitantes RMBH</span>
-
-
-          </div>
-
-
-          <div class="page-stat-divider"></div>
-
-
-          <div class="page-stat">
-
-
-            <span class="page-stat-value">80%</span>
-
-
-            <span class="page-stat-label">Transporte por —nibus</span>
-
-
-          </div>
-
-
-          <div class="page-stat-divider"></div>
-
-
-          <div class="page-stat">
-
-
-            <span class="page-stat-value">12</span>
-
-
-            <span class="page-stat-label">Rotas metropolitanas</span>
-
-
-          </div>
-
-
-        </div>
-
-
-        <div class="tag-list" style="margin-top: var(--sp-6);">
-
-
-          <span class="tag">Metrô</span>
-
-
-          <span class="tag">—?nibus</span>
-
-
-          <span class="tag">Mobilidade Urbana</span>
-
-
-          <span class="tag">VLT</span>
-
-
-          <span class="tag">Ciclomobilidade</span>
-
-
-          <span class="tag">Trânsito</span>
-
-
-        </div>
-
-
+   <div class="page-hero-grid">
+   </div>
+   <div class="container">
+    <div class="page-hero-content fade-in-section">
+     <div class="breadcrumb">
+      <a href="../index.html">
+       Início
+      </a>
+      <span class="breadcrumb-sep">
+       /
+      </span>
+      <a href="../index.html#areas">
+       Áreas
+      </a>
+      <span class="breadcrumb-sep">
+       /
+      </span>
+      <span class="breadcrumb-current">
+       Mobilidade e Transporte
+      </span>
+     </div>
+     <div class="section-label">
+      Centro Temático
+     </div>
+     <h1>
+      Centro de Mobilidade e Transporte
+     </h1>
+     <p class="page-subtitle">
+      Criando sistemas de transporte inteligentes, eficientes e sustentáveis que integrem os 853 municípios de Minas Gerais em uma rede logística e humana de nível internacional.
+     </p>
+     <div class="page-stats">
+      <div class="page-stat">
+       <span class="page-stat-value">
+        5,8M
+       </span>
+       <span class="page-stat-label">
+        Habitantes RMBH
+       </span>
       </div>
-
-
+      <div class="page-stat-divider">
+      </div>
+      <div class="page-stat">
+       <span class="page-stat-value">
+        80%
+       </span>
+       <span class="page-stat-label">
+        Transporte por ônibus
+       </span>
+      </div>
+      <div class="page-stat-divider">
+      </div>
+      <div class="page-stat">
+       <span class="page-stat-value">
+        12
+       </span>
+       <span class="page-stat-label">
+        Rotas metropolitanas
+       </span>
+      </div>
+     </div>
+     <div class="tag-list" style="margin-top: var(--sp-6);">
+      <span class="tag">
+       Metrô
+      </span>
+      <span class="tag">
+       —?nibus
+      </span>
+      <span class="tag">
+       Mobilidade Urbana
+      </span>
+      <span class="tag">
+       VLT
+      </span>
+      <span class="tag">
+       Ciclomobilidade
+      </span>
+      <span class="tag">
+       Trânsito
+      </span>
+     </div>
     </div>
-
-
+   </div>
   </section>
-
-
-
-
-
   <!-- MAIN CONTENT -->
-
-
   <div class="container">
-
-
-    <div class="page-layout">
-
-
-
-
-
-      <!-- TABLE OF CONTENTS -->
-
-
-      <aside>
-
-
-        <nav class="toc" aria-label="Índice">
-
-
-          <div class="toc-title">Neste Centro</div>
-
-
-          <ul class="toc-list">
-
-
-            <li><a href="#resumo">Resumo Executivo</a></li>
-
-
-            <li><a href="#situacao">Situação Atual</a></li>
-
-
-            <li><a href="#desafios">Desafios Estruturais</a></li>
-
-
-            <li><a href="#oportunidades">Oportunidades</a></li>
-
-
-            <li><a href="#benchmarking">Benchmarking Internacional</a></li>
-
-
-            <li><a href="#objetivos">Objetivos 2035</a></li>
-
-
-            <li><a href="#metas">Metas 2050</a></li>
-
-
-            <li><a href="#projetos">Projetos Estratégicos</a></li>
-
-
-            <li><a href="#indicadores">Indicadores-Chave</a></li>
-
-
-            <li><a href="#debate">Questões para Debate</a></li>
-
-
-            <li><a href="#referencias">Referências</a></li>
-
-
-          </ul>
-
-
-        </nav>
-
-
-      </aside>
-
-
-
-
-
-      <!-- ARTICLE -->
-
-
-      <article class="article-content">
-
-
-
-
-
-        <!-- 01 RESUMO EXECUTIVO -->
-
-
-        <section id="resumo" class="content-section fade-in-section">
-
-
-          <div class="section-label">01</div>
-
-
-          <h2>Resumo Executivo</h2>
-
-
-          <p>Minas Gerais enfrenta uma crise silenciosa de mobilidade que compromete a produtividade econômica, a qualidade de vida urbana e a coesão territorial do estado. Com a Região Metropolitana de Belo Horizonte concentrando 5,8 milhões de habitantes e gerando mais de 40% do PIB estadual, o sistema de transporte da RMBH opera em condição de estresse crênico: congestionamentos custam estimadamente R$ 7,4 bilhões por ano em perda de produtividade, segundo estudo da Fundação João Pinheiro (2023).</p>
-
-
-          <p>O padrão rodoviarista dominante — em que 80% dos usuários de transporte público dependem exclusivamente de —nibus — cria um sistema frágil, poluente e ineficiente. A rede metroviária de BH, limitada a duas linhas com 28 estações e 28 km de extensão, atende apenas 11% dos usuários de transporte coletivo na região. Comparativamente, cidades como Bogotá e Curitiba consolidaram sistemas multimodais robustos com frações de investimento per capita semelhantes —s disponíveis em Minas.</p>
-
-
-          <p>O interior do estado enfrenta desafio oposto: dos 853 municípios mineiros, 62% possuem menos de 10 mil habitantes e dependem de linhas rodoviárias estaduais para acesso a serviços básicos, educação e saúde. A malha ferroviária de cargas não contempla passageiros, e o transporte rural intermunicipal apresenta irregularidade e baixa frequência, aprofundando o isolamento de populações vulneráveis.</p>
-
-
-          <p>O Projeto Minas 2035 propõe uma transformação sistêmica que vai da expansão do metrô metropolitano — criação de corredores de BRT de alta capacidade, passando pela implementação de um VLT interconectando municípios da borda metropolitana e pela digitalização plena da gestão do trânsito. O objetivo central — reduzir o tempo médio de deslocamento diário na RMBH em 35% até 2035, ao mesmo tempo em que se dobra a participação do transporte de baixo carbono na matriz modal mineira.</p>
-
-
-        </section>
-
-
-
-
-
-        <!-- 02 SITUA——?O ATUAL -->
-
-
-        <section id="situacao" class="content-section fade-in-section">
-
-
-          <div class="section-label">02</div>
-
-
-          <h2>Situação Atual</h2>
-
-
-          <p>O diagnóstico da mobilidade em Minas Gerais revela uma combinação de infraestrutura envelhecida, governança fragmentada e investimento insuficiente. Os dados abaixo sintetizam os principais indicadores do estado da mobilidade no estado em 2024.</p>
-
-
-
-
-
-          <div class="metric-grid">
-
-
-            <div class="metric-card">
-
-
-              <div class="metric-label">Tempo médio deslocamento BH</div>
-
-
-              <div class="metric-value">68<span class="metric-unit">min</span></div>
-
-
-              <div class="metric-description">Mádia diúria por habitante. Índice TomTom Traffic (2023).</div>
-
-
-              <div class="metric-trend down"><i data-lucide="trending-up"></i> Pior que a média nacional (61 min)</div>
-
-
-            </div>
-
-
-            <div class="metric-card">
-
-
-              <div class="metric-label">Extensão do Metrô BH</div>
-
-
-              <div class="metric-value">28<span class="metric-unit">km</span></div>
-
-
-              <div class="metric-description">2 linhas, 28 estações. Expandido pela —ltima vez em 2008.</div>
-
-
-              <div class="metric-trend down"><i data-lucide="minus"></i> Estagnado há 16 anos</div>
-
-
-            </div>
-
-
-            <div class="metric-card">
-
-
-              <div class="metric-label">Frota de —nibus RMBH</div>
-
-
-              <div class="metric-value">7.200</div>
-
-
-              <div class="metric-description">Veículos com idade média de 8,4 anos. BHTRANS, 2024.</div>
-
-
-              <div class="metric-trend down"><i data-lucide="alert-triangle"></i> 18% acima da vida —til</div>
-
-
-            </div>
-
-
-            <div class="metric-card">
-
-
-              <div class="metric-label">Ciclofaixas em BH</div>
-
-
-              <div class="metric-value">195<span class="metric-unit">km</span></div>
-
-
-              <div class="metric-description">Meta era 300 km até 2020. PBH, 2024.</div>
-
-
-              <div class="metric-trend down"><i data-lucide="x-circle"></i> Meta não atingida</div>
-
-
-            </div>
-
-
-          </div>
-
-
-
-
-
-          <p>A frota de veículos particulares na RMBH cresceu 3,2% ao ano na —ltima década, superando o crescimento populacional de 1,1%. Esse desequilíbrio reflete a ausência de alternativas de transporte público atraentes. Pesquisa de Origem e Destino da BHTRANS (2023) indica que 47% dos deslocamentos motorizados na RMBH são realizados por automóvel individual, dado que contrasta com os 23% registrados em cidades com transporte público bem estruturado.</p>
-
-
-
-
-
-          <p>No interior, apenas 127 dos 853 municípios possuem serviço de transporte público municipal regular. O DNIT registra que 34% da malha viária estadual não pavimentada apresenta condições créticas, dificultando o transporte rodoviário intermunicipal de passageiros.</p>
-
-
-        </section>
-
-
-
-
-
-        <!-- 03 DESAFIOS ESTRUTURAIS -->
-
-
-        <section id="desafios" class="content-section fade-in-section">
-
-
-          <div class="section-label">03</div>
-
-
-          <h2>Desafios Estruturais</h2>
-
-
-          <p>A crise de mobilidade em Minas Gerais — produto de décadas de escolhas políticas que priorizaram o automóvel individual e negligenciaram o planejamento integrado de transporte. Os desafios a seguir são interconectados e exigem abordagem sistêmica.</p>
-
-
-
-
-
-          <h3>Superlotação e precariedade do transporte coletivo</h3>
-
-
-          <p>Os corredores de —nibus da RMBH operam com lotação média de 140% da capacidade nos horários de pico. A ausência de sistemas de BRT de alta capacidade nos principais eixos — como a Avenida Antônio Carlos e o Anel Rodoviário — força milhões de passageiros a suportar condições degradantes cotidianamente. A insatisfação sistemática eleva o abandono do transporte público em favor do automóvel particular, criando um ciclo vicioso de congestionamento.</p>
-
-
-
-
-
-          <div class="callout callout-warning">
-
-
-            <div class="callout-icon"><i data-lucide="alert-triangle"></i></div>
-
-
-            <p><strong>Ponto crático:</strong> A taxa de abandono do transporte coletivo na RMBH cresceu 18% entre 2015 e 2023, com usuários migrando para automóveis e motos, piorando emissões e congestionamentos. Esse ciclo — autorreforçante e exige intervenção estrutural imediata.</p>
-
-
-          </div>
-
-
-
-
-
-          <h3>Dominância absoluta do modal rodoviário</h3>
-
-
-          <p>O sistema de transporte mineiro — quase integralmente rodoviarista. Não há nenhuma linha de trem de passageiros metropolitano além das duas linhas do metrô de BH. A RFFSA foi desativada nos anos 1990 sem substituição, e os trilhos — em grande parte ainda existentes — foram cedidos exclusivamente — exploração mineral e de cargas. Minas Gerais possui mais de 8.000 km de malha ferroviária, dos quais zero são destinados ao transporte regular de passageiros fora da RMBH.</p>
-
-
-
-
-
-          <h3>Caos urbano em Belo Horizonte e municípios vizinhos</h3>
-
-
-          <p>A gestão do trânsito na RMBH — atomizada em 34 municípios com competências sobrepostas e sistemas de sinalização incompatéveis. A ausência de um sistema —nico de gerenciamento de tráfego metropolitano resulta em ondas verdes desalinhadas, semáforos analógicos e incapacidade de resposta em tempo real a acidentes e eventos extraordinários. Belo Horizonte registra mais de 1.200 acidentes fatais de trânsito por ano — taxa 60% acima das capitais com sistemas de gestão integrada.</p>
-
-
-
-
-
-          <h3>Ausência de modal ferroviário regional</h3>
-
-
-          <p>Cidades mineiras de médio porte — como Uberlândia (700 mil hab.), Juiz de Fora (600 mil hab.) e Montes Claros (400 mil hab.) — carecem de conexão ferroviária de passageiros entre si e com BH. O transporte rodoviário de longa distância — caro, lento e emite carbono em nível 3x superior ao ferroviário. A inexistência de trem de alta velocidade ou VLT regional prejudica a integração econômica intermunicipal e a competitividade do estado.</p>
-
-
-
-
-
-          <div class="callout callout-info">
-
-
-            <div class="callout-icon"><i data-lucide="info"></i></div>
-
-
-            <p>A OCDE (2022) estima que cidades com participação do transporte coletivo acima de 40% dos deslocamentos apresentam PIB per capita 12% maior na média, devido — redução de perdas por congestionamento e maior mobilidade de trabalhadores de baixa renda em direção a oportunidades de emprego.</p>
-
-
-          </div>
-
-
-
-
-
-          <h3>Exclusão da população rural e periurbana</h3>
-
-
-          <p>Aproximadamente 1,4 milhão de mineiros residem em —reas rurais sem acesso regular a transporte público. Estudantes, trabalhadores rurais e idosos dependem de transporte informal, lotações clandestinas ou deslocamentos a pé em distâncias superiores a 10 km. Esse isolamento perpetua a pobreza rural e dificulta o acesso a serviços de saúde, educação e emprego nos centros urbanos.</p>
-
-
-        </section>
-
-
-
-
-
-        <!-- 04 OPORTUNIDADES -->
-
-
-        <section id="oportunidades" class="content-section fade-in-section">
-
-
-          <div class="section-label">04</div>
-
-
-          <h2>Oportunidades</h2>
-
-
-          <p>Apesar do diagnóstico desafiador, Minas Gerais possui ativos —nicos que, se mobilizados estrategicamente, podem transformar sua matriz de mobilidade em menos de uma geração.</p>
-
-
-
-
-
-          <h3>Infraestrutura ferroviária latente</h3>
-
-
-          <p>Com mais de 8.000 km de trilhos — muitos em bom estado de conservação — Minas Gerais possui a base física necessária para uma rede ferroviária regional de passageiros. A reativação seletiva de trechos estratégicos, como o Belo Horizonte?Juiz de Fora e o BH?Governador Valadares, permitiria conectar polos econômicos regionais com velocidade, eficiência e custo ambiental reduzido, usando a infraestrutura existente com adaptações relativamente modestas.</p>
-
-
-
-
-
-          <h3>Corredor de BRT de alta capacidade</h3>
-
-
-          <p>Os grandes eixos viários da RMBH — especialmente a BR-040, a Avenida Antônio Carlos e o Anel Rodoviário — têm geometria adequada para implantação de BRT dedicado com frequência de 3 minutos. Curitiba demonstrou que sistemas de BRT bem planejados transportam volume equivalente ao metrô a 8% do custo de implantação. O potencial de atendimento diário de corredores BRT em BH — estimado em 1,2 milhão de passageiros adicionais.</p>
-
-
-
-
-
-          <h3>Financiamento climático internacional</h3>
-
-
-          <p>O Brasil — elegível a bilhões de dólares em financiamento climático do Fundo Verde para o Clima, BID, Banco Mundial e CAF para projetos de mobilidade de baixo carbono. A eletrificação de frotas de —nibus, a implantação de BRT e a expansão metroviária podem ser financiadas com taxas de juros subsidiadas e prazos de 30 anos, tornando projetos que pareciam fiscalmente inviáveis em oportunidades acessíveis ao governo estadual.</p>
-
-
-
-
-
-          <h3>Tecnologia e mobilidade como serviço (MaaS)</h3>
-
-
-          <p>A digitalização completa do sistema de transporte — com bilhetagem integrada, rastreamento em tempo real, aplicativos de planejamento multimodal e gestão inteligente de tráfego — pode ser implementada a baixo custo com tecnologia já disponível no mercado. Cidades como Singapura e Helsinque demonstraram que a integração digital reduz o tempo médio de deslocamento em 15-20% sem necessidade de nova infraestrutura física.</p>
-
-
-        </section>
-
-
-
-
-
-        <!-- 05 BENCHMARKING -->
-
-
-        <section id="benchmarking" class="content-section fade-in-section">
-
-
-          <div class="section-label">05</div>
-
-
-          <h2>Benchmarking Internacional</h2>
-
-
-          <p>A análise comparativa com sistemas de referência revela que os objetivos propostos para Minas Gerais são alcançáveis, tendo sido realizados em contextos socioeconômicos comparáveis ao mineiro.</p>
-
-
-
-
-
-          <div style="overflow-x:auto;">
-
-
-            <table class="bench-table">
-
-
-              <thead>
-
-
-                <tr>
-
-
-                  <th>Referência</th>
-
-
-                  <th>Modal público (%)</th>
-
-
-                  <th>Tempo médio deslocamento</th>
-
-
-                  <th>Política chave</th>
-
-
-                  <th>Lição para MG</th>
-
-
-                </tr>
-
-
-              </thead>
-
-
-              <tbody>
-
-
-                <tr>
-
-
-                  <td class="td-highlight">Curitiba (BR)</td>
-
-
-                  <td class="td-accent">45%</td>
-
-
-                  <td>38 min</td>
-
-
-                  <td>BRT integrado com 340 km de vias exclusivas; terminal de tubo com embarque nível plataforma; integração tarifária —nica</td>
-
-
-                  <td>BRT de alta qualidade — tão eficaz quanto metrô e viável com orçamentos estaduais</td>
-
-
-                </tr>
-
-
-                <tr>
-
-
-                  <td class="td-highlight">Bogotá (Colômbia)</td>
-
-
-                  <td class="td-accent">52%</td>
-
-
-                  <td>48 min</td>
-
-
-                  <td>TransMilenio BRT (114 km); integração com Ciclovía (550 km de ciclovias); restrição veicular por placa</td>
-
-
-                  <td>Combinação de BRT com ciclomobilidade massiva reduz demanda e custo do sistema principal</td>
-
-
-                </tr>
-
-
-                <tr>
-
-
-                  <td class="td-highlight">Singapura</td>
-
-
-                  <td class="td-accent">66%</td>
-
-
-                  <td>42 min</td>
-
-
-                  <td>Integração metrô + —nibus + MaaS digital; pedágio urbano por eletrônica; taxação progressiva de automóveis</td>
-
-
-                  <td>Gestão da demanda via preços — essencial para evitar que nova oferta gere nova procura por carro</td>
-
-
-                </tr>
-
-
-                <tr>
-
-
-                  <td class="td-highlight">Zurique (Suíça)</td>
-
-
-                  <td class="td-accent">72%</td>
-
-
-                  <td>28 min</td>
-
-
-                  <td>S-Bahn regional integrado com VLT urbano; bilhete —nico para todos os modais; frequência de 6 min em horário de pico</td>
-
-
-                  <td>Integração tarifária e frequência elevada são os maiores drivers de adoção do transporte público</td>
-
-
-                </tr>
-
-
-                <tr>
-
-
-                  <td class="td-highlight">Minas Gerais (2024)</td>
-
-
-                  <td class="td-accent">38%</td>
-
-
-                  <td>68 min</td>
-
-
-                  <td>Dois sistemas isolados (metrô BH + —nibus RMBH); sem integração tarifária plena; zero BRT estruturado</td>
-
-
-                  <td>?</td>
-
-
-                </tr>
-
-
-              </tbody>
-
-
-            </table>
-
-
-          </div>
-
-
-
-
-
-          <div class="quote-block">
-
-
-            <blockquote>"A mobilidade urbana não — um problema de engenharia — — um problema de escolha política. Toda cidade que priorizou o transporte coletivo melhorou sua economia, sua qualidade do ar e seu —ndice de felicidade."</blockquote>
-
-
-            <cite>— Enrique Peñalosa, ex-prefeito de Bogotá e referência mundial em mobilidade urbana</cite>
-
-
-          </div>
-
-
-        </section>
-
-
-
-
-
-        <!-- 06 OBJETIVOS 2035 -->
-
-
-        <section id="objetivos" class="content-section fade-in-section">
-
-
-          <div class="section-label">06</div>
-
-
-          <h2>Objetivos 2035</h2>
-
-
-          <p>Os objetivos abaixo são mensuráveis, vinculados a responsáveis institucionais e estruturados para serem alcançados dentro do horizonte temporal de 2035, com marcos intermediários em 2027 e 2030.</p>
-
-
-
-
-
-          <div class="timeline">
-
-
-            <div class="timeline-item">
-
-
-              <div class="timeline-dot"></div>
-
-
-              <div class="timeline-year">2027</div>
-
-
-              <div class="timeline-title">Sistema de Gestão Integrada de Tráfego Metropolitano</div>
-
-
-              <div class="timeline-desc">Implantação do Centro de Controle Operacional Metropolitano (CCOM) unificando o gerenciamento de tráfego de BH e 10 municípios vizinhos. Instalação de 1.200 câmeras inteligentes e integração de semáforos adaptativos em 650 cruzamentos cráticos da RMBH. Redução estimada de 12% no tempo de deslocamento.</div>
-
-
-            </div>
-
-
-            <div class="timeline-item">
-
-
-              <div class="timeline-dot"></div>
-
-
-              <div class="timeline-year">2028</div>
-
-
-              <div class="timeline-title">Corredor BRT Antônio Carlos — Pedro I em operação plena</div>
-
-
-              <div class="timeline-desc">Primeiro corredor BRT de alta capacidade da RMBH, ligando a Pampulha ao Centro com 42 km de vias exclusivas, 28 estações e frequência de 4 minutos. Capacidade para 280 mil passageiros/dia. Integração tarifária com o Metrô e —nibus alimentadores via cartão —nico MG Mobilidade.</div>
-
-
-            </div>
-
-
-            <div class="timeline-item">
-
-
-              <div class="timeline-dot"></div>
-
-
-              <div class="timeline-year">2030</div>
-
-
-              <div class="timeline-title">VLT Contagem — BH em operação e expansão do Metrô</div>
-
-
-              <div class="timeline-desc">VLT de superfície conectando Contagem ao Centro de BH (18 km, 14 estações). Extensão da Linha 2 do Metrô até Venda Nova (+9,4 km, 7 estações). Juntos, esses projetos adicionarão 350 mil passageiros/dia ao modal ferroviário metropolitano, reduzindo 28% da frota de —nibus na orla da RMBH.</div>
-
-
-            </div>
-
-
-            <div class="timeline-item">
-
-
-              <div class="timeline-dot"></div>
-
-
-              <div class="timeline-year">2032</div>
-
-
-              <div class="timeline-title">Eletrificação de 60% da frota de —nibus metropolitana</div>
-
-
-              <div class="timeline-desc">Renovação de 4.300 veículos por —nibus elétricos, com depósitos de recarga solar nas 12 garagens metropolitanas. Redução de 45% nas emissões de NOx e material particulado, com economia de R$ 780 milhões/ano em combustível. Parceria com fabricantes nacionais (Marcopolo, Eletra Bus).</div>
-
-
-            </div>
-
-
-            <div class="timeline-item">
-
-
-              <div class="timeline-dot"></div>
-
-
-              <div class="timeline-year">2035</div>
-
-
-              <div class="timeline-title">Tempo médio de deslocamento reduzido em 35% na RMBH</div>
-
-
-              <div class="timeline-desc">Meta final: deslocamento médio diário de 68 minutos reduzido para 44 minutos. Modal público atingindo 52% dos deslocamentos motorizados. 500 km de ciclovias integradas — rede pública. Transporte rural regular implantado em 80% dos municípios com menos de 10 mil habitantes.</div>
-
-
-            </div>
-
-
-          </div>
-
-
-        </section>
-
-
-
-
-
-        <!-- 07 METAS 2050 -->
-
-
-        <section id="metas" class="content-section fade-in-section">
-
-
-          <div class="section-label">07</div>
-
-
-          <h2>Metas 2050</h2>
-
-
-          <p>As metas de 2050 representam a visão de longo prazo — um estado de Minas Gerais com mobilidade de classe mundial, neutro em carbono no setor de transportes e com plena integração entre seus 853 municípios.</p>
-
-
-          <ol>
-
-
-            <li>Atingir 65% de participação do transporte coletivo e ativo (a pé e bicicleta) nos deslocamentos motorizados da RMBH, alinhando Minas Gerais com os padrões das melhores cidades europeias.</li>
-
-
-            <li>Implantar rede ferroviária regional de passageiros conectando as 12 cidades com mais de 100 mil habitantes ao sistema metropolitano de BH, com viagens de até 300 km em menos de 2 horas.</li>
-
-
-            <li>Zerar as emissões de carbono da frota de transporte coletivo público, com 100% de veículos elétricos ou a hidrogênio verde operando na rede metropolitana e intermunicipal.</li>
-
-
-            <li>Eliminar o transporte irregular (lotações clandestinas) substituindo-o por serviços formais, seguros e subsidiados em todos os municípios com menos de 5 mil habitantes.</li>
-
-
-            <li>Reduzir em 80% as mortes no trânsito em Minas Gerais em relação a 2020, através de infraestrutura viária segura, fiscalização eletrônica e educação para o trânsito integrada ao currículo escolar.</li>
-
-
-            <li>Consolidar Belo Horizonte como referência ibero-americana em mobilidade sustentável, com reconhecimento da UITP (União Internacional de Transporte Público) e posição entre as 30 cidades mais eficientes do mundo.</li>
-
-
-          </ol>
-
-
-        </section>
-
-
-
-
-
-        <!-- 08 PROJETOS ESTRATÉGICOS -->
-
-
-        <section id="projetos" class="content-section fade-in-section">
-
-
-          <div class="section-label">08</div>
-
-
-          <h2>Projetos Estratégicos</h2>
-
-
-          <p>Os projetos a seguir representam as iniciativas prioritárias para a transformação do sistema de mobilidade mineiro, selecionadas pela combinação de impacto, viabilidade e capacidade de mobilizar recursos públicos e privados.</p>
-
-
-
-
-
-          <div style="display:flex;flex-direction:column;gap:var(--sp-4);margin-top:var(--sp-6);">
-
-
-
-
-
-            <div class="project-card">
-
-
-              <div>
-
-
-                <h4>Metrô RMBH — Expansão das Linhas 1 e 2</h4>
-
-
-                <p>Extensão da Linha 1 (Lagoinha?Carlos Prates, +4,2 km) e da Linha 2 (Calafate?Venda Nova, +9,4 km). Inclui 11 novas estações, modernização dos sistemas de sinalização CBTC e aquisição de 30 novos trens. Capacidade adicional de 220 mil passageiros/dia. Custo estimado: R$ 6,8 bilhões com financiamento misto (BID + Estado + PPP).</p>
-
-
-              </div>
-
-
-              <span class="project-status status-study"><i data-lucide="search"></i> Em Estudo</span>
-
-
-            </div>
-
-
-
-
-
-            <div class="project-card">
-
-
-              <div>
-
-
-                <h4>VLT Contagem?BH — Corredor Oeste Metropolitano</h4>
-
-
-                <p>Veículo Leve sobre Trilhos conectando o centro de Contagem ao Centro de BH (18 km, 14 estações) via Avenida Nossa Senhora do Carmo e Avenida Amazonas. Integrado ao Metrô na Estação Eldorado e aos —nibus municipais em cada estação. Viagem prevista de 28 minutos. Modelo de concessão com construção privada e operação regulada pela SETOP.</p>
-
-
-              </div>
-
-
-              <span class="project-status status-proposal"><i data-lucide="file-text"></i> Proposta</span>
-
-
-            </div>
-
-
-
-
-
-            <div class="project-card">
-
-
-              <div>
-
-
-                <h4>Corredor BRT 24h — Anel Rodoviário a Savassi</h4>
-
-
-                <p>Corredor BRT de alta capacidade operando 24 horas por dia, 7 dias por semana, no eixo Anel Rodoviário?Avenida do Contorno?Savassi (32 km). Veículos elétricos articulados com frequência de 3 minutos. 22 estações com acesso para pessoas com deficiência, bicicletários e integração digital. Capacidade: 180 mil passageiros/dia. Modelo similar ao Linha Verde de Curitiba.</p>
-
-
-              </div>
-
-
-              <span class="project-status status-proposal"><i data-lucide="file-text"></i> Proposta</span>
-
-
-            </div>
-
-
-
-
-
-            <div class="project-card">
-
-
-              <div>
-
-
-                <h4>Mobilidade Rural Integrada — 853 Municípios Conectados</h4>
-
-
-                <p>Programa de transporte público rural para municípios com menos de 10 mil habitantes, cobrindo deslocamentos para saúde, educação e comércio. Uso de vans elétricas sob demanda (modelo agendamento por aplicativo e SMS) em rotas flexíveis. Subsídio escalonado pelo tamanho e vulnerabilidade do município. Parceria com SECTES e EMATER para atendimento de comunidades rurais remotas.</p>
-
-
-              </div>
-
-
-              <span class="project-status status-active"><i data-lucide="check-circle"></i> Planejamento Ativo</span>
-
-
-            </div>
-
-
-
-
-
-            <div class="project-card">
-
-
-              <div>
-
-
-                <h4>MG Mobilidade Digital — Bilhetagem —nica e MaaS</h4>
-
-
-                <p>Plataforma digital integrada para todos os modais de transporte público de Minas Gerais: metrô, —nibus municipais, BRT, VLT, transporte escolar e rural. Cartão —nico com recarga via aplicativo, Pix e terminais físicos. Inclui painel de planejamento de viagens multimodal em tempo real, com acessibilidade em libras e —udio para deficientes visuais. Prazo de implantação: 18 meses.</p>
-
-
-              </div>
-
-
-              <span class="project-status status-study"><i data-lucide="search"></i> Em Estudo</span>
-
-
-            </div>
-
-
-
-
-
-          </div>
-
-
-        </section>
-
-
-
-
-
-        <!-- 09 INDICADORES-CHAVE -->
-
-
-        <section id="indicadores" class="content-section fade-in-section">
-
-
-          <div class="section-label">09</div>
-
-
-          <h2>Indicadores-Chave (KPIs)</h2>
-
-
-          <p>Os indicadores abaixo constituem o painel de monitoramento do Centro de Mobilidade e Transporte. Serão atualizados semestralmente com dados de BHTRANS, SETOP, CBTU e IBGE.</p>
-
-
-
-
-
-          <div class="metric-grid">
-
-
-            <div class="metric-card">
-
-
-              <div class="metric-label">Tempo médio deslocamento RMBH</div>
-
-
-              <div class="metric-value">68<span class="metric-unit">min</span></div>
-
-
-              <div class="metric-description">Meta 2035: 44 min. Fonte: TomTom Traffic Index.</div>
-
-
-              <div class="metric-trend down"><i data-lucide="arrow-up"></i> 12% pior vs. 2019</div>
-
-
-            </div>
-
-
-            <div class="metric-card">
-
-
-              <div class="metric-label">Modal público nos deslocamentos</div>
-
-
-              <div class="metric-value">38<span class="metric-unit">%</span></div>
-
-
-              <div class="metric-description">Meta 2035: 52%. Fonte: Pesquisa OD BHTRANS 2023.</div>
-
-
-              <div class="metric-trend down"><i data-lucide="trending-down"></i> Queda de 6pp em 10 anos</div>
-
-
-            </div>
-
-
-            <div class="metric-card">
-
-
-              <div class="metric-label">Emissões CO—?— transporte (MG)</div>
-
-
-              <div class="metric-value">24<span class="metric-unit">Mt</span></div>
-
-
-              <div class="metric-description">Megatoneladas por ano. Meta 2035: 16 Mt. Fonte: SEEG 2023.</div>
-
-
-              <div class="metric-trend down"><i data-lucide="cloud"></i> 32% do total estadual</div>
-
-
-            </div>
-
-
-            <div class="metric-card">
-
-
-              <div class="metric-label">Índice de Mobilidade Urbana</div>
-
-
-              <div class="metric-value">0,47</div>
-
-
-              <div class="metric-description">IMOB/MDR (0 a 1). Meta 2035: 0,68. Mádia capitais: 0,53.</div>
-
-
-              <div class="metric-trend down"><i data-lucide="bar-chart-2"></i> Abaixo da média</div>
-
-
-            </div>
-
-
-            <div class="metric-card">
-
-
-              <div class="metric-label">Mortes no trânsito (por 100 mil hab.)</div>
-
-
-              <div class="metric-value">16,8</div>
-
-
-              <div class="metric-description">Meta 2035: 8,0. Fonte: Observatório Nacional de Segurança Viária.</div>
-
-
-              <div class="metric-trend down"><i data-lucide="alert-circle"></i> 2º maior que UE</div>
-
-
-            </div>
-
-
-            <div class="metric-card">
-
-
-              <div class="metric-label">Extensão de ciclovias (BH)</div>
-
-
-              <div class="metric-value">195<span class="metric-unit">km</span></div>
-
-
-              <div class="metric-description">Meta 2035: 500 km integrados. Fonte: PBH Mobilidade.</div>
-
-
-              <div class="metric-trend up"><i data-lucide="trending-up"></i> +38% vs. 2018</div>
-
-
-            </div>
-
-
-          </div>
-
-
-        </section>
-
-
-
-
-
-        <!-- 10 QUEST—?ES PARA DEBATE -->
-
-
-        <section id="debate" class="content-section fade-in-section">
-
-
-          <div class="section-label">10</div>
-
-
-          <h2>Questões para Debate Público</h2>
-
-
-          <p>O Centro de Mobilidade e Transporte convida pesquisadores, gestores, operadores e a sociedade civil a debater as seguintes questões fundamentais para a formulação de políticas de mobilidade em Minas Gerais:</p>
-
-
-
-
-
-          <ul>
-
-
-            <li>Como estruturar um modelo de governança metropolitana de mobilidade que supere a fragmentação entre os 34 municípios da RMBH sem ferir a autonomia municipal garantida pela Constituição de 1988?</li>
-
-
-            <li>Qual deve ser a proporção ideal entre investimento em infraestrutura nova (metrô, BRT) e melhorias operacionais no sistema existente de —nibus, considerando as restrições fiscais do Estado de Minas Gerais?</li>
-
-
-            <li>Como garantir que a expansão do sistema de transporte alcance as periferias mais vulneráveis da RMBH — e não apenas os corredores de maior demanda e rentabilidade para os operadores privados?</li>
-
-
-            <li>Quais mecanismos de financiamento são mais adequados para projetos de mobilidade de longo prazo (30-40 anos) em um estado com histérico de restrições fiscais severas?</li>
-
-
-            <li>Como implementar instrumentos de gestão da demanda — como pedágio urbano e restrição de circulação — de forma politicamente viável e socialmente justa, sem penalizar trabalhadores de baixa renda que dependem do automóvel?</li>
-
-
-            <li>De que forma o transporte rural e intermunicipal pode ser estruturado como serviço público essencial, com financiamento garantido mesmo em municípios sem capacidade própria de arrecadação?</li>
-
-
-            <li>Como a eletrificação da frota de —nibus pode ser acelerada aproveitando a capacidade instalada de energia renovável em Minas Gerais, ao mesmo tempo em que se desenvolvem fornecedores industriais locais?</li>
-
-
-          </ul>
-
-
-        </section>
-
-
-
-
-
-        <!-- 11 REFER—?NCIAS -->
-
-
-        <section id="referencias" class="content-section fade-in-section">
-
-
-          <div class="section-label">11</div>
-
-
-          <h2>Referências</h2>
-
-
-          <div class="reference-list">
-
-
-            <div class="reference-item">
-
-
-              <span class="reference-num">01</span>
-
-
-              <div>BHTRANS — Empresa de Transportes e Trânsito de Belo Horizonte. <em>Pesquisa de Origem e Destino da RMBH 2023</em>. Belo Horizonte: BHTRANS, 2023.</div>
-
-
-            </div>
-
-
-            <div class="reference-item">
-
-
-              <span class="reference-num">02</span>
-
-
-              <div>FUNDA——?O JO—?O PINHEIRO (FJP). <em>Custo dos congestionamentos na RMBH: estimativa de perdas de produtividade 2023</em>. Belo Horizonte: FJP, 2023.</div>
-
-
-            </div>
-
-
-            <div class="reference-item">
-
-
-              <span class="reference-num">03</span>
-
-
-              <div>BRASIL. Ministério das Cidades. <em>Sistema Nacional de Indicadores de Mobilidade Urbana — SIMOB 2022</em>. Brasília: MDR, 2022. Disponível em: <a href="https://www.gov.br/cidades" target="_blank" rel="noopener">gov.br/cidades</a></div>
-
-
-            </div>
-
-
-            <div class="reference-item">
-
-
-              <span class="reference-num">04</span>
-
-
-              <div>INSTITUTO CLIMA E SOCIEDADE (iCS) / SEEG. <em>Sistema de Estimativa de Emissões e Remoções de Gases de Efeito Estufa — Setor Transportes 2023</em>. São Paulo: SEEG, 2023.</div>
-
-
-            </div>
-
-
-            <div class="reference-item">
-
-
-              <span class="reference-num">05</span>
-
-
-              <div>TOMTOM INTERNATIONAL. <em>Traffic Index Report 2023</em>. Amsterdam: TomTom, 2024. Disponível em: <a href="https://www.tomtom.com/traffic-index/" target="_blank" rel="noopener">tomtom.com/traffic-index</a></div>
-
-
-            </div>
-
-
-            <div class="reference-item">
-
-
-              <span class="reference-num">06</span>
-
-
-              <div>OCDE — Organização para Cooperação e Desenvolvimento Econômico. <em>Urban Mobility and Economic Productivity: Evidence from 200 Cities</em>. Paris: OECD Publishing, 2022.</div>
-
-
-            </div>
-
-
-            <div class="reference-item">
-
-
-              <span class="reference-num">07</span>
-
-
-              <div>INSTITUTE FOR TRANSPORTATION AND DEVELOPMENT POLICY (ITDP). <em>The BRT Standard 2016</em>. New York: ITDP, 2016. Disponível em: <a href="https://www.itdp.org" target="_blank" rel="noopener">itdp.org</a></div>
-
-
-            </div>
-
-
-            <div class="reference-item">
-
-
-              <span class="reference-num">08</span>
-
-
-              <div>OBSERVATóRIO NACIONAL DE SEGURANçA VIÁRIA (ONSV). <em>Relatério Anual de Acidentes e Mortes no Trânsito Brasileiro 2023</em>. São Paulo: ONSV, 2024.</div>
-
-
-            </div>
-
-
-            <div class="reference-item">
-
-
-              <span class="reference-num">09</span>
-
-
-              <div>BANCO MUNDIAL. <em>Mobilidade Urbana na América Latina: Desafios e Soluções para Cidades Inclusivas</em>. Washington: World Bank Group, 2021.</div>
-
-
-            </div>
-
-
-            <div class="reference-item">
-
-
-              <span class="reference-num">10</span>
-
-
-              <div>CBTU — Companhia Brasileira de Trens Urbanos. <em>Relatério de Desempenho Operacional do Metrô de Belo Horizonte 2023</em>. Rio de Janeiro: CBTU, 2024.</div>
-
-
-            </div>
-
-
-          </div>
-
-
-        </section>
-
-
-
-
-
-      </article>
-
-
-    </div>
-
-
-  </div>
-
-
-
-
-
-  <!-- FOOTER -->
-
-
-  <footer class="site-footer">
-
-
-    <div class="container">
-
-
-      <div class="footer-grid">
-
-
-        <div class="footer-brand">
-
-
-          <a href="../index.html" class="navbar-brand">
-
-
-            <svg class="navbar-logo" viewBox="0 0 36 36" fill="none">
-
-
-              <rect width="36" height="36" rx="8" fill="url(#grad-footer-transporte)"/>
-
-
-              <path d="M10 24 L10 13 L18 20 L26 13 L26 24" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-
-
-              <defs><linearGradient id="grad-footer-transporte" x1="0" y1="0" x2="36" y2="36" gradientUnits="userSpaceOnUse"><stop stop-color="#00E5FF"/><stop offset="1" stop-color="#4F46E5"/></linearGradient></defs>
-
-
-            </svg>
-
-
-            <span class="navbar-name">Minas <span>2035</span></span>
-
-
-          </a>
-
-
-          <p>Plataforma independente de estudos para o desenvolvimento de Minas Gerais com visão de longo prazo.</p>
-
-
+   <div class="page-layout">
+    <!-- TABLE OF CONTENTS -->
+    <aside>
+     <nav aria-label="Índice" class="toc">
+      <div class="toc-title">
+       Neste Centro
+      </div>
+      <ul class="toc-list">
+       <li>
+        <a href="#resumo">
+         Resumo Executivo
+        </a>
+       </li>
+       <li>
+        <a href="#situacao">
+         Situação Atual
+        </a>
+       </li>
+       <li>
+        <a href="#desafios">
+         Desafios Estruturais
+        </a>
+       </li>
+       <li>
+        <a href="#oportunidades">
+         Oportunidades
+        </a>
+       </li>
+       <li>
+        <a href="#benchmarking">
+         Benchmarking Internacional
+        </a>
+       </li>
+       <li>
+        <a href="#objetivos">
+         Objetivos 2035
+        </a>
+       </li>
+       <li>
+        <a href="#metas">
+         Metas 2050
+        </a>
+       </li>
+       <li>
+        <a href="#projetos">
+         Projetos Estratégicos
+        </a>
+       </li>
+       <li>
+        <a href="#indicadores">
+         Indicadores-Chave
+        </a>
+       </li>
+       <li>
+        <a href="#debate">
+         Questões para Debate
+        </a>
+       </li>
+       <li>
+        <a href="#referencias">
+         Referências
+        </a>
+       </li>
+      </ul>
+     </nav>
+    </aside>
+    <!-- ARTICLE -->
+    <article class="article-content">
+     <!-- 01 RESUMO EXECUTIVO -->
+     <section class="content-section fade-in-section" id="resumo">
+      <div class="section-label">
+       01
+      </div>
+      <h2>
+       Resumo Executivo
+      </h2>
+      <p>
+       Minas Gerais enfrenta uma crise silenciosa de mobilidade que compromete a produtividade econômica, a qualidade de vida urbana e a coesão territorial do estado. Com a Região Metropolitana de Belo Horizonte concentrando 5,8 milhões de habitantes e gerando mais de 40% do PIB estadual, o sistema de transporte da RMBH opera em condição de estresse crênico: congestionamentos custam estimadamente R$ 7,4 bilhões por ano em perda de produtividade, segundo estudo da Fundação João Pinheiro (2023).
+      </p>
+      <p>
+       O padrão rodoviarista dominante — em que 80% dos usuários de transporte público dependem exclusivamente de ônibus — cria um sistema frágil, poluente e ineficiente. A rede metroviária de BH, limitada a duas linhas com 28 estações e 28 km de extensão, atende apenas 11% dos usuários de transporte coletivo na região. Comparativamente, cidades como Bogotá e Curitiba consolidaram sistemas multimodais robustos com frações de investimento per capita semelhantes s disponíveis em Minas.
+      </p>
+      <p>
+       O interior do estado enfrenta desafio oposto: dos 853 municípios mineiros, 62% possuem menos de 10 mil habitantes e dependem de linhas rodoviárias estaduais para acesso a serviços básicos, educação e saúde. A malha ferroviária de cargas não contempla passageiros, e o transporte rural intermunicipal apresenta irregularidade e baixa frequência, aprofundando o isolamento de populações vulneráveis.
+      </p>
+      <p>
+       O Projeto Minas 2035 propõe uma transformação sistêmica que vai da expansão do metrô metropolitano — criação de corredores de BRT de alta capacidade, passando pela implementação de um VLT interconectando municípios da borda metropolitana e pela digitalização plena da gestão do trânsito. O objetivo central — reduzir o tempo médio de deslocamento diário na RMBH em 35% até 2035, ao mesmo tempo em que se dobra a participação do transporte de baixo carbono na matriz modal mineira.
+      </p>
+     </section>
+     <!-- 02 SITUA——?O ATUAL -->
+     <section class="content-section fade-in-section" id="situacao">
+      <div class="section-label">
+       02
+      </div>
+      <h2>
+       Situação Atual
+      </h2>
+      <p>
+       O diagnóstico da mobilidade em Minas Gerais revela uma combinação de infraestrutura envelhecida, governança fragmentada e investimento insuficiente. Os dados abaixo sintetizam os principais indicadores do estado da mobilidade no estado em 2024.
+      </p>
+      <div class="metric-grid">
+       <div class="metric-card">
+        <div class="metric-label">
+         Tempo médio deslocamento BH
         </div>
-
-
-        <div class="footer-col"><h5>Projeto</h5><ul><li><a href="../sobre.html">Sobre</a></li><li><a href="../manifesto.html">Manifesto</a></li><li><a href="../pilares.html">Pilares</a></li><li><a href="../participar.html">Participar</a></li></ul></div>
-
-
-        <div class="footer-col"><h5>Áreas</h5><ul><li><a href="economia.html">Economia</a></li><li><a href="educacao.html">Educação</a></li><li><a href="tecnologia.html">Tecnologia</a></li><li><a href="saude.html">Saúde</a></li></ul></div>
-
-
-        <div class="footer-col"><h5>Legal</h5><ul><li><a href="#">Política de privacidade</a></li><li><a href="#">Licença de uso</a></li><li><a href="#">Contato</a></li></ul></div>
-
-
+        <div class="metric-value">
+         68
+         <span class="metric-unit">
+          min
+         </span>
+        </div>
+        <div class="metric-description">
+         Mádia diúria por habitante. Índice TomTom Traffic (2023).
+        </div>
+        <div class="metric-trend down">
+         <i data-lucide="trending-up">
+         </i>
+         Pior que a média nacional (61 min)
+        </div>
+       </div>
+       <div class="metric-card">
+        <div class="metric-label">
+         Extensão do Metrô BH
+        </div>
+        <div class="metric-value">
+         28
+         <span class="metric-unit">
+          km
+         </span>
+        </div>
+        <div class="metric-description">
+         2 linhas, 28 estações. Expandido pela ltima vez em 2008.
+        </div>
+        <div class="metric-trend down">
+         <i data-lucide="minus">
+         </i>
+         Estagnado há 16 anos
+        </div>
+       </div>
+       <div class="metric-card">
+        <div class="metric-label">
+         Frota de ônibus RMBH
+        </div>
+        <div class="metric-value">
+         7.200
+        </div>
+        <div class="metric-description">
+         Veículos com idade média de 8,4 anos. BHTRANS, 2024.
+        </div>
+        <div class="metric-trend down">
+         <i data-lucide="alert-triangle">
+         </i>
+         18% acima da vida til
+        </div>
+       </div>
+       <div class="metric-card">
+        <div class="metric-label">
+         Ciclofaixas em BH
+        </div>
+        <div class="metric-value">
+         195
+         <span class="metric-unit">
+          km
+         </span>
+        </div>
+        <div class="metric-description">
+         Meta era 300 km até 2020. PBH, 2024.
+        </div>
+        <div class="metric-trend down">
+         <i data-lucide="x-circle">
+         </i>
+         Meta não atingida
+        </div>
+       </div>
       </div>
-
-
-      <div class="footer-bottom">
-
-
-        <p>— 2026 Projeto Minas 2035. O conteúdo representa estudos e ideias para debate público.</p>
-
-
-        <a href="../manifesto.html">Manifesto —</a>
-
-
+      <p>
+       A frota de veículos particulares na RMBH cresceu 3,2% ao ano na ltima década, superando o crescimento populacional de 1,1%. Esse desequilíbrio reflete a ausência de alternativas de transporte público atraentes. Pesquisa de Origem e Destino da BHTRANS (2023) indica que 47% dos deslocamentos motorizados na RMBH são realizados por automóvel individual, dado que contrasta com os 23% registrados em cidades com transporte público bem estruturado.
+      </p>
+      <p>
+       No interior, apenas 127 dos 853 municípios possuem serviço de transporte público municipal regular. O DNIT registra que 34% da malha viária estadual não pavimentada apresenta condições créticas, dificultando o transporte rodoviário intermunicipal de passageiros.
+      </p>
+     </section>
+     <!-- 03 DESAFIOS ESTRUTURAIS -->
+     <section class="content-section fade-in-section" id="desafios">
+      <div class="section-label">
+       03
       </div>
-
-
+      <h2>
+       Desafios Estruturais
+      </h2>
+      <p>
+       A crise de mobilidade em Minas Gerais — produto de décadas de escolhas políticas que priorizaram o automóvel individual e negligenciaram o planejamento integrado de transporte. Os desafios a seguir são interconectados e exigem abordagem sistêmica.
+      </p>
+      <h3>
+       Superlotação e precariedade do transporte coletivo
+      </h3>
+      <p>
+       Os corredores de ônibus da RMBH operam com lotação média de 140% da capacidade nos horários de pico. A ausência de sistemas de BRT de alta capacidade nos principais eixos — como a Avenida Antônio Carlos e o Anel Rodoviário — força milhões de passageiros a suportar condições degradantes cotidianamente. A insatisfação sistemática eleva o abandono do transporte público em favor do automóvel particular, criando um ciclo vicioso de congestionamento.
+      </p>
+      <div class="callout callout-warning">
+       <div class="callout-icon">
+        <i data-lucide="alert-triangle">
+        </i>
+       </div>
+       <p>
+        <strong>
+         Ponto crático:
+        </strong>
+        A taxa de abandono do transporte coletivo na RMBH cresceu 18% entre 2015 e 2023, com usuários migrando para automóveis e motos, piorando emissões e congestionamentos. Esse ciclo — autorreforçante e exige intervenção estrutural imediata.
+       </p>
+      </div>
+      <h3>
+       Dominância absoluta do modal rodoviário
+      </h3>
+      <p>
+       O sistema de transporte mineiro — quase integralmente rodoviarista. Não há nenhuma linha de trem de passageiros metropolitano além das duas linhas do metrô de BH. A RFFSA foi desativada nos anos 1990 sem substituição, e os trilhos — em grande parte ainda existentes — foram cedidos exclusivamente — exploração mineral e de cargas. Minas Gerais possui mais de 8.000 km de malha ferroviária, dos quais zero são destinados ao transporte regular de passageiros fora da RMBH.
+      </p>
+      <h3>
+       Caos urbano em Belo Horizonte e municípios vizinhos
+      </h3>
+      <p>
+       A gestão do trânsito na RMBH — atomizada em 34 municípios com competências sobrepostas e sistemas de sinalização incompatéveis. A ausência de um sistema nico de gerenciamento de tráfego metropolitano resulta em ondas verdes desalinhadas, semáforos analógicos e incapacidade de resposta em tempo real a acidentes e eventos extraordinários. Belo Horizonte registra mais de 1.200 acidentes fatais de trânsito por ano — taxa 60% acima das capitais com sistemas de gestão integrada.
+      </p>
+      <h3>
+       Ausência de modal ferroviário regional
+      </h3>
+      <p>
+       Cidades mineiras de médio porte — como Uberlândia (700 mil hab.), Juiz de Fora (600 mil hab.) e Montes Claros (400 mil hab.) — carecem de conexão ferroviária de passageiros entre si e com BH. O transporte rodoviário de longa distância — caro, lento e emite carbono em nível 3x superior ao ferroviário. A inexistência de trem de alta velocidade ou VLT regional prejudica a integração econômica intermunicipal e a competitividade do estado.
+      </p>
+      <div class="callout callout-info">
+       <div class="callout-icon">
+        <i data-lucide="info">
+        </i>
+       </div>
+       <p>
+        A OCDE (2022) estima que cidades com participação do transporte coletivo acima de 40% dos deslocamentos apresentam PIB per capita 12% maior na média, devido — redução de perdas por congestionamento e maior mobilidade de trabalhadores de baixa renda em direção a oportunidades de emprego.
+       </p>
+      </div>
+      <h3>
+       Exclusão da população rural e periurbana
+      </h3>
+      <p>
+       Aproximadamente 1,4 milhão de mineiros residem em áreas rurais sem acesso regular a transporte público. Estudantes, trabalhadores rurais e idosos dependem de transporte informal, lotações clandestinas ou deslocamentos a pé em distâncias superiores a 10 km. Esse isolamento perpetua a pobreza rural e dificulta o acesso a serviços de saúde, educação e emprego nos centros urbanos.
+      </p>
+     </section>
+     <!-- 04 OPORTUNIDADES -->
+     <section class="content-section fade-in-section" id="oportunidades">
+      <div class="section-label">
+       04
+      </div>
+      <h2>
+       Oportunidades
+      </h2>
+      <p>
+       Apesar do diagnóstico desafiador, Minas Gerais possui ativos nicos que, se mobilizados estrategicamente, podem transformar sua matriz de mobilidade em menos de uma geração.
+      </p>
+      <h3>
+       Infraestrutura ferroviária latente
+      </h3>
+      <p>
+       Com mais de 8.000 km de trilhos — muitos em bom estado de conservação — Minas Gerais possui a base física necessária para uma rede ferroviária regional de passageiros. A reativação seletiva de trechos estratégicos, como o Belo Horizonte?Juiz de Fora e o BH?Governador Valadares, permitiria conectar polos econômicos regionais com velocidade, eficiência e custo ambiental reduzido, usando a infraestrutura existente com adaptações relativamente modestas.
+      </p>
+      <h3>
+       Corredor de BRT de alta capacidade
+      </h3>
+      <p>
+       Os grandes eixos viários da RMBH — especialmente a BR-040, a Avenida Antônio Carlos e o Anel Rodoviário — têm geometria adequada para implantação de BRT dedicado com frequência de 3 minutos. Curitiba demonstrou que sistemas de BRT bem planejados transportam volume equivalente ao metrô a 8% do custo de implantação. O potencial de atendimento diário de corredores BRT em BH — estimado em 1,2 milhão de passageiros adicionais.
+      </p>
+      <h3>
+       Financiamento climático internacional
+      </h3>
+      <p>
+       O Brasil — elegível a bilhões de dólares em financiamento climático do Fundo Verde para o Clima, BID, Banco Mundial e CAF para projetos de mobilidade de baixo carbono. A eletrificação de frotas de ônibus, a implantação de BRT e a expansão metroviária podem ser financiadas com taxas de juros subsidiadas e prazos de 30 anos, tornando projetos que pareciam fiscalmente inviáveis em oportunidades acessíveis ao governo estadual.
+      </p>
+      <h3>
+       Tecnologia e mobilidade como serviço (MaaS)
+      </h3>
+      <p>
+       A digitalização completa do sistema de transporte — com bilhetagem integrada, rastreamento em tempo real, aplicativos de planejamento multimodal e gestão inteligente de tráfego — pode ser implementada a baixo custo com tecnologia já disponível no mercado. Cidades como Singapura e Helsinque demonstraram que a integração digital reduz o tempo médio de deslocamento em 15-20% sem necessidade de nova infraestrutura física.
+      </p>
+     </section>
+     <!-- 05 BENCHMARKING -->
+     <section class="content-section fade-in-section" id="benchmarking">
+      <div class="section-label">
+       05
+      </div>
+      <h2>
+       Benchmarking Internacional
+      </h2>
+      <p>
+       A análise comparativa com sistemas de referência revela que os objetivos propostos para Minas Gerais são alcançáveis, tendo sido realizados em contextos socioeconômicos comparáveis ao mineiro.
+      </p>
+      <div style="overflow-x:auto;">
+       <table class="bench-table">
+        <thead>
+         <tr>
+          <th>
+           Referência
+          </th>
+          <th>
+           Modal público (%)
+          </th>
+          <th>
+           Tempo médio deslocamento
+          </th>
+          <th>
+           Política chave
+          </th>
+          <th>
+           Lição para MG
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr>
+          <td class="td-highlight">
+           Curitiba (BR)
+          </td>
+          <td class="td-accent">
+           45%
+          </td>
+          <td>
+           38 min
+          </td>
+          <td>
+           BRT integrado com 340 km de vias exclusivas; terminal de tubo com embarque nível plataforma; integração tarifária nica
+          </td>
+          <td>
+           BRT de alta qualidade — tão eficaz quanto metrô e viável com orçamentos estaduais
+          </td>
+         </tr>
+         <tr>
+          <td class="td-highlight">
+           Bogotá (Colômbia)
+          </td>
+          <td class="td-accent">
+           52%
+          </td>
+          <td>
+           48 min
+          </td>
+          <td>
+           TransMilenio BRT (114 km); integração com Ciclovía (550 km de ciclovias); restrição veicular por placa
+          </td>
+          <td>
+           Combinação de BRT com ciclomobilidade massiva reduz demanda e custo do sistema principal
+          </td>
+         </tr>
+         <tr>
+          <td class="td-highlight">
+           Singapura
+          </td>
+          <td class="td-accent">
+           66%
+          </td>
+          <td>
+           42 min
+          </td>
+          <td>
+           Integração metrô + ônibus + MaaS digital; pedágio urbano por eletrônica; taxação progressiva de automóveis
+          </td>
+          <td>
+           Gestão da demanda via preços — essencial para evitar que nova oferta gere nova procura por carro
+          </td>
+         </tr>
+         <tr>
+          <td class="td-highlight">
+           Zurique (Suíça)
+          </td>
+          <td class="td-accent">
+           72%
+          </td>
+          <td>
+           28 min
+          </td>
+          <td>
+           S-Bahn regional integrado com VLT urbano; bilhete nico para todos os modais; frequência de 6 min em horário de pico
+          </td>
+          <td>
+           Integração tarifária e frequência elevada são os maiores drivers de adoção do transporte público
+          </td>
+         </tr>
+         <tr>
+          <td class="td-highlight">
+           Minas Gerais (2024)
+          </td>
+          <td class="td-accent">
+           38%
+          </td>
+          <td>
+           68 min
+          </td>
+          <td>
+           Dois sistemas isolados (metrô BH + ônibus RMBH); sem integração tarifária plena; zero BRT estruturado
+          </td>
+          <td>
+           ?
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </div>
+      <div class="quote-block">
+       <blockquote>
+        "A mobilidade urbana não — um problema de engenharia — — um problema de escolha política. Toda cidade que priorizou o transporte coletivo melhorou sua economia, sua qualidade do ar e seu ndice de felicidade."
+       </blockquote>
+       <cite>
+        — Enrique Peñalosa, ex-prefeito de Bogotá e referência mundial em mobilidade urbana
+       </cite>
+      </div>
+     </section>
+     <!-- 06 OBJETIVOS 2035 -->
+     <section class="content-section fade-in-section" id="objetivos">
+      <div class="section-label">
+       06
+      </div>
+      <h2>
+       Objetivos 2035
+      </h2>
+      <p>
+       Os objetivos abaixo são mensuráveis, vinculados a responsáveis institucionais e estruturados para serem alcançados dentro do horizonte temporal de 2035, com marcos intermediários em 2027 e 2030.
+      </p>
+      <div class="timeline">
+       <div class="timeline-item">
+        <div class="timeline-dot">
+        </div>
+        <div class="timeline-year">
+         2027
+        </div>
+        <div class="timeline-title">
+         Sistema de Gestão Integrada de Tráfego Metropolitano
+        </div>
+        <div class="timeline-desc">
+         Implantação do Centro de Controle Operacional Metropolitano (CCOM) unificando o gerenciamento de tráfego de BH e 10 municípios vizinhos. Instalação de 1.200 câmeras inteligentes e integração de semáforos adaptativos em 650 cruzamentos cráticos da RMBH. Redução estimada de 12% no tempo de deslocamento.
+        </div>
+       </div>
+       <div class="timeline-item">
+        <div class="timeline-dot">
+        </div>
+        <div class="timeline-year">
+         2028
+        </div>
+        <div class="timeline-title">
+         Corredor BRT Antônio Carlos — Pedro I em operação plena
+        </div>
+        <div class="timeline-desc">
+         Primeiro corredor BRT de alta capacidade da RMBH, ligando a Pampulha ao Centro com 42 km de vias exclusivas, 28 estações e frequência de 4 minutos. Capacidade para 280 mil passageiros/dia. Integração tarifária com o Metrô e ônibus alimentadores via cartão nico MG Mobilidade.
+        </div>
+       </div>
+       <div class="timeline-item">
+        <div class="timeline-dot">
+        </div>
+        <div class="timeline-year">
+         2030
+        </div>
+        <div class="timeline-title">
+         VLT Contagem — BH em operação e expansão do Metrô
+        </div>
+        <div class="timeline-desc">
+         VLT de superfície conectando Contagem ao Centro de BH (18 km, 14 estações). Extensão da Linha 2 do Metrô até Venda Nova (+9,4 km, 7 estações). Juntos, esses projetos adicionarão 350 mil passageiros/dia ao modal ferroviário metropolitano, reduzindo 28% da frota de ônibus na orla da RMBH.
+        </div>
+       </div>
+       <div class="timeline-item">
+        <div class="timeline-dot">
+        </div>
+        <div class="timeline-year">
+         2032
+        </div>
+        <div class="timeline-title">
+         Eletrificação de 60% da frota de ônibus metropolitana
+        </div>
+        <div class="timeline-desc">
+         Renovação de 4.300 veículos por ônibus elétricos, com depósitos de recarga solar nas 12 garagens metropolitanas. Redução de 45% nas emissões de NOx e material particulado, com economia de R$ 780 milhões/ano em combustível. Parceria com fabricantes nacionais (Marcopolo, Eletra Bus).
+        </div>
+       </div>
+       <div class="timeline-item">
+        <div class="timeline-dot">
+        </div>
+        <div class="timeline-year">
+         2035
+        </div>
+        <div class="timeline-title">
+         Tempo médio de deslocamento reduzido em 35% na RMBH
+        </div>
+        <div class="timeline-desc">
+         Meta final: deslocamento médio diário de 68 minutos reduzido para 44 minutos. Modal público atingindo 52% dos deslocamentos motorizados. 500 km de ciclovias integradas — rede pública. Transporte rural regular implantado em 80% dos municípios com menos de 10 mil habitantes.
+        </div>
+       </div>
+      </div>
+     </section>
+     <!-- 07 METAS 2050 -->
+     <section class="content-section fade-in-section" id="metas">
+      <div class="section-label">
+       07
+      </div>
+      <h2>
+       Metas 2050
+      </h2>
+      <p>
+       As metas de 2050 representam a visão de longo prazo — um estado de Minas Gerais com mobilidade de classe mundial, neutro em carbono no setor de transportes e com plena integração entre seus 853 municípios.
+      </p>
+      <ol>
+       <li>
+        Atingir 65% de participação do transporte coletivo e ativo (a pé e bicicleta) nos deslocamentos motorizados da RMBH, alinhando Minas Gerais com os padrões das melhores cidades europeias.
+       </li>
+       <li>
+        Implantar rede ferroviária regional de passageiros conectando as 12 cidades com mais de 100 mil habitantes ao sistema metropolitano de BH, com viagens de até 300 km em menos de 2 horas.
+       </li>
+       <li>
+        Zerar as emissões de carbono da frota de transporte coletivo público, com 100% de veículos elétricos ou a hidrogênio verde operando na rede metropolitana e intermunicipal.
+       </li>
+       <li>
+        Eliminar o transporte irregular (lotações clandestinas) substituindo-o por serviços formais, seguros e subsidiados em todos os municípios com menos de 5 mil habitantes.
+       </li>
+       <li>
+        Reduzir em 80% as mortes no trânsito em Minas Gerais em relação a 2020, através de infraestrutura viária segura, fiscalização eletrônica e educação para o trânsito integrada ao currículo escolar.
+       </li>
+       <li>
+        Consolidar Belo Horizonte como referência ibero-americana em mobilidade sustentável, com reconhecimento da UITP (União Internacional de Transporte Público) e posição entre as 30 cidades mais eficientes do mundo.
+       </li>
+      </ol>
+     </section>
+     <!-- 08 PROJETOS ESTRATÉGICOS -->
+     <section class="content-section fade-in-section" id="projetos">
+      <div class="section-label">
+       08
+      </div>
+      <h2>
+       Projetos Estratégicos
+      </h2>
+      <p>
+       Os projetos a seguir representam as iniciativas prioritárias para a transformação do sistema de mobilidade mineiro, selecionadas pela combinação de impacto, viabilidade e capacidade de mobilizar recursos públicos e privados.
+      </p>
+      <div style="display:flex;flex-direction:column;gap:var(--sp-4);margin-top:var(--sp-6);">
+       <div class="project-card">
+        <div>
+         <h4>
+          Metrô RMBH — Expansão das Linhas 1 e 2
+         </h4>
+         <p>
+          Extensão da Linha 1 (Lagoinha?Carlos Prates, +4,2 km) e da Linha 2 (Calafate?Venda Nova, +9,4 km). Inclui 11 novas estações, modernização dos sistemas de sinalização CBTC e aquisição de 30 novos trens. Capacidade adicional de 220 mil passageiros/dia. Custo estimado: R$ 6,8 bilhões com financiamento misto (BID + Estado + PPP).
+         </p>
+        </div>
+        <span class="project-status status-study">
+         <i data-lucide="search">
+         </i>
+         Em Estudo
+        </span>
+       </div>
+       <div class="project-card">
+        <div>
+         <h4>
+          VLT Contagem?BH — Corredor Oeste Metropolitano
+         </h4>
+         <p>
+          Veículo Leve sobre Trilhos conectando o centro de Contagem ao Centro de BH (18 km, 14 estações) via Avenida Nossa Senhora do Carmo e Avenida Amazonas. Integrado ao Metrô na Estação Eldorado e aos ônibus municipais em cada estação. Viagem prevista de 28 minutos. Modelo de concessão com construção privada e operação regulada pela SETOP.
+         </p>
+        </div>
+        <span class="project-status status-proposal">
+         <i data-lucide="file-text">
+         </i>
+         Proposta
+        </span>
+       </div>
+       <div class="project-card">
+        <div>
+         <h4>
+          Corredor BRT 24h — Anel Rodoviário a Savassi
+         </h4>
+         <p>
+          Corredor BRT de alta capacidade operando 24 horas por dia, 7 dias por semana, no eixo Anel Rodoviário?Avenida do Contorno?Savassi (32 km). Veículos elétricos articulados com frequência de 3 minutos. 22 estações com acesso para pessoas com deficiência, bicicletários e integração digital. Capacidade: 180 mil passageiros/dia. Modelo similar ao Linha Verde de Curitiba.
+         </p>
+        </div>
+        <span class="project-status status-proposal">
+         <i data-lucide="file-text">
+         </i>
+         Proposta
+        </span>
+       </div>
+       <div class="project-card">
+        <div>
+         <h4>
+          Mobilidade Rural Integrada — 853 Municípios Conectados
+         </h4>
+         <p>
+          Programa de transporte público rural para municípios com menos de 10 mil habitantes, cobrindo deslocamentos para saúde, educação e comércio. Uso de vans elétricas sob demanda (modelo agendamento por aplicativo e SMS) em rotas flexíveis. Subsídio escalonado pelo tamanho e vulnerabilidade do município. Parceria com SECTES e EMATER para atendimento de comunidades rurais remotas.
+         </p>
+        </div>
+        <span class="project-status status-active">
+         <i data-lucide="check-circle">
+         </i>
+         Planejamento Ativo
+        </span>
+       </div>
+       <div class="project-card">
+        <div>
+         <h4>
+          MG Mobilidade Digital — Bilhetagem nica e MaaS
+         </h4>
+         <p>
+          Plataforma digital integrada para todos os modais de transporte público de Minas Gerais: metrô, ônibus municipais, BRT, VLT, transporte escolar e rural. Cartão nico com recarga via aplicativo, Pix e terminais físicos. Inclui painel de planejamento de viagens multimodal em tempo real, com acessibilidade em libras e udio para deficientes visuais. Prazo de implantação: 18 meses.
+         </p>
+        </div>
+        <span class="project-status status-study">
+         <i data-lucide="search">
+         </i>
+         Em Estudo
+        </span>
+       </div>
+      </div>
+     </section>
+     <!-- 09 INDICADORES-CHAVE -->
+     <section class="content-section fade-in-section" id="indicadores">
+      <div class="section-label">
+       09
+      </div>
+      <h2>
+       Indicadores-Chave (KPIs)
+      </h2>
+      <p>
+       Os indicadores abaixo constituem o painel de monitoramento do Centro de Mobilidade e Transporte. Serão atualizados semestralmente com dados de BHTRANS, SETOP, CBTU e IBGE.
+      </p>
+      <div class="metric-grid">
+       <div class="metric-card">
+        <div class="metric-label">
+         Tempo médio deslocamento RMBH
+        </div>
+        <div class="metric-value">
+         68
+         <span class="metric-unit">
+          min
+         </span>
+        </div>
+        <div class="metric-description">
+         Meta 2035: 44 min. Fonte: TomTom Traffic Index.
+        </div>
+        <div class="metric-trend down">
+         <i data-lucide="arrow-up">
+         </i>
+         12% pior vs. 2019
+        </div>
+       </div>
+       <div class="metric-card">
+        <div class="metric-label">
+         Modal público nos deslocamentos
+        </div>
+        <div class="metric-value">
+         38
+         <span class="metric-unit">
+          %
+         </span>
+        </div>
+        <div class="metric-description">
+         Meta 2035: 52%. Fonte: Pesquisa OD BHTRANS 2023.
+        </div>
+        <div class="metric-trend down">
+         <i data-lucide="trending-down">
+         </i>
+         Queda de 6pp em 10 anos
+        </div>
+       </div>
+       <div class="metric-card">
+        <div class="metric-label">
+         Emissões CO—?— transporte (MG)
+        </div>
+        <div class="metric-value">
+         24
+         <span class="metric-unit">
+          Mt
+         </span>
+        </div>
+        <div class="metric-description">
+         Megatoneladas por ano. Meta 2035: 16 Mt. Fonte: SEEG 2023.
+        </div>
+        <div class="metric-trend down">
+         <i data-lucide="cloud">
+         </i>
+         32% do total estadual
+        </div>
+       </div>
+       <div class="metric-card">
+        <div class="metric-label">
+         Índice de Mobilidade Urbana
+        </div>
+        <div class="metric-value">
+         0,47
+        </div>
+        <div class="metric-description">
+         IMOB/MDR (0 a 1). Meta 2035: 0,68. Mádia capitais: 0,53.
+        </div>
+        <div class="metric-trend down">
+         <i data-lucide="bar-chart-2">
+         </i>
+         Abaixo da média
+        </div>
+       </div>
+       <div class="metric-card">
+        <div class="metric-label">
+         Mortes no trânsito (por 100 mil hab.)
+        </div>
+        <div class="metric-value">
+         16,8
+        </div>
+        <div class="metric-description">
+         Meta 2035: 8,0. Fonte: Observatório Nacional de Segurança Viária.
+        </div>
+        <div class="metric-trend down">
+         <i data-lucide="alert-circle">
+         </i>
+         2º maior que UE
+        </div>
+       </div>
+       <div class="metric-card">
+        <div class="metric-label">
+         Extensão de ciclovias (BH)
+        </div>
+        <div class="metric-value">
+         195
+         <span class="metric-unit">
+          km
+         </span>
+        </div>
+        <div class="metric-description">
+         Meta 2035: 500 km integrados. Fonte: PBH Mobilidade.
+        </div>
+        <div class="metric-trend up">
+         <i data-lucide="trending-up">
+         </i>
+         +38% vs. 2018
+        </div>
+       </div>
+      </div>
+     </section>
+     <!-- 10 QUEST—?ES PARA DEBATE -->
+     <section class="content-section fade-in-section" id="debate">
+      <div class="section-label">
+       10
+      </div>
+      <h2>
+       Questões para Debate Público
+      </h2>
+      <p>
+       O Centro de Mobilidade e Transporte convida pesquisadores, gestores, operadores e a sociedade civil a debater as seguintes questões fundamentais para a formulação de políticas de mobilidade em Minas Gerais:
+      </p>
+      <ul>
+       <li>
+        Como estruturar um modelo de governança metropolitana de mobilidade que supere a fragmentação entre os 34 municípios da RMBH sem ferir a autonomia municipal garantida pela Constituição de 1988?
+       </li>
+       <li>
+        Qual deve ser a proporção ideal entre investimento em infraestrutura nova (metrô, BRT) e melhorias operacionais no sistema existente de ônibus, considerando as restrições fiscais do Estado de Minas Gerais?
+       </li>
+       <li>
+        Como garantir que a expansão do sistema de transporte alcance as periferias mais vulneráveis da RMBH — e não apenas os corredores de maior demanda e rentabilidade para os operadores privados?
+       </li>
+       <li>
+        Quais mecanismos de financiamento são mais adequados para projetos de mobilidade de longo prazo (30-40 anos) em um estado com histérico de restrições fiscais severas?
+       </li>
+       <li>
+        Como implementar instrumentos de gestão da demanda — como pedágio urbano e restrição de circulação — de forma politicamente viável e socialmente justa, sem penalizar trabalhadores de baixa renda que dependem do automóvel?
+       </li>
+       <li>
+        De que forma o transporte rural e intermunicipal pode ser estruturado como serviço público essencial, com financiamento garantido mesmo em municípios sem capacidade própria de arrecadação?
+       </li>
+       <li>
+        Como a eletrificação da frota de ônibus pode ser acelerada aproveitando a capacidade instalada de energia renovável em Minas Gerais, ao mesmo tempo em que se desenvolvem fornecedores industriais locais?
+       </li>
+      </ul>
+     </section>
+     <!-- 11 REFER—?NCIAS -->
+     <section class="content-section fade-in-section" id="referencias">
+      <div class="section-label">
+       11
+      </div>
+      <h2>
+       Referências
+      </h2>
+      <div class="reference-list">
+       <div class="reference-item">
+        <span class="reference-num">
+         01
+        </span>
+        <div>
+         BHTRANS — Empresa de Transportes e Trânsito de Belo Horizonte.
+         <em>
+          Pesquisa de Origem e Destino da RMBH 2023
+         </em>
+         . Belo Horizonte: BHTRANS, 2023.
+        </div>
+       </div>
+       <div class="reference-item">
+        <span class="reference-num">
+         02
+        </span>
+        <div>
+         FUNDA——?O JO—?O PINHEIRO (FJP).
+         <em>
+          Custo dos congestionamentos na RMBH: estimativa de perdas de produtividade 2023
+         </em>
+         . Belo Horizonte: FJP, 2023.
+        </div>
+       </div>
+       <div class="reference-item">
+        <span class="reference-num">
+         03
+        </span>
+        <div>
+         BRASIL. Ministério das Cidades.
+         <em>
+          Sistema Nacional de Indicadores de Mobilidade Urbana — SIMOB 2022
+         </em>
+         . Brasília: MDR, 2022. Disponível em:
+         <a href="https://www.gov.br/cidades" rel="noopener" target="_blank">
+          gov.br/cidades
+         </a>
+        </div>
+       </div>
+       <div class="reference-item">
+        <span class="reference-num">
+         04
+        </span>
+        <div>
+         INSTITUTO CLIMA E SOCIEDADE (iCS) / SEEG.
+         <em>
+          Sistema de Estimativa de Emissões e Remoções de Gases de Efeito Estufa — Setor Transportes 2023
+         </em>
+         . São Paulo: SEEG, 2023.
+        </div>
+       </div>
+       <div class="reference-item">
+        <span class="reference-num">
+         05
+        </span>
+        <div>
+         TOMTOM INTERNATIONAL.
+         <em>
+          Traffic Index Report 2023
+         </em>
+         . Amsterdam: TomTom, 2024. Disponível em:
+         <a href="https://www.tomtom.com/traffic-index/" rel="noopener" target="_blank">
+          tomtom.com/traffic-index
+         </a>
+        </div>
+       </div>
+       <div class="reference-item">
+        <span class="reference-num">
+         06
+        </span>
+        <div>
+         OCDE — Organização para Cooperação e Desenvolvimento Econômico.
+         <em>
+          Urban Mobility and Economic Productivity: Evidence from 200 Cities
+         </em>
+         . Paris: OECD Publishing, 2022.
+        </div>
+       </div>
+       <div class="reference-item">
+        <span class="reference-num">
+         07
+        </span>
+        <div>
+         INSTITUTE FOR TRANSPORTATION AND DEVELOPMENT POLICY (ITDP).
+         <em>
+          The BRT Standard 2016
+         </em>
+         . New York: ITDP, 2016. Disponível em:
+         <a href="https://www.itdp.org" rel="noopener" target="_blank">
+          itdp.org
+         </a>
+        </div>
+       </div>
+       <div class="reference-item">
+        <span class="reference-num">
+         08
+        </span>
+        <div>
+         OBSERVATóRIO NACIONAL DE SEGURANçA VIÁRIA (ONSV).
+         <em>
+          Relatério Anual de Acidentes e Mortes no Trânsito Brasileiro 2023
+         </em>
+         . São Paulo: ONSV, 2024.
+        </div>
+       </div>
+       <div class="reference-item">
+        <span class="reference-num">
+         09
+        </span>
+        <div>
+         BANCO MUNDIAL.
+         <em>
+          Mobilidade Urbana na América Latina: Desafios e Soluções para Cidades Inclusivas
+         </em>
+         . Washington: World Bank Group, 2021.
+        </div>
+       </div>
+       <div class="reference-item">
+        <span class="reference-num">
+         10
+        </span>
+        <div>
+         CBTU — Companhia Brasileira de Trens Urbanos.
+         <em>
+          Relatério de Desempenho Operacional do Metrô de Belo Horizonte 2023
+         </em>
+         . Rio de Janeiro: CBTU, 2024.
+        </div>
+       </div>
+      </div>
+     </section>
+    </article>
+   </div>
+  </div>
+  <!-- FOOTER -->
+  <footer class="site-footer">
+   <div class="container">
+    <div class="footer-grid">
+     <div class="footer-brand">
+      <a class="navbar-brand" href="../index.html">
+       <svg class="navbar-logo" fill="none" viewbox="0 0 36 36">
+        <rect fill="url(#grad-footer-transporte)" height="36" rx="8" width="36">
+        </rect>
+        <path d="M10 24 L10 13 L18 20 L26 13 L26 24" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2">
+        </path>
+        <defs>
+         <lineargradient gradientunits="userSpaceOnUse" id="grad-footer-transporte" x1="0" x2="36" y1="0" y2="36">
+          <stop stop-color="#00E5FF">
+          </stop>
+          <stop offset="1" stop-color="#4F46E5">
+          </stop>
+         </lineargradient>
+        </defs>
+       </svg>
+       <span class="navbar-name">
+        Minas
+        <span>
+         2035
+        </span>
+       </span>
+      </a>
+      <p>
+       Plataforma independente de estudos para o desenvolvimento de Minas Gerais com visão de longo prazo.
+      </p>
+     </div>
+     <div class="footer-col">
+      <h5>
+       Projeto
+      </h5>
+      <ul>
+       <li>
+        <a href="../sobre.html">
+         Sobre
+        </a>
+       </li>
+       <li>
+        <a href="../manifesto.html">
+         Manifesto
+        </a>
+       </li>
+       <li>
+        <a href="../pilares.html">
+         Pilares
+        </a>
+       </li>
+       <li>
+        <a href="../participar.html">
+         Participar
+        </a>
+       </li>
+      </ul>
+     </div>
+     <div class="footer-col">
+      <h5>
+       Áreas
+      </h5>
+      <ul>
+       <li>
+        <a href="economia.html">
+         Economia
+        </a>
+       </li>
+       <li>
+        <a href="educacao.html">
+         Educação
+        </a>
+       </li>
+       <li>
+        <a href="tecnologia.html">
+         Tecnologia
+        </a>
+       </li>
+       <li>
+        <a href="saude.html">
+         Saúde
+        </a>
+       </li>
+      </ul>
+     </div>
+     <div class="footer-col">
+      <h5>
+       Legal
+      </h5>
+      <ul>
+       <li>
+        <a href="#">
+         Política de privacidade
+        </a>
+       </li>
+       <li>
+        <a href="#">
+         Licença de uso
+        </a>
+       </li>
+       <li>
+        <a href="#">
+         Contato
+        </a>
+       </li>
+      </ul>
+     </div>
     </div>
-
-
+    <div class="footer-bottom">
+     <p>
+      — 2026 Projeto Minas 2035. O conteúdo representa estudos e ideias para debate público.
+     </p>
+     <a href="../manifesto.html">
+      Manifesto —
+     </a>
+    </div>
+   </div>
   </footer>
-
-
-
-
-
-  <script>lucide.createIcons();</script>
-
-
-</body>
-
-
+  <script>
+   lucide.createIcons();
+  </script>
+ </body>
 </html>
-
-
-
-
-

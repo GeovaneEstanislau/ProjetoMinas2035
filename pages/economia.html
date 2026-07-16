@@ -1,1428 +1,1091 @@
-?<!DOCTYPE html>
-
-
+?
+<!DOCTYPE html>
 <html lang="pt-BR">
-
-
-<head>
-
-
-  <meta charset="UTF-8" />
-
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />  <meta name="referrer" content="strict-origin-when-cross-origin" />
-
-
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' https://unpkg.com 'unsafe-inline'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https:; object-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self';" />
-
-
-  <meta name="description" content="Centro de Desenvolvimento Econômico — Estratégias, diagnósticos e projetos para tornar Minas Gerais uma das economias mais dinâmicas da América Latina até 2035." />
-
-
-  <title>Economia — Projeto Minas 2035</title>
-
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-
-
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-
-  <link rel="stylesheet" href="../css/variables.css" />
-
-
-  <link rel="stylesheet" href="../css/style.css" />
-
-
-  <link rel="stylesheet" href="../css/components.css" />
-
-
-  <link rel="stylesheet" href="../css/animations.css" />
-
-
-  <link rel="stylesheet" href="../css/responsive.css" />
-
-
-  <link rel="stylesheet" href="../css/pages.css" />
-
-
-  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
-
-
-  <script defer src="../js/app.js"></script>
-
-
-  <script defer src="../js/menu.js"></script>
-
-
-  <script defer src="../js/animations.js"></script>
-
-
-  <script defer src="../js/counters.js"></script>
-
-
-</head>
-
-
-<body>
-
-
-
-
-
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="strict-origin-when-cross-origin" name="referrer"/>
+  <meta content="default-src 'self' https:; script-src 'self' https://unpkg.com 'unsafe-inline'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https:; object-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self';" http-equiv="Content-Security-Policy"/>
+  <meta content="Centro de Desenvolvimento Econômico — Estratégias, diagnósticos e projetos para tornar Minas Gerais uma das economias mais dinâmicas da América Latina até 2035." name="description"/>
+  <title>
+   Economia — Projeto Minas 2035
+  </title>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="../css/variables.css" rel="stylesheet"/>
+  <link href="../css/style.css" rel="stylesheet"/>
+  <link href="../css/components.css" rel="stylesheet"/>
+  <link href="../css/animations.css" rel="stylesheet"/>
+  <link href="../css/responsive.css" rel="stylesheet"/>
+  <link href="../css/pages.css" rel="stylesheet"/>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js">
+  </script>
+  <script defer="" src="../js/app.js">
+  </script>
+  <script defer="" src="../js/menu.js">
+  </script>
+  <script defer="" src="../js/animations.js">
+  </script>
+  <script defer="" src="../js/counters.js">
+  </script>
+ </head>
+ <body>
   <header class="navbar" id="navbar">
-
-
-    <div class="container">
-
-
-      <a href="../index.html" class="navbar-brand">
-
-
-        <svg class="navbar-logo" viewBox="0 0 36 36" fill="none">
-
-
-          <rect width="36" height="36" rx="8" fill="url(#grad-nav-eco)"/>
-
-
-          <path d="M10 24 L10 13 L18 20 L26 13 L26 24" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-
-
-          <defs><linearGradient id="grad-nav-eco" x1="0" y1="0" x2="36" y2="36" gradientUnits="userSpaceOnUse"><stop stop-color="#00E5FF"/><stop offset="1" stop-color="#4F46E5"/></linearGradient></defs>
-
-
-        </svg>
-
-
-        <span class="navbar-name">Minas <span>2035</span></span>
-
-
-      </a>
-
-
-      <nav class="navbar-nav" id="main-nav">
-
-
-        <a href="../index.html#sobre">O Projeto</a>
-
-
-        <a href="../index.html#areas">Áreas</a>
-
-
-        <a href="../index.html#principios">Princípios</a>
-
-
-        <a href="../indicadores.html">Indicadores</a>
-
-
-        <a href="../manifesto.html">Manifesto</a>
-
-
-      </nav>
-
-
-      <div class="navbar-cta">
-
-
-        <a href="../participar.html" class="btn btn-outline">Participar</a>
-
-
-        <a href="../index.html#areas" class="btn btn-primary">Explorar</a>
-
-
-      </div>
-
-
-      <button class="hamburger" id="hamburger-btn" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav">
-
-
-        <span></span><span></span><span></span>
-
-
-      </button>
-
-
+   <div class="container">
+    <a class="navbar-brand" href="../index.html">
+     <svg class="navbar-logo" fill="none" viewbox="0 0 36 36">
+      <rect fill="url(#grad-nav-eco)" height="36" rx="8" width="36">
+      </rect>
+      <path d="M10 24 L10 13 L18 20 L26 13 L26 24" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2">
+      </path>
+      <defs>
+       <lineargradient gradientunits="userSpaceOnUse" id="grad-nav-eco" x1="0" x2="36" y1="0" y2="36">
+        <stop stop-color="#00E5FF">
+        </stop>
+        <stop offset="1" stop-color="#4F46E5">
+        </stop>
+       </lineargradient>
+      </defs>
+     </svg>
+     <span class="navbar-name">
+      Minas
+      <span>
+       2035
+      </span>
+     </span>
+    </a>
+    <nav class="navbar-nav" id="main-nav">
+     <a href="../index.html#sobre">
+      O Projeto
+     </a>
+     <a href="../index.html#areas">
+      Áreas
+     </a>
+     <a href="../index.html#principios">
+      Princípios
+     </a>
+     <a href="../indicadores.html">
+      Indicadores
+     </a>
+     <a href="../manifesto.html">
+      Manifesto
+     </a>
+    </nav>
+    <div class="navbar-cta">
+     <a class="btn btn-outline" href="../participar.html">
+      Participar
+     </a>
+     <a class="btn btn-primary" href="../index.html#areas">
+      Explorar
+     </a>
     </div>
-
-
+    <button aria-controls="main-nav" aria-expanded="false" aria-label="Abrir menu" class="hamburger" id="hamburger-btn">
+     <span>
+     </span>
+     <span>
+     </span>
+     <span>
+     </span>
+    </button>
+   </div>
   </header>
-
-
-
-
-
   <!-- PAGE HERO -->
-
-
   <section class="page-hero">
-
-
-    <div class="page-hero-grid"></div>
-
-
-    <div class="container">
-
-
-      <div class="page-hero-content fade-in-section">
-
-
-        <div class="breadcrumb">
-
-
-          <a href="../index.html">Início</a>
-
-
-          <span class="breadcrumb-sep">/</span>
-
-
-          <a href="../index.html#areas">Áreas</a>
-
-
-          <span class="breadcrumb-sep">/</span>
-
-
-          <span class="breadcrumb-current">Economia</span>
-
-
-        </div>
-
-
-        <div class="section-label">Centro Temático</div>
-
-
-        <h1>Centro de Desenvolvimento Econômico</h1>
-
-
-        <p class="page-subtitle">
-
-
-          Estratégias, diagnósticos e projetos para tornar Minas Gerais uma das economias
+   <div class="page-hero-grid">
+   </div>
+   <div class="container">
+    <div class="page-hero-content fade-in-section">
+     <div class="breadcrumb">
+      <a href="../index.html">
+       Início
+      </a>
+      <span class="breadcrumb-sep">
+       /
+      </span>
+      <a href="../index.html#areas">
+       Áreas
+      </a>
+      <span class="breadcrumb-sep">
+       /
+      </span>
+      <span class="breadcrumb-current">
+       Economia
+      </span>
+     </div>
+     <div class="section-label">
+      Centro Temático
+     </div>
+     <h1>
+      Centro de Desenvolvimento Econômico
+     </h1>
+     <p class="page-subtitle">
+      Estratégias, diagnósticos e projetos para tornar Minas Gerais uma das economias
 
 
           mais dinâmicas e inclusivas da América Latina até 2035.
-
-
-        </p>
-
-
-        <div class="page-stats">
-
-
-          <div class="page-stat">
-
-
-            <span class="page-stat-value">R$ 700bi</span>
-
-
-            <span class="page-stat-label">PIB de Minas Gerais</span>
-
-
-          </div>
-
-
-          <div class="page-stat-divider"></div>
-
-
-          <div class="page-stat">
-
-
-            <span class="page-stat-value">9%</span>
-
-
-            <span class="page-stat-label">do PIB Nacional</span>
-
-
-          </div>
-
-
-          <div class="page-stat-divider"></div>
-
-
-          <div class="page-stat">
-
-
-            <span class="page-stat-value">2º</span>
-
-
-            <span class="page-stat-label">maior economia do Brasil</span>
-
-
-          </div>
-
-
-        </div>
-
-
-        <div class="tag-list" style="margin-top: var(--sp-6);">
-
-
-          <span class="tag">PIB</span>
-
-
-          <span class="tag">Investimentos</span>
-
-
-          <span class="tag">Desindustrialização</span>
-
-
-          <span class="tag">Competitividade</span>
-
-
-          <span class="tag">Inovação</span>
-
-
-          <span class="tag">Fiscal</span>
-
-
-        </div>
-
-
+     </p>
+     <div class="page-stats">
+      <div class="page-stat">
+       <span class="page-stat-value">
+        R$ 700bi
+       </span>
+       <span class="page-stat-label">
+        PIB de Minas Gerais
+       </span>
       </div>
-
-
+      <div class="page-stat-divider">
+      </div>
+      <div class="page-stat">
+       <span class="page-stat-value">
+        9%
+       </span>
+       <span class="page-stat-label">
+        do PIB Nacional
+       </span>
+      </div>
+      <div class="page-stat-divider">
+      </div>
+      <div class="page-stat">
+       <span class="page-stat-value">
+        2º
+       </span>
+       <span class="page-stat-label">
+        maior economia do Brasil
+       </span>
+      </div>
+     </div>
+     <div class="tag-list" style="margin-top: var(--sp-6);">
+      <span class="tag">
+       PIB
+      </span>
+      <span class="tag">
+       Investimentos
+      </span>
+      <span class="tag">
+       Desindustrialização
+      </span>
+      <span class="tag">
+       Competitividade
+      </span>
+      <span class="tag">
+       Inovação
+      </span>
+      <span class="tag">
+       Fiscal
+      </span>
+     </div>
     </div>
-
-
+   </div>
   </section>
-
-
-
-
-
   <!-- MAIN -->
-
-
   <div class="container">
-
-
-    <div class="page-layout">
-
-
-
-
-
-      <!-- TOC -->
-
-
-      <aside>
-
-
-        <nav class="toc" aria-label="Índice do conteúdo">
-
-
-          <div class="toc-title">Neste Centro</div>
-
-
-          <ul class="toc-list">
-
-
-            <li><a href="#resumo">01 — Resumo Executivo</a></li>
-
-
-            <li><a href="#situacao">02 — Situação Atual</a></li>
-
-
-            <li><a href="#desafios">03 — Desafios Estruturais</a></li>
-
-
-            <li><a href="#oportunidades">04 — Oportunidades</a></li>
-
-
-            <li><a href="#benchmarking">05 — Benchmarking Internacional</a></li>
-
-
-            <li><a href="#objetivos">06 — Objetivos 2035</a></li>
-
-
-            <li><a href="#metas">07 — Metas 2050</a></li>
-
-
-            <li><a href="#projetos">08 — Projetos Estratégicos</a></li>
-
-
-            <li><a href="#indicadores">09 — Indicadores-Chave</a></li>
-
-
-            <li><a href="#debate">10 — Questões para Debate</a></li>
-
-
-            <li><a href="#referencias">11 — Referências</a></li>
-
-
-          </ul>
-
-
-        </nav>
-
-
-      </aside>
-
-
-
-
-
-      <!-- ARTICLE -->
-
-
-      <article class="article-content">
-
-
-
-
-
-        <section id="resumo" class="content-section fade-in-section">
-
-
-          <div class="section-label">01</div>
-
-
-          <h2>Resumo Executivo</h2>
-
-
-          <p>Minas Gerais — a segunda maior economia do Brasil, com PIB de aproximadamente R$ 700 bilhões (2023), respondendo por cerca de 9% do Produto Interno Bruto nacional. Com mais de 21 milhões de habitantes e 853 municípios, o Estado apresenta uma base produtiva diversificada que abrange mineração, agronegócio, indústria de transformação e um crescente setor de serviços e tecnologia.</p>
-
-
-          <p>No entanto, apesar de seu peso econômico, Minas Gerais enfrenta desafios estruturais relevantes: um processo acelerado de desindustrialização iniciado nos anos 1990, uma dependência histórica de commodities minerais sujeitas a volatilidade internacional, um déficit fiscal que limita a capacidade de investimento público e uma heterogeneidade econômica regional acentuada, com o Vale do Ação e o Triângulo Mineiro apresentando indicadores muito superiores ao Jequitinhonha e ao Norte de Minas.</p>
-
-
-          <p>O Projeto Minas 2035 propõe uma agenda de desenvolvimento econômico fundamentada em diversificação produtiva, atração de investimentos em setores de alto valor agregado, consolidação do ecossistema de inovação e equilíbrio fiscal sustentável. O horizonte de 2035 — ambicioso: tornar Minas Gerais uma das economias mais dinâmicas, competitivas e inclusivas da América Latina.</p>
-
-
-
-
-
-          <div class="quote-block">
-
-
-            <blockquote>"Nenhuma transformação econômica de longo prazo foi construída sem planejamento estratégico consistente, financiamento adequado e governança de qualidade."</blockquote>
-
-
-            <cite>— Banco Mundial, Relatério sobre Desenvolvimento Estadual, 2022</cite>
-
-
-          </div>
-
-
-        </section>
-
-
-
-
-
-        <section id="situacao" class="content-section fade-in-section">
-
-
-          <div class="section-label">02</div>
-
-
-          <h2>Situação Atual de Minas Gerais</h2>
-
-
-          <p>A economia mineira apresenta uma estrutura dual: de um lado, setores de alta produtividade ligados — mineração, ao agronegócio de exportação e — indústria metalúrgica; de outro, um setor de serviços fragmentado e uma indústria de transformação em processo de contração relativa.</p>
-
-
-          <p>O Estado ocupa posição de destaque em setores específicos: — o maior produtor nacional de minério de ferro, segundo maior produtor de café do mundo e sede de empresas como Usiminas, Gerdau, Fiat e Vale. Contudo, o valor adicionado per capita ainda — inferior — média nacional, refletindo a concentração da riqueza em poucas sub-regiões.</p>
-
-
-
-
-
-          <div class="metric-grid">
-
-
-            <div class="metric-card">
-
-
-              <div class="metric-label">PIB Total</div>
-
-
-              <div><span class="metric-value">R$ 700</span><span class="metric-unit">bi</span></div>
-
-
-              <div class="metric-description">2023 — crescimento de 3,1% a.a.</div>
-
-
-            </div>
-
-
-            <div class="metric-card">
-
-
-              <div class="metric-label">PIB per capita</div>
-
-
-              <div><span class="metric-value">R$ 33</span><span class="metric-unit">mil</span></div>
-
-
-              <div class="metric-description">Abaixo da média nacional (R$ 40 mil)</div>
-
-
-            </div>
-
-
-            <div class="metric-card">
-
-
-              <div class="metric-label">Exportações</div>
-
-
-              <div><span class="metric-value">US$ 42</span><span class="metric-unit">bi</span></div>
-
-
-              <div class="metric-description">73% commodities minerais e agro</div>
-
-
-            </div>
-
-
-            <div class="metric-card">
-
-
-              <div class="metric-label">Informalidade</div>
-
-
-              <div><span class="metric-value">40</span><span class="metric-unit">%</span></div>
-
-
-              <div class="metric-description">Da força de trabalho — PNAD 2023</div>
-
-
-            </div>
-
-
-            <div class="metric-card">
-
-
-              <div class="metric-label">Déficit fiscal</div>
-
-
-              <div><span class="metric-value">R$ 18</span><span class="metric-unit">bi</span></div>
-
-
-              <div class="metric-description">Previdência responde por 85% do gasto</div>
-
-
-            </div>
-
-
-            <div class="metric-card">
-
-
-              <div class="metric-label">IDE Recebido</div>
-
-
-              <div><span class="metric-value">R$ 28</span><span class="metric-unit">bi</span></div>
-
-
-              <div class="metric-description">Investimento Direto Estrangeiro — 2022</div>
-
-
-            </div>
-
-
-          </div>
-
-
-        </section>
-
-
-
-
-
-        <section id="desafios" class="content-section fade-in-section">
-
-
-          <div class="section-label">03</div>
-
-
-          <h2>Desafios Estruturais</h2>
-
-
-          <ul>
-
-
-            <li>
-
-
-              <strong>Desindustrialização precoce</strong> — A participação da indústria de transformação no PIB mineiro caiu de 28% em 1990 para 15% em 2023, processo acelerado pela apreciação cambial, pela concorrência asiática e pela ausência de política industrial ativa. Esse esvaziamento reduziu a base de empregos de alta produtividade e fragilizou a capacidade exportadora de manufaturados.
-
-
-            </li>
-
-
-            <li>
-
-
-              <strong>Dependência de commodities</strong> — Mais de 70% das exportações mineiras são compostas por minério de ferro e produtos agrícolas in natura, tornando o Estado vulnerável a ciclos internacionais de preços. A ausência de diversificação exportadora impede a agregação de valor ao longo das cadeias produtivas.
-
-
-            </li>
-
-
-            <li>
-
-
-              <strong>Crise fiscal estrutural</strong> — O Estado convive com um déficit fiscal crênico, alimentado principalmente pelos gastos previdenciários. A rigidez or—amentária limita investimentos em infraestrutura, educação e inovação — justamente os pilares necessários para uma transformação econômica de longo prazo.
-
-
-            </li>
-
-
-            <li>
-
-
-              <strong>Heterogeneidade regional extrema</strong> — O PIB per capita do Triângulo Mineiro — cinco vezes superior ao do Vale do Jequitinhonha. Essa desigualdade regional perpetua círculos viciosos de pobreza e inviabiliza a construção de um mercado interno robusto e integrado.
-
-
-            </li>
-
-
-            <li>
-
-
-              <strong>Ambiente de negócios complexo</strong> — O tempo médio para abertura de uma empresa em Minas Gerais — superior a 20 dias. A carga tributária estadual e a burocracia regulatéria constituem barreiras relevantes ao investimento privado e ao empreendedorismo.
-
-
-            </li>
-
-
-          </ul>
-
-
-
-
-
-          <div class="callout callout-warning">
-
-
-            <span class="callout-icon"><i data-lucide="alert-triangle"></i></span>
-
-
-            <p><strong>Ponto crático:</strong> Sem reversão da trajetária de desindustrialização e sem equilíbrio fiscal, Minas Gerais corre o risco de se tornar uma economia de baixo crescimento estrutural, com geração insuficiente de empregos qualificados para absorver sua população em idade ativa.</p>
-
-
-          </div>
-
-
-        </section>
-
-
-
-
-
-        <section id="oportunidades" class="content-section fade-in-section">
-
-
-          <div class="section-label">04</div>
-
-
-          <h2>Oportunidades</h2>
-
-
-          <ul>
-
-
-            <li>
-
-
-              <strong>Transição energética global</strong> — Minas Gerais possui reservas significativas de lítio, grafite e terras-raras, minerais essenciais para baterias e tecnologias de energia limpa. O Estado pode se posicionar como fornecedor estratégico da cadeia global de descarbonização, agregando valor por meio de processamento local.
-
-
-            </li>
-
-
-            <li>
-
-
-              <strong>Ecossistema de inovação em expansão</strong> — Belo Horizonte figura entre os três maiores ecossistemas de startups do Brasil. Com universidades de excelência (UFMG, PUC-MG, UFV), o Estado possui capital humano qualificado para sustentar uma economia do conhecimento.
-
-
-            </li>
-
-
-            <li>
-
-
-              <strong>Posição logística central</strong> — Minas Gerais faz fronteira com seis estados e está no centro do triângulo econômico São Paulo?Rio de Janeiro?Brasília. Investimentos em infraestrutura multimodal podem transformar o Estado na principal plataforma logística do Brasil Central.
-
-
-            </li>
-
-
-            <li>
-
-
-              <strong>Agronegócio de alto valor</strong> — O café especial mineiro tem valorização crescente nos mercados globais. A oportunidade de transição do agronegócio de commodity para produção de alto valor agregado (especialidades, orgânicos, bioeconomia) — significativa e imediata.
-
-
-            </li>
-
-
-            <li>
-
-
-              <strong>Reformas estruturais em andamento</strong> — A adesão de Minas ao Regime de Recuperação Fiscal (RRF) cria uma janela de oportunidade para modernização da gestão pública e atração de investimentos condicionados ao equilíbrio fiscal.
-
-
-            </li>
-
-
-          </ul>
-
-
-        </section>
-
-
-
-
-
-        <section id="benchmarking" class="content-section fade-in-section">
-
-
-          <div class="section-label">05</div>
-
-
-          <h2>Benchmarking Internacional</h2>
-
-
-          <p>Economias regionais que enfrentaram desafios similares aos de Minas Gerais oferecem lições valiosas sobre estratégias de diversificação e crescimento sustentado.</p>
-
-
-
-
-
-          <table class="bench-table">
-
-
-            <thead>
-
-
-              <tr>
-
-
-                <th>Região / País</th>
-
-
-                <th>PIB per capita</th>
-
-
-                <th>Estratégia-chave</th>
-
-
-                <th>Lição para Minas</th>
-
-
-              </tr>
-
-
-            </thead>
-
-
-            <tbody>
-
-
-              <tr>
-
-
-                <td class="td-highlight">Baden-Württemberg (Alemanha)</td>
-
-
-                <td class="td-accent">—?— 47.000</td>
-
-
-                <td>Cluster industrial de alta tecnologia (Bosch, Mercedes, SAP). P&D industrial intensivo.</td>
-
-
-                <td>Integração universidade-indústria com transferência de tecnologia sistemática.</td>
-
-
-              </tr>
-
-
-              <tr>
-
-
-                <td class="td-highlight">Catalunha (Espanha)</td>
-
-
-                <td class="td-accent">—?— 33.000</td>
-
-
-                <td>Diversificação em serviços, turismo de alto valor e indústria farmacêutica. Hub logístico europeu.</td>
-
-
-                <td>Uso estratégico da posição geográfica como plataforma logística e de serviços.</td>
-
-
-              </tr>
-
-
-              <tr>
-
-
-                <td class="td-highlight">São Paulo (Brasil)</td>
-
-
-                <td class="td-accent">R$ 62.000</td>
-
-
-                <td>Serviços financeiros, tecnologia e manufatura de alto valor. Ecossistema de startups robusto.</td>
-
-
-                <td>Concentração de capital humano qualificado e ambiente de negócios —gil como atratores de investimento.</td>
-
-
-              </tr>
-
-
-              <tr>
-
-
-                <td class="td-highlight">Coreia do Sul</td>
-
-
-                <td class="td-accent">US$ 33.000</td>
-
-
-                <td>Política industrial ativa de longo prazo (chaebols). Investimento massivo em P&D (4,5% do PIB).</td>
-
-
-                <td>Planejamento econômico de longo prazo com metas setoriais claras e financiamento público-privado.</td>
-
-
-              </tr>
-
-
-            </tbody>
-
-
-          </table>
-
-
-        </section>
-
-
-
-
-
-        <section id="objetivos" class="content-section fade-in-section">
-
-
-          <div class="section-label">06</div>
-
-
-          <h2>Objetivos 2035</h2>
-
-
-          <div class="timeline">
-
-
-            <div class="timeline-item">
-
-
-              <div class="timeline-dot"></div>
-
-
-              <div class="timeline-year">2026?2028</div>
-
-
-              <div class="timeline-title">Estabilização fiscal e ambiente de negócios</div>
-
-
-              <div class="timeline-desc">Aprovação do marco de recuperação fiscal, redução do tempo de abertura de empresas para menos de 5 dias e implementação da plataforma digital de serviços empresariais.</div>
-
-
-            </div>
-
-
-            <div class="timeline-item">
-
-
-              <div class="timeline-dot"></div>
-
-
-              <div class="timeline-year">2028?2030</div>
-
-
-              <div class="timeline-title">Diversificação produtiva e atração de IDE</div>
-
-
-              <div class="timeline-desc">Implantação de zonas de processamento industrial em regiões estratégicas, criação do fundo soberano de Minas Gerais e lançamento do programa de benefícios fiscais condicionados — geração de empregos qualificados.</div>
-
-
-            </div>
-
-
-            <div class="timeline-item">
-
-
-              <div class="timeline-dot"></div>
-
-
-              <div class="timeline-year">2030?2033</div>
-
-
-              <div class="timeline-title">Consolidação do ecossistema de inovação</div>
-
-
-              <div class="timeline-desc">Minas Gerais como polo de referência em mineração sustentável, agro de alto valor e tecnologia. Pelo menos 5 empresas unicórnio sediadas no Estado. Investimento em P&D acima de 1,5% do PIB estadual.</div>
-
-
-            </div>
-
-
-            <div class="timeline-item">
-
-
-              <div class="timeline-dot"></div>
-
-
-              <div class="timeline-year">2033?2035</div>
-
-
-              <div class="timeline-title">PIB per capita equivalente — média nacional</div>
-
-
-              <div class="timeline-desc">Alcançar PIB per capita de R$ 50.000 (valores de 2023), redução do coeficiente de Gini econômico regional e inserção de ao menos 3 regiões historicamente desfavorecidas no circuito produtivo nacional.</div>
-
-
-            </div>
-
-
-          </div>
-
-
-        </section>
-
-
-
-
-
-        <section id="metas" class="content-section fade-in-section">
-
-
-          <div class="section-label">07</div>
-
-
-          <h2>Metas 2050</h2>
-
-
-          <ol>
-
-
-            <li>PIB de Minas Gerais equivalente a 12% do PIB nacional, com diversificação setorial equilibrada entre indústria, serviços de alto valor e agronegócio.</li>
-
-
-            <li>PIB per capita superior a US$ 25.000 (PPC), posicionando Minas Gerais no grupo de economias de alta renda.</li>
-
-
-            <li>Exportações manufaturadas respondendo por pelo menos 40% da pauta exportadora — contra os atuais 27%.</li>
-
-
-            <li>Eliminar a pobreza extrema em todos os 853 municípios e reduzir o —ndice de Gini econômico regional abaixo de 0,3.</li>
-
-
-            <li>Tornar Minas Gerais carbono neutro até 2045, com economia verde respondendo por 15% do PIB.</li>
-
-
-            <li>Investimento em P&D (público + privado) acima de 3% do PIB estadual, referência internacional de liderança em inovação.</li>
-
-
-          </ol>
-
-
-        </section>
-
-
-
-
-
-        <section id="projetos" class="content-section fade-in-section">
-
-
-          <div class="section-label">08</div>
-
-
-          <h2>Projetos Estratégicos</h2>
-
-
-
-
-
-          <div style="display: flex; flex-direction: column; gap: var(--sp-4);">
-
-
-            <div class="project-card">
-
-
-              <div>
-
-
-                <h4>Polo de Inovação de Belo Horizonte</h4>
-
-
-                <p>Criação de um distrito de inovação integrado no entorno da UFMG, reunindo startups, laboratérios de pesquisa aplicada, aceleradoras e escritórios de grandes empresas de tecnologia. Modelo inspirado no District (SP) e no Silicon Allee (Berlim).</p>
-
-
-              </div>
-
-
-              <span class="project-status status-active">Em desenvolvimento</span>
-
-
-            </div>
-
-
-            <div class="project-card">
-
-
-              <div>
-
-
-                <h4>Fundo Soberano de Minas Gerais</h4>
-
-
-                <p>Fundo de poupança intergeracional capitalizado com royalties da mineração e dividendos de estatais, destinado ao financiamento de infraestrutura de longo prazo e — redução da dependência de transferências federais.</p>
-
-
-              </div>
-
-
-              <span class="project-status status-proposal">Proposta</span>
-
-
-            </div>
-
-
-            <div class="project-card">
-
-
-              <div>
-
-
-                <h4>Zonas de Processamento Industrial (ZPI-MG)</h4>
-
-
-                <p>Implantação de quatro ZPIs em regiões estratégicas (Norte de Minas, Triângulo, Vale do Ação e Zona da Mata) com incentivos fiscais condicionados — geração de empregos formais e — transferência tecnológica.</p>
-
-
-              </div>
-
-
-              <span class="project-status status-study">Em estudo</span>
-
-
-            </div>
-
-
-            <div class="project-card">
-
-
-              <div>
-
-
-                <h4>Simplifica MG — Reforma do Ambiente de Negócios</h4>
-
-
-                <p>Plataforma digital unificada de licenciamento empresarial, com meta de reduzir o tempo de abertura de empresas para menos de 3 dias —teis e o número de licenças ambientais para empreendimentos de baixo risco para menos de 30 dias.</p>
-
-
-              </div>
-
-
-              <span class="project-status status-active">Em implementação</span>
-
-
-            </div>
-
-
-          </div>
-
-
-        </section>
-
-
-
-
-
-        <section id="indicadores" class="content-section fade-in-section">
-
-
-          <div class="section-label">09</div>
-
-
-          <h2>Indicadores-Chave (KPIs)</h2>
-
-
-          <div class="metric-grid">
-
-
-            <div class="metric-card">
-
-
-              <div class="metric-label">Meta PIB per capita 2035</div>
-
-
-              <div><span class="metric-value">R$ 50</span><span class="metric-unit">mil</span></div>
-
-
-              <div class="metric-description">Atual: R$ 33.000 — crescimento anual necessário: 3,5%</div>
-
-
-            </div>
-
-
-            <div class="metric-card">
-
-
-              <div class="metric-label">Taxa de crescimento anual</div>
-
-
-              <div><span class="metric-value">3,5</span><span class="metric-unit">% a.a.</span></div>
-
-
-              <div class="metric-description">Meta para superar consistentemente o crescimento nacional</div>
-
-
-            </div>
-
-
-            <div class="metric-card">
-
-
-              <div class="metric-label">Empregos formais criados</div>
-
-
-              <div><span class="metric-value">+1,5</span><span class="metric-unit">M</span></div>
-
-
-              <div class="metric-description">Entre 2026?2035, com foco em setores de alta produtividade</div>
-
-
-            </div>
-
-
-            <div class="metric-card">
-
-
-              <div class="metric-label">IDE anual atraído</div>
-
-
-              <div><span class="metric-value">R$ 60</span><span class="metric-unit">bi</span></div>
-
-
-              <div class="metric-description">Meta 2035 — atual: R$ 28bi — crescimento necessário: 8% a.a.</div>
-
-
-            </div>
-
-
-            <div class="metric-card">
-
-
-              <div class="metric-label">Exportações manufaturadas</div>
-
-
-              <div><span class="metric-value">40</span><span class="metric-unit">%</span></div>
-
-
-              <div class="metric-description">Da pauta exportadora — atual: 27%</div>
-
-
-            </div>
-
-
-            <div class="metric-card">
-
-
-              <div class="metric-label">P&D / PIB estadual</div>
-
-
-              <div><span class="metric-value">1,5</span><span class="metric-unit">%</span></div>
-
-
-              <div class="metric-description">Meta 2035 — atual: 0,7% — referência OCDE: 2,7%</div>
-
-
-            </div>
-
-
-          </div>
-
-
-        </section>
-
-
-
-
-
-        <section id="debate" class="content-section fade-in-section">
-
-
-          <div class="section-label">10</div>
-
-
-          <h2>Questões para Debate Público</h2>
-
-
-          <ol>
-
-
-            <li>Como Minas Gerais pode aproveitar o boom global de minerais estratégicos (lítio, grafite, nióbio) sem repetir os erros históricos da dependência de commodities?</li>
-
-
-            <li>Qual deve ser o papel do Estado na indução da reindustrialização: incentivos fiscais, compras públicas, fundos de venture capital ou pesquisa aplicada nas universidades?</li>
-
-
-            <li>Como equilibrar o ajuste fiscal necessário com os investimentos indispensáveis para o crescimento de longo prazo?</li>
-
-
-            <li>O desenvolvimento do interior mineiro exige um modelo econômico diferente do adotado pela RMBH— Quais são as vocações produtivas de cada macro-região?</li>
-
-
-            <li>Como atrair talentos qualificados de volta —s cidades mineiras em competição com São Paulo e o mercado internacional remoto?</li>
-
-
-            <li>Qual o papel das universidades federais e estaduais na criação de empresas de base tecnológica e na transferência de conhecimento para o setor produtivo?</li>
-
-
-            <li>— viável uma zona de livre comércio ou regime tributário diferenciado para regiões específicas de Minas Gerais?</li>
-
-
-          </ol>
-
-
-          <div style="margin-top: var(--sp-8);">
-
-
-            <a href="../participar.html" class="btn btn-primary" id="btn-eco-debate">Participar do Debate</a>
-
-
-          </div>
-
-
-        </section>
-
-
-
-
-
-        <section id="referencias" class="content-section fade-in-section">
-
-
-          <div class="section-label">11</div>
-
-
-          <h2>Referências Bibliográficas</h2>
-
-
-          <div class="reference-list">
-
-
-            <div class="reference-item">
-
-
-              <span class="reference-num">01</span>
-
-
-              <span>IBGE. <em>Sistema de Contas Regionais — Minas Gerais 2021</em>. Rio de Janeiro: IBGE, 2023.</span>
-
-
-            </div>
-
-
-            <div class="reference-item">
-
-
-              <span class="reference-num">02</span>
-
-
-              <span>FJP — Fundação João Pinheiro. <em>Produto Interno Bruto dos Municípios de Minas Gerais</em>. Belo Horizonte: FJP, 2023.</span>
-
-
-            </div>
-
-
-            <div class="reference-item">
-
-
-              <span class="reference-num">03</span>
-
-
-              <span>BANCO MUNDIAL. <em>Doing Business 2023: Comparing Business Regulation in 190 Economies</em>. Washington: World Bank Group, 2023.</span>
-
-
-            </div>
-
-
-            <div class="reference-item">
-
-
-              <span class="reference-num">04</span>
-
-
-              <span>MDIC — Ministério do Desenvolvimento, Indústria e Comércio. <em>Comex Stat — Estatésticas de Comércio Exterior</em>. Brasília: MDIC, 2023.</span>
-
-
-            </div>
-
-
-            <div class="reference-item">
-
-
-              <span class="reference-num">05</span>
-
-
-              <span>OCDE. <em>Regional Competitiveness: Policies for a Better Life</em>. Paris: OECD Publishing, 2022.</span>
-
-
-            </div>
-
-
-            <div class="reference-item">
-
-
-              <span class="reference-num">06</span>
-
-
-              <span>RODRIK, Dani. <em>Premature Deindustrialization</em>. Journal of Economic Growth, v. 21, p. 1?33, 2016.</span>
-
-
-            </div>
-
-
-            <div class="reference-item">
-
-
-              <span class="reference-num">07</span>
-
-
-              <span>CNI — Confederação Nacional da Indústria. <em>Mapa Estratégico da Indústria 2023?2032</em>. Brasília: CNI, 2023.</span>
-
-
-            </div>
-
-
-            <div class="reference-item">
-
-
-              <span class="reference-num">08</span>
-
-
-              <span>GOVERNO DE MINAS GERAIS. <em>Plano Mineiro de Desenvolvimento Integrado (PMDI) 2019?2030</em>. Belo Horizonte: SEPLAG, 2019.</span>
-
-
-            </div>
-
-
-          </div>
-
-
-        </section>
-
-
-
-
-
-      </article>
-
-
-    </div>
-
-
-  </div>
-
-
-
-
-
-  <!-- FOOTER -->
-
-
-  <footer class="site-footer">
-
-
-    <div class="container">
-
-
-      <div class="footer-grid">
-
-
-        <div class="footer-brand">
-
-
-          <a href="../index.html" class="navbar-brand">
-
-
-            <svg class="navbar-logo" viewBox="0 0 36 36" fill="none">
-
-
-              <rect width="36" height="36" rx="8" fill="url(#grad-footer-eco)"/>
-
-
-              <path d="M10 24 L10 13 L18 20 L26 13 L26 24" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-
-
-              <defs><linearGradient id="grad-footer-eco" x1="0" y1="0" x2="36" y2="36" gradientUnits="userSpaceOnUse"><stop stop-color="#00E5FF"/><stop offset="1" stop-color="#4F46E5"/></linearGradient></defs>
-
-
-            </svg>
-
-
-            <span class="navbar-name">Minas <span>2035</span></span>
-
-
-          </a>
-
-
-          <p>Plataforma independente de estudos para o desenvolvimento de Minas Gerais com visão de longo prazo.</p>
-
-
+   <div class="page-layout">
+    <!-- TOC -->
+    <aside>
+     <nav aria-label="Índice do conteúdo" class="toc">
+      <div class="toc-title">
+       Neste Centro
+      </div>
+      <ul class="toc-list">
+       <li>
+        <a href="#resumo">
+         01 — Resumo Executivo
+        </a>
+       </li>
+       <li>
+        <a href="#situacao">
+         02 — Situação Atual
+        </a>
+       </li>
+       <li>
+        <a href="#desafios">
+         03 — Desafios Estruturais
+        </a>
+       </li>
+       <li>
+        <a href="#oportunidades">
+         04 — Oportunidades
+        </a>
+       </li>
+       <li>
+        <a href="#benchmarking">
+         05 — Benchmarking Internacional
+        </a>
+       </li>
+       <li>
+        <a href="#objetivos">
+         06 — Objetivos 2035
+        </a>
+       </li>
+       <li>
+        <a href="#metas">
+         07 — Metas 2050
+        </a>
+       </li>
+       <li>
+        <a href="#projetos">
+         08 — Projetos Estratégicos
+        </a>
+       </li>
+       <li>
+        <a href="#indicadores">
+         09 — Indicadores-Chave
+        </a>
+       </li>
+       <li>
+        <a href="#debate">
+         10 — Questões para Debate
+        </a>
+       </li>
+       <li>
+        <a href="#referencias">
+         11 — Referências
+        </a>
+       </li>
+      </ul>
+     </nav>
+    </aside>
+    <!-- ARTICLE -->
+    <article class="article-content">
+     <section class="content-section fade-in-section" id="resumo">
+      <div class="section-label">
+       01
+      </div>
+      <h2>
+       Resumo Executivo
+      </h2>
+      <p>
+       Minas Gerais — a segunda maior economia do Brasil, com PIB de aproximadamente R$ 700 bilhões (2023), respondendo por cerca de 9% do Produto Interno Bruto nacional. Com mais de 21 milhões de habitantes e 853 municípios, o Estado apresenta uma base produtiva diversificada que abrange mineração, agronegócio, indústria de transformação e um crescente setor de serviços e tecnologia.
+      </p>
+      <p>
+       No entanto, apesar de seu peso econômico, Minas Gerais enfrenta desafios estruturais relevantes: um processo acelerado de desindustrialização iniciado nos anos 1990, uma dependência histórica de commodities minerais sujeitas a volatilidade internacional, um déficit fiscal que limita a capacidade de investimento público e uma heterogeneidade econômica regional acentuada, com o Vale do Ação e o Triângulo Mineiro apresentando indicadores muito superiores ao Jequitinhonha e ao Norte de Minas.
+      </p>
+      <p>
+       O Projeto Minas 2035 propõe uma agenda de desenvolvimento econômico fundamentada em diversificação produtiva, atração de investimentos em setores de alto valor agregado, consolidação do ecossistema de inovação e equilíbrio fiscal sustentável. O horizonte de 2035 — ambicioso: tornar Minas Gerais uma das economias mais dinâmicas, competitivas e inclusivas da América Latina.
+      </p>
+      <div class="quote-block">
+       <blockquote>
+        "Nenhuma transformação econômica de longo prazo foi construída sem planejamento estratégico consistente, financiamento adequado e governança de qualidade."
+       </blockquote>
+       <cite>
+        — Banco Mundial, Relatério sobre Desenvolvimento Estadual, 2022
+       </cite>
+      </div>
+     </section>
+     <section class="content-section fade-in-section" id="situacao">
+      <div class="section-label">
+       02
+      </div>
+      <h2>
+       Situação Atual de Minas Gerais
+      </h2>
+      <p>
+       A economia mineira apresenta uma estrutura dual: de um lado, setores de alta produtividade ligados — mineração, ao agronegócio de exportação e — indústria metalúrgica; de outro, um setor de serviços fragmentado e uma indústria de transformação em processo de contração relativa.
+      </p>
+      <p>
+       O Estado ocupa posição de destaque em setores específicos: — o maior produtor nacional de minério de ferro, segundo maior produtor de café do mundo e sede de empresas como Usiminas, Gerdau, Fiat e Vale. Contudo, o valor adicionado per capita ainda — inferior — média nacional, refletindo a concentração da riqueza em poucas sub-regiões.
+      </p>
+      <div class="metric-grid">
+       <div class="metric-card">
+        <div class="metric-label">
+         PIB Total
         </div>
-
-
-        <div class="footer-col"><h5>Projeto</h5><ul><li><a href="../sobre.html">Sobre</a></li><li><a href="../manifesto.html">Manifesto</a></li><li><a href="../pilares.html">Pilares</a></li><li><a href="../participar.html">Participar</a></li></ul></div>
-
-
-        <div class="footer-col"><h5>Outras Áreas</h5><ul><li><a href="educacao.html">Educação</a></li><li><a href="tecnologia.html">Tecnologia</a></li><li><a href="saude.html">Saúde</a></li><li><a href="infraestrutura.html">Infraestrutura</a></li></ul></div>
-
-
-        <div class="footer-col"><h5>Legal</h5><ul><li><a href="#">Política de privacidade</a></li><li><a href="#">Licença de uso</a></li><li><a href="#">Contato</a></li></ul></div>
-
-
+        <div>
+         <span class="metric-value">
+          R$ 700
+         </span>
+         <span class="metric-unit">
+          bi
+         </span>
+        </div>
+        <div class="metric-description">
+         2023 — crescimento de 3,1% a.a.
+        </div>
+       </div>
+       <div class="metric-card">
+        <div class="metric-label">
+         PIB per capita
+        </div>
+        <div>
+         <span class="metric-value">
+          R$ 33
+         </span>
+         <span class="metric-unit">
+          mil
+         </span>
+        </div>
+        <div class="metric-description">
+         Abaixo da média nacional (R$ 40 mil)
+        </div>
+       </div>
+       <div class="metric-card">
+        <div class="metric-label">
+         Exportações
+        </div>
+        <div>
+         <span class="metric-value">
+          US$ 42
+         </span>
+         <span class="metric-unit">
+          bi
+         </span>
+        </div>
+        <div class="metric-description">
+         73% commodities minerais e agro
+        </div>
+       </div>
+       <div class="metric-card">
+        <div class="metric-label">
+         Informalidade
+        </div>
+        <div>
+         <span class="metric-value">
+          40
+         </span>
+         <span class="metric-unit">
+          %
+         </span>
+        </div>
+        <div class="metric-description">
+         Da força de trabalho — PNAD 2023
+        </div>
+       </div>
+       <div class="metric-card">
+        <div class="metric-label">
+         Déficit fiscal
+        </div>
+        <div>
+         <span class="metric-value">
+          R$ 18
+         </span>
+         <span class="metric-unit">
+          bi
+         </span>
+        </div>
+        <div class="metric-description">
+         Previdência responde por 85% do gasto
+        </div>
+       </div>
+       <div class="metric-card">
+        <div class="metric-label">
+         IDE Recebido
+        </div>
+        <div>
+         <span class="metric-value">
+          R$ 28
+         </span>
+         <span class="metric-unit">
+          bi
+         </span>
+        </div>
+        <div class="metric-description">
+         Investimento Direto Estrangeiro — 2022
+        </div>
+       </div>
       </div>
-
-
-      <div class="footer-bottom">
-
-
-        <p>— 2026 Projeto Minas 2035. Fontes: IBGE, FJP, Banco Mundial, OCDE, CNI.</p>
-
-
-        <a href="../manifesto.html">Manifesto —</a>
-
-
+     </section>
+     <section class="content-section fade-in-section" id="desafios">
+      <div class="section-label">
+       03
       </div>
-
-
+      <h2>
+       Desafios Estruturais
+      </h2>
+      <ul>
+       <li>
+        <strong>
+         Desindustrialização precoce
+        </strong>
+        — A participação da indústria de transformação no PIB mineiro caiu de 28% em 1990 para 15% em 2023, processo acelerado pela apreciação cambial, pela concorrência asiática e pela ausência de política industrial ativa. Esse esvaziamento reduziu a base de empregos de alta produtividade e fragilizou a capacidade exportadora de manufaturados.
+       </li>
+       <li>
+        <strong>
+         Dependência de commodities
+        </strong>
+        — Mais de 70% das exportações mineiras são compostas por minério de ferro e produtos agrícolas in natura, tornando o Estado vulnerável a ciclos internacionais de preços. A ausência de diversificação exportadora impede a agregação de valor ao longo das cadeias produtivas.
+       </li>
+       <li>
+        <strong>
+         Crise fiscal estrutural
+        </strong>
+        — O Estado convive com um déficit fiscal crênico, alimentado principalmente pelos gastos previdenciários. A rigidez oramentária limita investimentos em infraestrutura, educação e inovação — justamente os pilares necessários para uma transformação econômica de longo prazo.
+       </li>
+       <li>
+        <strong>
+         Heterogeneidade regional extrema
+        </strong>
+        — O PIB per capita do Triângulo Mineiro — cinco vezes superior ao do Vale do Jequitinhonha. Essa desigualdade regional perpetua círculos viciosos de pobreza e inviabiliza a construção de um mercado interno robusto e integrado.
+       </li>
+       <li>
+        <strong>
+         Ambiente de negócios complexo
+        </strong>
+        — O tempo médio para abertura de uma empresa em Minas Gerais — superior a 20 dias. A carga tributária estadual e a burocracia regulatéria constituem barreiras relevantes ao investimento privado e ao empreendedorismo.
+       </li>
+      </ul>
+      <div class="callout callout-warning">
+       <span class="callout-icon">
+        <i data-lucide="alert-triangle">
+        </i>
+       </span>
+       <p>
+        <strong>
+         Ponto crático:
+        </strong>
+        Sem reversão da trajetária de desindustrialização e sem equilíbrio fiscal, Minas Gerais corre o risco de se tornar uma economia de baixo crescimento estrutural, com geração insuficiente de empregos qualificados para absorver sua população em idade ativa.
+       </p>
+      </div>
+     </section>
+     <section class="content-section fade-in-section" id="oportunidades">
+      <div class="section-label">
+       04
+      </div>
+      <h2>
+       Oportunidades
+      </h2>
+      <ul>
+       <li>
+        <strong>
+         Transição energética global
+        </strong>
+        — Minas Gerais possui reservas significativas de lítio, grafite e terras-raras, minerais essenciais para baterias e tecnologias de energia limpa. O Estado pode se posicionar como fornecedor estratégico da cadeia global de descarbonização, agregando valor por meio de processamento local.
+       </li>
+       <li>
+        <strong>
+         Ecossistema de inovação em expansão
+        </strong>
+        — Belo Horizonte figura entre os três maiores ecossistemas de startups do Brasil. Com universidades de excelência (UFMG, PUC-MG, UFV), o Estado possui capital humano qualificado para sustentar uma economia do conhecimento.
+       </li>
+       <li>
+        <strong>
+         Posição logística central
+        </strong>
+        — Minas Gerais faz fronteira com seis estados e está no centro do triângulo econômico São Paulo?Rio de Janeiro?Brasília. Investimentos em infraestrutura multimodal podem transformar o Estado na principal plataforma logística do Brasil Central.
+       </li>
+       <li>
+        <strong>
+         Agronegócio de alto valor
+        </strong>
+        — O café especial mineiro tem valorização crescente nos mercados globais. A oportunidade de transição do agronegócio de commodity para produção de alto valor agregado (especialidades, orgânicos, bioeconomia) — significativa e imediata.
+       </li>
+       <li>
+        <strong>
+         Reformas estruturais em andamento
+        </strong>
+        — A adesão de Minas ao Regime de Recuperação Fiscal (RRF) cria uma janela de oportunidade para modernização da gestão pública e atração de investimentos condicionados ao equilíbrio fiscal.
+       </li>
+      </ul>
+     </section>
+     <section class="content-section fade-in-section" id="benchmarking">
+      <div class="section-label">
+       05
+      </div>
+      <h2>
+       Benchmarking Internacional
+      </h2>
+      <p>
+       Economias regionais que enfrentaram desafios similares aos de Minas Gerais oferecem lições valiosas sobre estratégias de diversificação e crescimento sustentado.
+      </p>
+      <table class="bench-table">
+       <thead>
+        <tr>
+         <th>
+          Região / País
+         </th>
+         <th>
+          PIB per capita
+         </th>
+         <th>
+          Estratégia-chave
+         </th>
+         <th>
+          Lição para Minas
+         </th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+         <td class="td-highlight">
+          Baden-Württemberg (Alemanha)
+         </td>
+         <td class="td-accent">
+          —?— 47.000
+         </td>
+         <td>
+          Cluster industrial de alta tecnologia (Bosch, Mercedes, SAP). P&amp;D industrial intensivo.
+         </td>
+         <td>
+          Integração universidade-indústria com transferência de tecnologia sistemática.
+         </td>
+        </tr>
+        <tr>
+         <td class="td-highlight">
+          Catalunha (Espanha)
+         </td>
+         <td class="td-accent">
+          —?— 33.000
+         </td>
+         <td>
+          Diversificação em serviços, turismo de alto valor e indústria farmacêutica. Hub logístico europeu.
+         </td>
+         <td>
+          Uso estratégico da posição geográfica como plataforma logística e de serviços.
+         </td>
+        </tr>
+        <tr>
+         <td class="td-highlight">
+          São Paulo (Brasil)
+         </td>
+         <td class="td-accent">
+          R$ 62.000
+         </td>
+         <td>
+          Serviços financeiros, tecnologia e manufatura de alto valor. Ecossistema de startups robusto.
+         </td>
+         <td>
+          Concentração de capital humano qualificado e ambiente de negócios gil como atratores de investimento.
+         </td>
+        </tr>
+        <tr>
+         <td class="td-highlight">
+          Coreia do Sul
+         </td>
+         <td class="td-accent">
+          US$ 33.000
+         </td>
+         <td>
+          Política industrial ativa de longo prazo (chaebols). Investimento massivo em P&amp;D (4,5% do PIB).
+         </td>
+         <td>
+          Planejamento econômico de longo prazo com metas setoriais claras e financiamento público-privado.
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </section>
+     <section class="content-section fade-in-section" id="objetivos">
+      <div class="section-label">
+       06
+      </div>
+      <h2>
+       Objetivos 2035
+      </h2>
+      <div class="timeline">
+       <div class="timeline-item">
+        <div class="timeline-dot">
+        </div>
+        <div class="timeline-year">
+         2026?2028
+        </div>
+        <div class="timeline-title">
+         Estabilização fiscal e ambiente de negócios
+        </div>
+        <div class="timeline-desc">
+         Aprovação do marco de recuperação fiscal, redução do tempo de abertura de empresas para menos de 5 dias e implementação da plataforma digital de serviços empresariais.
+        </div>
+       </div>
+       <div class="timeline-item">
+        <div class="timeline-dot">
+        </div>
+        <div class="timeline-year">
+         2028?2030
+        </div>
+        <div class="timeline-title">
+         Diversificação produtiva e atração de IDE
+        </div>
+        <div class="timeline-desc">
+         Implantação de zonas de processamento industrial em regiões estratégicas, criação do fundo soberano de Minas Gerais e lançamento do programa de benefícios fiscais condicionados — geração de empregos qualificados.
+        </div>
+       </div>
+       <div class="timeline-item">
+        <div class="timeline-dot">
+        </div>
+        <div class="timeline-year">
+         2030?2033
+        </div>
+        <div class="timeline-title">
+         Consolidação do ecossistema de inovação
+        </div>
+        <div class="timeline-desc">
+         Minas Gerais como polo de referência em mineração sustentável, agro de alto valor e tecnologia. Pelo menos 5 empresas unicórnio sediadas no Estado. Investimento em P&amp;D acima de 1,5% do PIB estadual.
+        </div>
+       </div>
+       <div class="timeline-item">
+        <div class="timeline-dot">
+        </div>
+        <div class="timeline-year">
+         2033?2035
+        </div>
+        <div class="timeline-title">
+         PIB per capita equivalente — média nacional
+        </div>
+        <div class="timeline-desc">
+         Alcançar PIB per capita de R$ 50.000 (valores de 2023), redução do coeficiente de Gini econômico regional e inserção de ao menos 3 regiões historicamente desfavorecidas no circuito produtivo nacional.
+        </div>
+       </div>
+      </div>
+     </section>
+     <section class="content-section fade-in-section" id="metas">
+      <div class="section-label">
+       07
+      </div>
+      <h2>
+       Metas 2050
+      </h2>
+      <ol>
+       <li>
+        PIB de Minas Gerais equivalente a 12% do PIB nacional, com diversificação setorial equilibrada entre indústria, serviços de alto valor e agronegócio.
+       </li>
+       <li>
+        PIB per capita superior a US$ 25.000 (PPC), posicionando Minas Gerais no grupo de economias de alta renda.
+       </li>
+       <li>
+        Exportações manufaturadas respondendo por pelo menos 40% da pauta exportadora — contra os atuais 27%.
+       </li>
+       <li>
+        Eliminar a pobreza extrema em todos os 853 municípios e reduzir o ndice de Gini econômico regional abaixo de 0,3.
+       </li>
+       <li>
+        Tornar Minas Gerais carbono neutro até 2045, com economia verde respondendo por 15% do PIB.
+       </li>
+       <li>
+        Investimento em P&amp;D (público + privado) acima de 3% do PIB estadual, referência internacional de liderança em inovação.
+       </li>
+      </ol>
+     </section>
+     <section class="content-section fade-in-section" id="projetos">
+      <div class="section-label">
+       08
+      </div>
+      <h2>
+       Projetos Estratégicos
+      </h2>
+      <div style="display: flex; flex-direction: column; gap: var(--sp-4);">
+       <div class="project-card">
+        <div>
+         <h4>
+          Polo de Inovação de Belo Horizonte
+         </h4>
+         <p>
+          Criação de um distrito de inovação integrado no entorno da UFMG, reunindo startups, laboratérios de pesquisa aplicada, aceleradoras e escritórios de grandes empresas de tecnologia. Modelo inspirado no District (SP) e no Silicon Allee (Berlim).
+         </p>
+        </div>
+        <span class="project-status status-active">
+         Em desenvolvimento
+        </span>
+       </div>
+       <div class="project-card">
+        <div>
+         <h4>
+          Fundo Soberano de Minas Gerais
+         </h4>
+         <p>
+          Fundo de poupança intergeracional capitalizado com royalties da mineração e dividendos de estatais, destinado ao financiamento de infraestrutura de longo prazo e — redução da dependência de transferências federais.
+         </p>
+        </div>
+        <span class="project-status status-proposal">
+         Proposta
+        </span>
+       </div>
+       <div class="project-card">
+        <div>
+         <h4>
+          Zonas de Processamento Industrial (ZPI-MG)
+         </h4>
+         <p>
+          Implantação de quatro ZPIs em regiões estratégicas (Norte de Minas, Triângulo, Vale do Ação e Zona da Mata) com incentivos fiscais condicionados — geração de empregos formais e — transferência tecnológica.
+         </p>
+        </div>
+        <span class="project-status status-study">
+         Em estudo
+        </span>
+       </div>
+       <div class="project-card">
+        <div>
+         <h4>
+          Simplifica MG — Reforma do Ambiente de Negócios
+         </h4>
+         <p>
+          Plataforma digital unificada de licenciamento empresarial, com meta de reduzir o tempo de abertura de empresas para menos de 3 dias teis e o número de licenças ambientais para empreendimentos de baixo risco para menos de 30 dias.
+         </p>
+        </div>
+        <span class="project-status status-active">
+         Em implementação
+        </span>
+       </div>
+      </div>
+     </section>
+     <section class="content-section fade-in-section" id="indicadores">
+      <div class="section-label">
+       09
+      </div>
+      <h2>
+       Indicadores-Chave (KPIs)
+      </h2>
+      <div class="metric-grid">
+       <div class="metric-card">
+        <div class="metric-label">
+         Meta PIB per capita 2035
+        </div>
+        <div>
+         <span class="metric-value">
+          R$ 50
+         </span>
+         <span class="metric-unit">
+          mil
+         </span>
+        </div>
+        <div class="metric-description">
+         Atual: R$ 33.000 — crescimento anual necessário: 3,5%
+        </div>
+       </div>
+       <div class="metric-card">
+        <div class="metric-label">
+         Taxa de crescimento anual
+        </div>
+        <div>
+         <span class="metric-value">
+          3,5
+         </span>
+         <span class="metric-unit">
+          % a.a.
+         </span>
+        </div>
+        <div class="metric-description">
+         Meta para superar consistentemente o crescimento nacional
+        </div>
+       </div>
+       <div class="metric-card">
+        <div class="metric-label">
+         Empregos formais criados
+        </div>
+        <div>
+         <span class="metric-value">
+          +1,5
+         </span>
+         <span class="metric-unit">
+          M
+         </span>
+        </div>
+        <div class="metric-description">
+         Entre 2026?2035, com foco em setores de alta produtividade
+        </div>
+       </div>
+       <div class="metric-card">
+        <div class="metric-label">
+         IDE anual atraído
+        </div>
+        <div>
+         <span class="metric-value">
+          R$ 60
+         </span>
+         <span class="metric-unit">
+          bi
+         </span>
+        </div>
+        <div class="metric-description">
+         Meta 2035 — atual: R$ 28bi — crescimento necessário: 8% a.a.
+        </div>
+       </div>
+       <div class="metric-card">
+        <div class="metric-label">
+         Exportações manufaturadas
+        </div>
+        <div>
+         <span class="metric-value">
+          40
+         </span>
+         <span class="metric-unit">
+          %
+         </span>
+        </div>
+        <div class="metric-description">
+         Da pauta exportadora — atual: 27%
+        </div>
+       </div>
+       <div class="metric-card">
+        <div class="metric-label">
+         P&amp;D / PIB estadual
+        </div>
+        <div>
+         <span class="metric-value">
+          1,5
+         </span>
+         <span class="metric-unit">
+          %
+         </span>
+        </div>
+        <div class="metric-description">
+         Meta 2035 — atual: 0,7% — referência OCDE: 2,7%
+        </div>
+       </div>
+      </div>
+     </section>
+     <section class="content-section fade-in-section" id="debate">
+      <div class="section-label">
+       10
+      </div>
+      <h2>
+       Questões para Debate Público
+      </h2>
+      <ol>
+       <li>
+        Como Minas Gerais pode aproveitar o boom global de minerais estratégicos (lítio, grafite, nióbio) sem repetir os erros históricos da dependência de commodities?
+       </li>
+       <li>
+        Qual deve ser o papel do Estado na indução da reindustrialização: incentivos fiscais, compras públicas, fundos de venture capital ou pesquisa aplicada nas universidades?
+       </li>
+       <li>
+        Como equilibrar o ajuste fiscal necessário com os investimentos indispensáveis para o crescimento de longo prazo?
+       </li>
+       <li>
+        O desenvolvimento do interior mineiro exige um modelo econômico diferente do adotado pela RMBH— Quais são as vocações produtivas de cada macro-região?
+       </li>
+       <li>
+        Como atrair talentos qualificados de volta s cidades mineiras em competição com São Paulo e o mercado internacional remoto?
+       </li>
+       <li>
+        Qual o papel das universidades federais e estaduais na criação de empresas de base tecnológica e na transferência de conhecimento para o setor produtivo?
+       </li>
+       <li>
+        — viável uma zona de livre comércio ou regime tributário diferenciado para regiões específicas de Minas Gerais?
+       </li>
+      </ol>
+      <div style="margin-top: var(--sp-8);">
+       <a class="btn btn-primary" href="../participar.html" id="btn-eco-debate">
+        Participar do Debate
+       </a>
+      </div>
+     </section>
+     <section class="content-section fade-in-section" id="referencias">
+      <div class="section-label">
+       11
+      </div>
+      <h2>
+       Referências Bibliográficas
+      </h2>
+      <div class="reference-list">
+       <div class="reference-item">
+        <span class="reference-num">
+         01
+        </span>
+        <span>
+         IBGE.
+         <em>
+          Sistema de Contas Regionais — Minas Gerais 2021
+         </em>
+         . Rio de Janeiro: IBGE, 2023.
+        </span>
+       </div>
+       <div class="reference-item">
+        <span class="reference-num">
+         02
+        </span>
+        <span>
+         FJP — Fundação João Pinheiro.
+         <em>
+          Produto Interno Bruto dos Municípios de Minas Gerais
+         </em>
+         . Belo Horizonte: FJP, 2023.
+        </span>
+       </div>
+       <div class="reference-item">
+        <span class="reference-num">
+         03
+        </span>
+        <span>
+         BANCO MUNDIAL.
+         <em>
+          Doing Business 2023: Comparing Business Regulation in 190 Economies
+         </em>
+         . Washington: World Bank Group, 2023.
+        </span>
+       </div>
+       <div class="reference-item">
+        <span class="reference-num">
+         04
+        </span>
+        <span>
+         MDIC — Ministério do Desenvolvimento, Indústria e Comércio.
+         <em>
+          Comex Stat — Estatésticas de Comércio Exterior
+         </em>
+         . Brasília: MDIC, 2023.
+        </span>
+       </div>
+       <div class="reference-item">
+        <span class="reference-num">
+         05
+        </span>
+        <span>
+         OCDE.
+         <em>
+          Regional Competitiveness: Policies for a Better Life
+         </em>
+         . Paris: OECD Publishing, 2022.
+        </span>
+       </div>
+       <div class="reference-item">
+        <span class="reference-num">
+         06
+        </span>
+        <span>
+         RODRIK, Dani.
+         <em>
+          Premature Deindustrialization
+         </em>
+         . Journal of Economic Growth, v. 21, p. 1?33, 2016.
+        </span>
+       </div>
+       <div class="reference-item">
+        <span class="reference-num">
+         07
+        </span>
+        <span>
+         CNI — Confederação Nacional da Indústria.
+         <em>
+          Mapa Estratégico da Indústria 2023?2032
+         </em>
+         . Brasília: CNI, 2023.
+        </span>
+       </div>
+       <div class="reference-item">
+        <span class="reference-num">
+         08
+        </span>
+        <span>
+         GOVERNO DE MINAS GERAIS.
+         <em>
+          Plano Mineiro de Desenvolvimento Integrado (PMDI) 2019?2030
+         </em>
+         . Belo Horizonte: SEPLAG, 2019.
+        </span>
+       </div>
+      </div>
+     </section>
+    </article>
+   </div>
+  </div>
+  <!-- FOOTER -->
+  <footer class="site-footer">
+   <div class="container">
+    <div class="footer-grid">
+     <div class="footer-brand">
+      <a class="navbar-brand" href="../index.html">
+       <svg class="navbar-logo" fill="none" viewbox="0 0 36 36">
+        <rect fill="url(#grad-footer-eco)" height="36" rx="8" width="36">
+        </rect>
+        <path d="M10 24 L10 13 L18 20 L26 13 L26 24" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2">
+        </path>
+        <defs>
+         <lineargradient gradientunits="userSpaceOnUse" id="grad-footer-eco" x1="0" x2="36" y1="0" y2="36">
+          <stop stop-color="#00E5FF">
+          </stop>
+          <stop offset="1" stop-color="#4F46E5">
+          </stop>
+         </lineargradient>
+        </defs>
+       </svg>
+       <span class="navbar-name">
+        Minas
+        <span>
+         2035
+        </span>
+       </span>
+      </a>
+      <p>
+       Plataforma independente de estudos para o desenvolvimento de Minas Gerais com visão de longo prazo.
+      </p>
+     </div>
+     <div class="footer-col">
+      <h5>
+       Projeto
+      </h5>
+      <ul>
+       <li>
+        <a href="../sobre.html">
+         Sobre
+        </a>
+       </li>
+       <li>
+        <a href="../manifesto.html">
+         Manifesto
+        </a>
+       </li>
+       <li>
+        <a href="../pilares.html">
+         Pilares
+        </a>
+       </li>
+       <li>
+        <a href="../participar.html">
+         Participar
+        </a>
+       </li>
+      </ul>
+     </div>
+     <div class="footer-col">
+      <h5>
+       Outras Áreas
+      </h5>
+      <ul>
+       <li>
+        <a href="educacao.html">
+         Educação
+        </a>
+       </li>
+       <li>
+        <a href="tecnologia.html">
+         Tecnologia
+        </a>
+       </li>
+       <li>
+        <a href="saude.html">
+         Saúde
+        </a>
+       </li>
+       <li>
+        <a href="infraestrutura.html">
+         Infraestrutura
+        </a>
+       </li>
+      </ul>
+     </div>
+     <div class="footer-col">
+      <h5>
+       Legal
+      </h5>
+      <ul>
+       <li>
+        <a href="#">
+         Política de privacidade
+        </a>
+       </li>
+       <li>
+        <a href="#">
+         Licença de uso
+        </a>
+       </li>
+       <li>
+        <a href="#">
+         Contato
+        </a>
+       </li>
+      </ul>
+     </div>
     </div>
-
-
+    <div class="footer-bottom">
+     <p>
+      — 2026 Projeto Minas 2035. Fontes: IBGE, FJP, Banco Mundial, OCDE, CNI.
+     </p>
+     <a href="../manifesto.html">
+      Manifesto —
+     </a>
+    </div>
+   </div>
   </footer>
-
-
-
-
-
-  <script>lucide.createIcons();</script>
-
-
-</body>
-
-
+  <script>
+   lucide.createIcons();
+  </script>
+ </body>
 </html>
-
-
-
-
-
