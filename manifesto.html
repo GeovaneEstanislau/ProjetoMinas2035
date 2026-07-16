@@ -3,12 +3,1033 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Manifesto - Projeto Minas 2035</title>
+  <meta name="description" content="Manifesto e Carta Fundadora do Projeto Minas 2035 – os princípios, a visão e o compromisso coletivo com o desenvolvimento de Minas Gerais." />
+  <meta name="theme-color" content="#050816" />
+  <title>Manifesto – Projeto Minas 2035</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
   <link rel="stylesheet" href="css/variables.css" />
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script defer src="js/app.js"></script>
+  <script defer src="js/menu.js"></script>
+  <script defer src="js/animations.js"></script>
+
+  <style>
+    /* ── MANIFESTO-SPECIFIC STYLES ───────────────────────── */
+    .manifesto-hero {
+      position: relative;
+      padding-top: calc(var(--navbar-h) + var(--sp-20));
+      padding-bottom: var(--sp-20);
+      background: var(--bg);
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .manifesto-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 50% at 50% 0%, rgba(0,229,255,0.09) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 40% at 80% 90%, rgba(79,70,229,0.08) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .manifesto-hero-grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+      background-size: 60px 60px;
+      mask-image: radial-gradient(ellipse at center, black 20%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .manifesto-hero-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 760px;
+      margin-inline: auto;
+      padding-inline: var(--sp-4);
+    }
+
+    .manifesto-label {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--sp-2);
+      font-family: var(--font-heading);
+      font-size: var(--text-xs);
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent-cyan);
+      background: rgba(0,229,255,0.08);
+      border: 1px solid rgba(0,229,255,0.22);
+      border-radius: var(--radius-full);
+      padding: var(--sp-2) var(--sp-5);
+      margin-bottom: var(--sp-8);
+    }
+
+    .manifesto-label::before {
+      content: '';
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--accent-cyan);
+      animation: pulse 2s infinite;
+    }
+
+    .manifesto-hero h1 {
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      font-weight: 800;
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+      color: var(--text-primary);
+      margin-bottom: var(--sp-6);
+    }
+
+    .manifesto-hero h1 .accent-line {
+      display: block;
+      background: var(--accent-grad);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .manifesto-hero-sub {
+      font-size: var(--text-lg);
+      color: var(--text-secondary);
+      line-height: 1.7;
+      max-width: 600px;
+      margin-inline: auto;
+      margin-bottom: var(--sp-10);
+    }
+
+    .manifesto-meta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--sp-8);
+      flex-wrap: wrap;
+      font-size: var(--text-xs);
+      font-family: var(--font-heading);
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      text-transform: uppercase;
+    }
+
+    .manifesto-meta span {
+      display: flex;
+      align-items: center;
+      gap: var(--sp-2);
+    }
+
+    .manifesto-meta i { width: 14px; height: 14px; color: var(--accent-cyan); }
+
+    /* ── MANIFESTO BODY ──────────────────────────────────── */
+    .manifesto-body {
+      max-width: 720px;
+      margin-inline: auto;
+      padding-inline: var(--sp-4);
+      padding-block: var(--sp-24);
+    }
+
+    /* ── MANIFESTO SECTION ───────────────────────────────── */
+    .manifesto-section {
+      padding-bottom: var(--sp-20);
+    }
+
+    .manifesto-section-header {
+      text-align: center;
+      margin-bottom: var(--sp-12);
+    }
+
+    .manifesto-section-num {
+      font-family: var(--font-heading);
+      font-size: var(--text-xs);
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent-cyan);
+      margin-bottom: var(--sp-4);
+    }
+
+    .manifesto-section h2 {
+      font-family: var(--font-heading);
+      font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      line-height: 1.15;
+      color: var(--text-primary);
+      margin-bottom: var(--sp-4);
+    }
+
+    /* Manifesto body text – larger, editorial */
+    .manifesto-section p {
+      font-size: var(--text-lg);
+      color: var(--text-secondary);
+      line-height: 2.0;
+      margin-bottom: var(--sp-6);
+    }
+
+    .manifesto-section p strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    /* ── CENTRAL QUOTE ───────────────────────────────────── */
+    .manifesto-quote {
+      text-align: center;
+      padding-block: var(--sp-12);
+      margin-block: var(--sp-10);
+      position: relative;
+    }
+
+    .manifesto-quote::before,
+    .manifesto-quote::after {
+      content: '';
+      display: block;
+      height: 1px;
+      background: linear-gradient(90deg, transparent 0%, var(--accent-cyan) 50%, transparent 100%);
+      opacity: 0.35;
+      margin-block: var(--sp-8);
+    }
+
+    .manifesto-quote blockquote {
+      font-family: var(--font-heading);
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.35;
+      letter-spacing: -0.02em;
+      max-width: 620px;
+      margin-inline: auto;
+    }
+
+    .manifesto-quote cite {
+      display: block;
+      margin-top: var(--sp-6);
+      font-size: var(--text-sm);
+      color: var(--text-muted);
+      font-style: normal;
+      letter-spacing: 0.08em;
+    }
+
+    /* ── GLOW DIVIDER ────────────────────────────────────── */
+    .glow-divider {
+      display: flex;
+      align-items: center;
+      gap: var(--sp-4);
+      margin-block: var(--sp-16);
+    }
+
+    .glow-divider::before,
+    .glow-divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border-accent));
+    }
+
+    .glow-divider::after {
+      background: linear-gradient(90deg, var(--border-accent), transparent);
+    }
+
+    .glow-divider-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: rgba(0,229,255,0.08);
+      border: 1px solid rgba(0,229,255,0.22);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-cyan);
+      flex-shrink: 0;
+    }
+
+    .glow-divider-icon i { width: 14px; height: 14px; }
+
+    /* ── PRINCIPLES GRID ─────────────────────────────────── */
+    .principles-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--sp-5);
+      margin-block: var(--sp-10);
+    }
+
+    .principle-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: var(--sp-6);
+      transition: all var(--trans-med);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .principle-card::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: var(--accent-grad);
+      opacity: 0.6;
+    }
+
+    .principle-card:hover {
+      border-color: var(--border-accent);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-glow-cyan);
+    }
+
+    .principle-num {
+      font-family: var(--font-heading);
+      font-size: var(--text-xs);
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: var(--accent-cyan);
+      margin-bottom: var(--sp-3);
+    }
+
+    .principle-card h3 {
+      font-family: var(--font-heading);
+      font-size: var(--text-base);
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: var(--sp-3);
+    }
+
+    .principle-card p {
+      font-size: var(--text-sm);
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    .principle-icon {
+      width: 36px; height: 36px;
+      border-radius: var(--radius-md);
+      background: rgba(0,229,255,0.08);
+      border: 1px solid rgba(0,229,255,0.18);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: var(--sp-4);
+      color: var(--accent-cyan);
+    }
+
+    .principle-icon i { width: 16px; height: 16px; }
+
+    /* ── VISION CARD ─────────────────────────────────────── */
+    .vision-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-2xl);
+      padding: var(--sp-8);
+      margin-block: var(--sp-8);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .vision-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(0,229,255,0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .vision-year {
+      font-family: var(--font-heading);
+      font-size: clamp(3rem, 8vw, 5rem);
+      font-weight: 800;
+      background: var(--accent-grad);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1;
+      margin-bottom: var(--sp-3);
+    }
+
+    .vision-card h3 {
+      font-family: var(--font-heading);
+      font-size: var(--text-xl);
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: var(--sp-4);
+    }
+
+    .vision-card p {
+      font-size: var(--text-base);
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin-bottom: var(--sp-3);
+    }
+
+    .vision-list {
+      display: flex;
+      flex-direction: column;
+      gap: var(--sp-2);
+      margin-top: var(--sp-5);
+    }
+
+    .vision-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--sp-3);
+      font-size: var(--text-sm);
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .vision-list li::before {
+      content: '';
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--accent-cyan);
+      flex-shrink: 0;
+      margin-top: 7px;
+    }
+
+    /* ── HOW-TO PARTICIPATE LIST ─────────────────────────── */
+    .participate-list {
+      display: flex;
+      flex-direction: column;
+      gap: var(--sp-5);
+      margin-block: var(--sp-8);
+    }
+
+    .participate-item {
+      display: flex;
+      gap: var(--sp-5);
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: var(--sp-6);
+      transition: all var(--trans-med);
+    }
+
+    .participate-item:hover {
+      border-color: var(--border-accent);
+    }
+
+    .participate-item-icon {
+      width: 40px; height: 40px;
+      border-radius: var(--radius-lg);
+      background: rgba(0,229,255,0.08);
+      border: 1px solid rgba(0,229,255,0.2);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--accent-cyan);
+      flex-shrink: 0;
+    }
+
+    .participate-item-icon i { width: 18px; height: 18px; }
+
+    .participate-item h4 {
+      font-family: var(--font-heading);
+      font-size: var(--text-base);
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: var(--sp-2);
+    }
+
+    .participate-item p {
+      font-size: var(--text-sm);
+      color: var(--text-secondary);
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    /* ── AUDIENCE CHIPS ──────────────────────────────────── */
+    .audience-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--sp-4);
+      margin-block: var(--sp-8);
+    }
+
+    .audience-item {
+      display: flex;
+      align-items: center;
+      gap: var(--sp-4);
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: var(--sp-5);
+    }
+
+    .audience-icon {
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      background: rgba(79,70,229,0.12);
+      border: 1px solid rgba(79,70,229,0.25);
+      display: flex; align-items: center; justify-content: center;
+      color: #818cf8;
+      flex-shrink: 0;
+    }
+
+    .audience-icon i { width: 16px; height: 16px; }
+
+    .audience-item p {
+      font-size: var(--text-sm);
+      color: var(--text-secondary);
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    .audience-item strong {
+      display: block;
+      font-size: var(--text-base);
+      color: var(--text-primary);
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    /* ── COMMITMENT BLOCK ────────────────────────────────── */
+    .commitment-block {
+      background: var(--bg-card);
+      border: 1px solid var(--border-accent);
+      border-radius: var(--radius-2xl);
+      padding: var(--sp-10) var(--sp-8);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      margin-top: var(--sp-8);
+    }
+
+    .commitment-block::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 80% 60% at 50% 50%, rgba(0,229,255,0.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .commitment-block p {
+      font-size: var(--text-xl);
+      color: var(--text-secondary);
+      line-height: 2.0;
+      max-width: 580px;
+      margin-inline: auto;
+      margin-bottom: var(--sp-8);
+    }
+
+    .commitment-block p strong {
+      color: var(--text-primary);
+    }
+
+    .commitment-signature {
+      font-family: var(--font-heading);
+      font-size: var(--text-sm);
+      color: var(--text-muted);
+      letter-spacing: 0.1em;
+      margin-top: var(--sp-4);
+    }
+
+    /* ── RESPONSIVE ──────────────────────────────────────── */
+    @media (max-width: 640px) {
+      .principles-grid,
+      .audience-grid {
+        grid-template-columns: 1fr;
+      }
+      .manifesto-body { padding-inline: var(--sp-4); }
+    }
+  </style>
 </head>
 <body>
-  <h1>Manifesto</h1>
-  <p>Conteúdo do Manifesto será adicionado aqui.</p>
+
+  <!-- ======================================================
+       NAVBAR
+  ====================================================== -->
+  <header class="navbar" id="navbar">
+    <div class="container">
+      <a href="index.html" class="navbar-brand" aria-label="Projeto Minas 2035 – Página Inicial">
+        <svg class="navbar-logo" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="36" height="36" rx="8" fill="url(#grad-nav-manifesto)"/>
+          <path d="M10 24 L10 13 L18 20 L26 13 L26 24" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <defs>
+            <linearGradient id="grad-nav-manifesto" x1="0" y1="0" x2="36" y2="36" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#00E5FF"/><stop offset="1" stop-color="#4F46E5"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <span class="navbar-name">Minas <span>2035</span></span>
+      </a>
+
+      <nav class="navbar-nav" id="main-nav" aria-label="Navegação principal">
+        <a href="index.html#sobre">O Projeto</a>
+        <a href="index.html#areas">Áreas</a>
+        <a href="index.html#principios">Princípios</a>
+        <a href="index.html#numeros">Indicadores</a>
+        <a href="manifesto.html" style="color: var(--accent-cyan);">Manifesto</a>
+      </nav>
+
+      <div class="navbar-cta">
+        <a href="participar.html" class="btn btn-outline">Participar</a>
+        <a href="index.html#areas" class="btn btn-primary">Explorar</a>
+      </div>
+
+      <button class="hamburger" id="hamburger-btn" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+
+  <!-- ======================================================
+       MANIFESTO HERO
+  ====================================================== -->
+  <section class="manifesto-hero" aria-label="Manifesto do Projeto Minas 2035">
+    <div class="manifesto-hero-grid" aria-hidden="true"></div>
+    <div class="manifesto-hero-inner fade-in-section">
+      <div class="manifesto-label">
+        <i data-lucide="file-text"></i>
+        Carta Fundadora
+      </div>
+      <h1>
+        Manifesto
+        <span class="accent-line">Minas 2035</span>
+      </h1>
+      <p class="manifesto-hero-sub">
+        Um documento coletivo de princípios, visão e compromisso com o desenvolvimento
+        de longo prazo de Minas Gerais — aberto a todos que acreditam no poder das ideias.
+      </p>
+      <div class="manifesto-meta">
+        <span><i data-lucide="calendar"></i> Publicado em 2026</span>
+        <span><i data-lucide="users"></i> Documento Coletivo</span>
+        <span><i data-lucide="refresh-cw"></i> Documento Vivo</span>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ======================================================
+       MANIFESTO BODY
+  ====================================================== -->
+  <main class="manifesto-body" aria-label="Conteúdo do Manifesto">
+
+    <!-- ── I. PREÂMBULO ─────────────────────────────────── -->
+    <section class="manifesto-section fade-in-section" id="preambulo" aria-labelledby="preambulo-heading">
+      <div class="manifesto-section-header">
+        <div class="manifesto-section-num">I — Preâmbulo</div>
+        <h2 id="preambulo-heading">Por que este documento existe</h2>
+      </div>
+
+      <p>
+        Minas Gerais é um estado de contradições magníficas. Possui a segunda maior economia do Brasil, abriga universidades de excelência reconhecidas internacionalmente, concentra riquezas minerais, hídrica e agrícola sem paralelo no continente — e, ao mesmo tempo, convive com desigualdades regionais profundas, infraestrutura precária em vastas porções do território, jovens talentosos que migram em busca de oportunidades e uma administração pública historicamente pressionada por desequilíbrios fiscais crônicos.
+      </p>
+
+      <p>
+        Não nascemos para registrar essas contradições como fatalidade. Nascemos para investigar as suas causas, mapear caminhos de superação e — sobretudo — <strong>organizar o conhecimento disponível de forma acessível e orientada à ação</strong>. Vivemos numa época em que a informação existe em abundância, mas a síntese qualificada e o debate público fundamentado em evidências continuam sendo bens escassos.
+      </p>
+
+      <p>
+        O Projeto Minas 2035 existe porque acreditamos que o futuro não acontece por acidente. Ele é construído — lentamente, teimosamente, por pessoas que se recusam a aceitar o presente como destino. Este manifesto é o registro de uma crença compartilhada: a de que Minas Gerais tem tudo o que precisa para protagonizar uma das histórias de desenvolvimento mais notáveis da América do Sul nas próximas décadas. O que falta não é capacidade — é vontade organizada, conhecimento sistematizado e visão de longo prazo.
+      </p>
+
+      <div class="manifesto-quote">
+        <blockquote>
+          "O futuro é construído antes de acontecer. Cada análise, cada debate, cada proposta séria é um tijolo na fundação do amanhã."
+        </blockquote>
+        <cite>— Projeto Minas 2035 · Carta Fundadora</cite>
+      </div>
+
+      <p>
+        Este documento não pertence a nenhum partido, governo, empresa ou indivíduo. Pertence ao debate público. Ele representa o compromisso de uma plataforma com a seriedade intelectual, a transparência metodológica e a abertura ao contraditório. Qualquer análise aqui apresentada pode — e deve — ser questionada, aprimorada e superada por evidências melhores.
+      </p>
+    </section>
+
+    <div class="glow-divider" aria-hidden="true">
+      <div class="glow-divider-icon"><i data-lucide="diamond"></i></div>
+    </div>
+
+
+    <!-- ── II. DECLARAÇÃO DE PRINCÍPIOS ─────────────────── -->
+    <section class="manifesto-section fade-in-section" id="principios" aria-labelledby="principios-heading">
+      <div class="manifesto-section-header">
+        <div class="manifesto-section-num">II — Declaração de Princípios</div>
+        <h2 id="principios-heading">Os seis pilares que nos orientam</h2>
+      </div>
+
+      <p>
+        Todo projeto intelectual é guiado por valores, explícitos ou implícitos. Aqui os tornamos explícitos. Estes seis princípios não são slogan — são critérios de avaliação do nosso próprio trabalho. Se um conteúdo produzido nesta plataforma contradiz algum deles, ele deve ser revisto.
+      </p>
+
+      <div class="principles-grid">
+
+        <div class="principle-card">
+          <div class="principle-icon"><i data-lucide="bar-chart-2"></i></div>
+          <div class="principle-num">Princípio 01</div>
+          <h3>Baseado em Evidências</h3>
+          <p>Toda afirmação relevante deve ser sustentada por dados, pesquisas ou experiências verificáveis. Opinião e análise são bem-vindas, desde que claramente distinguidas dos fatos. Preferimos a incerteza honesta à certeza fabricada.</p>
+        </div>
+
+        <div class="principle-card">
+          <div class="principle-icon"><i data-lucide="clock"></i></div>
+          <div class="principle-num">Princípio 02</div>
+          <h3>Visão de Longo Prazo</h3>
+          <p>Grandes transformações estruturais exigem décadas. Não nos rendemos à lógica dos ciclos eleitorais de quatro anos. Pensamos em horizontes de dez, vinte e trinta anos — sem ignorar o que é urgente no presente.</p>
+        </div>
+
+        <div class="principle-card">
+          <div class="principle-icon"><i data-lucide="map"></i></div>
+          <div class="principle-num">Princípio 03</div>
+          <h3>Desenvolvimento Regional</h3>
+          <p>Minas Gerais não é um território homogêneo. Do Vale do Jequitinhonha ao Sul de Minas, do Triângulo Mineiro ao Vale do Aço, cada região possui especificidades que exigem diagnósticos e soluções contextualizadas. Rejeitamos soluções únicas para realidades diversas.</p>
+        </div>
+
+        <div class="principle-card">
+          <div class="principle-icon"><i data-lucide="book-open"></i></div>
+          <div class="principle-num">Princípio 04</div>
+          <h3>Conhecimento como Base</h3>
+          <p>Educação, ciência e tecnologia não são setores entre outros — são os pilares que sustentam toda forma de desenvolvimento sustentável. Uma economia que não investe em conhecimento condena sua prosperidade a ser transitória.</p>
+        </div>
+
+        <div class="principle-card">
+          <div class="principle-icon"><i data-lucide="zap"></i></div>
+          <div class="principle-num">Princípio 05</div>
+          <h3>Inovação Estruturante</h3>
+          <p>Crescimento econômico de qualidade depende da capacidade de criar, adaptar e escalar soluções novas. Valorizamos modelos que transformam recursos naturais e intelectuais em valor agregado, emprego qualificado e competitividade sustentável.</p>
+        </div>
+
+        <div class="principle-card">
+          <div class="principle-icon"><i data-lucide="heart"></i></div>
+          <div class="principle-num">Princípio 06</div>
+          <h3>Qualidade de Vida</h3>
+          <p>O crescimento do PIB é instrumento, não fim. Todo modelo de desenvolvimento que não se traduzir em melhoria mensurável nas condições de vida das pessoas — saúde, segurança, educação, liberdade — é um projeto incompleto.</p>
+        </div>
+
+      </div>
+
+      <div class="manifesto-quote">
+        <blockquote>
+          "Princípios sem ação são poesia. Ação sem princípios é caos. Este projeto busca o ponto onde as duas coisas se encontram."
+        </blockquote>
+        <cite>— Projeto Minas 2035</cite>
+      </div>
+    </section>
+
+    <div class="glow-divider" aria-hidden="true">
+      <div class="glow-divider-icon"><i data-lucide="diamond"></i></div>
+    </div>
+
+
+    <!-- ── III. NOSSA VISÃO ──────────────────────────────── -->
+    <section class="manifesto-section fade-in-section" id="visao" aria-labelledby="visao-heading">
+      <div class="manifesto-section-header">
+        <div class="manifesto-section-num">III — Nossa Visão</div>
+        <h2 id="visao-heading">Minas em 2035 e em 2050</h2>
+      </div>
+
+      <p>
+        Visão não é previsão. É uma imagem desejada do futuro, suficientemente concreta para orientar decisões presentes e suficientemente ambiciosa para motivar o esforço coletivo. Nossa visão para Minas Gerais é a de um estado que realizou a transição de uma economia baseada em commodities para uma economia baseada em conhecimento, inovação e serviços de alto valor agregado — sem abandonar sua base agropecuária e industrial, mas tornando-a mais produtiva, sustentável e tecnológica.
+      </p>
+
+      <div class="vision-card">
+        <div class="vision-year">2035</div>
+        <h3>Um estado reformado e competitivo</h3>
+        <p>Em 2035, Minas Gerais é reconhecida como um dos estados mais bem administrados e competitivos do Brasil. Suas finanças públicas estão equilibradas, sua infraestrutura foi modernizada e sua capital, Belo Horizonte, compete com Curitiba e Porto Alegre como polo de inovação e qualidade de vida do interior brasileiro.</p>
+        <ul class="vision-list">
+          <li>PIB per capita crescendo acima da média nacional há ao menos 5 anos consecutivos</li>
+          <li>Rede de banda larga de alta velocidade alcançando 90% dos municípios</li>
+          <li>Pelo menos 3 clusters tecnológicos de relevância nacional consolidados</li>
+          <li>Déficit de aprendizagem nas escolas públicas reduzido em 40% frente a 2024</li>
+          <li>Gestão fiscal equilibrada e capacidade de investimento público restaurada</li>
+        </ul>
+      </div>
+
+      <div class="vision-card" style="margin-top: var(--sp-6);">
+        <div class="vision-year">2050</div>
+        <h3>Uma economia de alta complexidade e bem-estar amplo</h3>
+        <p>Em 2050, a geração que nasce hoje em Minas Gerais pode estudar em universidades de padrão mundial, trabalhar em empresas de tecnologia e biotecnologia de relevância global, viver em cidades com mobilidade inteligente e acesso universal a serviços de saúde de excelência. A desigualdade regional deixou de ser uma fatalidade geográfica e passou a ser uma agenda de oportunidades.</p>
+        <ul class="vision-list">
+          <li>Complexidade econômica no quartil superior entre estados sul-americanos</li>
+          <li>Emissões líquidas de carbono próximas de zero com liderança em energia limpa</li>
+          <li>Índice de Desenvolvimento Humano acima de 0,850 em todas as regiões</li>
+          <li>Ecossistema de startups e pesquisa básica com projeção internacional</li>
+        </ul>
+      </div>
+
+      <div class="manifesto-quote">
+        <blockquote>
+          "Não é ingenuidade acreditar que Minas pode ser diferente. É ingenuidade acreditar que isso acontecerá sem esforço deliberado, planejamento sério e investimento persistente."
+        </blockquote>
+        <cite>— Projeto Minas 2035</cite>
+      </div>
+    </section>
+
+    <div class="glow-divider" aria-hidden="true">
+      <div class="glow-divider-icon"><i data-lucide="diamond"></i></div>
+    </div>
+
+
+    <!-- ── IV. O QUE CONSTRUÍMOS ─────────────────────────── -->
+    <section class="manifesto-section fade-in-section" id="plataforma" aria-labelledby="plataforma-heading">
+      <div class="manifesto-section-header">
+        <div class="manifesto-section-num">IV — O Que Construímos</div>
+        <h2 id="plataforma-heading">Uma base de conhecimento viva</h2>
+      </div>
+
+      <p>
+        O Projeto Minas 2035 é uma plataforma digital de estudos, diagnósticos e propostas organizada em quinze centros temáticos: Economia, Educação, Tecnologia, Saúde, Infraestrutura, Ciência, Indústria, Agricultura, Trabalho, Energia, Meio Ambiente, Turismo, Segurança Jurídica e Governo Digital. Cada centro funciona como um núcleo de curadoria e produção de conhecimento sobre um eixo estratégico do desenvolvimento mineiro.
+      </p>
+
+      <p>
+        O conteúdo é estruturado para diferentes perfis de leitores: do cidadão curioso que quer entender os desafios do estado ao pesquisador que busca dados e referências; do gestor público que precisa de benchmarks internacionais ao empreendedor que quer identificar oportunidades. <strong>Não escrevemos para especialistas isolados — escrevemos para a interseção entre rigor e acessibilidade.</strong>
+      </p>
+
+      <p>
+        Cada centro temático inclui: diagnóstico da situação atual com dados verificáveis; identificação de desafios estruturais; mapeamento de oportunidades; benchmarking com referências internacionais; objetivos mensuráveis para 2035 e metas de longo prazo para 2050; projetos estratégicos propostos; indicadores-chave de progresso; e questões abertas para debate público. Não é um produto acabado — é um ponto de partida em constante evolução.
+      </p>
+
+      <div class="manifesto-quote">
+        <blockquote>
+          "Uma plataforma de conhecimento não é uma enciclopédia. É uma conversa em andamento — rigorosa o suficiente para ser confiável, aberta o suficiente para ser aprimorada."
+        </blockquote>
+        <cite>— Projeto Minas 2035</cite>
+      </div>
+
+      <p>
+        Chamamos esta plataforma de "documento vivo" porque reconhecemos que o conhecimento envelhece e o contexto muda. O que vale hoje pode precisar de revisão amanhã. Por isso, revisamos periodicamente os dados, atualizamos as referências e incorporamos críticas e contribuições externas que elevem a qualidade do conteúdo. A versão mais recente de qualquer análise substitui as anteriores — e a data de cada atualização é sempre registrada.
+      </p>
+    </section>
+
+    <div class="glow-divider" aria-hidden="true">
+      <div class="glow-divider-icon"><i data-lucide="diamond"></i></div>
+    </div>
+
+
+    <!-- ── V. A QUEM SE DESTINA ──────────────────────────── -->
+    <section class="manifesto-section fade-in-section" id="audiencia" aria-labelledby="audiencia-heading">
+      <div class="manifesto-section-header">
+        <div class="manifesto-section-num">V — A Quem Se Destina</div>
+        <h2 id="audiencia-heading">Aberto a todos que se importam</h2>
+      </div>
+
+      <p>
+        O Projeto Minas 2035 não tem dono, não tem partido e não tem público exclusivo. Ele é construído para todos os que acreditam que Minas Gerais merece um futuro melhor e estão dispostos a pensar seriamente sobre como chegar lá. A diversidade de perspectivas não é um problema a ser gerenciado — é a nossa maior fonte de qualidade.
+      </p>
+
+      <div class="audience-grid">
+
+        <div class="audience-item">
+          <div class="audience-icon"><i data-lucide="user"></i></div>
+          <p><strong>Cidadãos</strong>Mineiros de todos os perfis que querem entender os desafios do estado e participar do debate público com informação de qualidade.</p>
+        </div>
+
+        <div class="audience-item">
+          <div class="audience-icon"><i data-lucide="graduation-cap"></i></div>
+          <p><strong>Pesquisadores e Acadêmicos</strong>Professores, estudantes e cientistas que contribuem com rigor metodológico, dados primários e análises setoriais aprofundadas.</p>
+        </div>
+
+        <div class="audience-item">
+          <div class="audience-icon"><i data-lucide="briefcase"></i></div>
+          <p><strong>Empreendedores e Empresários</strong>Líderes do setor privado que identificam oportunidades, testam propostas no mundo real e compartilham aprendizados práticos.</p>
+        </div>
+
+        <div class="audience-item">
+          <div class="audience-icon"><i data-lucide="landmark"></i></div>
+          <p><strong>Servidores e Gestores Públicos</strong>Profissionais da administração pública que buscam referências internacionais, metodologias de planejamento e evidências para orientar políticas.</p>
+        </div>
+
+        <div class="audience-item">
+          <div class="audience-icon"><i data-lucide="mic"></i></div>
+          <p><strong>Jornalistas e Comunicadores</strong>Profissionais que cobrem desenvolvimento, política e economia e buscam fontes qualificadas e dados verificáveis para suas pautas.</p>
+        </div>
+
+        <div class="audience-item">
+          <div class="audience-icon"><i data-lucide="globe"></i></div>
+          <p><strong>Organizações da Sociedade Civil</strong>Entidades, associações e movimentos sociais que representam comunidades e setores específicos e trazem perspectivas que o mercado e o Estado frequentemente ignoram.</p>
+        </div>
+
+      </div>
+
+      <div class="manifesto-quote">
+        <blockquote>
+          "O desenvolvimento que não inclui a diversidade de vozes de um povo não é desenvolvimento — é concentração de decisão disfarçada de progresso."
+        </blockquote>
+        <cite>— Projeto Minas 2035</cite>
+      </div>
+    </section>
+
+    <div class="glow-divider" aria-hidden="true">
+      <div class="glow-divider-icon"><i data-lucide="diamond"></i></div>
+    </div>
+
+
+    <!-- ── VI. COMO PARTICIPAR ───────────────────────────── -->
+    <section class="manifesto-section fade-in-section" id="participar" aria-labelledby="participar-heading">
+      <div class="manifesto-section-header">
+        <div class="manifesto-section-num">VI — Como Participar</div>
+        <h2 id="participar-heading">Formas concretas de contribuir</h2>
+      </div>
+
+      <p>
+        Este projeto não cresce por decretos — cresce pela participação. Cada leitura atenta, cada crítica bem fundamentada, cada dado compartilhado, cada análise enviada torna a plataforma mais rica e mais útil. A seguir, apresentamos as formas concretas pelas quais qualquer pessoa pode contribuir.
+      </p>
+
+      <div class="participate-list">
+
+        <div class="participate-item">
+          <div class="participate-item-icon"><i data-lucide="pen-line"></i></div>
+          <div>
+            <h4>Contribuir com análises e estudos</h4>
+            <p>Pesquisadores, especialistas e profissionais podem enviar estudos, artigos, diagnósticos ou análises setoriais. O conteúdo passa por curadoria editorial antes de ser incorporado à plataforma, com crédito completo ao autor.</p>
+          </div>
+        </div>
+
+        <div class="participate-item">
+          <div class="participate-item-icon"><i data-lucide="database"></i></div>
+          <div>
+            <h4>Compartilhar dados e fontes</h4>
+            <p>Dados primários, séries históricas, relatórios institucionais ou pesquisas não publicadas que enriqueçam os centros temáticos são sempre bem-vindos. Dados devem vir acompanhados de metodologia e fonte clara.</p>
+          </div>
+        </div>
+
+        <div class="participate-item">
+          <div class="participate-item-icon"><i data-lucide="message-circle"></i></div>
+          <div>
+            <h4>Participar do debate público</h4>
+            <p>Cada centro temático apresenta questões abertas para debate. Posições bem argumentadas — inclusive as que contradizem nossas análises — são incorporadas à discussão. O contraditório qualificado é um bem, não um problema.</p>
+          </div>
+        </div>
+
+        <div class="participate-item">
+          <div class="participate-item-icon"><i data-lucide="flag"></i></div>
+          <div>
+            <h4>Sinalizar erros e imprecisões</h4>
+            <p>Se você identificar dados desatualizados, conclusões equivocadas ou lacunas importantes em qualquer conteúdo, informe-nos. A precisão é nossa responsabilidade e a comunidade é nossa principal linha de controle de qualidade.</p>
+          </div>
+        </div>
+
+        <div class="participate-item">
+          <div class="participate-item-icon"><i data-lucide="share-2"></i></div>
+          <div>
+            <h4>Difundir o conhecimento</h4>
+            <p>Compartilhar análises com colegas, estudantes, representantes públicos e redes sociais amplia o impacto do debate. Conteúdo de qualidade só transforma quando alcança quem pode agir sobre ele.</p>
+          </div>
+        </div>
+
+        <div class="participate-item">
+          <div class="participate-item-icon"><i data-lucide="link"></i></div>
+          <div>
+            <h4>Propor parcerias institucionais</h4>
+            <p>Universidades, institutos de pesquisa, organizações do terceiro setor e empresas que queiram colaborar de forma estruturada podem nos contatar para estabelecer parcerias de produção de conhecimento e difusão de dados.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div style="text-align: center; margin-top: var(--sp-10);">
+        <a href="participar.html" class="btn btn-primary btn-lg">
+          <i data-lucide="arrow-right"></i>
+          Ver como participar
+        </a>
+      </div>
+    </section>
+
+    <div class="glow-divider" aria-hidden="true">
+      <div class="glow-divider-icon"><i data-lucide="diamond"></i></div>
+    </div>
+
+
+    <!-- ── VII. COMPROMISSO ──────────────────────────────── -->
+    <section class="manifesto-section fade-in-section" id="compromisso" aria-labelledby="compromisso-heading">
+      <div class="manifesto-section-header">
+        <div class="manifesto-section-num">VII — Compromisso</div>
+        <h2 id="compromisso-heading">Nossa declaração coletiva</h2>
+      </div>
+
+      <p>
+        Este manifesto não é um documento de chegada — é um documento de partida. Ele registra onde nos situamos hoje, o que acreditamos e para onde queremos caminhar. Mas reconhecemos que o caminho transforma os viajantes, e que este projeto será inevitavelmente diferente daquilo que imaginamos quando o começamos.
+      </p>
+
+      <p>
+        O que não mudará são os nossos compromissos fundamentais: com a honestidade intelectual, com o rigor metodológico, com a abertura ao debate, com o respeito à diversidade de perspectivas e com a crença inabalável de que Minas Gerais tem a capacidade — e a obrigação histórica — de construir um futuro melhor para todos os seus habitantes.
+      </p>
+
+      <div class="commitment-block">
+        <p>
+          <strong>Comprometemo-nos</strong> a produzir conhecimento sério, acessível e honesto. A reconhecer quando estamos errados. A incorporar críticas que nos tornem melhores. A não nos render a agendas políticas ou corporativas. A manter esta plataforma como espaço de reflexão plural e rigorosa. <strong>E a não desistir.</strong>
+        </p>
+
+        <div style="display: flex; align-items: center; justify-content: center; gap: var(--sp-4); flex-wrap: wrap; margin-top: var(--sp-8);">
+          <a href="sobre.html" class="btn btn-outline">Conhecer o Projeto</a>
+          <a href="participar.html" class="btn btn-primary">Participar Agora</a>
+        </div>
+
+        <div class="commitment-signature">
+          Projeto Minas 2035 · Belo Horizonte, 2026
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- ======================================================
+       FOOTER
+  ====================================================== -->
+  <footer class="site-footer" aria-label="Rodapé do site">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="navbar-brand" aria-label="Página inicial">
+            <svg class="navbar-logo" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect width="36" height="36" rx="8" fill="url(#grad-footer-manifesto)"/>
+              <path d="M10 24 L10 13 L18 20 L26 13 L26 24" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              <defs>
+                <linearGradient id="grad-footer-manifesto" x1="0" y1="0" x2="36" y2="36" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#00E5FF"/><stop offset="1" stop-color="#4F46E5"/>
+                </linearGradient>
+              </defs>
+            </svg>
+            <span class="navbar-name">Minas <span>2035</span></span>
+          </a>
+          <p>Plataforma independente de estudos para o desenvolvimento de Minas Gerais com visão de longo prazo.</p>
+        </div>
+        <div class="footer-col">
+          <h5>Projeto</h5>
+          <ul>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="manifesto.html">Manifesto</a></li>
+            <li><a href="pilares.html">Pilares</a></li>
+            <li><a href="participar.html">Participar</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Áreas</h5>
+          <ul>
+            <li><a href="pages/economia.html">Economia</a></li>
+            <li><a href="pages/educacao.html">Educação</a></li>
+            <li><a href="pages/tecnologia.html">Tecnologia</a></li>
+            <li><a href="pages/saude.html">Saúde</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Legal</h5>
+          <ul>
+            <li><a href="#">Política de privacidade</a></li>
+            <li><a href="#">Licença de uso</a></li>
+            <li><a href="#">Contato</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Projeto Minas 2035. O conteúdo representa estudos e ideias para debate público.</p>
+        <a href="manifesto.html">Manifesto →</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>lucide.createIcons();</script>
 </body>
 </html>

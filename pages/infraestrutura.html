@@ -3,41 +3,593 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Infraestrutura – Projeto Minas 2035</title>
+  <meta name="description" content="Centro de Infraestrutura e Logística do Projeto Minas 2035 — análise, objetivos e projetos estratégicos para modernizar a plataforma logística de Minas Gerais." />
+  <title>Infraestrutura e Logística – Projeto Minas 2035</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="../css/variables.css" />
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="stylesheet" href="../css/components.css" />
-  <link rel="stylesheet" href="../css/responsive.css" />
   <link rel="stylesheet" href="../css/animations.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+  <link rel="stylesheet" href="../css/pages.css" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
   <script defer src="../js/app.js"></script>
   <script defer src="../js/menu.js"></script>
   <script defer src="../js/animations.js"></script>
-  <script defer src="../js/charts.js"></script>
+  <script defer src="../js/counters.js"></script>
 </head>
 <body>
-  <header class="site-header">
-    <h1>Projeto Minas 2035</h1>
-    <nav class="main-nav">
-      <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../manifesto.html">Manifesto</a></li>
-        <li><a href="../pilares.html">Pilares</a></li>
-        <li><a href="../indicadores.html">Indicadores</a></li>
-        <li><a href="../participar.html">Participar</a></li>
-        <li><a href="../sobre.html">Sobre</a></li>
-      </ul>
-    </nav>
+
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="container">
+      <a href="../index.html" class="navbar-brand">
+        <svg class="navbar-logo" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="36" height="36" rx="8" fill="url(#grad-nav-infra)"/>
+          <path d="M10 24 L10 13 L18 20 L26 13 L26 24" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <defs>
+            <linearGradient id="grad-nav-infra" x1="0" y1="0" x2="36" y2="36" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#00E5FF"/><stop offset="1" stop-color="#4F46E5"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <span class="navbar-name">Minas <span>2035</span></span>
+      </a>
+      <nav class="navbar-nav" id="main-nav">
+        <a href="../index.html#sobre">O Projeto</a>
+        <a href="../index.html#areas">Áreas</a>
+        <a href="../index.html#principios">Princípios</a>
+        <a href="../index.html#numeros">Indicadores</a>
+        <a href="../manifesto.html">Manifesto</a>
+      </nav>
+      <div class="navbar-cta">
+        <a href="../participar.html" class="btn btn-outline">Participar</a>
+        <a href="../index.html#areas" class="btn btn-primary">Explorar</a>
+      </div>
+      <button class="hamburger" id="hamburger-btn" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </header>
-  <main>
-    <section class="content">
-      <h2>Infraestrutura</h2>
-      <p>Conteúdo introdutório sobre a infraestrutura planejada para Minas até 2035.</p>
-      <!-- Placeholder for future visualizations -->
-      <div id="chart-infraestrutura"></div>
-    </section>
-  </main>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero-grid"></div>
+    <div class="container">
+      <div class="page-hero-content fade-in-section">
+        <div class="breadcrumb">
+          <a href="../index.html">Início</a>
+          <span class="breadcrumb-sep">/</span>
+          <a href="../index.html#areas">Áreas</a>
+          <span class="breadcrumb-sep">/</span>
+          <span class="breadcrumb-current">Infraestrutura e Logística</span>
+        </div>
+        <div class="section-label">Centro Temático</div>
+        <h1>Infraestrutura e Logística</h1>
+        <p class="page-subtitle">Modernizando a infraestrutura de Minas Gerais para torná-la a plataforma logística do Brasil Central — conectando produção, mercado e o mundo.</p>
+        <div class="page-stats">
+          <div class="page-stat">
+            <span class="page-stat-value">487 mil</span>
+            <span class="page-stat-label">km de rodovias</span>
+          </div>
+          <div class="page-stat-divider"></div>
+          <div class="page-stat">
+            <span class="page-stat-value">2</span>
+            <span class="page-stat-label">aeroportos internacionais</span>
+          </div>
+          <div class="page-stat-divider"></div>
+          <div class="page-stat">
+            <span class="page-stat-value">1.350</span>
+            <span class="page-stat-label">km de ferrovias ativas</span>
+          </div>
+        </div>
+        <div class="tag-list" style="margin-top: var(--sp-6);">
+          <span class="tag">Rodovias</span>
+          <span class="tag">Ferrovias</span>
+          <span class="tag">Aeroportos</span>
+          <span class="tag">Porto Seco</span>
+          <span class="tag">Logística</span>
+          <span class="tag">PPP</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <div class="container">
+    <div class="page-layout">
+
+      <!-- TABLE OF CONTENTS -->
+      <aside>
+        <nav class="toc" aria-label="Índice">
+          <div class="toc-title">Neste Centro</div>
+          <ul class="toc-list">
+            <li><a href="#resumo">Resumo Executivo</a></li>
+            <li><a href="#situacao">Situação Atual</a></li>
+            <li><a href="#desafios">Desafios Estruturais</a></li>
+            <li><a href="#oportunidades">Oportunidades</a></li>
+            <li><a href="#benchmarking">Benchmarking Internacional</a></li>
+            <li><a href="#objetivos">Objetivos 2035</a></li>
+            <li><a href="#metas">Metas 2050</a></li>
+            <li><a href="#projetos">Projetos Estratégicos</a></li>
+            <li><a href="#indicadores">Indicadores-Chave</a></li>
+            <li><a href="#debate">Questões para Debate</a></li>
+            <li><a href="#referencias">Referências</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- ARTICLE -->
+      <article class="article-content">
+
+        <!-- 01 RESUMO EXECUTIVO -->
+        <section id="resumo" class="content-section fade-in-section">
+          <div class="section-label">01</div>
+          <h2>Resumo Executivo</h2>
+          <p>Minas Gerais ocupa posição geográfica privilegiada no coração do Brasil, fazendo divisa com seis estados e concentrando parte significativa da produção agropecuária, mineral e industrial do país. Apesar desse potencial, a infraestrutura logística estadual permanece subdesenvolvida em relação à sua relevância econômica: o estado é responsável por cerca de 9,2% do PIB nacional (IBGE, 2023), mas movimenta cargas com custos que superam em 15% a 20% a média das regiões Sul e Sudeste mais conectadas, segundo dados da CNT e do Banco Mundial.</p>
+          <p>A malha rodoviária estadual, com seus 487 mil km, é a mais extensa do Brasil, porém apenas uma fração encontra-se em condições adequadas de trafegabilidade. A pesquisa CNT de Rodovias (2023) classificou 62% das vias federais que atravessam Minas como regulares, ruins ou péssimas. A baixa competitividade logística encarece produtos mineiros no mercado nacional e internacional, corrói margens produtivas e reduz a atratividade do território para novos investimentos industriais.</p>
+          <p>No modal ferroviário, a situação é ainda mais crítica. O estado que historicamente abrigou o primeiro trecho ferroviário da América do Sul conta hoje com apenas 1.350 km de ferrovias operantes — um paradoxo histórico que deixa a produção de minério de ferro, aço, soja e eucalipto excessivamente dependente do transporte rodoviário. O custo de frete ferroviário é, em média, 3 a 4 vezes inferior ao rodoviário para longas distâncias, o que significa que a matriz modal atual representa bilhões de reais anuais em ineficiência sistêmica.</p>
+          <p>O Projeto Minas 2035 propõe uma agenda de modernização logística estrutural, articulando investimento público qualificado, atração de capital privado via PPPs bem estruturadas e redesenho da governança de infraestrutura estadual. A meta é posicionar Minas Gerais como a principal plataforma logística do Brasil Central até 2035, com ganhos diretos de competitividade econômica, redução de emissões e geração de empregos de qualidade.</p>
+        </section>
+
+        <!-- 02 SITUAÇÃO ATUAL -->
+        <section id="situacao" class="content-section fade-in-section">
+          <div class="section-label">02</div>
+          <h2>Situação Atual</h2>
+          <p>O diagnóstico da infraestrutura mineira revela um quadro de subinvestimento crônico e matriz modal desequilibrada. O estado possui a maior malha rodoviária do país, mas enfrenta déficit histórico de manutenção. Os dados abaixo sintetizam os principais indicadores do setor.</p>
+
+          <div class="metric-grid">
+            <div class="metric-card">
+              <div class="metric-label">Rodovias em bom estado</div>
+              <div class="metric-value">38<span class="metric-unit">%</span></div>
+              <div class="metric-description">Apenas 38% da malha federal em MG foi classificada como boa ou ótima pela CNT (2023)</div>
+              <div class="metric-trend down"><i data-lucide="trending-down"></i> Queda de 4 p.p. desde 2019</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">Custo logístico / PIB estadual</div>
+              <div class="metric-value">14<span class="metric-unit">%</span></div>
+              <div class="metric-description">Acima da média alemã (8%) e muito superior ao benchmarks de países com infraestrutura moderna</div>
+              <div class="metric-trend down"><i data-lucide="trending-down"></i> Impacto negativo na competitividade</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">Participação ferroviária</div>
+              <div class="metric-value">18<span class="metric-unit">%</span></div>
+              <div class="metric-description">Apenas 18% da carga estadual é transportada por ferrovia, vs. 40% na Alemanha e 28% no Chile</div>
+              <div class="metric-trend down"><i data-lucide="trending-down"></i> Matriz modal desequilibrada</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">Investimento em infraestrutura / PIB</div>
+              <div class="metric-value">1,2<span class="metric-unit">%</span></div>
+              <div class="metric-description">Investimento público estadual em infraestrutura como percentual do PIB estadual (SEINFRA-MG, 2022)</div>
+              <div class="metric-trend down"><i data-lucide="trending-down"></i> FMI recomenda mínimo de 3,5%</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">Passageiros BH Airport / ano</div>
+              <div class="metric-value">9,2<span class="metric-unit">M</span></div>
+              <div class="metric-description">Aeroporto Internacional de Confins operou com 9,2 milhões de passageiros em 2023 (ANAC)</div>
+              <div class="metric-trend up"><i data-lucide="trending-up"></i> Crescimento de 18% vs. 2019</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">Portos secos (recintos alfandegados)</div>
+              <div class="metric-value">7</div>
+              <div class="metric-description">Minas possui 7 portos secos ativos, mas com baixa integração intermodal e capacidade subutilizada</div>
+              <div class="metric-trend down"><i data-lucide="trending-down"></i> Potencial logístico inexplorado</div>
+            </div>
+          </div>
+
+          <div class="quote-block">
+            <blockquote>"O Brasil desperdiça aproximadamente R$ 200 bilhões por ano em razão da ineficiência logística. Minas Gerais, pelo seu peso econômico e posição geográfica, absorve parcela desproporcional desse custo."</blockquote>
+            <cite>— Confederação Nacional do Transporte (CNT), Relatório de Competitividade Logística, 2023</cite>
+          </div>
+
+          <p>O setor aeroviário apresenta dinâmica dual: o Aeroporto de Confins vive crescimento acelerado de demanda, aproximando-se de sua capacidade operacional, enquanto o Aeroporto da Pampulha serve demanda regional com infraestrutura defasada. No plano rodoviário, as concessões existentes (BR-040, BR-381, BR-262) apresentam desempenho heterogêneo, com algumas concessionárias em processo de revisão contratual ou reequilíbrio financeiro.</p>
+        </section>
+
+        <!-- 03 DESAFIOS ESTRUTURAIS -->
+        <section id="desafios" class="content-section fade-in-section">
+          <div class="section-label">03</div>
+          <h2>Desafios Estruturais</h2>
+          <p>A modernização da infraestrutura mineira enfrenta obstáculos que vão além da escassez de recursos. São desafios de governança, modelo de negócios, capacidade institucional e legado histórico acumulado.</p>
+
+          <h3><i data-lucide="road"></i> Malha Rodoviária Deteriorada</h3>
+          <p>A manutenção das rodovias estaduais — responsabilidade do DER-MG — é cronicamente subfinanciada. O déficit de manutenção acumulado nas rodovias estaduais ultrapassa R$ 8 bilhões, segundo estimativas do próprio departamento. O estado possui cerca de 18.000 km de rodovias estaduais pavimentadas, das quais mais de 40% apresentam patologias graves (buracos, recalques, sinalização inexistente). Esse cenário eleva o custo operacional dos veículos, aumenta acidentes e reduz a vida útil das frotas, gerando externalidades negativas estimadas em R$ 3,5 bilhões anuais (ANTP, 2022).</p>
+
+          <div class="callout callout-warning">
+            <i data-lucide="triangle-alert" class="callout-icon"></i>
+            <p><strong>Ponto crítico:</strong> A BR-381 (Fernão Dias), principal corredor entre Belo Horizonte e São Paulo, registra um dos maiores índices de acidentes fatais do Brasil. A concessão enfrenta disputas sobre o escopo de duplicação, deixando trechos críticos sem adequação há mais de uma década.</p>
+          </div>
+
+          <h3><i data-lucide="train-track"></i> Baixa Conectividade Ferroviária</h3>
+          <p>A malha ferroviária mineira é operada majoritariamente pela VALE (Estrada de Ferro Vitória a Minas e Estrada de Ferro Carajás), com foco quase exclusivo no transporte de minério de ferro. A ausência de uma malha ferroviária de uso geral adequada para cargas agrícolas, industriais e contêineres impede que Minas aproveite as vantagens competitivas do transporte ferroviário. O projeto da Ferrovia de Integração Oeste-Leste (FIOL) e discuções sobre novas concessões ainda não avançaram de forma conclusiva, mantendo o estado dependente das rodovias para escoamento da maior parte da produção.</p>
+
+          <h3><i data-lucide="plane"></i> Gargalos Aeroportuários</h3>
+          <p>O aeroporto internacional de Confins (BH Airport), concedido à BH Airport S.A. em 2013, enfrenta pressão crescente de demanda. Projeções da ANAC indicam que o terminal passará por saturação de capacidade entre 2027 e 2029, caso não haja expansão do terminal de passageiros e das pistas. A falta de voos internacionais diretos para mercados estratégicos (Europa, Ásia, EUA sem escala no Rio) encarece o acesso ao estado para turistas de negócios, executivos e investidores, reduzindo sua atratividade como sede de operações corporativas. O Aeroporto Carlos Drummond de Andrade (Pampulha), por sua vez, opera sem instrumento de voo (IFR), limitando sua operação a condições visuais.</p>
+
+          <h3><i data-lucide="file-x"></i> PPPs Travadas e Ambiente Regulatório Incerto</h3>
+          <p>O Estado de Minas Gerais possui histórico de PPPs bem estruturadas (Complexo Penal, Arena MRV, MGI), mas o setor de infraestrutura de transporte enfrenta ambiente regulatório instável. Mudanças de governo com frequência implicam revisão de prioridades, interrupção de licitações em curso e renegociações contratuais que elevam o prêmio de risco exigido pelo setor privado. A percepção de risco político elevou o custo de capital das concessões mineiras em estimados 80 a 120 pontos-base acima da média nacional (ABDIB, 2023), reduzindo a viabilidade de projetos que seriam economicamente justificáveis.</p>
+
+          <div class="callout callout-warning">
+            <i data-lucide="triangle-alert" class="callout-icon"></i>
+            <p><strong>Risco fiscal:</strong> A Lei de Responsabilidade Fiscal e o teto de gastos estadual (aprovado em 2016) limitam a capacidade do Estado de assumir compromissos de longo prazo em obras de infraestrutura. Isso torna o modelo de concessão e PPP essencial, mas exige reforma regulatória para destravar o pipeline de projetos.</p>
+          </div>
+
+          <h3><i data-lucide="map-pin-off"></i> Desconexão Intermodal</h3>
+          <p>Os diferentes modais de transporte — rodoviário, ferroviário, aéreo e os portos secos — operam de forma fragmentada, sem integração de sistemas, dados ou terminais. A ausência de um planejamento logístico intermodal estruturado impede que cargas fluam de forma otimizada da origem ao destino, gerando ineficiências nas transferências de modal e aumentando o tempo de entrega. Países logisticamente competitivos investem em plataformas multimodais integradas como eixo central de suas estratégias de desenvolvimento territorial.</p>
+        </section>
+
+        <!-- 04 OPORTUNIDADES -->
+        <section id="oportunidades" class="content-section fade-in-section">
+          <div class="section-label">04</div>
+          <h2>Oportunidades</h2>
+          <p>A posição geográfica, a diversidade econômica e o crescente interesse de investidores em infraestrutura verde e resiliente abrem janelas de oportunidade concretas para Minas Gerais.</p>
+
+          <h3><i data-lucide="map"></i> Corredor Logístico do Brasil Central</h3>
+          <p>Minas Gerais é o único estado que conecta diretamente a região Centro-Oeste produtora de grãos (Goiás, MT, MS) aos portos do Espírito Santo e ao grande mercado consumidor de São Paulo. Estruturar um Corredor Logístico Central passando por Minas — integrando rodovias, ferrovias e portos secos — pode posicionar o estado como o hub logístico do agronegócio e da indústria do Brasil Central, capturando valor de toda cadeia de transporte e armazenamento.</p>
+
+          <h3><i data-lucide="zap"></i> Infraestrutura Verde e ESG</h3>
+          <p>O mercado internacional de capitais direciona crescente volume de recursos para infraestrutura sustentável (green bonds, sustainability-linked bonds). A ampliação do modal ferroviário e a eletrificação de frotas de transporte público urbano são projetos com forte apelo ESG e viáveis para captação via mercado de capitais. O BNDES e o BID já sinalizaram interesse em financiar projetos de infraestrutura verde no Sudeste brasileiro com taxas diferenciadas.</p>
+
+          <h3><i data-lucide="package"></i> Expansão dos Portos Secos e Zonas Logísticas</h3>
+          <p>Minas não tem acesso ao mar, mas pode capitalizar sua posição central criando uma rede de portos secos (recintos alfandegados terrestres) de alta capacidade integrados às ferrovias e à malha rodoviária concedida. Zonas de Atividade Logística (ZALs) ao redor de Contagem, Uberlândia, Juiz de Fora e Montes Claros têm potencial de atrair centros de distribuição nacional de grandes empresas, gerando emprego e receita fiscal.</p>
+
+          <h3><i data-lucide="plane-landing"></i> Hub Aéreo de Carga e Conectividade Internacional</h3>
+          <p>O Aeroporto de Confins tem capacidade ociosa na operação de cargas aéreas. Com a estruturação de uma zona de logística aérea (cargo city) integrada ao aeroporto, combinada com rotas internacionais diretas para Frankfurt, Miami e Dubai, Minas pode se tornar referência no escoamento de produtos de alto valor agregado (flores, carnes nobres, peças aeronáuticas, semicondutores). O mercado de e-commerce internacional também demanda capacidade de frete aéreo crescente.</p>
+        </section>
+
+        <!-- 05 BENCHMARKING -->
+        <section id="benchmarking" class="content-section fade-in-section">
+          <div class="section-label">05</div>
+          <h2>Benchmarking Internacional</h2>
+          <p>A análise comparativa com referências internacionais permite identificar políticas, modelos de gestão e metas concretas aplicáveis ao contexto mineiro.</p>
+
+          <div style="overflow-x:auto;">
+            <table class="bench-table">
+              <thead>
+                <tr>
+                  <th>Referência</th>
+                  <th>Investimento Infraestrutura/PIB</th>
+                  <th>Custo Logístico/PIB</th>
+                  <th>Modal Ferroviário</th>
+                  <th>Diferencial Chave</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="td-highlight">Minas Gerais (atual)</td>
+                  <td class="td-accent">1,2%</td>
+                  <td>~14%</td>
+                  <td>18% das cargas</td>
+                  <td>Alta extensão territorial, baixa integração intermodal</td>
+                </tr>
+                <tr>
+                  <td class="td-highlight">Alemanha</td>
+                  <td class="td-accent">3,8%</td>
+                  <td>~8%</td>
+                  <td>40% das cargas</td>
+                  <td>Rede TEN-T integrada; planejamento logístico federal de longo prazo; autobahn bem mantida</td>
+                </tr>
+                <tr>
+                  <td class="td-highlight">Holanda</td>
+                  <td class="td-accent">4,1%</td>
+                  <td>~6%</td>
+                  <td>Multimodal denso</td>
+                  <td>Porto de Rotterdam como hub europeu; integração rodoviária, ferroviária e fluvial exemplar; modelo de PPP maduro</td>
+                </tr>
+                <tr>
+                  <td class="td-highlight">Estado de São Paulo</td>
+                  <td class="td-accent">2,4%</td>
+                  <td>~10%</td>
+                  <td>22% das cargas</td>
+                  <td>Sistema Anhanguera-Bandeirantes como referência de concessão; Aeroporto de Campinas como hub de cargas; ARTESP como regulador eficaz</td>
+                </tr>
+                <tr>
+                  <td class="td-highlight">Chile</td>
+                  <td class="td-accent">3,5%</td>
+                  <td>~9%</td>
+                  <td>28% das cargas</td>
+                  <td>Programa de Concesiones de Obras Públicas (MOP); transparência contratual; integração logística com portos do Pacífico</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="callout callout-info">
+            <i data-lucide="info" class="callout-icon"></i>
+            <p>A Holanda, com área menor que o município de Uberlândia, movimenta mais carga do que todo o Brasil graças a um sistema logístico multimodal exemplar. O modelo de planejamento integrado e a agência regulatória independente (ILT) são referências diretas para a governança mineira.</p>
+          </div>
+
+          <p>O modelo chileno de concessões é particularmente relevante: o Chile estruturou um sistema de concessões rodoviárias com garantias mínimas de tráfego, mecanismos de reequilíbrio transparentes e agência reguladora independente (MOP/Concesiones), reduzindo o prêmio de risco e atraindo capital privado de qualidade em escala. Minas pode adaptar esse framework para suas concessões estaduais, criando um ambiente previsível e atrativo para investidores de longo prazo.</p>
+        </section>
+
+        <!-- 06 OBJETIVOS 2035 -->
+        <section id="objetivos" class="content-section fade-in-section">
+          <div class="section-label">06</div>
+          <h2>Objetivos 2035</h2>
+          <p>Os objetivos abaixo são mensuráveis, temporalmente definidos e factíveis dentro do horizonte de uma década, desde que sustentados por continuidade de política pública e investimento adequado.</p>
+
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-year">2026–2027</div>
+              <div class="timeline-title">Aprovação do Plano Estadual de Logística Integrada</div>
+              <div class="timeline-desc">Elaborar e aprovar, com participação de especialistas, setor privado e municípios, um Plano Estadual de Logística que defina corredores prioritários, modelo regulatório e pipeline de projetos para 10 anos. Criar a Agência Reguladora de Infraestrutura de MG (ARINFRA-MG) com mandato independente.</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-year">2027–2028</div>
+              <div class="timeline-title">Elevação de rodovias em bom estado para 55%</div>
+              <div class="timeline-desc">Programa de recuperação da malha estadual com R$ 4 bilhões em cinco anos, priorizando corredores de acesso a polos produtivos. Meta: elevar de 38% para 55% a proporção da malha federal em MG classificada como boa ou ótima pela CNT.</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-year">2028–2030</div>
+              <div class="timeline-title">Licitação e início da Ferrovia do Aço 2.0</div>
+              <div class="timeline-desc">Estruturar e licitar em PPP a expansão e modernização do corredor ferroviário central de Minas, integrando o Quadrilátero Ferrífero ao Porto de Vitória e ao interior do Brasil Central, viabilizando transporte de contêineres além do minério.</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-year">2029–2031</div>
+              <div class="timeline-title">Expansão do BH Airport para 18 milhões de passageiros/ano</div>
+              <div class="timeline-desc">Conclusão da expansão do terminal de passageiros e ampliação da capacidade de pistas. Atração de novas rotas internacionais diretas: mínimo de 3 novos destinos europeus ou asiáticos. Estruturação da Zona de Logística Aérea (cargo city) para e-commerce e produtos de alto valor.</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-year">2030–2035</div>
+              <div class="timeline-title">Reduzir custo logístico/PIB de 14% para 10%</div>
+              <div class="timeline-desc">Combinar melhoria da malha rodoviária, ampliação do modal ferroviário, integração intermodal e digitalização da cadeia logística para reduzir em 30% o custo logístico relativo ao PIB estadual — economizando bilhões anuais para exportadores e produtores mineiros.</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-year">2033–2035</div>
+              <div class="timeline-title">Anel Viário Metropolitano e Contorno do Vetor Norte</div>
+              <div class="timeline-desc">Concluir o Anel Rodoviário Metropolitano de BH, integrando o Vetor Norte ao Vetor Sul e desafogando o trânsito de cargas pesadas da malha urbana. Reduzir o tempo médio de trânsito na RMBH em 25% para veículos de carga.</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 07 METAS 2050 -->
+        <section id="metas" class="content-section fade-in-section">
+          <div class="section-label">07</div>
+          <h2>Metas 2050</h2>
+          <p>No horizonte de médio-longo prazo, a visão para a infraestrutura mineira é de transformação estrutural — de um estado com logística precária para a principal plataforma de distribuição do Brasil Central.</p>
+          <ol>
+            <li>Alcançar custo logístico equivalente a 8% do PIB estadual, equiparando-se à Alemanha e ao Chile, tornando Minas Gerais a economia de menor custo logístico relativo entre os estados brasileiros de grande porte.</li>
+            <li>Ampliar a participação do modal ferroviário para 35% da carga transportada no estado, com rede integrada de uso geral que atenda agronegócio, indústria e comércio, não apenas mineração.</li>
+            <li>Consolidar o Aeroporto de Confins como o terceiro maior hub de cargas do Brasil, com capacidade superior a 250 mil toneladas de carga por ano, conectado a rotas diretas intercontinentais.</li>
+            <li>Implementar uma rede de 15 plataformas logísticas multimodais (Zonas de Atividade Logística) distribuídas pelo território, com pelo menos uma em cada macrorregião do estado.</li>
+            <li>Elevar o investimento em infraestrutura para 3,5% do PIB estadual, combinando recursos públicos estaduais, federais e privados, com foco crescente em infraestrutura resiliente ao clima.</li>
+            <li>Digitalizar 100% da cadeia de rastreabilidade logística do estado — do produtor ao destino final — por meio de uma plataforma pública de dados abertos integrada aos sistemas privados de gestão de frota e carga.</li>
+            <li>Reduzir em 40% as emissões de CO₂ do setor de transporte de cargas em Minas, por meio da eletrificação ferroviária, do uso de biocombustíveis e da otimização de rotas via inteligência artificial.</li>
+          </ol>
+        </section>
+
+        <!-- 08 PROJETOS ESTRATÉGICOS -->
+        <section id="projetos" class="content-section fade-in-section">
+          <div class="section-label">08</div>
+          <h2>Projetos Estratégicos</h2>
+          <p>Os projetos abaixo foram identificados como prioritários pela combinação de impacto econômico, viabilidade técnica e potencial de atração de investimento privado.</p>
+
+          <div style="display: flex; flex-direction: column; gap: var(--sp-4); margin-top: var(--sp-6);">
+
+            <div class="project-card">
+              <div>
+                <h4>Corredor Logístico Central de Minas</h4>
+                <p>Integração multimodal do eixo Uberlândia–Belo Horizonte–Governador Valadares, criando um corredor contínuo com rodovias concedidas de alto padrão, terminais intermodais e sistema de informação logística em tempo real. Estimativa de investimento: R$ 12 bilhões em PPP. Potencial de redução de 18% no custo de frete regional.</p>
+              </div>
+              <span class="project-status status-study"><i data-lucide="search"></i> Em Estudo</span>
+            </div>
+
+            <div class="project-card">
+              <div>
+                <h4>Ferrovia do Aço 2.0 — Corredor Ferroviário de Uso Geral</h4>
+                <p>Modernização e expansão do corredor ferroviário que liga o Quadrilátero Ferrífero ao litoral capixaba, com adaptação para transporte de contêineres, produtos agrícolas processados e manufaturados, além do minério. Inclui novos ramais para Uberaba, Uberlândia e o eixo do agronegócio do Triângulo Mineiro. Investimento estimado: R$ 18 bilhões em 15 anos, via concessão federal.</p>
+              </div>
+              <span class="project-status status-proposal"><i data-lucide="file-text"></i> Proposta</span>
+            </div>
+
+            <div class="project-card">
+              <div>
+                <h4>Modernização e Expansão do BH Airport (Confins)</h4>
+                <p>Ampliação do terminal de passageiros de 12 para 22 milhões de passageiros/ano, construção de novo terminal de cargas aéreas (cargo city), ampliação do pátio de aeronaves e construção de segundo acesso rodoviário integrado ao metrô de BH. Investimento estimado: R$ 3,5 bilhões pela concessionária BH Airport, com apoio de financiamento federal via BNDES.</p>
+              </div>
+              <span class="project-status status-active"><i data-lucide="circle-check"></i> Em Andamento</span>
+            </div>
+
+            <div class="project-card">
+              <div>
+                <h4>Anel Viário Metropolitano da RMBH</h4>
+                <p>Construção do trecho norte do Anel Viário da Região Metropolitana de Belo Horizonte, completando o circuito que permite o desvio do tráfego de cargas pesadas do centro urbano. O projeto conecta a BR-040 à BR-381 pelo vetor norte, reduzindo em 40 km o percurso médio de caminhões de passagem pela RMBH. Custo estimado: R$ 5,8 bilhões, via PPP ou obra federal.</p>
+              </div>
+              <span class="project-status status-proposal"><i data-lucide="file-text"></i> Proposta</span>
+            </div>
+
+            <div class="project-card">
+              <div>
+                <h4>Rede de Portos Secos Integrados — MG Logistics Hub</h4>
+                <p>Estruturação de 5 novos recintos alfandegados (portos secos) em Uberlândia, Montes Claros, Juiz de Fora, Varginha e Sete Lagoas, integrados à malha ferroviária e às rodovias concedidas. Cada terminal operará como plataforma logística multimodal com armazéns refrigerados, centros de distribuição e áreas de processamento aduaneiro simplificado. Investimento estimado: R$ 2,4 bilhões, majoritariamente privado.</p>
+              </div>
+              <span class="project-status status-study"><i data-lucide="search"></i> Em Estudo</span>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- 09 INDICADORES-CHAVE -->
+        <section id="indicadores" class="content-section fade-in-section">
+          <div class="section-label">09</div>
+          <h2>Indicadores-Chave (KPIs)</h2>
+          <p>Os indicadores abaixo serão monitorados anualmente para avaliar o progresso da agenda de infraestrutura e logística do Projeto Minas 2035.</p>
+
+          <div class="metric-grid">
+            <div class="metric-card">
+              <div class="metric-label">% rodovias em bom/ótimo estado</div>
+              <div class="metric-value">38<span class="metric-unit">%</span></div>
+              <div class="metric-description">Meta 2035: 70%. Fonte: Pesquisa CNT de Rodovias (anual)</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">Custo Logístico / PIB Estadual</div>
+              <div class="metric-value">14<span class="metric-unit">%</span></div>
+              <div class="metric-description">Meta 2035: 10%. Meta 2050: 8%. Fonte: ILOS/COPPEAD</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">Carga ferroviária (bilhões TKU)</div>
+              <div class="metric-value">62</div>
+              <div class="metric-description">Toneladas-quilômetro úteis transportadas por ferrovia. Meta 2035: 100 bilhões TKU. Fonte: ANTT</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">Investimento infraestrutura / PIB</div>
+              <div class="metric-value">1,2<span class="metric-unit">%</span></div>
+              <div class="metric-description">Meta 2030: 2,5%. Meta 2035: 3,5% (público + privado). Fonte: SEINFRA-MG</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">Passageiros BH Airport</div>
+              <div class="metric-value">9,2<span class="metric-unit">M</span></div>
+              <div class="metric-description">Meta 2035: 18 milhões. Meta 2050: 30 milhões. Fonte: ANAC</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">Carga aérea em MG (ton/ano)</div>
+              <div class="metric-value">95<span class="metric-unit">K</span></div>
+              <div class="metric-description">Meta 2035: 180 mil toneladas/ano. Potencial com expansão do cargo terminal. Fonte: ANAC</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">PPPs de infraestrutura ativas</div>
+              <div class="metric-value">4</div>
+              <div class="metric-description">Número de PPPs estaduais de infraestrutura de transporte em operação. Meta 2035: 12. Fonte: SEINFRA-MG</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">Redução de emissões — transporte cargas</div>
+              <div class="metric-value">0<span class="metric-unit">%</span></div>
+              <div class="metric-description">Baseline 2024. Meta 2035: -15%. Meta 2050: -40%. Fonte: INVENTÁRIO GEE-MG</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 10 DEBATE -->
+        <section id="debate" class="content-section fade-in-section">
+          <div class="section-label">10</div>
+          <h2>Questões para Debate Público</h2>
+          <p>A definição de prioridades em infraestrutura envolve escolhas com implicações distributivas, ambientais e econômicas que merecem amplo debate. Convidamos pesquisadores, gestores públicos, empresários e cidadãos a refletir sobre as seguintes questões:</p>
+          <ul>
+            <li>Como equilibrar o investimento em infraestrutura regional — que favorece municípios menores e mais isolados — com a prioridade nos grandes corredores econômicos de maior retorno imediato?</li>
+            <li>Qual é o papel que as PPPs devem desempenhar na infraestrutura mineira e quais são os limites aceitáveis de transferência de risco para o setor privado em serviços essenciais de transporte?</li>
+            <li>Como garantir que a expansão do modal ferroviário não reproduza a lógica extrativista do passado (transporte de commodities brutas), mas sirva também ao desenvolvimento industrial e agroindustrial de maior valor agregado?</li>
+            <li>Em que medida a digitalização logística (rastreamento, gestão de frota, otimização de rotas por IA) pode compensar parte do déficit de infraestrutura física, e quem deve ser o responsável por essa plataforma pública de dados?</li>
+            <li>Quais municípios do interior de Minas Gerais deveriam ser priorizados para receber plataformas logísticas multimodais, considerando critérios de equidade regional, proximidade de polos produtivos e viabilidade de acesso?</li>
+            <li>Como estruturar um modelo de governança de longo prazo para a infraestrutura que resista às mudanças de governo e garanta continuidade dos projetos estratégicos ao longo de décadas?</li>
+            <li>De que forma a agenda de infraestrutura pode ser integrada à política ambiental, garantindo que a expansão da malha logística não amplie o desmatamento ou a pressão sobre recursos hídricos?</li>
+          </ul>
+        </section>
+
+        <!-- 11 REFERÊNCIAS -->
+        <section id="referencias" class="content-section fade-in-section">
+          <div class="section-label">11</div>
+          <h2>Referências</h2>
+          <div class="reference-list">
+            <div class="reference-item">
+              <span class="reference-num">01</span>
+              <span>Confederação Nacional do Transporte (CNT). <em>Pesquisa CNT de Rodovias 2023</em>. Brasília: CNT, 2023. Disponível em: cnt.org.br/pesquisa-rodovias</span>
+            </div>
+            <div class="reference-item">
+              <span class="reference-num">02</span>
+              <span>Banco Mundial. <em>Brazil: Logistics and Competitiveness</em>. Washington, D.C.: World Bank Group, 2022. Report No. ACS14186.</span>
+            </div>
+            <div class="reference-item">
+              <span class="reference-num">03</span>
+              <span>Instituto ILOS/COPPEAD-UFRJ. <em>Panorama ILOS: Custos Logísticos no Brasil 2023</em>. Rio de Janeiro: ILOS, 2023.</span>
+            </div>
+            <div class="reference-item">
+              <span class="reference-num">04</span>
+              <span>Agência Nacional de Transportes Terrestres (ANTT). <em>Relatório Anual de Desempenho das Concessões Ferroviárias 2022</em>. Brasília: ANTT, 2023.</span>
+            </div>
+            <div class="reference-item">
+              <span class="reference-num">05</span>
+              <span>Agência Nacional de Aviação Civil (ANAC). <em>Anuário do Transporte Aéreo 2023</em>. Brasília: ANAC, 2024.</span>
+            </div>
+            <div class="reference-item">
+              <span class="reference-num">06</span>
+              <span>Associação Brasileira de Desenvolvimento de Infraestrutura (ABDIB). <em>Relatório de Percepção de Risco em Concessões 2023</em>. São Paulo: ABDIB, 2023.</span>
+            </div>
+            <div class="reference-item">
+              <span class="reference-num">07</span>
+              <span>Ministério de Obras Públicas do Chile (MOP). <em>Programa de Concesiones de Obras Públicas: Balances e Perspectivas</em>. Santiago: MOP, 2022.</span>
+            </div>
+            <div class="reference-item">
+              <span class="reference-num">08</span>
+              <span>Bundesministerium für Digitales und Verkehr (BMDV). <em>Federal Transport Infrastructure Plan 2030</em>. Berlin: BMDV, 2016 (atualizado 2021).</span>
+            </div>
+            <div class="reference-item">
+              <span class="reference-num">09</span>
+              <span>Secretaria de Estado de Infraestrutura e Mobilidade de Minas Gerais (SEINFRA-MG). <em>Relatório de Desempenho da Malha Estadual 2022</em>. Belo Horizonte: SEINFRA-MG, 2023.</span>
+            </div>
+            <div class="reference-item">
+              <span class="reference-num">10</span>
+              <span>Associação Nacional de Transportes Públicos (ANTP). <em>Relatório de Mobilidade Urbana e Custos de Externalidade 2022</em>. São Paulo: ANTP, 2022.</span>
+            </div>
+            <div class="reference-item">
+              <span class="reference-num">11</span>
+              <span>Fundo Monetário Internacional (FMI). <em>Public Investment Management Assessment: Brazil</em>. Washington, D.C.: IMF, 2021. IMF Country Report No. 21/66.</span>
+            </div>
+            <div class="reference-item">
+              <span class="reference-num">12</span>
+              <span>IBGE. <em>Contas Regionais do Brasil 2022</em>. Rio de Janeiro: IBGE, 2023. Coordenação de Contas Nacionais.</span>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
   <footer class="site-footer">
-    <p>&copy; 2026 Projeto Minas 2035 – Todos os direitos reservados.</p>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="navbar-brand">
+            <svg class="navbar-logo" viewBox="0 0 36 36" fill="none">
+              <rect width="36" height="36" rx="8" fill="url(#grad-footer-infra)"/>
+              <path d="M10 24 L10 13 L18 20 L26 13 L26 24" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              <defs><linearGradient id="grad-footer-infra" x1="0" y1="0" x2="36" y2="36" gradientUnits="userSpaceOnUse"><stop stop-color="#00E5FF"/><stop offset="1" stop-color="#4F46E5"/></linearGradient></defs>
+            </svg>
+            <span class="navbar-name">Minas <span>2035</span></span>
+          </a>
+          <p>Plataforma independente de estudos para o desenvolvimento de Minas Gerais com visão de longo prazo.</p>
+        </div>
+        <div class="footer-col">
+          <h5>Projeto</h5>
+          <ul>
+            <li><a href="../sobre.html">Sobre</a></li>
+            <li><a href="../manifesto.html">Manifesto</a></li>
+            <li><a href="../pilares.html">Pilares</a></li>
+            <li><a href="../participar.html">Participar</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Áreas</h5>
+          <ul>
+            <li><a href="economia.html">Economia</a></li>
+            <li><a href="educacao.html">Educação</a></li>
+            <li><a href="tecnologia.html">Tecnologia</a></li>
+            <li><a href="saude.html">Saúde</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Legal</h5>
+          <ul>
+            <li><a href="#">Política de privacidade</a></li>
+            <li><a href="#">Licença de uso</a></li>
+            <li><a href="#">Contato</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Projeto Minas 2035. O conteúdo representa estudos e ideias para debate público.</p>
+        <a href="../manifesto.html">Manifesto →</a>
+      </div>
+    </div>
   </footer>
+
+  <script>lucide.createIcons();</script>
 </body>
 </html>
