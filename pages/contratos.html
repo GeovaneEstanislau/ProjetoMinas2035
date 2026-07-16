@@ -3,41 +3,468 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contratos – Projeto Minas 2035</title>
+  <meta name="description" content="Centro de Segurança Jurídica e Contratos – Estratégias para fortalecer o ambiente legal e institucional de Minas Gerais, atraindo investimentos e garantindo previsibilidade para negócios e cidadãos." />
+  <title>Segurança Jurídica – Projeto Minas 2035</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="../css/variables.css" />
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="stylesheet" href="../css/components.css" />
-  <link rel="stylesheet" href="../css/responsive.css" />
   <link rel="stylesheet" href="../css/animations.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+  <link rel="stylesheet" href="../css/pages.css" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
   <script defer src="../js/app.js"></script>
   <script defer src="../js/menu.js"></script>
   <script defer src="../js/animations.js"></script>
-  <script defer src="../js/charts.js"></script>
+  <script defer src="../js/counters.js"></script>
 </head>
 <body>
-  <header class="site-header">
-    <h1>Projeto Minas 2035</h1>
-    <nav class="main-nav">
-      <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../manifesto.html">Manifesto</a></li>
-        <li><a href="../pilares.html">Pilares</a></li>
-        <li><a href="../indicadores.html">Indicadores</a></li>
-        <li><a href="../participar.html">Participar</a></li>
-        <li><a href="../sobre.html">Sobre</a></li>
-      </ul>
-    </nav>
+
+  <header class="navbar" id="navbar">
+    <div class="container">
+      <a href="../index.html" class="navbar-brand">
+        <svg class="navbar-logo" viewBox="0 0 36 36" fill="none">
+          <rect width="36" height="36" rx="8" fill="url(#grad-nav-con)"/>
+          <path d="M10 24 L10 13 L18 20 L26 13 L26 24" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <defs><linearGradient id="grad-nav-con" x1="0" y1="0" x2="36" y2="36" gradientUnits="userSpaceOnUse"><stop stop-color="#00E5FF"/><stop offset="1" stop-color="#4F46E5"/></linearGradient></defs>
+        </svg>
+        <span class="navbar-name">Minas <span>2035</span></span>
+      </a>
+      <nav class="navbar-nav" id="main-nav">
+        <a href="../index.html#sobre">O Projeto</a>
+        <a href="../index.html#areas">Áreas</a>
+        <a href="../index.html#principios">Princípios</a>
+        <a href="../indicadores.html">Indicadores</a>
+        <a href="../manifesto.html">Manifesto</a>
+      </nav>
+      <div class="navbar-cta">
+        <a href="../participar.html" class="btn btn-outline">Participar</a>
+        <a href="../index.html#areas" class="btn btn-primary">Explorar</a>
+      </div>
+      <button class="hamburger" id="hamburger-btn" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </header>
-  <main>
-    <section class="content">
-      <h2>Contratos</h2>
-      <p>Conteúdo introdutório sobre a estrutura de contratos e acordos estratégicos para Minas até 2035.</p>
-      <!-- Placeholder for charts -->
-      <div id="chart-contratos"></div>
-    </section>
-  </main>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero-grid"></div>
+    <div class="container">
+      <div class="page-hero-content fade-in-section">
+        <div class="breadcrumb">
+          <a href="../index.html">Início</a>
+          <span class="breadcrumb-sep">/</span>
+          <a href="../index.html#areas">Áreas</a>
+          <span class="breadcrumb-sep">/</span>
+          <span class="breadcrumb-current">Segurança Jurídica</span>
+        </div>
+        <div class="section-label">Centro Temático</div>
+        <h1>Centro de Segurança Jurídica e Contratos</h1>
+        <p class="page-subtitle">
+          Fortalecer o ambiente legal, institucional e contratual de Minas Gerais para atrair investimentos,
+          proteger direitos e garantir previsibilidade para empresas e cidadãos até 2035.
+        </p>
+        <div class="page-stats">
+          <div class="page-stat">
+            <span class="page-stat-value">8,5 anos</span>
+            <span class="page-stat-label">tempo médio de litígio judicial</span>
+          </div>
+          <div class="page-stat-divider"></div>
+          <div class="page-stat">
+            <span class="page-stat-value">72º</span>
+            <span class="page-stat-label">BR no índice rule of law (WJP)</span>
+          </div>
+          <div class="page-stat-divider"></div>
+          <div class="page-stat">
+            <span class="page-stat-value">R$ 1,5tri</span>
+            <span class="page-stat-label">estoque de processos no TJMG</span>
+          </div>
+        </div>
+        <div class="tag-list" style="margin-top: var(--sp-6);">
+          <span class="tag">Judiciário</span>
+          <span class="tag">Arbitragem</span>
+          <span class="tag">TJMG</span>
+          <span class="tag">Contratos Públicos</span>
+          <span class="tag">Desjudicialização</span>
+          <span class="tag">Compliance</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN -->
+  <div class="container">
+    <div class="page-layout">
+
+      <!-- TOC -->
+      <aside>
+        <nav class="toc" aria-label="Índice do conteúdo">
+          <div class="toc-title">Neste Centro</div>
+          <ul class="toc-list">
+            <li><a href="#resumo">01 · Resumo Executivo</a></li>
+            <li><a href="#situacao">02 · Situação Atual</a></li>
+            <li><a href="#desafios">03 · Desafios Estruturais</a></li>
+            <li><a href="#oportunidades">04 · Oportunidades</a></li>
+            <li><a href="#benchmarking">05 · Benchmarking Internacional</a></li>
+            <li><a href="#objetivos">06 · Objetivos 2035</a></li>
+            <li><a href="#metas">07 · Metas 2050</a></li>
+            <li><a href="#projetos">08 · Projetos Estratégicos</a></li>
+            <li><a href="#indicadores">09 · Indicadores-Chave</a></li>
+            <li><a href="#debate">10 · Questões para Debate</a></li>
+            <li><a href="#referencias">11 · Referências</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- ARTICLE -->
+      <article class="article-content">
+
+        <section id="resumo" class="content-section fade-in-section">
+          <div class="section-label">01</div>
+          <h2>Resumo Executivo</h2>
+          <p>A segurança jurídica é um dos pilares fundamentais do desenvolvimento econômico. Investidores nacionais e estrangeiros dependem de ambientes legais estáveis, contratos honrados, processos judiciais previsíveis e regulações claras para alocar capital de longo prazo. Minas Gerais, como a segunda maior economia do Brasil, possui um sistema jurídico que reflete tanto os pontos fortes quanto as fragilidades do ambiente institucional brasileiro.</p>
+          <p>O Tribunal de Justiça de Minas Gerais (TJMG) é um dos maiores tribunais estaduais do país, com mais de 25 milhões de processos em tramitação ao longo de sua história recente. Embora tenha avançado significativamente em digitalização processual e uso de inteligência artificial para triagem, o congestionamento judicial permanece um obstáculo estrutural ao ambiente de negócios mineiro.</p>
+          <p>O Projeto Minas 2035 propõe uma agenda de fortalecimento da segurança jurídica centrada em quatro eixos: modernização e desjudicialização, fortalecimento de meios alternativos de solução de conflitos (arbitragem, mediação, conciliação), reforma contratual no setor público e modernização dos marcos regulatórios setoriais para eliminar insegurança normativa.</p>
+          <div class="quote-block">
+            <blockquote>"A segurança jurídica não é privilégio — é condição para o desenvolvimento. Onde contratos não são cumpridos e direitos não são efetivados, o capital foge e os mais pobres pagam o preço mais alto."</blockquote>
+            <cite>— Banco Mundial, Doing Business Report, 2023</cite>
+          </div>
+        </section>
+
+        <section id="situacao" class="content-section fade-in-section">
+          <div class="section-label">02</div>
+          <h2>Situação Atual de Minas Gerais</h2>
+          <p>O TJMG conta com mais de 2.700 magistrados e servidores, e o Ministério Público de Minas Gerais (MPMG) é reconhecido como uma das procuradorias mais ativas do Brasil em áreas como combate à corrupção, defesa do consumidor e proteção ambiental. O Estado possui também uma rede extensa de Câmaras de Arbitragem e Mediação, com destaque para a CAMARB (Câmara de Arbitragem Empresarial Brasil), sediada em Belo Horizonte, referência nacional em resolução de disputas comerciais.</p>
+          <p>No campo dos contratos públicos, a aprovação da Nova Lei de Licitações (Lei 14.133/2021) criou oportunidades para modernização das compras governamentais em Minas, com foco em critérios de eficiência, compliance e gestão de riscos. A Advocacia-Geral do Estado (AGE-MG) tem desempenhado papel crescente na prevenção de litígios e na standardização de cláusulas contratuais para concessões e parcerias público-privadas.</p>
+
+          <div class="metric-grid">
+            <div class="metric-card">
+              <div class="metric-label">Processos no TJMG</div>
+              <div><span class="metric-value">6,2</span><span class="metric-unit">M</span></div>
+              <div class="metric-description">Em tramitação ativa – um dos maiores do Brasil</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">Taxa de congestionamento</div>
+              <div><span class="metric-value">78</span><span class="metric-unit">%</span></div>
+              <div class="metric-description">Processos não resolvidos no exercício – meta: 55%</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">Tempo médio de litígio</div>
+              <div><span class="metric-value">8,5</span><span class="metric-unit">anos</span></div>
+              <div class="metric-description">Da propositura ao trânsito em julgado – meta: 3 anos</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">Casos de arbitragem / ano</div>
+              <div><span class="metric-value">1.200</span><span class="metric-unit">+</span></div>
+              <div class="metric-description">CAMARB e câmaras setoriais – crescimento de 18% a.a.</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">Processos digitais</div>
+              <div><span class="metric-value">95</span><span class="metric-unit">%</span></div>
+              <div class="metric-description">Do total já tramitam eletronicamente no TJMG</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">PPPs ativas em MG</div>
+              <div><span class="metric-value">32</span><span class="metric-unit"></span></div>
+              <div class="metric-description">Parcerias Público-Privadas em operação – referência nacional</div>
+            </div>
+          </div>
+        </section>
+
+        <section id="desafios" class="content-section fade-in-section">
+          <div class="section-label">03</div>
+          <h2>Desafios Estruturais</h2>
+          <ul>
+            <li>
+              <strong>Congestionamento judicial crônico</strong> — A taxa de congestionamento do TJMG de 78% significa que, a cada 100 processos que entram, apenas 22 são resolvidos no mesmo período. Esse represamento acumula ano a ano, criando um passivo judicial que desestimula investimentos e prolonga conflitos que poderiam ser resolvidos em meses.
+            </li>
+            <li>
+              <strong>Insegurança regulatória nos contratos públicos</strong> — A frequente mudança de interpretações e regulamentações em concessões, licitações e contratos de PPPs cria risco regulatório que eleva o custo de capital privado. O chamado "risco Brasil regulatório" incide diretamente sobre a atratividade das PPPs mineiras no mercado de capitais.
+            </li>
+            <li>
+              <strong>Baixo acesso à justiça nas regiões periféricas</strong> — Mais de 300 municípios mineiros possuem apenas um juiz ou funcionam com magistrado itinerante. A ausência de infraestrutura judiciária no interior perpetua disputas não resolvidas sobre terra, herança e relações comerciais, especialmente prejudicial para a agricultura familiar e pequenas empresas.
+            </li>
+            <li>
+              <strong>Cultura de litigância excessiva</strong> — O Brasil possui a maior densidade de advogados por habitante da América Latina e uma das maiores taxas de judicialização do mundo. Minas Gerais reflete essa tendência nacional, com altos volumes de litígios que poderiam ser resolvidos extrajudicialmente com custo muito menor.
+            </li>
+            <li>
+              <strong>Cumprimento de contratos como gargalo para investimentos</strong> — Segundo o Banco Mundial, o Brasil levou em média 1.418 dias e custou 26,8% do valor da dívida para fazer cumprir um contrato comercial. Esse indicador impacta diretamente a percepção de segurança jurídica por investidores estrangeiros.
+            </li>
+          </ul>
+          <div class="callout callout-warning">
+            <span class="callout-icon"><i data-lucide="alert-triangle"></i></span>
+            <p><strong>Impacto econômico:</strong> Estima-se que a insegurança jurídica custe ao Brasil entre 1% e 2% do PIB ao ano em investimentos não realizados. Para Minas Gerais, isso equivale a R$ 7–14 bilhões em capital que deixa de ser investido anualmente.</p>
+          </div>
+        </section>
+
+        <section id="oportunidades" class="content-section fade-in-section">
+          <div class="section-label">04</div>
+          <h2>Oportunidades</h2>
+          <ul>
+            <li>
+              <strong>IA e automação processual no TJMG</strong> — O TJMG já utiliza IA (sistema VICTOR) para triagem de recursos. A expansão do uso de inteligência artificial para classificação de processos, detecção de demandas repetitivas e apoio à decisão judicial pode reduzir drasticamente o congestionamento sem aumento de despesa.
+            </li>
+            <li>
+              <strong>Arbitragem e mediação como mercado em crescimento</strong> — O mercado de resolução alternativa de disputas cresce 18% ao ano em Minas. BH pode se consolidar como o maior centro de arbitragem da América Latina fora de São Paulo, atraindo disputas comerciais de toda a região e gerando renda para advogados, árbitros e câmaras locais.
+            </li>
+            <li>
+              <strong>Nova Lei de Licitações como plataforma de modernização</strong> — A Lei 14.133/2021 introduz mecanismos de gestão de riscos, compliance obrigatório e critérios de sustentabilidade nas compras públicas. Minas pode liderar a implementação desses marcos, criando modelos replicáveis para outros estados.
+            </li>
+            <li>
+              <strong>Desjudicialização de conflitos de massa</strong> — Conflitos tributários, previdenciários e de consumo respondem por mais de 60% do volume de processos. A criação de câmaras administrativas de resolução, acordos programados e negociações diretas com grandes litigantes pode reduzir esse volume drasticamente.
+            </li>
+            <li>
+              <strong>Marco de integridade nas PPPs</strong> — A criação de um marco robusto de compliance, auditoria independente e arbitragem obrigatória para contratos de PPP pode posicionar Minas como o destino preferencial para infraestrutura no Brasil, com percepção de menor risco regulatório.
+            </li>
+          </ul>
+        </section>
+
+        <section id="benchmarking" class="content-section fade-in-section">
+          <div class="section-label">05</div>
+          <h2>Benchmarking Internacional</h2>
+          <p>Jurisdições que conseguiram melhorar significativamente seu ambiente jurídico oferecem modelos concretos para Minas Gerais.</p>
+          <table class="bench-table">
+            <thead>
+              <tr>
+                <th>País / Região</th>
+                <th>Índice WJP</th>
+                <th>Estratégia-chave</th>
+                <th>Lição para Minas</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="td-highlight">Cingapura</td>
+                <td class="td-accent">1º Ásia</td>
+                <td>Supremacia do Estado de Direito como vantagem competitiva. Contratos cumpridos em 150 dias (média global: 589). Câmaras de arbitragem internacionais sediadas em Cingapura atraem disputas de toda a Ásia.</td>
+                <td>Segurança jurídica como ativo estratégico de atração de investimentos — não apenas como valor moral.</td>
+              </tr>
+              <tr>
+                <td class="td-highlight">Holanda</td>
+                <td class="td-accent">Top 5 mundial</td>
+                <td>Câmara de Comércio Internacional sediada em Haia. Tribunal especializado em litígios empresariais internacionais. Arbitragem como norma em contratos comerciais de médio e grande porte.</td>
+                <td>Especialização de tribunais para disputas comerciais complexas — separando da justiça comum sobrecarregada.</td>
+              </tr>
+              <tr>
+                <td class="td-highlight">Chile</td>
+                <td class="td-accent">1º América Latina</td>
+                <td>Reforma judicial abrangente nos anos 2000: oralidade, prazos fixos, juízes especializados. Índice de cumprimento de contratos entre os melhores da região.</td>
+                <td>Reformas processuais profundas (oralidade, especialização, prazos) produzem resultados em 5–10 anos.</td>
+              </tr>
+              <tr>
+                <td class="td-highlight">São Paulo (Brasil)</td>
+                <td class="td-accent">1º BR</td>
+                <td>CIESP Arbitragem, FIESP, CAM-CCBC: maior ecossistema de arbitragem comercial do Brasil. Câmara de Resolução de Disputas do Estado de SP para contratos de PPP.</td>
+                <td>A concentração de câmaras especializadas e profissionais qualificados cria escala que BH pode disputar.</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section id="objetivos" class="content-section fade-in-section">
+          <div class="section-label">06</div>
+          <h2>Objetivos 2035</h2>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-year">2026–2028</div>
+              <div class="timeline-title">Desjudicialização e resolução extrajudicial</div>
+              <div class="timeline-desc">Implementação de câmaras administrativas obrigatórias para conflitos tributários e de consumo abaixo de R$ 50.000. Meta: desviar 30% do volume atual de novos processos para canais extrajudiciais.</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-year">2028–2030</div>
+              <div class="timeline-title">IA processual e modernização do TJMG</div>
+              <div class="timeline-desc">Expansão do uso de IA para triagem, classificação e apoio à decisão em 100% das comarcas mineiras. Redução da taxa de congestionamento para 65% e do tempo médio de litígios para 5 anos.</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-year">2030–2033</div>
+              <div class="timeline-title">BH como hub de arbitragem da América Latina</div>
+              <div class="timeline-desc">Consolidação da CAMARB e criação de pelo menos 3 novas câmaras setoriais especializadas (energia, agronegócio, tecnologia). Atração de disputas internacionais com regras bilíngues e árbitros certificados internacionalmente.</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-year">2033–2035</div>
+              <div class="timeline-title">Minas no top-5 brasileiro de ambiente jurídico</div>
+              <div class="timeline-desc">Minas Gerais reconhecido como o estado de maior previsibilidade jurídica do Brasil para investimentos de infraestrutura e PPPs. Tempo médio de litígio reduzido para 3 anos. Taxa de congestionamento abaixo de 55%.</div>
+            </div>
+          </div>
+        </section>
+
+        <section id="metas" class="content-section fade-in-section">
+          <div class="section-label">07</div>
+          <h2>Metas 2050</h2>
+          <ol>
+            <li>Taxa de congestionamento do TJMG abaixo de 45%, alinhada ao padrão dos sistemas judiciais mais eficientes da OCDE.</li>
+            <li>Tempo médio para fazer cumprir um contrato comercial inferior a 2 anos, contra os atuais 8,5 anos.</li>
+            <li>Pelo menos 40% dos conflitos comerciais resolvidos por arbitragem ou mediação, sem necessidade de ação judicial.</li>
+            <li>Minas Gerais no top-3 do Índice de Segurança Jurídica para PPPs da FGV, atraindo R$ 200 bilhões em concessões até 2050.</li>
+            <li>Zero municípios mineiros sem cobertura judiciária regular — com juízes titulares ou varas digitais plenas em todos os 853 municípios.</li>
+            <li>Marco normativo estável para contratos públicos de longo prazo, com revisões programadas e previsíveis a cada 10 anos.</li>
+          </ol>
+        </section>
+
+        <section id="projetos" class="content-section fade-in-section">
+          <div class="section-label">08</div>
+          <h2>Projetos Estratégicos</h2>
+          <div style="display: flex; flex-direction: column; gap: var(--sp-4);">
+            <div class="project-card">
+              <div>
+                <h4>Plataforma de Desjudicialização MG</h4>
+                <p>Sistema digital integrado de mediação e conciliação pré-processual, com câmaras virtuais especializadas por tema (consumidor, tributário, trabalhista, imobiliário). Modelo inspirado no eTribunais da Holanda. Meta: desviar 500.000 processos por ano do judiciário convencional.</p>
+              </div>
+              <span class="project-status status-proposal">Proposta</span>
+            </div>
+            <div class="project-card">
+              <div>
+                <h4>BH Arbitration Hub</h4>
+                <p>Cluster de câmaras de arbitragem especializadas em BH com infraestrutura física e digital de classe mundial, capacitação de árbitros bilíngues e regras específicas para setores estratégicos de Minas (mineração, energia, agronegócio, tecnologia). Objetivo: tornar BH o segundo maior mercado de arbitragem do Brasil.</p>
+              </div>
+              <span class="project-status status-active">Em estruturação</span>
+            </div>
+            <div class="project-card">
+              <div>
+                <h4>IA Judicial MG – Expansão VICTOR</h4>
+                <p>Expansão do sistema de IA do TJMG para todas as comarcas, com funcionalidades de classificação automática de processos, identificação de demandas repetitivas, geração de minutas e sugestão de precedentes. Integração com CNJ para dados em tempo real.</p>
+              </div>
+              <span class="project-status status-active">Em implementação</span>
+            </div>
+            <div class="project-card">
+              <div>
+                <h4>Marco de Integridade nas PPPs Mineiras</h4>
+                <p>Protocolo obrigatório de compliance, due diligence e auditoria independente para todos os contratos de PPP acima de R$ 500 milhões, com câmara de disputas pré-constituída e árbitros de standby nomeados antes da assinatura do contrato.</p>
+              </div>
+              <span class="project-status status-study">Em consulta pública</span>
+            </div>
+          </div>
+        </section>
+
+        <section id="indicadores" class="content-section fade-in-section">
+          <div class="section-label">09</div>
+          <h2>Indicadores-Chave (KPIs)</h2>
+          <div class="metric-grid">
+            <div class="metric-card">
+              <div class="metric-label">Taxa de congestionamento TJMG</div>
+              <div><span class="metric-value">55</span><span class="metric-unit">%</span></div>
+              <div class="metric-description">Meta 2035 · atual: 78% · melhor BR: 60% (SC)</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">Tempo médio litígios</div>
+              <div><span class="metric-value">3</span><span class="metric-unit">anos</span></div>
+              <div class="metric-description">Meta 2035 · atual: 8,5 anos · OCDE: 1,5 anos</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">Conflitos em arbitragem/mediação</div>
+              <div><span class="metric-value">40</span><span class="metric-unit">%</span></div>
+              <div class="metric-description">Meta 2035 · atual: ~8% dos conflitos comerciais</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">PPPs com câmara de disputas</div>
+              <div><span class="metric-value">100</span><span class="metric-unit">%</span></div>
+              <div class="metric-description">Meta: todos os novos contratos com DAB pré-constituído</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">Municípios com cobertura judicial</div>
+              <div><span class="metric-value">853</span><span class="metric-unit"></span></div>
+              <div class="metric-description">Meta: 100% dos municípios com vara regular ou digital</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">Processos desviados p/ extrajudicial</div>
+              <div><span class="metric-value">500k</span><span class="metric-unit">/ano</span></div>
+              <div class="metric-description">Meta anual da plataforma de desjudicialização</div>
+            </div>
+          </div>
+        </section>
+
+        <section id="debate" class="content-section fade-in-section">
+          <div class="section-label">10</div>
+          <h2>Questões para Debate Público</h2>
+          <ol>
+            <li>A arbitragem é um instrumento de justiça acessível ou é um privilégio de grandes empresas? Como democratizá-la para médias e pequenas empresas e para a agricultura familiar?</li>
+            <li>Como garantir que a desjudicialização não resulte em acordos forçados que prejudiquem as partes mais vulneráveis, especialmente trabalhadores e consumidores de baixa renda?</li>
+            <li>Qual deve ser o papel do Ministério Público e da Defensoria Pública na nova arquitetura de resolução de conflitos de Minas Gerais?</li>
+            <li>A IA no judiciário deve ser usada apenas para triagem e suporte, ou também pode decidir casos de menor complexidade? Quais os limites éticos e legais?</li>
+            <li>Como criar marcos regulatórios estáveis para PPPs sem engessá-los ao ponto de impossibilitar adaptações diante de mudanças tecnológicas e climáticas?</li>
+            <li>O tempo excessivo dos litígios é um problema de estrutura judiciária, de excesso de recursos processuais ou de cultura litigante? Qual a raiz do problema?</li>
+            <li>Como equilibrar o direito de acesso ao judiciário — constitucionalmente garantido — com a necessidade de desafogar o sistema sem impor barreiras econômicas ao acesso à justiça?</li>
+          </ol>
+          <div style="margin-top: var(--sp-8);">
+            <a href="../participar.html" class="btn btn-primary" id="btn-contratos-debate">Participar do Debate</a>
+          </div>
+        </section>
+
+        <section id="referencias" class="content-section fade-in-section">
+          <div class="section-label">11</div>
+          <h2>Referências Bibliográficas</h2>
+          <div class="reference-list">
+            <div class="reference-item">
+              <span class="reference-num">01</span>
+              <span>CNJ – Conselho Nacional de Justiça. <em>Justiça em Números 2023</em>. Brasília: CNJ, 2023.</span>
+            </div>
+            <div class="reference-item">
+              <span class="reference-num">02</span>
+              <span>WORLD JUSTICE PROJECT. <em>Rule of Law Index 2023</em>. Washington: WJP, 2023.</span>
+            </div>
+            <div class="reference-item">
+              <span class="reference-num">03</span>
+              <span>BANCO MUNDIAL. <em>Doing Business 2023: Enforcing Contracts</em>. Washington: World Bank Group, 2023.</span>
+            </div>
+            <div class="reference-item">
+              <span class="reference-num">04</span>
+              <span>CAMARB. <em>Relatório de Atividades 2023: Câmara de Arbitragem Empresarial Brasil</em>. Belo Horizonte: CAMARB, 2023.</span>
+            </div>
+            <div class="reference-item">
+              <span class="reference-num">05</span>
+              <span>BRASIL. <em>Lei 14.133/2021 – Nova Lei de Licitações e Contratos Administrativos</em>. Brasília: Congresso Nacional, 2021.</span>
+            </div>
+            <div class="reference-item">
+              <span class="reference-num">06</span>
+              <span>FGV DIREITO RIO. <em>Índice de Segurança Jurídica para PPPs 2023</em>. Rio de Janeiro: FGV, 2023.</span>
+            </div>
+            <div class="reference-item">
+              <span class="reference-num">07</span>
+              <span>TJMG – Tribunal de Justiça de Minas Gerais. <em>Relatório Anual de Gestão 2023</em>. Belo Horizonte: TJMG, 2023.</span>
+            </div>
+            <div class="reference-item">
+              <span class="reference-num">08</span>
+              <span>OCDE. <em>Access to Justice and the SDGs: A Data-Driven Approach</em>. Paris: OECD Publishing, 2022.</span>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
   <footer class="site-footer">
-    <p>&copy; 2026 Projeto Minas 2035 – Todos os direitos reservados.</p>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="navbar-brand">
+            <svg class="navbar-logo" viewBox="0 0 36 36" fill="none">
+              <rect width="36" height="36" rx="8" fill="url(#grad-footer-con)"/>
+              <path d="M10 24 L10 13 L18 20 L26 13 L26 24" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              <defs><linearGradient id="grad-footer-con" x1="0" y1="0" x2="36" y2="36" gradientUnits="userSpaceOnUse"><stop stop-color="#00E5FF"/><stop offset="1" stop-color="#4F46E5"/></linearGradient></defs>
+            </svg>
+            <span class="navbar-name">Minas <span>2035</span></span>
+          </a>
+          <p>Plataforma independente de estudos para o desenvolvimento de Minas Gerais com visão de longo prazo.</p>
+        </div>
+        <div class="footer-col"><h5>Projeto</h5><ul><li><a href="../sobre.html">Sobre</a></li><li><a href="../manifesto.html">Manifesto</a></li><li><a href="../pilares.html">Pilares</a></li><li><a href="../participar.html">Participar</a></li></ul></div>
+        <div class="footer-col"><h5>Outras Áreas</h5><ul><li><a href="economia.html">Economia</a></li><li><a href="governo-digital.html">Governo Digital</a></li><li><a href="renda.html">Renda e Inclusão</a></li><li><a href="trabalho.html">Trabalho</a></li></ul></div>
+        <div class="footer-col"><h5>Legal</h5><ul><li><a href="#">Política de privacidade</a></li><li><a href="#">Licença de uso</a></li><li><a href="#">Contato</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Projeto Minas 2035. Fontes: CNJ, WJP, Banco Mundial, CAMARB, FGV.</p>
+        <a href="../manifesto.html">Manifesto →</a>
+      </div>
+    </div>
   </footer>
+
+  <script>lucide.createIcons();</script>
 </body>
 </html>

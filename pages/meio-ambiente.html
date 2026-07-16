@@ -3,41 +3,473 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Meio‑Ambiente – Projeto Minas 2035</title>
+  <meta name="description" content="Centro de Meio Ambiente e Clima – Diagnósticos, estratégias e projetos para proteger a biodiversidade, recuperar ecossistemas degradados e posicionar Minas Gerais como líder na agenda climática até 2035." />
+  <title>Meio Ambiente e Clima – Projeto Minas 2035</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="../css/variables.css" />
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="stylesheet" href="../css/components.css" />
-  <link rel="stylesheet" href="../css/responsive.css" />
   <link rel="stylesheet" href="../css/animations.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+  <link rel="stylesheet" href="../css/pages.css" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
   <script defer src="../js/app.js"></script>
   <script defer src="../js/menu.js"></script>
   <script defer src="../js/animations.js"></script>
-  <script defer src="../js/charts.js"></script>
+  <script defer src="../js/counters.js"></script>
 </head>
 <body>
-  <header class="site-header">
-    <h1>Projeto Minas 2035</h1>
-    <nav class="main-nav">
-      <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../manifesto.html">Manifesto</a></li>
-        <li><a href="../pilares.html">Pilares</a></li>
-        <li><a href="../indicadores.html">Indicadores</a></li>
-        <li><a href="../participar.html">Participar</a></li>
-        <li><a href="../sobre.html">Sobre</a></li>
-      </ul>
-    </nav>
+
+  <header class="navbar" id="navbar">
+    <div class="container">
+      <a href="../index.html" class="navbar-brand">
+        <svg class="navbar-logo" viewBox="0 0 36 36" fill="none">
+          <rect width="36" height="36" rx="8" fill="url(#grad-nav-ma)"/>
+          <path d="M10 24 L10 13 L18 20 L26 13 L26 24" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <defs><linearGradient id="grad-nav-ma" x1="0" y1="0" x2="36" y2="36" gradientUnits="userSpaceOnUse"><stop stop-color="#00E5FF"/><stop offset="1" stop-color="#4F46E5"/></linearGradient></defs>
+        </svg>
+        <span class="navbar-name">Minas <span>2035</span></span>
+      </a>
+      <nav class="navbar-nav" id="main-nav">
+        <a href="../index.html#sobre">O Projeto</a>
+        <a href="../index.html#areas">Áreas</a>
+        <a href="../index.html#principios">Princípios</a>
+        <a href="../indicadores.html">Indicadores</a>
+        <a href="../manifesto.html">Manifesto</a>
+      </nav>
+      <div class="navbar-cta">
+        <a href="../participar.html" class="btn btn-outline">Participar</a>
+        <a href="../index.html#areas" class="btn btn-primary">Explorar</a>
+      </div>
+      <button class="hamburger" id="hamburger-btn" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </header>
-  <main>
-    <section class="content">
-      <h2>Meio‑Ambiente</h2>
-      <p>Conteúdo introdutório sobre a política ambiental de Minas até 2035.</p>
-      <!-- Placeholder for charts or visualizations -->
-      <div id="chart-meio-ambiente"></div>
-    </section>
-  </main>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero-grid"></div>
+    <div class="container">
+      <div class="page-hero-content fade-in-section">
+        <div class="breadcrumb">
+          <a href="../index.html">Início</a>
+          <span class="breadcrumb-sep">/</span>
+          <a href="../index.html#areas">Áreas</a>
+          <span class="breadcrumb-sep">/</span>
+          <span class="breadcrumb-current">Meio Ambiente</span>
+        </div>
+        <div class="section-label">Centro Temático</div>
+        <h1>Centro de Meio Ambiente e Clima</h1>
+        <p class="page-subtitle">
+          Diagnósticos, estratégias e projetos para proteger a biodiversidade excepcional de Minas Gerais,
+          recuperar ecossistemas degradados pelas tragédias de Mariana e Brumadinho, e posicionar
+          o estado como protagonista da agenda climática brasileira até 2035.
+        </p>
+        <div class="page-stats">
+          <div class="page-stat">
+            <span class="page-stat-value">2°</span>
+            <span class="page-stat-label">maior biodiversidade do BR</span>
+          </div>
+          <div class="page-stat-divider"></div>
+          <div class="page-stat">
+            <span class="page-stat-value">33%</span>
+            <span class="page-stat-label">área de MG preservada</span>
+          </div>
+          <div class="page-stat-divider"></div>
+          <div class="page-stat">
+            <span class="page-stat-value">800+</span>
+            <span class="page-stat-label">espécies ameaçadas monitoradas</span>
+          </div>
+        </div>
+        <div class="tag-list" style="margin-top: var(--sp-6);">
+          <span class="tag">Cerrado</span>
+          <span class="tag">Mata Atlântica</span>
+          <span class="tag">Bacias Hidrográficas</span>
+          <span class="tag">Mudanças Climáticas</span>
+          <span class="tag">RSE</span>
+          <span class="tag">Brumadinho</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN -->
+  <div class="container">
+    <div class="page-layout">
+
+      <!-- TOC -->
+      <aside>
+        <nav class="toc" aria-label="Índice do conteúdo">
+          <div class="toc-title">Neste Centro</div>
+          <ul class="toc-list">
+            <li><a href="#resumo">01 · Resumo Executivo</a></li>
+            <li><a href="#situacao">02 · Situação Atual</a></li>
+            <li><a href="#desafios">03 · Desafios Estruturais</a></li>
+            <li><a href="#oportunidades">04 · Oportunidades</a></li>
+            <li><a href="#benchmarking">05 · Benchmarking Internacional</a></li>
+            <li><a href="#objetivos">06 · Objetivos 2035</a></li>
+            <li><a href="#metas">07 · Metas 2050</a></li>
+            <li><a href="#projetos">08 · Projetos Estratégicos</a></li>
+            <li><a href="#indicadores">09 · Indicadores-Chave</a></li>
+            <li><a href="#debate">10 · Questões para Debate</a></li>
+            <li><a href="#referencias">11 · Referências</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- ARTICLE -->
+      <article class="article-content">
+
+        <section id="resumo" class="content-section fade-in-section">
+          <div class="section-label">01</div>
+          <h2>Resumo Executivo</h2>
+          <p>Minas Gerais é um estado de extraordinária riqueza ambiental e, ao mesmo tempo, de profundas contradições: abriga o segundo maior número de espécies da fauna e flora do Brasil — superado apenas pelo Pará —, com mais de 800 espécies ameaçadas de extinção monitoradas pelo IEF (Instituto Estadual de Florestas). Dois biomas de importância global coexistem em seu território: o Cerrado, reconhecido como a savana mais biodiversa do mundo, e a Mata Atlântica, um dos hotspots de biodiversidade mais ameaçados do planeta.</p>
+          <p>Essa riqueza coexiste com um legado de degradação ambiental de dimensões históricas. As tragédias de Mariana (2015) e Brumadinho (2019) — os dois maiores desastres ambientais da história do Brasil — lançaram sobre Minas Gerais um olhar crítico global sobre o modelo de mineração sem responsabilidade socioambiental. A bacia do Rio Doce, que percorre 850 km desde as nascentes no Quadrilátero Ferrífero até o mar no Espírito Santo, ainda não foi recuperada após o rompimento da barragem de Fundão, da Samarco/Vale/BHP.</p>
+          <p>O Projeto Minas 2035 propõe uma agenda ambiental e climática fundamentada em três pilares: recuperação e conservação dos ecossistemas degradados, bioeconomia e créditos de carbono como vetor de desenvolvimento econômico sustentável, e governança ambiental moderna — com tecnologia de monitoramento via satélite, licenciamento ágil e transparente e responsabilização efetiva de poluidores. O ambiente não é obstáculo ao desenvolvimento; é sua fundação mais sólida.</p>
+
+          <div class="quote-block">
+            <blockquote>"A proteção da natureza e o desenvolvimento econômico não são opostos: são complementares quando planejados com sabedoria e com visão de longo prazo."</blockquote>
+            <cite>— PNUMA – Programa das Nações Unidas para o Meio Ambiente, Relatório de Perspectivas Globais, 2023</cite>
+          </div>
+        </section>
+
+        <section id="situacao" class="content-section fade-in-section">
+          <div class="section-label">02</div>
+          <h2>Situação Atual de Minas Gerais</h2>
+          <p>Minas Gerais possui 33% de seu território coberto por vegetação nativa, o que equivale a aproximadamente 182 mil km² — área maior que a Alemanha. O sistema estadual de áreas protegidas compreende 71 Unidades de Conservação estaduais (geridas pelo IEF), além de Parques Nacionais, APAs (Áreas de Proteção Ambiental) e Reservas Particulares do Patrimônio Natural (RPPNs). O SUPRAM (Superintendência Regional de Meio Ambiente) realiza o licenciamento ambiental estadual, processo que, apesar de recentes avanços digitais, ainda é lento e pouco previsível para empreendedores.</p>
+          <p>O Cerrado — que cobre cerca de 57% do território mineiro — é a savana mais biodiversa do mundo, com mais de 11 mil espécies de plantas catalogadas, das quais 44% são endêmicas. Contudo, estima-se que menos de 3% do Cerrado mineiro está efetivamente protegido em unidades de conservação de proteção integral, enquanto o restante da vegetação nativa é preservado por reservas legais em propriedades rurais — frequentemente fiscalizadas de forma insuficiente. A Mata Atlântica, por sua vez, restringe-se a fragmentos isolados que cobrem apenas 14% de sua área original no estado.</p>
+
+          <div class="metric-grid">
+            <div class="metric-card">
+              <div class="metric-label">Área Preservada</div>
+              <div><span class="metric-value">33</span><span class="metric-unit">%</span></div>
+              <div class="metric-description">Do território de MG com vegetação nativa</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">Unidades de Conservação</div>
+              <div><span class="metric-value">71</span><span class="metric-unit">UCs</span></div>
+              <div class="metric-description">Estaduais geridas pelo IEF – 2023</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">Espécies Ameaçadas</div>
+              <div><span class="metric-value">800+</span><span class="metric-unit"></span></div>
+              <div class="metric-description">Fauna e flora monitoradas – Lista MG/IEF 2023</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">Rio Doce Contaminado</div>
+              <div><span class="metric-value">850</span><span class="metric-unit">km</span></div>
+              <div class="metric-description">Extensão afetada pela lama de Mariana (2015)</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">Cerrado Protegido MG</div>
+              <div><span class="metric-value">&lt;3</span><span class="metric-unit">%</span></div>
+              <div class="metric-description">Em UCs de proteção integral – meta mínima: 17%</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">Emissões GEE (MG)</div>
+              <div><span class="metric-value">145</span><span class="metric-unit">MtCO₂e</span></div>
+              <div class="metric-description">Estimativa anual – agropecuária responde por 38%</div>
+            </div>
+          </div>
+        </section>
+
+        <section id="desafios" class="content-section fade-in-section">
+          <div class="section-label">03</div>
+          <h2>Desafios Estruturais</h2>
+          <ul>
+            <li>
+              <strong>O legado de Mariana e Brumadinho</strong> — As tragédias de Mariana (novembro de 2015, rompimento da barragem de Fundão, Samarco/Vale/BHP, 19 mortos, 40 milhões m³ de rejeitos) e de Brumadinho (janeiro de 2019, rompimento da barragem B1 da Vale, 270 mortos, maior acidente de trabalho da história do Brasil) deixaram cicatrizes ambientais e sociais que ainda não foram sanadas. O processo de reparação do Rio Doce — coordenado pela RAMBOLL e monitorado pelo Comitê da Bacia — avança lentamente. A fiscalização de barragens ainda apresenta fragilidades, apesar da Lei Estadual de Segurança de Barragens (Lei 23.291/2019), aprovada após Brumadinho.
+            </li>
+            <li>
+              <strong>Desmatamento e supressão de vegetação nativa</strong> — Apesar da queda geral no desmatamento observada nos últimos anos, o Cerrado mineiro ainda sofre pressão intensa da conversão para pastagens e lavouras de soja e milho, especialmente no Triângulo Mineiro e no Noroeste do estado. O PRODES-Cerrado (INPE) registrou mais de 80 mil hectares desmatados em Minas em 2022, configurando uma perda irreversível de biodiversidade e de serviços ecossistêmicos.
+            </li>
+            <li>
+              <strong>Licenciamento ambiental: burocracia vs. agilidade</strong> — O licenciamento ambiental no estado é percebido pelos empreendedores como lento (média de 18 meses para licenças complexas) e pouco previsível. Ao mesmo tempo, ambientalistas e comunidades denunciam a insuficiência dos estudos de impacto ambiental e a pressão por aprovações aceleradas. Conciliar agilidade e rigor técnico é um dos desafios mais complexos da governança ambiental mineira.
+            </li>
+            <li>
+              <strong>Mudanças climáticas e eventos extremos</strong> — Minas Gerais já sente os impactos das mudanças climáticas: secas cada vez mais prolongadas no Norte de Minas, enchentes devastadoras no Vale do Aço e na Zona da Mata (como as de 2022 que deixaram 24 mortos), e ondas de calor com temperaturas recordes em BH. Sem adaptação climática sistêmica — especialmente em habitação, infraestrutura hídrica e agricultura —, os custos humanos e econômicos dessas catástrofes crescerão exponencialmente.
+            </li>
+            <li>
+              <strong>Fragilidade dos fragmentos de Mata Atlântica</strong> — Os remanescentes de Mata Atlântica em Minas são fragmentados, isolados e em geral demasiado pequenos para sustentar populações viáveis de grandes mamíferos e aves. A construção de corredores ecológicos — que conectam fragmentos e permitem o fluxo gênico entre populações — é urgente, mas demanda articulação entre propriedades privadas, prefeituras e governos estadual e federal que ainda não existe de forma sistemática.
+            </li>
+          </ul>
+
+          <div class="callout callout-warning">
+            <span class="callout-icon"><i data-lucide="tree-pine"></i></span>
+            <p><strong>Ponto crítico:</strong> A degradação ambiental não é apenas um problema ecológico: ela compromete a segurança hídrica, a produtividade agrícola, a atratividade turística e a reputação ESG de Minas Gerais. Investir na natureza é investir no desenvolvimento econômico de longo prazo.</p>
+          </div>
+        </section>
+
+        <section id="oportunidades" class="content-section fade-in-section">
+          <div class="section-label">04</div>
+          <h2>Oportunidades</h2>
+          <ul>
+            <li>
+              <strong>Bioeconomia e serviços ecossistêmicos</strong> — O Cerrado e a Mata Atlântica oferecem um portfólio extraordinário de serviços ecossistêmicos (regulação hídrica, sequestro de carbono, polinização, controle de erosão) que podem ser monetizados via pagamentos por serviços ambientais (PSA) e créditos de biodiversidade. Minas Gerais está bem posicionada para se tornar um laboratório nacional de bioeconomia — da produção sustentável de frutos nativos do Cerrado ao ecoturismo de alto valor.
+            </li>
+            <li>
+              <strong>Mercado de crédito de carbono</strong> — Com a aprovação do marco regulatório do mercado brasileiro de carbono (Lei 15.042/2024), Minas Gerais tem a oportunidade de se posicionar como principal fornecedor de créditos de carbono do país — seja via projetos de REDD+ (redução do desmatamento), seja via restauração florestal certificada. A combinação de área preservada, capacidade institucional (IEF, FAPEMIG) e setor privado engajado em ESG cria condições únicas para esse mercado.
+            </li>
+            <li>
+              <strong>ESG e atração de investimentos responsáveis</strong> — A crescente demanda global por produtos e serviços com baixo impacto ambiental cria oportunidades para empresas mineiras que adotam práticas ESG genuínas. O agronegócio rastreável, o café sustentável, o turismo de natureza e a mineração responsável são setores onde Minas pode conquistar prêmios de preço e acesso a mercados que exigem certificações ambientais.
+            </li>
+            <li>
+              <strong>Restauração florestal em escala</strong> — O PLANAVEG (Plano Nacional de Recuperação da Vegetação Nativa) e os acordos de reparação do Rio Doce criam uma demanda por restauração florestal em escala sem precedentes em Minas Gerais. Isso representa uma oportunidade econômica concreta: produção de sementes e mudas nativas, implementação de técnicas de restauração de baixo custo e geração de empregos verdes no campo, especialmente em regiões do Jequitinhonha e do Vale do Rio Doce.
+            </li>
+            <li>
+              <strong>Tecnologia de monitoramento ambiental</strong> — O uso de satélites, drones, sensores IoT e inteligência artificial para monitoramento de desmatamento, queimadas, qualidade da água e emissões de GEE está se tornando mais acessível e preciso. Minas pode desenvolver um sistema estadual de monitoramento ambiental de referência, gerando dados abertos para pesquisa, fiscalização e tomada de decisão, e criando um ecossistema de empresas de tecnologia ambiental (greentechs) no estado.
+            </li>
+          </ul>
+        </section>
+
+        <section id="benchmarking" class="content-section fade-in-section">
+          <div class="section-label">05</div>
+          <h2>Benchmarking Internacional</h2>
+          <p>Regiões que transformaram seu patrimônio natural em vantagem competitiva, ou que superaram crises ambientais graves, oferecem lições fundamentais para a agenda ambiental e climática de Minas Gerais.</p>
+
+          <table class="bench-table">
+            <thead>
+              <tr>
+                <th>Região / País</th>
+                <th>Indicador de Destaque</th>
+                <th>Estratégia-chave</th>
+                <th>Lição para Minas</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="td-highlight">Costa Rica</td>
+                <td class="td-accent">99% energia renovável · 52% floresta</td>
+                <td>Líder mundial em conservação: reverteu desmatamento intenso nos anos 1980 por meio de PSA (Pagamento por Serviços Ambientais), ecoturismo de alto valor e proibição de caça. PIB verde responde por 8% da economia. Referência global em desenvolvimento sustentável.</td>
+                <td>Implementar sistema robusto de pagamento por serviços ambientais que remunere proprietários rurais pela conservação e recuperação da vegetação nativa, tornando a natureza economicamente viável para o produtor.</td>
+              </tr>
+              <tr>
+                <td class="td-highlight">Alemanha</td>
+                <td class="td-accent">Carbono neutro: meta 2045</td>
+                <td>Líder em economia circular: taxa de reciclagem de 67%, sistemas de depósito para embalagens, responsabilidade estendida do produtor. Combinação de regulação rigorosa, incentivos à inovação e cultura empresarial de responsabilidade ambiental.</td>
+                <td>Desenvolver política estadual de economia circular com metas setoriais para a indústria mineira, especialmente mineração, metalurgia e agronegócio — os setores com maior geração de resíduos industriais no estado.</td>
+              </tr>
+              <tr>
+                <td class="td-highlight">Amazônia Legal (Brasil)</td>
+                <td class="td-accent">Redução desmatamento: 83% (2004–2012)</td>
+                <td>Operação Arco do Fogo + moratorias de soja e carne + rastreabilidade da cadeia produtiva + fortalecimento do IBAMA e ICMBio. A combinação de repressão, monitoramento (PRODES/INPE) e incentivos econômicos alternativos gerou a maior redução de desmatamento tropical já registrada.</td>
+                <td>Adaptar o modelo de comando-e-controle combinado com incentivos positivos para o Cerrado mineiro, bioma igualmente ameaçado mas com muito menos proteção legal e atenção pública do que a Amazônia.</td>
+              </tr>
+              <tr>
+                <td class="td-highlight">Noruega</td>
+                <td class="td-accent">Carbono zero nas emissões domésticas</td>
+                <td>Fundo soberano com US$ 1,4 trilhão investe em empresas sustentáveis globalmente e desinveste de poluidores. Compensação de emissões por financiamento da conservação tropical (NICFI – Iniciativa de Florestas e Clima da Noruega, R$ 6 bilhões doados ao Brasil).</td>
+                <td>Criar fundo estadual de clima capitalizado com royalties da mineração e compensações ambientais, destinado a financiar projetos de conservação, restauração e adaptação climática em Minas Gerais.</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section id="objetivos" class="content-section fade-in-section">
+          <div class="section-label">06</div>
+          <h2>Objetivos 2035</h2>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-year">2026–2028</div>
+              <div class="timeline-title">Governança ambiental moderna e Rio Doce vivo</div>
+              <div class="timeline-desc">Lançamento do Sistema Estadual de Monitoramento Ambiental via Satélite (SEMAS-MG), digitalização completa do licenciamento ambiental com prazo máximo garantido por lei, e implementação do Plano Emergencial de Recuperação do Rio Doce com as primeiras espécies de peixes reintroduzidas em trechos já descontaminados.</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-year">2028–2030</div>
+              <div class="timeline-title">Expansão das áreas protegidas e mercado de carbono</div>
+              <div class="timeline-desc">Criação de 15 novas unidades de conservação no Cerrado mineiro, ampliando a área protegida de 3% para 10% do bioma no estado. Lançamento do MG Carbon Market com os primeiros contratos de crédito de carbono certificados, envolvendo 500 produtores rurais em projetos de REDD+ e restauração.</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-year">2030–2033</div>
+              <div class="timeline-title">Corredores ecológicos e restauração em escala</div>
+              <div class="timeline-desc">Implantação dos corredores ecológicos da Serra do Espinhaço e do Vale do Rio Doce, reconectando fragmentos de Mata Atlântica e Cerrado em mais de 300 municípios. Restauração de 500 mil hectares de vegetação nativa com mudas de espécies nativas produzidas em viveiros estaduais comunitários, gerando 20 mil empregos verdes.</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-year">2033–2035</div>
+              <div class="timeline-title">MG referência em bioeconomia e clima</div>
+              <div class="timeline-desc">Minas Gerais como estado referência nacional em bioeconomia: 1 milhão de créditos de carbono emitidos por ano, Rio Doce com qualidade de água apta à pesca e ao uso humano em 80% de seu curso, e plano de adaptação climática implementado em todos os 853 municípios — especialmente os mais vulneráveis a secas e enchentes.</div>
+            </div>
+          </div>
+        </section>
+
+        <section id="metas" class="content-section fade-in-section">
+          <div class="section-label">07</div>
+          <h2>Metas 2050</h2>
+          <ol>
+            <li>Atingir proteção efetiva de 30% do território mineiro em unidades de conservação e áreas de preservação permanente, alinhando Minas às metas globais do Acordo de Kunming-Montreal (30x30).</li>
+            <li>Recuperar 2 milhões de hectares de vegetação nativa degradada em Minas Gerais, revertendo o passivo ambiental acumulado desde 1965 e criando o maior programa de restauração florestal da América do Sul.</li>
+            <li>Restaurar completamente o Rio Doce e todas as suas sub-bacias afetadas pelo desastre de Mariana, com qualidade de água compatível com o uso humano e a biodiversidade aquática original em todo o seu curso.</li>
+            <li>Reduzir as emissões de gases de efeito estufa de Minas Gerais em 70% em relação ao nível de 2005, com neutralidade climática plena até 2050 por meio de combinação de reduções reais e compensações certificadas.</li>
+            <li>Tornar Minas Gerais o maior mercado estadual de créditos de carbono do Brasil, com emissão de ao menos 5 milhões de créditos por ano e R$ 2 bilhões em receita para comunidades rurais e povos tradicionais.</li>
+            <li>Eliminar completamente o desmatamento ilegal do Cerrado e da Mata Atlântica em Minas Gerais, com sistema de monitoramento em tempo real e responsabilização criminal efetiva dos infratores.</li>
+          </ol>
+        </section>
+
+        <section id="projetos" class="content-section fade-in-section">
+          <div class="section-label">08</div>
+          <h2>Projetos Estratégicos</h2>
+
+          <div style="display: flex; flex-direction: column; gap: var(--sp-4);">
+            <div class="project-card">
+              <div>
+                <h4>Programa Rio Doce Vivo</h4>
+                <p>Iniciativa de longo prazo para a recuperação integral da bacia hidrográfica do Rio Doce — a mais afetada pela lama de rejeitos da barragem de Fundão (Samarco/Vale/BHP, 2015). O programa inclui: descontaminação progressiva dos sedimentos por fitorremediação e técnicas de engenharia ambiental, repovoamento com 50 espécies de peixes nativos da bacia, restauração de matas ciliares em 1.200 km de margens, e monitoramento contínuo da qualidade da água com dados abertos para pesquisa e fiscalização. Prevê a integração com os recursos do acordo de reparação judicial (Termo de Ajustamento de Conduta, valor estimado R$ 100 bilhões) firmado entre a Samarco e os governos brasileiro e de Minas Gerais.</p>
+              </div>
+              <span class="project-status status-active">Em implementação</span>
+            </div>
+            <div class="project-card">
+              <div>
+                <h4>Corredor Ecológico do Espinhaço</h4>
+                <p>Projeto de conectividade ecológica que visa unir os fragmentos de vegetação nativa ao longo da Serra do Espinhaço — espinha dorsal de Minas Gerais, com 1.100 km de extensão —, criando um corredor contínuo de biodiversidade entre os Parques Nacionais do Cipó, da Serra do Gandarela, e a APA Sul. O corredor abrange mais de 80 municípios, e sua implantação será feita via parceria com proprietários rurais (PSA e RPPN incentivadas), prefeituras e organizações da sociedade civil. Espécies bandeira como o lobo-guará, a onça-parda e a ararinha-azul serão monitoradas por telemetria como indicadores da saúde do corredor.</p>
+              </div>
+              <span class="project-status status-study">Em estudo</span>
+            </div>
+            <div class="project-card">
+              <div>
+                <h4>MG Carbon Market</h4>
+                <p>Plataforma estadual de créditos de carbono que integra proprietários rurais, empresas e investidores em um mercado regulado e transparente. O sistema certifica projetos de REDD+ (redução do desmatamento), restauração florestal e agricultura de baixo carbono, emitindo créditos verificados por terceiros independentes (Verra, Gold Standard). A receita dos créditos é distribuída entre os proprietários rurais (60%), comunidades tradicionais da área do projeto (20%) e um fundo estadual de clima (20%). Meta: 1 milhão de créditos emitidos por ano até 2030, gerando R$ 500 milhões em receita anual para o campo mineiro.</p>
+              </div>
+              <span class="project-status status-proposal">Proposta</span>
+            </div>
+            <div class="project-card">
+              <div>
+                <h4>Monitoramento Ambiental via Satélite (SEMAS-MG)</h4>
+                <p>Sistema integrado de monitoramento ambiental do estado de Minas Gerais combinando dados de satélites (Landsat, Sentinel, CBERS), drones e sensores IoT para monitoramento em tempo real de desmatamento, queimadas, qualidade das águas superficiais e emissões industriais. O sistema, desenvolvido em parceria com o INPE, UFMG e startups de tecnologia ambiental, gera alertas automáticos para o SUPRAM e para o MP-MG quando anomalias são detectadas, permitindo resposta em menos de 48 horas. Todos os dados serão públicos, acessíveis via plataforma web aberta, fortalecendo a participação social na fiscalização ambiental.</p>
+              </div>
+              <span class="project-status status-active">Em desenvolvimento</span>
+            </div>
+          </div>
+        </section>
+
+        <section id="indicadores" class="content-section fade-in-section">
+          <div class="section-label">09</div>
+          <h2>Indicadores-Chave (KPIs)</h2>
+          <div class="metric-grid">
+            <div class="metric-card">
+              <div class="metric-label">Área Preservada / Recuperada</div>
+              <div><span class="metric-value">+500</span><span class="metric-unit">mil ha</span></div>
+              <div class="metric-description">Meta 2026–2035 · restauração florestal acumulada</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">Qualidade Água Rio Doce</div>
+              <div><span class="metric-value">80</span><span class="metric-unit">%</span></div>
+              <div class="metric-description">Do curso apto ao uso humano · meta 2035 · atual: &lt;20%</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">Emissões GEE Estaduais</div>
+              <div><span class="metric-value">-35</span><span class="metric-unit">%</span></div>
+              <div class="metric-description">Redução até 2035 em relação ao nível de 2005</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">Crédito Carbono Gerado</div>
+              <div><span class="metric-value">1M</span><span class="metric-unit">/ano</span></div>
+              <div class="metric-description">Meta 2030 · MG Carbon Market · valor: R$ 500M/ano</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">Áreas Degradadas Recuperadas</div>
+              <div><span class="metric-value">200</span><span class="metric-unit">mil ha</span></div>
+              <div class="metric-description">Meta para o Rio Doce e APAs prioritárias até 2033</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">Espécies Monitoradas</div>
+              <div><span class="metric-value">800+</span><span class="metric-unit"></span></div>
+              <div class="metric-description">Ameaçadas com monitoramento regular via SEMAS-MG</div>
+            </div>
+          </div>
+        </section>
+
+        <section id="debate" class="content-section fade-in-section">
+          <div class="section-label">10</div>
+          <h2>Questões para Debate Público</h2>
+          <ol>
+            <li>Qual a responsabilidade do Estado de Minas Gerais na tragédia de Brumadinho? O modelo de licenciamento e fiscalização de barragens de rejeitos foi efetivamente reformado após o desastre, ou ainda existem vulnerabilidades sistêmicas?</li>
+            <li>Como o mercado de créditos de carbono pode beneficiar comunidades quilombolas, indígenas e agricultores familiares do Cerrado mineiro, sem se tornar mais um instrumento de expropriação de terras por investidores externos?</li>
+            <li>O licenciamento ambiental em Minas Gerais é mais um instrumento de proteção ou de retardo burocrático? Como torná-lo simultaneamente mais ágil e mais rigoroso?</li>
+            <li>Como conciliar a expansão da mineração — fundamental para a transição energética global (lítio, grafite, nióbio) — com a proteção dos ecossistemas do Cerrado e da Mata Atlântica?</li>
+            <li>Qual deve ser o papel do Estado nas negociações de reparação por Mariana e Brumadinho? O acordo de R$ 100 bilhões firmado com a Samarco é suficiente para recuperar os danos causados ao Rio Doce?</li>
+            <li>Como integrar efetivamente a agenda climática às políticas municipais de Minas Gerais, especialmente nos 700+ municípios com menos de 20 mil habitantes e capacidade técnica limitada?</li>
+            <li>A proteção do Cerrado merece a mesma atenção política e recursos que a proteção da Amazônia? O que impede uma mobilização equivalente em torno desse bioma igualmente ameaçado?</li>
+          </ol>
+          <div style="margin-top: var(--sp-8);">
+            <a href="../participar.html" class="btn btn-primary" id="btn-ma-debate">Participar do Debate</a>
+          </div>
+        </section>
+
+        <section id="referencias" class="content-section fade-in-section">
+          <div class="section-label">11</div>
+          <h2>Referências Bibliográficas</h2>
+          <div class="reference-list">
+            <div class="reference-item">
+              <span class="reference-num">01</span>
+              <span>IEF – Instituto Estadual de Florestas. <em>Lista das Espécies Ameaçadas de Extinção da Fauna de Minas Gerais</em>. Belo Horizonte: IEF/SEMAD, 2023.</span>
+            </div>
+            <div class="reference-item">
+              <span class="reference-num">02</span>
+              <span>INPE – Instituto Nacional de Pesquisas Espaciais. <em>PRODES Cerrado: Monitoramento do Desmatamento no Cerrado Brasileiro 2022</em>. São José dos Campos: INPE, 2023.</span>
+            </div>
+            <div class="reference-item">
+              <span class="reference-num">03</span>
+              <span>COMITÊ PCJ / CBH DOCE. <em>Relatório de Situação dos Recursos Hídricos da Bacia do Rio Doce 2023</em>. Belo Horizonte: CBH Doce, 2024.</span>
+            </div>
+            <div class="reference-item">
+              <span class="reference-num">04</span>
+              <span>GOVERNO DE MINAS GERAIS / SEMAD. <em>Inventário de Emissões de Gases de Efeito Estufa de Minas Gerais 2020</em>. Belo Horizonte: SEMAD, 2022.</span>
+            </div>
+            <div class="reference-item">
+              <span class="reference-num">05</span>
+              <span>PNUMA – Programa das Nações Unidas para o Meio Ambiente. <em>Perspectivas do Meio Ambiente Mundial – GEO-6</em>. Nairobi: UNEP, 2019.</span>
+            </div>
+            <div class="reference-item">
+              <span class="reference-num">06</span>
+              <span>MYERS, N. et al. <em>Biodiversity hotspots for conservation priorities</em>. Nature, v. 403, p. 853–858, 2000. [Artigo seminal sobre hotspots, inclui Mata Atlântica e Cerrado]</span>
+            </div>
+            <div class="reference-item">
+              <span class="reference-num">07</span>
+              <span>MAPBIOMAS. <em>Relatório Anual de Uso e Cobertura da Terra de Minas Gerais – Coleção 8</em>. São Paulo: MapBiomas, 2023.</span>
+            </div>
+            <div class="reference-item">
+              <span class="reference-num">08</span>
+              <span>FELIPPE, M.F.; MAGALHÃES JUNIOR, A.P. (orgs.). <em>O Rio Doce e o rompimento da barragem de Fundão: natureza, sociedade e gestão da crise</em>. Belo Horizonte: IGC/UFMG, 2021.</span>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
   <footer class="site-footer">
-    <p>&copy; 2026 Projeto Minas 2035 – Todos os direitos reservados.</p>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="navbar-brand">
+            <svg class="navbar-logo" viewBox="0 0 36 36" fill="none">
+              <rect width="36" height="36" rx="8" fill="url(#grad-footer-ma)"/>
+              <path d="M10 24 L10 13 L18 20 L26 13 L26 24" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              <defs><linearGradient id="grad-footer-ma" x1="0" y1="0" x2="36" y2="36" gradientUnits="userSpaceOnUse"><stop stop-color="#00E5FF"/><stop offset="1" stop-color="#4F46E5"/></linearGradient></defs>
+            </svg>
+            <span class="navbar-name">Minas <span>2035</span></span>
+          </a>
+          <p>Plataforma independente de estudos para o desenvolvimento de Minas Gerais com visão de longo prazo.</p>
+        </div>
+        <div class="footer-col"><h5>Projeto</h5><ul><li><a href="../sobre.html">Sobre</a></li><li><a href="../manifesto.html">Manifesto</a></li><li><a href="../pilares.html">Pilares</a></li><li><a href="../participar.html">Participar</a></li></ul></div>
+        <div class="footer-col"><h5>Outras Áreas</h5><ul><li><a href="economia.html">Economia</a></li><li><a href="trabalho.html">Trabalho</a></li><li><a href="energia.html">Energia</a></li><li><a href="educacao.html">Educação</a></li></ul></div>
+        <div class="footer-col"><h5>Legal</h5><ul><li><a href="#">Política de privacidade</a></li><li><a href="#">Licença de uso</a></li><li><a href="#">Contato</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Projeto Minas 2035. Fontes: IEF, INPE, MapBiomas, SEMAD, CBH Doce, PNUMA.</p>
+        <a href="../manifesto.html">Manifesto →</a>
+      </div>
+    </div>
   </footer>
+
+  <script>lucide.createIcons();</script>
 </body>
 </html>

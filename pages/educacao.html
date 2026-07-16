@@ -3,41 +3,388 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Centro de Educação e Capital Humano – Formação, pesquisa e inovação como pilares do desenvolvimento sustentável de Minas Gerais até 2035." />
   <title>Educação – Projeto Minas 2035</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="../css/variables.css" />
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="stylesheet" href="../css/components.css" />
-  <link rel="stylesheet" href="../css/responsive.css" />
   <link rel="stylesheet" href="../css/animations.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+  <link rel="stylesheet" href="../css/pages.css" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
   <script defer src="../js/app.js"></script>
   <script defer src="../js/menu.js"></script>
   <script defer src="../js/animations.js"></script>
-  <script defer src="../js/charts.js"></script>
+  <script defer src="../js/counters.js"></script>
 </head>
 <body>
-  <header class="site-header">
-    <h1>Projeto Minas 2035</h1>
-    <nav class="main-nav">
-      <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../manifesto.html">Manifesto</a></li>
-        <li><a href="../pilares.html">Pilares</a></li>
-        <li><a href="../indicadores.html">Indicadores</a></li>
-        <li><a href="../participar.html">Participar</a></li>
-        <li><a href="../sobre.html">Sobre</a></li>
-      </ul>
-    </nav>
+
+  <header class="navbar" id="navbar">
+    <div class="container">
+      <a href="../index.html" class="navbar-brand">
+        <svg class="navbar-logo" viewBox="0 0 36 36" fill="none">
+          <rect width="36" height="36" rx="8" fill="url(#grad-nav-edu)"/>
+          <path d="M10 24 L10 13 L18 20 L26 13 L26 24" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <defs><linearGradient id="grad-nav-edu" x1="0" y1="0" x2="36" y2="36" gradientUnits="userSpaceOnUse"><stop stop-color="#00E5FF"/><stop offset="1" stop-color="#4F46E5"/></linearGradient></defs>
+        </svg>
+        <span class="navbar-name">Minas <span>2035</span></span>
+      </a>
+      <nav class="navbar-nav" id="main-nav">
+        <a href="../index.html#sobre">O Projeto</a>
+        <a href="../index.html#areas">Áreas</a>
+        <a href="../index.html#principios">Princípios</a>
+        <a href="../indicadores.html">Indicadores</a>
+        <a href="../manifesto.html">Manifesto</a>
+      </nav>
+      <div class="navbar-cta">
+        <a href="../participar.html" class="btn btn-outline">Participar</a>
+        <a href="../index.html#areas" class="btn btn-primary">Explorar</a>
+      </div>
+      <button class="hamburger" id="hamburger-btn" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </header>
-  <main>
-    <section class="content">
-      <h2>Educação</h2>
-      <p>Conteúdo introdutório sobre a estratégia educativa para Minas até 2035.</p>
-      <!-- Placeholder for charts -->
-      <div id="chart-educacao"></div>
-    </section>
-  </main>
+
+  <section class="page-hero">
+    <div class="page-hero-grid"></div>
+    <div class="container">
+      <div class="page-hero-content fade-in-section">
+        <div class="breadcrumb">
+          <a href="../index.html">Início</a><span class="breadcrumb-sep">/</span>
+          <a href="../index.html#areas">Áreas</a><span class="breadcrumb-sep">/</span>
+          <span class="breadcrumb-current">Educação</span>
+        </div>
+        <div class="section-label">Centro Temático</div>
+        <h1>Centro de Educação e Capital Humano</h1>
+        <p class="page-subtitle">Formação, pesquisa e inovação como pilares do desenvolvimento sustentável de Minas Gerais. Investir em pessoas é a única aposta que nunca perde.</p>
+        <div class="page-stats">
+          <div class="page-stat"><span class="page-stat-value">2,4M</span><span class="page-stat-label">Alunos na rede pública</span></div>
+          <div class="page-stat-divider"></div>
+          <div class="page-stat"><span class="page-stat-value">50+</span><span class="page-stat-label">IES públicas</span></div>
+          <div class="page-stat-divider"></div>
+          <div class="page-stat"><span class="page-stat-value">853</span><span class="page-stat-label">Municípios com rede educacional</span></div>
+        </div>
+        <div class="tag-list" style="margin-top:var(--sp-6);">
+          <span class="tag">IDEB</span><span class="tag">Ensino Médio</span><span class="tag">Universidades</span>
+          <span class="tag">Formação Técnica</span><span class="tag">Capital Humano</span><span class="tag">Evasão Escolar</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="page-layout">
+      <aside>
+        <nav class="toc">
+          <div class="toc-title">Neste Centro</div>
+          <ul class="toc-list">
+            <li><a href="#resumo">01 · Resumo Executivo</a></li>
+            <li><a href="#situacao">02 · Situação Atual</a></li>
+            <li><a href="#desafios">03 · Desafios Estruturais</a></li>
+            <li><a href="#oportunidades">04 · Oportunidades</a></li>
+            <li><a href="#benchmarking">05 · Benchmarking Internacional</a></li>
+            <li><a href="#objetivos">06 · Objetivos 2035</a></li>
+            <li><a href="#metas">07 · Metas 2050</a></li>
+            <li><a href="#projetos">08 · Projetos Estratégicos</a></li>
+            <li><a href="#indicadores">09 · Indicadores-Chave</a></li>
+            <li><a href="#debate">10 · Questões para Debate</a></li>
+            <li><a href="#referencias">11 · Referências</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <article class="article-content">
+
+        <section id="resumo" class="content-section fade-in-section">
+          <div class="section-label">01</div>
+          <h2>Resumo Executivo</h2>
+          <p>A educação é o investimento de mais longo prazo e de retorno mais consistente que uma sociedade pode fazer. Minas Gerais possui uma das maiores e mais antigas redes públicas de ensino do Brasil, com mais de 2,4 milhões de estudantes na educação básica e mais de 50 instituições de ensino superior públicas — incluindo a UFMG, considerada entre as melhores universidades da América Latina.</p>
+          <p>No entanto, os indicadores de qualidade revelam um quadro heterogêneo: o IDEB dos anos finais do ensino fundamental e do ensino médio permanece abaixo das metas nacionais, a taxa de evasão no ensino médio supera 10% ao ano e o interior do Estado apresenta resultados sistematicamente inferiores à capital. A desigualdade educacional é, ao mesmo tempo, reflexo e causa da desigualdade econômica regional.</p>
+          <p>O Projeto Minas 2035 propõe uma agenda educacional centrada em três eixos: melhoria da qualidade do ensino básico com foco em aprendizagem real, expansão da formação técnica e tecnológica alinhada às demandas do mercado de trabalho do século XXI, e fortalecimento do ecossistema de pesquisa e inovação nas universidades.</p>
+          <div class="quote-block">
+            <blockquote>"A educação não transforma o mundo. A educação muda as pessoas. As pessoas transformam o mundo."</blockquote>
+            <cite>— Paulo Freire, Pedagogia do Oprimido, 1968</cite>
+          </div>
+        </section>
+
+        <section id="situacao" class="content-section fade-in-section">
+          <div class="section-label">02</div>
+          <h2>Situação Atual de Minas Gerais</h2>
+          <p>Minas Gerais tem uma rede educacional extensa, mas com qualidade desigual. Enquanto escolas da Região Metropolitana de Belo Horizonte apresentam resultados próximos às médias das melhores redes estaduais do Brasil, municípios do Norte de Minas e Jequitinhonha registram IDEBs abaixo de 4,0 nos anos finais do ensino fundamental — equivalente a uma defasagem de aprendizagem de dois anos ou mais.</p>
+          <div class="metric-grid">
+            <div class="metric-card">
+              <div class="metric-label">IDEB Anos Iniciais (EF)</div>
+              <div><span class="metric-value">5,8</span></div>
+              <div class="metric-description">Meta 2035: 7,0 — INEP 2023</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">IDEB Ensino Médio</div>
+              <div><span class="metric-value">4,2</span></div>
+              <div class="metric-description">Meta 2035: 6,0 — lacuna crítica de qualidade</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">Taxa de Evasão no EM</div>
+              <div><span class="metric-value">10,3</span><span class="metric-unit">%</span></div>
+              <div class="metric-description">Por ano — INEP 2022 — meta 2035: abaixo de 3%</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">Matrículas Ensino Superior</div>
+              <div><span class="metric-value">650</span><span class="metric-unit">mil</span></div>
+              <div class="metric-description">Públicas e privadas — INEP 2022</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">Matrículas Técnicas</div>
+              <div><span class="metric-value">280</span><span class="metric-unit">mil</span></div>
+              <div class="metric-description">SENAI + CEFET + rede estadual</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">Analfabetismo (15+ anos)</div>
+              <div><span class="metric-value">6,1</span><span class="metric-unit">%</span></div>
+              <div class="metric-description">PNAD 2022 — concentrado no norte e nordeste mineiro</div>
+            </div>
+          </div>
+        </section>
+
+        <section id="desafios" class="content-section fade-in-section">
+          <div class="section-label">03</div>
+          <h2>Desafios Estruturais</h2>
+          <ul>
+            <li><strong>Baixa qualidade do ensino médio</strong> — O ensino médio é o elo mais fraco da educação básica mineira. Com IDEB de 4,2 e altas taxas de evasão, esse segmento é o principal gargalo entre o ensino fundamental e a formação superior ou técnica qualificada.</li>
+            <li><strong>Desigualdade regional profunda</strong> — O IDEB médio dos municípios do Vale do Jequitinhonha é 38% inferior ao da RMBH. Essa disparidade se reflete em diferenças dramáticas de renda, produtividade e oportunidades ao longo da vida.</li>
+            <li><strong>Subfinanciamento da educação estadual</strong> — O Estado de Minas Gerais destina cerca de 25% da receita líquida à educação — o mínimo constitucional — mas a crise fiscal limita investimentos em infraestrutura escolar, formação de professores e tecnologia educacional.</li>
+            <li><strong>Déficit de formação técnica e tecnológica</strong> — A demanda por profissionais técnicos em TI, automação, enfermagem e agronegócio supera em muito a oferta das redes SENAI, CEFET e estadual. Há um descompasso crescente entre o perfil da formação e as necessidades do mercado.</li>
+            <li><strong>Evasão universitária e brain drain</strong> — Minas forma um grande contingente de profissionais altamente qualificados, mas parcela significativa migra para São Paulo, Rio de Janeiro ou para o exterior em busca de melhores oportunidades profissionais e salariais.</li>
+          </ul>
+          <div class="callout callout-warning">
+            <span class="callout-icon"><i data-lucide="alert-triangle"></i></span>
+            <p><strong>Alerta:</strong> Estudos da FJP estimam que a defasagem educacional entre o norte e o sul de Minas Gerais perpetua uma diferença de renda per capita de até 400% entre municípios. Sem intervenção sistêmica na qualidade educacional, essa desigualdade tende a se aprofundar nas próximas décadas.</p>
+          </div>
+        </section>
+
+        <section id="oportunidades" class="content-section fade-in-section">
+          <div class="section-label">04</div>
+          <h2>Oportunidades</h2>
+          <ul>
+            <li><strong>Tecnologia educacional (EdTech)</strong> — O ensino híbrido e as plataformas digitais permitem levar conteúdo de qualidade a municípios distantes sem o custo de infraestrutura física. Minas pode usar sua rede de universidades para produzir conteúdo de referência nacional.</li>
+            <li><strong>Parceria escola-empresa</strong> — O modelo dual alemão, no qual estudantes alternam entre escola e empresa desde o ensino médio, demonstrou reduzir drasticamente o desemprego jovem e a desconexão entre formação e mercado. Adaptações desse modelo ao contexto mineiro são viáveis e urgentes.</li>
+            <li><strong>UFMG e rede federal como polo</strong> — A UFMG é a principal universidade de pesquisa de Minas Gerais e uma das 10 melhores da América Latina (QS 2023). Fortalecer sua conexão com o setor produtivo e expandir sua atuação regional pode multiplicar seu impacto econômico.</li>
+            <li><strong>Escola em tempo integral</strong> — O Programa Nacional de Escolas Cívico-Militares e o novo ensino médio criam uma janela de oportunidade para reformatar a oferta educacional do ensino médio com jornada ampliada, atividades extracurriculares e itinerários formativos diversificados.</li>
+          </ul>
+        </section>
+
+        <section id="benchmarking" class="content-section fade-in-section">
+          <div class="section-label">05</div>
+          <h2>Benchmarking Internacional</h2>
+          <table class="bench-table">
+            <thead>
+              <tr><th>País / Região</th><th>PISA Score (Média)</th><th>Estratégia-chave</th><th>Lição para Minas</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="td-highlight">Finlândia</td>
+                <td class="td-accent">520+</td>
+                <td>Professores altamente selecionados e bem remunerados; currículo focado em competências; autonomia escolar.</td>
+                <td>Valorização e formação de professores como alavanca central da qualidade educacional.</td>
+              </tr>
+              <tr>
+                <td class="td-highlight">Singapura</td>
+                <td class="td-accent">550+</td>
+                <td>Política de meritocracia educacional rigorosa; currículo atualizado a cada 5 anos; investimento em liderança escolar.</td>
+                <td>Gestão educacional profissional com metas claras e avaliação sistemática de resultados.</td>
+              </tr>
+              <tr>
+                <td class="td-highlight">Espírito Santo (Brasil)</td>
+                <td class="td-accent">5,6 IDEB EM</td>
+                <td>Bônus por desempenho para professores; escolas de referência; gestão por resultados com autonomia pedagógica.</td>
+                <td>Experiência brasileira bem-sucedida aplicável ao contexto mineiro sem necessidade de grandes reformas estruturais.</td>
+              </tr>
+              <tr>
+                <td class="td-highlight">Alemanha (Sistema Dual)</td>
+                <td class="td-accent">Desempr. Jovem: 5,5%</td>
+                <td>Formação profissional integrada à empresa desde os 16 anos; certificação reconhecida pelo mercado.</td>
+                <td>Modelo de formação técnica-empresarial que resolve simultaneamente qualificação e empregabilidade.</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section id="objetivos" class="content-section fade-in-section">
+          <div class="section-label">06</div>
+          <h2>Objetivos 2035</h2>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-year">2026–2027</div>
+              <div class="timeline-title">Plano Estadual de Educação reformulado</div>
+              <div class="timeline-desc">Revisão do PEE-MG com metas mensuráveis por escola e região, criação do Fundo Estadual de Qualidade Educacional e implementação do programa de bonificação por desempenho docente.</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-year">2027–2030</div>
+              <div class="timeline-title">IDEB do Ensino Médio acima de 5,0</div>
+              <div class="timeline-desc">Expansão de escolas de tempo integral para 50% da rede estadual, currículo reformulado com itinerários de tecnologia e empreendedorismo, e redução da evasão para abaixo de 6%.</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-year">2030–2033</div>
+              <div class="timeline-title">Rede de 30 Institutos Técnicos Regionais</div>
+              <div class="timeline-desc">Implantação de uma rede de institutos técnicos nas 12 mesorregiões, em parceria com o setor produtivo, com vagas voltadas para TI, saúde, agronegócio e energias renováveis.</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-year">2033–2035</div>
+              <div class="timeline-title">IDEB acima de 6,0 em todo o estado</div>
+              <div class="timeline-desc">Eliminar a diferença de IDEB entre a RMBH e o interior para menos de 0,5 ponto, com todos os municípios acima de 5,0 nos anos finais do ensino fundamental.</div>
+            </div>
+          </div>
+        </section>
+
+        <section id="metas" class="content-section fade-in-section">
+          <div class="section-label">07</div>
+          <h2>Metas 2050</h2>
+          <ol>
+            <li>Eliminar completamente o analfabetismo funcional na população com menos de 40 anos em todos os 853 municípios.</li>
+            <li>IDEB do ensino médio acima de 7,0 em toda a rede estadual — equiparando Minas aos sistemas educacionais da OCDE.</li>
+            <li>100% dos jovens de 18 anos com ensino médio completo ou formação técnica equivalente reconhecida.</li>
+            <li>30% dos trabalhadores com nível superior — contra os atuais 17% — com diversificação regional da formação.</li>
+            <li>UFMG entre as 200 melhores universidades do mundo no QS World University Rankings.</li>
+            <li>Investimento público em educação acima de 7% do PIB estadual, com alocação eficiente baseada em resultados.</li>
+          </ol>
+        </section>
+
+        <section id="projetos" class="content-section fade-in-section">
+          <div class="section-label">08</div>
+          <h2>Projetos Estratégicos</h2>
+          <div style="display:flex;flex-direction:column;gap:var(--sp-4);">
+            <div class="project-card">
+              <div>
+                <h4>MG Educa 2035 – Plano de Qualidade da Educação Básica</h4>
+                <p>Programa de gestão por resultados para todas as 3.800 escolas estaduais, com dashboards de acompanhamento por escola, formação continuada de professores e bonificação por metas de aprendizagem.</p>
+              </div>
+              <span class="project-status status-proposal">Proposta</span>
+            </div>
+            <div class="project-card">
+              <div>
+                <h4>Rede Mineira de Institutos Técnicos</h4>
+                <p>30 novos institutos técnicos nas mesorregiões mineiras, em parceria público-privada com SENAI, FIEMG e empresas locais. Foco em formação para as demandas do mercado regional: TI, saúde, energia e agronegócio.</p>
+              </div>
+              <span class="project-status status-study">Em estudo</span>
+            </div>
+            <div class="project-card">
+              <div>
+                <h4>Escola em Tempo Integral – Expansão MG</h4>
+                <p>Expansão do programa de escolas em tempo integral para 50% da rede estadual até 2030, com infraestrutura adequada, alimentação de qualidade e atividades extracurriculares focadas em STEM, artes e esporte.</p>
+              </div>
+              <span class="project-status status-active">Em implementação</span>
+            </div>
+            <div class="project-card">
+              <div>
+                <h4>Bolsas de Iniciação Científica no Ensino Médio</h4>
+                <p>Programa de iniciação científica para estudantes do ensino médio das redes pública e privada, em parceria com universidades e institutos de pesquisa. Meta: 5.000 bolsistas/ano até 2028.</p>
+              </div>
+              <span class="project-status status-proposal">Proposta</span>
+            </div>
+          </div>
+        </section>
+
+        <section id="indicadores" class="content-section fade-in-section">
+          <div class="section-label">09</div>
+          <h2>Indicadores-Chave (KPIs)</h2>
+          <div class="metric-grid">
+            <div class="metric-card">
+              <div class="metric-label">Meta IDEB Ensino Médio 2035</div>
+              <div><span class="metric-value">6,0</span></div>
+              <div class="metric-description">Atual: 4,2 — crescimento necessário: +0,18/ano</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">Evasão Escolar 2035</div>
+              <div><span class="metric-value">&lt; 3</span><span class="metric-unit">%</span></div>
+              <div class="metric-description">Atual: 10,3% — redução de 7 pontos percentuais</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">Matrículas Técnicas 2035</div>
+              <div><span class="metric-value">600</span><span class="metric-unit">mil</span></div>
+              <div class="metric-description">Atual: 280 mil — mais que dobrar a oferta</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">% PIB estadual em educação</div>
+              <div><span class="metric-value">7</span><span class="metric-unit">%</span></div>
+              <div class="metric-description">Meta 2035 — referência: Finlândia 6,8%</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">Analfabetismo funcional</div>
+              <div><span class="metric-value">&lt; 2</span><span class="metric-unit">%</span></div>
+              <div class="metric-description">Meta 2035 — atual: 6,1% (analfabetismo absoluto)</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">Professores com pós-graduação</div>
+              <div><span class="metric-value">60</span><span class="metric-unit">%</span></div>
+              <div class="metric-description">Meta 2035 — atual: ~30% da rede estadual</div>
+            </div>
+          </div>
+        </section>
+
+        <section id="debate" class="content-section fade-in-section">
+          <div class="section-label">10</div>
+          <h2>Questões para Debate Público</h2>
+          <ol>
+            <li>Como criar incentivos reais para que professores talentosos escolham escolas nas regiões mais vulneráveis do Estado?</li>
+            <li>O modelo de escola em tempo integral é viável para toda a rede estadual, ou deve ser priorizado em regiões específicas?</li>
+            <li>Como estruturar parcerias público-privadas na educação técnica sem comprometer a qualidade e o acesso universal?</li>
+            <li>Qual deve ser o papel das universidades federais mineiras no desenvolvimento econômico regional dos municípios onde estão instaladas?</li>
+            <li>Como combater a evasão escolar no ensino médio sem perder o rigor pedagógico?</li>
+            <li>É possível adaptar o sistema dual alemão de formação técnica ao contexto social e cultural mineiro?</li>
+            <li>Como usar tecnologia educacional para reduzir a desigualdade de qualidade entre escolas urbanas e rurais?</li>
+          </ol>
+          <div style="margin-top:var(--sp-8);"><a href="../participar.html" class="btn btn-primary" id="btn-edu-debate">Participar do Debate</a></div>
+        </section>
+
+        <section id="referencias" class="content-section fade-in-section">
+          <div class="section-label">11</div>
+          <h2>Referências Bibliográficas</h2>
+          <div class="reference-list">
+            <div class="reference-item"><span class="reference-num">01</span><span>INEP. <em>Índice de Desenvolvimento da Educação Básica (IDEB) – Resultados 2023</em>. Brasília: MEC/INEP, 2023.</span></div>
+            <div class="reference-item"><span class="reference-num">02</span><span>FJP – Fundação João Pinheiro. <em>Atlas do Desenvolvimento Humano em Minas Gerais</em>. Belo Horizonte: FJP, 2022.</span></div>
+            <div class="reference-item"><span class="reference-num">03</span><span>OCDE. <em>Education at a Glance 2023: OECD Indicators</em>. Paris: OECD Publishing, 2023.</span></div>
+            <div class="reference-item"><span class="reference-num">04</span><span>HANUSHEK, E.; WOESSMANN, L. <em>The Knowledge Capital of Nations: Education and the Economics of Growth</em>. Cambridge: MIT Press, 2015.</span></div>
+            <div class="reference-item"><span class="reference-num">05</span><span>BANCO MUNDIAL. <em>Relatório sobre o Desenvolvimento Mundial 2018: Aprendizagem para realizar a promessa da educação</em>. Washington: Banco Mundial, 2018.</span></div>
+            <div class="reference-item"><span class="reference-num">06</span><span>GOVERNO DE MINAS GERAIS / SEE-MG. <em>Plano Estadual de Educação de Minas Gerais 2022–2031</em>. Belo Horizonte: SEE-MG, 2022.</span></div>
+            <div class="reference-item"><span class="reference-num">07</span><span>PISA 2022: <em>Results in Focus – OECD Programme for International Student Assessment</em>. Paris: OECD, 2023.</span></div>
+            <div class="reference-item"><span class="reference-num">08</span><span>TODOS PELA EDUCAÇÃO. <em>Anuário Brasileiro da Educação Básica 2023</em>. São Paulo: Moderna, 2023.</span></div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+  </div>
+
   <footer class="site-footer">
-    <p>&copy; 2026 Projeto Minas 2035 – Todos os direitos reservados.</p>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="navbar-brand">
+            <svg class="navbar-logo" viewBox="0 0 36 36" fill="none">
+              <rect width="36" height="36" rx="8" fill="url(#grad-footer-edu)"/>
+              <path d="M10 24 L10 13 L18 20 L26 13 L26 24" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              <defs><linearGradient id="grad-footer-edu" x1="0" y1="0" x2="36" y2="36" gradientUnits="userSpaceOnUse"><stop stop-color="#00E5FF"/><stop offset="1" stop-color="#4F46E5"/></linearGradient></defs>
+            </svg>
+            <span class="navbar-name">Minas <span>2035</span></span>
+          </a>
+          <p>Plataforma independente de estudos para o desenvolvimento de Minas Gerais com visão de longo prazo.</p>
+        </div>
+        <div class="footer-col"><h5>Projeto</h5><ul><li><a href="../sobre.html">Sobre</a></li><li><a href="../manifesto.html">Manifesto</a></li><li><a href="../pilares.html">Pilares</a></li><li><a href="../participar.html">Participar</a></li></ul></div>
+        <div class="footer-col"><h5>Outras Áreas</h5><ul><li><a href="economia.html">Economia</a></li><li><a href="tecnologia.html">Tecnologia</a></li><li><a href="saude.html">Saúde</a></li><li><a href="infraestrutura.html">Infraestrutura</a></li></ul></div>
+        <div class="footer-col"><h5>Legal</h5><ul><li><a href="#">Política de privacidade</a></li><li><a href="#">Licença de uso</a></li><li><a href="#">Contato</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Projeto Minas 2035. Fontes: INEP, FJP, OCDE, Banco Mundial, SEE-MG.</p>
+        <a href="../manifesto.html">Manifesto →</a>
+      </div>
+    </div>
   </footer>
+  <script>lucide.createIcons();</script>
 </body>
 </html>

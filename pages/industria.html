@@ -3,41 +3,473 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Centro Industrial e Produtivo – Diagnóstico, estratégias e projetos para reindustrializar Minas Gerais e consolidar seu parque industrial como referência nacional até 2035." />
   <title>Indústria – Projeto Minas 2035</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="../css/variables.css" />
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="stylesheet" href="../css/components.css" />
-  <link rel="stylesheet" href="../css/responsive.css" />
   <link rel="stylesheet" href="../css/animations.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+  <link rel="stylesheet" href="../css/pages.css" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
   <script defer src="../js/app.js"></script>
   <script defer src="../js/menu.js"></script>
   <script defer src="../js/animations.js"></script>
-  <script defer src="../js/charts.js"></script>
+  <script defer src="../js/counters.js"></script>
 </head>
 <body>
-  <header class="site-header">
-    <h1>Projeto Minas 2035</h1>
-    <nav class="main-nav">
-      <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../manifesto.html">Manifesto</a></li>
-        <li><a href="../pilares.html">Pilares</a></li>
-        <li><a href="../indicadores.html">Indicadores</a></li>
-        <li><a href="../participar.html">Participar</a></li>
-        <li><a href="../sobre.html">Sobre</a></li>
-      </ul>
-    </nav>
+
+  <header class="navbar" id="navbar">
+    <div class="container">
+      <a href="../index.html" class="navbar-brand">
+        <svg class="navbar-logo" viewBox="0 0 36 36" fill="none">
+          <rect width="36" height="36" rx="8" fill="url(#grad-nav-ind)"/>
+          <path d="M10 24 L10 13 L18 20 L26 13 L26 24" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <defs><linearGradient id="grad-nav-ind" x1="0" y1="0" x2="36" y2="36" gradientUnits="userSpaceOnUse"><stop stop-color="#00E5FF"/><stop offset="1" stop-color="#4F46E5"/></linearGradient></defs>
+        </svg>
+        <span class="navbar-name">Minas <span>2035</span></span>
+      </a>
+      <nav class="navbar-nav" id="main-nav">
+        <a href="../index.html#sobre">O Projeto</a>
+        <a href="../index.html#areas">Áreas</a>
+        <a href="../index.html#principios">Princípios</a>
+        <a href="../indicadores.html">Indicadores</a>
+        <a href="../manifesto.html">Manifesto</a>
+      </nav>
+      <div class="navbar-cta">
+        <a href="../participar.html" class="btn btn-outline">Participar</a>
+        <a href="../index.html#areas" class="btn btn-primary">Explorar</a>
+      </div>
+      <button class="hamburger" id="hamburger-btn" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </header>
-  <main>
-    <section class="content">
-      <h2>Indústria</h2>
-      <p>Conteúdo introdutório sobre a estratégia industrial para Minas até 2035.</p>
-      <!-- Placeholder for charts -->
-      <div id="chart-industria"></div>
-    </section>
-  </main>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero-grid"></div>
+    <div class="container">
+      <div class="page-hero-content fade-in-section">
+        <div class="breadcrumb">
+          <a href="../index.html">Início</a>
+          <span class="breadcrumb-sep">/</span>
+          <a href="../index.html#areas">Áreas</a>
+          <span class="breadcrumb-sep">/</span>
+          <span class="breadcrumb-current">Indústria</span>
+        </div>
+        <div class="section-label">Centro Temático</div>
+        <h1>Centro Industrial e Produtivo</h1>
+        <p class="page-subtitle">
+          Diagnóstico, estratégias e projetos para reverter a desindustrialização, modernizar o parque
+          produtivo e consolidar Minas Gerais como o terceiro polo industrial do Brasil até 2035.
+        </p>
+        <div class="page-stats">
+          <div class="page-stat">
+            <span class="page-stat-value">15%</span>
+            <span class="page-stat-label">do PIB industrial</span>
+          </div>
+          <div class="page-stat-divider"></div>
+          <div class="page-stat">
+            <span class="page-stat-value">1,2M</span>
+            <span class="page-stat-label">empregos industriais</span>
+          </div>
+          <div class="page-stat-divider"></div>
+          <div class="page-stat">
+            <span class="page-stat-value">3°</span>
+            <span class="page-stat-label">parque industrial BR</span>
+          </div>
+        </div>
+        <div class="tag-list" style="margin-top: var(--sp-6);">
+          <span class="tag">Manufatura</span>
+          <span class="tag">Metalmecânica</span>
+          <span class="tag">Polo Automotivo</span>
+          <span class="tag">Descarbonização</span>
+          <span class="tag">Reindustrialização</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN -->
+  <div class="container">
+    <div class="page-layout">
+
+      <!-- TOC -->
+      <aside>
+        <nav class="toc" aria-label="Índice do conteúdo">
+          <div class="toc-title">Neste Centro</div>
+          <ul class="toc-list">
+            <li><a href="#resumo">01 · Resumo Executivo</a></li>
+            <li><a href="#situacao">02 · Situação Atual</a></li>
+            <li><a href="#desafios">03 · Desafios Estruturais</a></li>
+            <li><a href="#oportunidades">04 · Oportunidades</a></li>
+            <li><a href="#benchmarking">05 · Benchmarking Internacional</a></li>
+            <li><a href="#objetivos">06 · Objetivos 2035</a></li>
+            <li><a href="#metas">07 · Metas 2050</a></li>
+            <li><a href="#projetos">08 · Projetos Estratégicos</a></li>
+            <li><a href="#indicadores">09 · Indicadores-Chave</a></li>
+            <li><a href="#debate">10 · Questões para Debate</a></li>
+            <li><a href="#referencias">11 · Referências</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- ARTICLE -->
+      <article class="article-content">
+
+        <section id="resumo" class="content-section fade-in-section">
+          <div class="section-label">01</div>
+          <h2>Resumo Executivo</h2>
+          <p>Minas Gerais é o terceiro maior parque industrial do Brasil, com um setor manufatureiro que engloba desde a siderurgia e metalurgia de classe mundial até o maior polo automotivo da América Latina, sediado em Betim. A Fiat Chrysler (hoje Stellantis), instalada no Estado desde 1976, produziu mais de 25 milhões de veículos na planta de Betim — a maior fábrica de automóveis da América do Sul em capacidade instalada. A Usiminas, Gerdau, ArcelorMittal e Vallourec representam um complexo siderúrgico que abastece indústrias de todo o continente.</p>
+          <p>No entanto, o setor industrial mineiro enfrenta um processo acentuado de desindustrialização relativa: a participação da indústria de transformação no PIB estadual caiu de 28% em 1990 para cerca de 15% em 2023. Esse esvaziamento resultou em desemprego estrutural em regiões industriais tradicionais, queda da produtividade agregada e redução da complexidade econômica do Estado. O cenário é agravado pela obsolescência tecnológica de grande parte do parque industrial, com baixa adoção de automação, robótica e sistemas digitais integrados (Indústria 4.0).</p>
+          <p>O Projeto Minas 2035 propõe uma agenda de reindustrialização inteligente estruturada em três eixos: modernização tecnológica do parque existente via Indústria 4.0, atração de novos investimentos em setores estratégicos emergentes (veículos elétricos, energias limpas, semicondutores) e descarbonização industrial como vetor de competitividade e acesso a mercados internacionais.</p>
+
+          <div class="quote-block">
+            <blockquote>"Não há nação próspera sem uma base industrial robusta e capaz de inovar. A reindustrialização não é nostalgia — é necessidade estratégica."</blockquote>
+            <cite>— Dani Rodrik, Harvard Kennedy School, 2023</cite>
+          </div>
+        </section>
+
+        <section id="situacao" class="content-section fade-in-section">
+          <div class="section-label">02</div>
+          <h2>Situação Atual de Minas Gerais</h2>
+          <p>O parque industrial mineiro é geograficamente concentrado: a Região Metropolitana de Belo Horizonte (e especialmente Betim e Contagem) concentra o setor automotivo e metalmecânico; o Vale do Aço (Ipatinga, Timóteo, Coronel Fabriciano) abriga a siderurgia pesada; e a região de Uberlândia e o Triângulo Mineiro concentram agroindústria e distribuição. Setores tradicionais como calçadista (Franca e Nova Serrana), têxtil (municípios do Oeste de Minas) e cerâmico enfrentam pressão crescente da concorrência asiática.</p>
+          <p>A FIEMG (Federação das Indústrias do Estado de Minas Gerais) representa mais de 67.000 empresas industriais, das quais 93% são micro ou pequenas empresas. Essa estrutura produtiva pulverizada, apesar de resiliente, dificulta a realização de investimentos em P&amp;D e automação em escala, bem como a participação em cadeias globais de valor que exigem certificações e escala mínima crescentes.</p>
+          <p>O polo automotivo de Betim enfrenta um momento de inflexão crítico: a Stellantis anunciou investimentos de R$ 30 bilhões até 2030 no Brasil, com foco em eletrificação. Mas a decisão sobre onde instalar as linhas de produção de veículos elétricos ainda está em aberto, dependendo de condições de infraestrutura energética e fiscal que Minas Gerais precisa urgentemente oferecer para manter sua posição.</p>
+
+          <div class="metric-grid">
+            <div class="metric-card">
+              <div class="metric-label">VTI Indústria MG</div>
+              <div><span class="metric-value">R$ 105</span><span class="metric-unit">bi</span></div>
+              <div class="metric-description">Valor de Transformação Industrial – IBGE 2022</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">Empregos Formais</div>
+              <div><span class="metric-value">1,2</span><span class="metric-unit">M</span></div>
+              <div class="metric-description">Indústria de transformação – RAIS 2023</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">Veículos Produzidos</div>
+              <div><span class="metric-value">750</span><span class="metric-unit">mil/ano</span></div>
+              <div class="metric-description">Stellantis Betim – capacidade instalada</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">Aço Produzido</div>
+              <div><span class="metric-value">12</span><span class="metric-unit">Mt/ano</span></div>
+              <div class="metric-description">Complexo siderúrgico do Vale do Aço</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">Exportações Manufaturadas</div>
+              <div><span class="metric-value">US$ 11</span><span class="metric-unit">bi</span></div>
+              <div class="metric-description">27% da pauta exportadora estadual – MDIC 2023</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">Adoção Indústria 4.0</div>
+              <div><span class="metric-value">18</span><span class="metric-unit">%</span></div>
+              <div class="metric-description">Empresas com tecnologias avançadas – FIEMG 2023</div>
+            </div>
+          </div>
+        </section>
+
+        <section id="desafios" class="content-section fade-in-section">
+          <div class="section-label">03</div>
+          <h2>Desafios Estruturais</h2>
+          <ul>
+            <li>
+              <strong>Desindustrialização relativa acelerada</strong> — A participação da indústria de transformação no PIB mineiro caiu 13 pontos percentuais em três décadas, reflexo de uma combinação perversa: câmbio sobrevalorizado nos anos 1990 e 2000, concorrência asiática, ausência de política industrial ativa e deterioração da infraestrutura logística. O Estado perdeu elos inteiros de cadeias produtivas, especialmente em bens de capital, eletroeletrônicos e química fina.
+            </li>
+            <li>
+              <strong>Baixa produtividade e obsolescência tecnológica</strong> — A produtividade total dos fatores na indústria mineira cresceu apenas 0,8% ao ano na última década, contra 2,1% nas indústrias de Santa Catarina e 1,9% em São Paulo. A taxa de adoção de robótica industrial em MG (18 robôs por 10.000 trabalhadores) é menos da metade da média da OCDE (100 por 10.000), revelando um hiato tecnológico que compromete a competitividade internacional.
+            </li>
+            <li>
+              <strong>Concentração territorial e vulnerabilidade setorial</strong> — O setor industrial mineiro está excessivamente concentrado no eixo BH–Betim–Vale do Aço, criando riscos sistêmicos: crises setoriais (como a recessão da siderurgia em 2015–2016) afetam desproporcionalmente regiões inteiras sem alternativas produtivas. O interior do Estado carece de polos industriais diversificados que possam absorver a mão de obra local.
+            </li>
+            <li>
+              <strong>Custo energético e logístico elevado</strong> — As tarifas industriais de energia elétrica em Minas Gerais estão entre as mais altas do Brasil, penalizando especialmente setores energointensivos como a siderurgia e a cerâmica. A malha ferroviária é insuficiente para integrar os polos industriais do interior ao Porto de Santos e ao Porto de Vitória, encarecendo o escoamento da produção.
+            </li>
+            <li>
+              <strong>Pressão de descarbonização sem plano de transição</strong> — A indústria mineira, especialmente a siderurgia e a mineração de transformação, é responsável por parcela significativa das emissões de CO₂ do Estado. Mercados europeus e americanos exigem crescentemente certificações de pegada de carbono e conformidade com taxonomia ESG. Sem um plano de descarbonização industrial estruturado, o Estado corre o risco de perder competitividade exportadora em menos de uma década.
+            </li>
+          </ul>
+
+          <div class="callout callout-warning">
+            <span class="callout-icon"><i data-lucide="alert-triangle"></i></span>
+            <p><strong>Ponto crítico:</strong> A janela para atrair as linhas de produção de veículos elétricos da Stellantis para Betim é limitada. Se Minas Gerais não garantir fornecimento de energia limpa e competitiva, infraestrutura logística e incentivos fiscais adequados até 2026–2027, a decisão de investimento pode ser tomada em favor de outros estados ou países com condições mais vantajosas.</p>
+          </div>
+        </section>
+
+        <section id="oportunidades" class="content-section fade-in-section">
+          <div class="section-label">04</div>
+          <h2>Oportunidades</h2>
+          <ul>
+            <li>
+              <strong>Eletrificação automotiva e veículos elétricos</strong> — A transição global para veículos elétricos representa uma oportunidade histórica para o polo automotivo de Betim. Minas Gerais produz lítio, cobalto e outros minerais críticos para baterias; a combinação de parque fabril instalado, fornecedores locais e acesso a matérias-primas posiciona o Estado como candidato natural a sediar a indústria de baterias e montagem de EVs da América do Sul.
+            </li>
+            <li>
+              <strong>Nearshoring e relocalização de cadeias industriais</strong> — Com a reconfiguração das cadeias globais de valor pós-pandemia e as tensões geopolíticas entre EUA e China, empresas multinacionais buscam relocalizar parte de sua produção para países do continente americano. Minas Gerais tem condições — infraestrutura, mão de obra, tamanho de mercado — para atrair segmentos de médio-alto valor tecnológico que procuram alternativas à Ásia.
+            </li>
+            <li>
+              <strong>Hidrogênio verde e descarbonização do aço</strong> — O Brasil tem potencial para ser um dos maiores produtores mundiais de hidrogênio verde, e Minas Gerais, com sua tradição siderúrgica, pode se tornar pioneira na produção de aço verde (DRI + hidrogênio). Empresas como a ArcelorMittal já exploraram essa rota tecnológica globalmente, e a parceria com o Estado para uma planta-piloto em Minas seria de interesse estratégico mútuo.
+            </li>
+            <li>
+              <strong>Economia circular e upcycling industrial</strong> — A enorme base de rejeitos e resíduos industriais de Minas Gerais (rejeitos minerais, escórias de aço, refugos têxteis) representa insumos para novas indústrias de reciclagem e reaproveitamento. Regulação adequada e incentivos fiscais podem transformar resíduos industriais em matérias-primas de valor, criando uma cadeia circular que reduz custos ambientais e gera novos empregos.
+            </li>
+            <li>
+              <strong>Zonas de Processamento Industrial (ZPIs)</strong> — A criação de zonas especiais com infraestrutura preparada, regimes fiscais simplificados e conectividade digital de alta velocidade em regiões estratégicas do Estado pode funcionar como catalisador para novos investimentos industriais, especialmente de empresas que procuram bases de produção no interior brasileiro.
+            </li>
+          </ul>
+        </section>
+
+        <section id="benchmarking" class="content-section fade-in-section">
+          <div class="section-label">05</div>
+          <h2>Benchmarking Internacional</h2>
+          <p>Regiões industriais que enfrentaram desindustrialização e se reinventaram oferecem modelos estratégicos relevantes para Minas Gerais.</p>
+
+          <table class="bench-table">
+            <thead>
+              <tr>
+                <th>Região / País</th>
+                <th>PIB Industrial / Total</th>
+                <th>Estratégia-chave</th>
+                <th>Lição para Minas</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="td-highlight">Baden-Württemberg (Alemanha)</td>
+                <td class="td-accent">34% do PIB regional</td>
+                <td>Política industrial de longo prazo com clusters setoriais (automotivo, máquinas, química). Fraunhofer Institutes integram P&amp;D e produção. Mittelstand (PMEs inovadoras) como espinha dorsal industrial. Transição para Indústria 4.0 financiada por consórcios público-privados.</td>
+                <td>Criar institutos de transferência tecnológica setoriais (modelo Fraunhofer) para metalmecânica, automotivo e materiais avançados — integrando universidades, FIEMG e grandes empresas em redes de inovação com financiamento compartilhado.</td>
+              </tr>
+              <tr>
+                <td class="td-highlight">Coreia do Sul</td>
+                <td class="td-accent">27% do PIB nacional</td>
+                <td>Política industrial ativa de longo prazo: subsidiar P&amp;D industrial, criar padrões nacionais de qualidade, financiar exportações manufaturadas. Transição de têxtil/calçados para eletrônicos, semicondutores e automotivo de alta tecnologia em 30 anos via planejamento setorial.</td>
+                <td>Plano Estadual de Competitividade Industrial 2025–2035 com metas setoriais, financiamento público (BDMG) condicionado à inovação e programa nacional de compras governamentais favorecendo manufatura mineira de alto valor.</td>
+              </tr>
+              <tr>
+                <td class="td-highlight">Vale do Silício Industrial – EUA (Ohio)</td>
+                <td class="td-accent">19% do PIB do Ohio</td>
+                <td>Reindustrialização via CHIPS Act e Inflation Reduction Act: bilhões em incentivos para semicondutores, veículos elétricos e energia limpa. Ohio atraiu fábrica da Intel (US$ 20 bi) e da Honda (EVs) ao combinar incentivos fiscais, infraestrutura preparada e parcerias com universidades estaduais.</td>
+                <td>Montar um pacote MG de atração de IDE para indústrias estratégicas: isenção de ICMS por 10 anos, infraestrutura energética garantida, terrenos em ZPIs e parceria com UFMG para P&amp;D compartilhado como pacote integrado.</td>
+              </tr>
+              <tr>
+                <td class="td-highlight">Santa Catarina (Brasil)</td>
+                <td class="td-accent">29% do PIB estadual</td>
+                <td>Industrialização diversificada e interiorizada: cluster de tecnologia em Florianópolis, metal-mecânico em Joinville, têxtil em Blumenau, alimentos em Chapecó. Baixa concentração regional, alta produtividade industrial, liderança em exportações de alto valor como compressores (Embraco) e armas (Taurus).</td>
+                <td>Descentralizar a política industrial mineira para além do eixo BH–Betim: apoiar clusters regionais em Uberlândia (agro-industrial), Juiz de Fora (automotivo e tecnologia), Montes Claros (farmacêutico) e Teófilo Otoni (gemas e joalheria).</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section id="objetivos" class="content-section fade-in-section">
+          <div class="section-label">06</div>
+          <h2>Objetivos 2035</h2>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-year">2026–2028</div>
+              <div class="timeline-title">Modernização e competitividade imediata</div>
+              <div class="timeline-desc">Lançamento do Programa Indústria 4.0 MG com subsídios para automação de PMEs; aprovação do marco legal das ZPIs; negociação do pacote de atração para linhas de VEs da Stellantis; criação do Observatório da Indústria MG com dados em tempo real para monitoramento de competitividade.</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-year">2028–2030</div>
+              <div class="timeline-title">Atração de investimentos estratégicos e descarbonização</div>
+              <div class="timeline-desc">Início das operações das primeiras ZPIs em Montes Claros, Uberlândia, Ipatinga e Juiz de Fora; lançamento do Programa de Descarbonização Industrial MG com metas setoriais e financiamento via BDMG Verde; primeiras plantas de aço verde em operação piloto no Vale do Aço.</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-year">2030–2033</div>
+              <div class="timeline-title">Consolidação como polo de manufatura avançada</div>
+              <div class="timeline-desc">Participação da indústria de transformação no PIB mineiro retornando a 20%; 50.000 novos empregos industriais formais de alta qualificação criados; cadeia de fornecedores de VEs e baterias em operação em MG; exportações manufaturadas superando US$ 18 bilhões.</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-year">2033–2035</div>
+              <div class="timeline-title">Indústria sustentável e de alta produtividade</div>
+              <div class="timeline-desc">Redução de 40% nas emissões industriais de CO₂ em relação a 2023; produtividade industrial crescendo acima da média nacional; Minas Gerais posicionada como referência latino-americana em manufatura de baixo carbono e Indústria 4.0; pelo menos duas empresas industriais mineiras entre as 100 maiores da América Latina.</div>
+            </div>
+          </div>
+        </section>
+
+        <section id="metas" class="content-section fade-in-section">
+          <div class="section-label">07</div>
+          <h2>Metas 2050</h2>
+          <ol>
+            <li>Participação da indústria de transformação no PIB mineiro acima de 22%, revertendo completamente o processo de desindustrialização das últimas décadas e superando a média nacional.</li>
+            <li>Mais de 2 milhões de empregos industriais formais, com salário médio real 40% superior ao de 2023, refletindo ganhos de produtividade e sofisticação tecnológica.</li>
+            <li>Exportações manufaturadas acima de US$ 30 bilhões anuais, com 60% compostos por produtos de média-alta e alta intensidade tecnológica — contra os atuais 27%.</li>
+            <li>Emissões de CO₂ do setor industrial reduzidas em 80% em relação a 2023, com a siderurgia mineira sendo referência mundial em aço verde produzido com hidrogênio renovável.</li>
+            <li>Adoção plena de Indústria 4.0 em empresas com mais de 50 funcionários, com 80% das PMEs industriais operando com ao menos uma tecnologia digital avançada (IoT, IA, automação).</li>
+            <li>Pelo menos 10 clusters industriais diversificados distribuídos pelo território mineiro, eliminando a dependência do eixo BH–Betim como único polo de concentração industrial.</li>
+            <li>Minas Gerais como sede da primeira gigafábrica de baterias da América do Sul, produzindo para o mercado doméstico e para exportação a mercados da OCDE.</li>
+          </ol>
+        </section>
+
+        <section id="projetos" class="content-section fade-in-section">
+          <div class="section-label">08</div>
+          <h2>Projetos Estratégicos</h2>
+
+          <div style="display: flex; flex-direction: column; gap: var(--sp-4);">
+            <div class="project-card">
+              <div>
+                <h4>Polo Automotivo Elétrico de Betim</h4>
+                <p>Transformação do complexo automotivo de Betim/Contagem no primeiro polo de veículos elétricos e híbridos da América do Sul. O projeto prevê a instalação de linhas de produção de EVs da Stellantis, atração de fabricantes de baterias (como CATL ou BYD), criação de uma rede de fornecedores locais de componentes elétricos e eletrônicos e construção de infraestrutura de carregamento ultrarrápido. Estimativa de R$ 12 bilhões em investimento total (público e privado) com geração de 35.000 empregos diretos e indiretos até 2030.</p>
+              </div>
+              <span class="project-status status-active">Em negociação</span>
+            </div>
+            <div class="project-card">
+              <div>
+                <h4>Programa Indústria 4.0 MG</h4>
+                <p>Programa estadual de digitalização e automação industrial para PMEs mineiras, com foco em setores tradicionais (metalmecânica, têxtil, calçadista, cerâmica). O programa oferece crédito subsidiado via BDMG para aquisição de equipamentos de automação, diagnóstico gratuito de maturidade digital, capacitação técnica via SENAI e conectividade de banda larga para distritos industriais. Meta: 5.000 PMEs digitalizadas até 2030, com aumento médio de produtividade de 25%.</p>
+              </div>
+              <span class="project-status status-active">Em implementação</span>
+            </div>
+            <div class="project-card">
+              <div>
+                <h4>Centro de Descarbonização Industrial – Vale do Aço</h4>
+                <p>Hub de pesquisa e produção de tecnologias de baixo carbono para a indústria siderúrgica, instalado em Ipatinga em parceria com Usiminas, Gerdau, ArcelorMittal e UNIFEI. O centro desenvolverá tecnologias de captura de carbono, produção de aço via DRI com hidrogênio verde, eficiência energética em altos-fornos e reutilização de subprodutos industriais. Financiamento esperado: R$ 800 milhões em cinco anos, com 40% de recursos federais via BNDES Finem.</p>
+              </div>
+              <span class="project-status status-study">Em estudo</span>
+            </div>
+            <div class="project-card">
+              <div>
+                <h4>Zonas de Processamento Industrial (ZPI-MG)</h4>
+                <p>Criação de quatro Zonas de Processamento Industrial em regiões estratégicas do Estado, com infraestrutura completa (energia, logística, fibra óptica, tratamento de efluentes), regime tributário simplificado e serviços de apoio empresarial. As ZPIs serão sediadas em Montes Claros (Norte, foco em alimentos e têxtil), Uberlândia (Triângulo, foco em agroindústria), Ipatinga (Vale do Aço, foco em metal e materiais) e Juiz de Fora (Zona da Mata, foco em automotivo e tecnologia). Meta de atrair R$ 8 bilhões em investimentos privados até 2032.</p>
+              </div>
+              <span class="project-status status-proposal">Proposta</span>
+            </div>
+          </div>
+        </section>
+
+        <section id="indicadores" class="content-section fade-in-section">
+          <div class="section-label">09</div>
+          <h2>Indicadores-Chave (KPIs)</h2>
+          <div class="metric-grid">
+            <div class="metric-card">
+              <div class="metric-label">Valor Adicionado Manufatura</div>
+              <div><span class="metric-value">20</span><span class="metric-unit">% PIB</span></div>
+              <div class="metric-description">Meta 2035 · atual: 15% · retorno ao patamar de 2000</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">Produtividade Industrial</div>
+              <div><span class="metric-value">+35</span><span class="metric-unit">%</span></div>
+              <div class="metric-description">Crescimento acumulado 2023–2035 · via Indústria 4.0</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">Empregos Formais Indústria</div>
+              <div><span class="metric-value">1,5</span><span class="metric-unit">M</span></div>
+              <div class="metric-description">Meta 2035 · atual: 1,2M · +300 mil novos postos</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">Exportações Manufaturadas</div>
+              <div><span class="metric-value">US$ 18</span><span class="metric-unit">bi</span></div>
+              <div class="metric-description">Meta 2035 · atual: US$ 11bi · crescimento: 64%</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">Investimento em Automação</div>
+              <div><span class="metric-value">5.000+</span><span class="metric-unit">PMEs</span></div>
+              <div class="metric-description">Empresas digitalizadas via Programa Indústria 4.0 MG até 2030</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">Certificações ISO Indústria</div>
+              <div><span class="metric-value">+40</span><span class="metric-unit">%</span></div>
+              <div class="metric-description">Crescimento em certificações ISO 9001, 14001 e 45001 até 2035</div>
+            </div>
+          </div>
+        </section>
+
+        <section id="debate" class="content-section fade-in-section">
+          <div class="section-label">10</div>
+          <h2>Questões para Debate Público</h2>
+          <ol>
+            <li>A reindustrialização de Minas Gerais deve priorizar a modernização das indústrias existentes (automotivo, siderurgia) ou o desenvolvimento de setores inteiramente novos (semicondutores, biotecnologia)? Há recursos para ambas as estratégias simultaneamente?</li>
+            <li>Como Minas Gerais pode competir com estados que oferecem benefícios fiscais mais agressivos (como Goiás e Pernambuco) sem aprofundar a guerra fiscal prejudicial ao conjunto do País?</li>
+            <li>A transição para veículos elétricos é uma ameaça ou uma oportunidade para o polo automotivo de Betim? Quais investimentos públicos e infraestrutura o Estado precisa garantir para que a Stellantis mantenha e expanda operações em MG?</li>
+            <li>Como integrar os trabalhadores industriais das regiões em desindustrialização (como partes do Vale do Aço e da Zona da Mata) em novos setores produtivos, evitando o desemprego estrutural de longa duração?</li>
+            <li>A descarbonização industrial deve ser imposta por regulação estadual ou incentivada por mecanismos de mercado (crédito de carbono, preferência em compras públicas, financiamento subsidiado)?</li>
+            <li>O BDMG (Banco de Desenvolvimento de Minas Gerais) tem capital e mandato suficientes para financiar a reindustrialização proposta, ou é necessário criar novos instrumentos de financiamento de longo prazo?</li>
+            <li>Como proteger os trabalhadores industriais dos efeitos da automação acelerada, garantindo que os ganhos de produtividade sejam distribuídos e não apenas capturados pelos proprietários do capital?</li>
+          </ol>
+          <div style="margin-top: var(--sp-8);">
+            <a href="../participar.html" class="btn btn-primary" id="btn-ind-debate">Participar do Debate</a>
+          </div>
+        </section>
+
+        <section id="referencias" class="content-section fade-in-section">
+          <div class="section-label">11</div>
+          <h2>Referências Bibliográficas</h2>
+          <div class="reference-list">
+            <div class="reference-item">
+              <span class="reference-num">01</span>
+              <span>FIEMG – Federação das Indústrias do Estado de Minas Gerais. <em>Painel da Indústria Mineira 2023</em>. Belo Horizonte: FIEMG, 2023.</span>
+            </div>
+            <div class="reference-item">
+              <span class="reference-num">02</span>
+              <span>IBGE – Instituto Brasileiro de Geografia e Estatística. <em>Pesquisa Industrial Anual – Empresa 2022</em>. Rio de Janeiro: IBGE, 2023.</span>
+            </div>
+            <div class="reference-item">
+              <span class="reference-num">03</span>
+              <span>CNI – Confederação Nacional da Indústria. <em>Mapa Estratégico da Indústria 2023–2032</em>. Brasília: CNI, 2023.</span>
+            </div>
+            <div class="reference-item">
+              <span class="reference-num">04</span>
+              <span>MDIC – Ministério do Desenvolvimento, Indústria e Comércio. <em>Política Industrial "Nova Indústria Brasil" 2024</em>. Brasília: MDIC, 2024.</span>
+            </div>
+            <div class="reference-item">
+              <span class="reference-num">05</span>
+              <span>RODRIK, Dani. <em>Premature Deindustrialization</em>. Journal of Economic Growth, v. 21, p. 1–33, 2016.</span>
+            </div>
+            <div class="reference-item">
+              <span class="reference-num">06</span>
+              <span>IEA – International Energy Agency. <em>Net Zero by 2050: A Roadmap for the Global Energy Sector</em>. Paris: IEA, 2021.</span>
+            </div>
+            <div class="reference-item">
+              <span class="reference-num">07</span>
+              <span>BDMG – Banco de Desenvolvimento de Minas Gerais. <em>Relatório Anual 2023: Financiamento ao Setor Industrial</em>. Belo Horizonte: BDMG, 2023.</span>
+            </div>
+            <div class="reference-item">
+              <span class="reference-num">08</span>
+              <span>ANFAVEA – Associação Nacional dos Fabricantes de Veículos Automotores. <em>Anuário da Indústria Automobilística Brasileira 2023</em>. São Paulo: ANFAVEA, 2023.</span>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
   <footer class="site-footer">
-    <p>&copy; 2026 Projeto Minas 2035 – Todos os direitos reservados.</p>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="navbar-brand">
+            <svg class="navbar-logo" viewBox="0 0 36 36" fill="none">
+              <rect width="36" height="36" rx="8" fill="url(#grad-footer-ind)"/>
+              <path d="M10 24 L10 13 L18 20 L26 13 L26 24" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              <defs><linearGradient id="grad-footer-ind" x1="0" y1="0" x2="36" y2="36" gradientUnits="userSpaceOnUse"><stop stop-color="#00E5FF"/><stop offset="1" stop-color="#4F46E5"/></linearGradient></defs>
+            </svg>
+            <span class="navbar-name">Minas <span>2035</span></span>
+          </a>
+          <p>Plataforma independente de estudos para o desenvolvimento de Minas Gerais com visão de longo prazo.</p>
+        </div>
+        <div class="footer-col"><h5>Projeto</h5><ul><li><a href="../sobre.html">Sobre</a></li><li><a href="../manifesto.html">Manifesto</a></li><li><a href="../pilares.html">Pilares</a></li><li><a href="../participar.html">Participar</a></li></ul></div>
+        <div class="footer-col"><h5>Outras Áreas</h5><ul><li><a href="economia.html">Economia</a></li><li><a href="ciencia.html">Ciência</a></li><li><a href="agricultura.html">Agronegócio</a></li><li><a href="educacao.html">Educação</a></li></ul></div>
+        <div class="footer-col"><h5>Legal</h5><ul><li><a href="#">Política de privacidade</a></li><li><a href="#">Licença de uso</a></li><li><a href="#">Contato</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Projeto Minas 2035. Fontes: FIEMG, CNI, IBGE, ANFAVEA, BDMG.</p>
+        <a href="../manifesto.html">Manifesto →</a>
+      </div>
+    </div>
   </footer>
+
+  <script>lucide.createIcons();</script>
 </body>
 </html>

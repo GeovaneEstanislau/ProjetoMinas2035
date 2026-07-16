@@ -3,41 +3,474 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ciência – Projeto Minas 2035</title>
+  <meta name="description" content="Centro de Ciência e Pesquisa – Diagnóstico, estratégias e projetos para tornar Minas Gerais uma potência científica e de inovação até 2035." />
+  <title>Ciência e Pesquisa – Projeto Minas 2035</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="../css/variables.css" />
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="stylesheet" href="../css/components.css" />
-  <link rel="stylesheet" href="../css/responsive.css" />
   <link rel="stylesheet" href="../css/animations.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+  <link rel="stylesheet" href="../css/pages.css" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
   <script defer src="../js/app.js"></script>
   <script defer src="../js/menu.js"></script>
   <script defer src="../js/animations.js"></script>
-  <script defer src="../js/charts.js"></script>
+  <script defer src="../js/counters.js"></script>
 </head>
 <body>
-  <header class="site-header">
-    <h1>Projeto Minas 2035</h1>
-    <nav class="main-nav">
-      <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../manifesto.html">Manifesto</a></li>
-        <li><a href="../pilares.html">Pilares</a></li>
-        <li><a href="../indicadores.html">Indicadores</a></li>
-        <li><a href="../participar.html">Participar</a></li>
-        <li><a href="../sobre.html">Sobre</a></li>
-      </ul>
-    </nav>
+
+  <header class="navbar" id="navbar">
+    <div class="container">
+      <a href="../index.html" class="navbar-brand">
+        <svg class="navbar-logo" viewBox="0 0 36 36" fill="none">
+          <rect width="36" height="36" rx="8" fill="url(#grad-nav-cien)"/>
+          <path d="M10 24 L10 13 L18 20 L26 13 L26 24" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <defs><linearGradient id="grad-nav-cien" x1="0" y1="0" x2="36" y2="36" gradientUnits="userSpaceOnUse"><stop stop-color="#00E5FF"/><stop offset="1" stop-color="#4F46E5"/></linearGradient></defs>
+        </svg>
+        <span class="navbar-name">Minas <span>2035</span></span>
+      </a>
+      <nav class="navbar-nav" id="main-nav">
+        <a href="../index.html#sobre">O Projeto</a>
+        <a href="../index.html#areas">Áreas</a>
+        <a href="../index.html#principios">Princípios</a>
+        <a href="../indicadores.html">Indicadores</a>
+        <a href="../manifesto.html">Manifesto</a>
+      </nav>
+      <div class="navbar-cta">
+        <a href="../participar.html" class="btn btn-outline">Participar</a>
+        <a href="../index.html#areas" class="btn btn-primary">Explorar</a>
+      </div>
+      <button class="hamburger" id="hamburger-btn" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </header>
-  <main>
-    <section class="content">
-      <h2>Ciência</h2>
-      <p>Conteúdo introdutório sobre ciência e inovação para Minas até 2035.</p>
-      <!-- Placeholder for charts -->
-      <div id="chart-ciencia"></div>
-    </section>
-  </main>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero-grid"></div>
+    <div class="container">
+      <div class="page-hero-content fade-in-section">
+        <div class="breadcrumb">
+          <a href="../index.html">Início</a>
+          <span class="breadcrumb-sep">/</span>
+          <a href="../index.html#areas">Áreas</a>
+          <span class="breadcrumb-sep">/</span>
+          <span class="breadcrumb-current">Ciência</span>
+        </div>
+        <div class="section-label">Centro Temático</div>
+        <h1>Centro de Ciência e Pesquisa</h1>
+        <p class="page-subtitle">
+          Diagnóstico, estratégias e projetos para consolidar Minas Gerais como polo de produção científica,
+          inovação e transferência de tecnologia de referência latino-americana até 2035.
+        </p>
+        <div class="page-stats">
+          <div class="page-stat">
+            <span class="page-stat-value">15+</span>
+            <span class="page-stat-label">universidades federais</span>
+          </div>
+          <div class="page-stat-divider"></div>
+          <div class="page-stat">
+            <span class="page-stat-value">0,7%</span>
+            <span class="page-stat-label">PIB em P&amp;D</span>
+          </div>
+          <div class="page-stat-divider"></div>
+          <div class="page-stat">
+            <span class="page-stat-value">8.000+</span>
+            <span class="page-stat-label">pesquisadores doutores</span>
+          </div>
+        </div>
+        <div class="tag-list" style="margin-top: var(--sp-6);">
+          <span class="tag">Pesquisa</span>
+          <span class="tag">Pós-Graduação</span>
+          <span class="tag">FAPEMIG</span>
+          <span class="tag">CNPq</span>
+          <span class="tag">Inovação</span>
+          <span class="tag">Transferência de Tecnologia</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN -->
+  <div class="container">
+    <div class="page-layout">
+
+      <!-- TOC -->
+      <aside>
+        <nav class="toc" aria-label="Índice do conteúdo">
+          <div class="toc-title">Neste Centro</div>
+          <ul class="toc-list">
+            <li><a href="#resumo">01 · Resumo Executivo</a></li>
+            <li><a href="#situacao">02 · Situação Atual</a></li>
+            <li><a href="#desafios">03 · Desafios Estruturais</a></li>
+            <li><a href="#oportunidades">04 · Oportunidades</a></li>
+            <li><a href="#benchmarking">05 · Benchmarking Internacional</a></li>
+            <li><a href="#objetivos">06 · Objetivos 2035</a></li>
+            <li><a href="#metas">07 · Metas 2050</a></li>
+            <li><a href="#projetos">08 · Projetos Estratégicos</a></li>
+            <li><a href="#indicadores">09 · Indicadores-Chave</a></li>
+            <li><a href="#debate">10 · Questões para Debate</a></li>
+            <li><a href="#referencias">11 · Referências</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- ARTICLE -->
+      <article class="article-content">
+
+        <section id="resumo" class="content-section fade-in-section">
+          <div class="section-label">01</div>
+          <h2>Resumo Executivo</h2>
+          <p>Minas Gerais abriga um dos mais robustos sistemas de ciência, tecnologia e inovação do Brasil, sustentado por mais de 15 universidades federais e estaduais, dezenas de institutos de pesquisa e uma rede crescente de empresas inovadoras. A Universidade Federal de Minas Gerais (UFMG) figura consistentemente entre as dez melhores universidades da América Latina em rankings internacionais, e a Universidade Federal de Viçosa (UFV) é referência global em ciências agrárias e agronomia tropical.</p>
+          <p>O Estado investe aproximadamente 0,7% de seu PIB em pesquisa e desenvolvimento — metade da meta da OCDE de 1,5% para economias emergentes. A FAPEMIG (Fundação de Amparo à Pesquisa do Estado de Minas Gerais) constitui o principal instrumento de fomento científico estadual, mas opera com orçamento cronicamente aquém da demanda. A produção científica mineira responde por cerca de 12% do total nacional de artigos publicados em periódicos indexados, revelando uma capacidade acadêmica que ainda não se converteu plenamente em inovação produtiva e transferência tecnológica para o setor empresarial.</p>
+          <p>O Projeto Minas 2035 propõe uma agenda de fortalecimento científico baseada em quatro eixos: aumento substancial do investimento público em P&amp;D, modernização dos Núcleos de Inovação Tecnológica (NITs) universitários, criação de programas sistemáticos de atração de pesquisadores de excelência e construção de pontes efetivas entre academia e indústria.</p>
+
+          <div class="quote-block">
+            <blockquote>"A universidade que não se conecta ao tecido produtivo de sua região desperdiça o bem mais precioso que produz: o conhecimento aplicado."</blockquote>
+            <cite>— Eduardo Moacyr Krieger, ex-presidente da Academia Brasileira de Ciências</cite>
+          </div>
+        </section>
+
+        <section id="situacao" class="content-section fade-in-section">
+          <div class="section-label">02</div>
+          <h2>Situação Atual de Minas Gerais</h2>
+          <p>O sistema científico mineiro é estruturado em torno de instituições de excelência distribuídas pelo território estadual. A UFMG, com mais de 50.000 estudantes e 300 cursos de pós-graduação, concentra o maior volume de produção científica. A UFV, em Viçosa, lidera globalmente em pesquisas sobre fitopatologia, melhoramento genético vegetal e agricultura tropical — campos diretamente estratégicos para o agronegócio mineiro e brasileiro.</p>
+          <p>A UFJF (Juiz de Fora), UNIFEI (Itajubá) e UFOP (Ouro Preto) complementam o mapa científico regional com especializações em engenharia, ciências exatas e geociências. A Embrapa Milho e Sorgo, sediada em Sete Lagoas, é referência mundial em pesquisa com culturas tropicais. O CNEN (Centro de Desenvolvimento da Tecnologia Nuclear) mantém instalações em Belo Horizonte relevantes para pesquisa em materiais e energia.</p>
+          <p>Apesar da qualidade institucional, o ecossistema enfrenta uma fratura entre geração de conhecimento e aplicação produtiva: apenas 6% das patentes depositadas por instituições mineiras resultam em produtos ou processos comercializados no mercado — índice muito inferior ao de regiões como Baden-Württemberg (Alemanha) e o triângulo tecnológico de Campinas (SP).</p>
+
+          <div class="metric-grid">
+            <div class="metric-card">
+              <div class="metric-label">Artigos Publicados</div>
+              <div><span class="metric-value">32</span><span class="metric-unit">mil/ano</span></div>
+              <div class="metric-description">Em periódicos indexados – Scopus 2023</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">Programas de Pós-Grad.</div>
+              <div><span class="metric-value">680+</span><span class="metric-unit">cursos</span></div>
+              <div class="metric-description">Mestrado e doutorado – CAPES 2023</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">Patentes Depositadas</div>
+              <div><span class="metric-value">1.200+</span><span class="metric-unit">/ano</span></div>
+              <div class="metric-description">INPI – baixa taxa de comercialização</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">Orçamento FAPEMIG</div>
+              <div><span class="metric-value">R$ 280</span><span class="metric-unit">mi</span></div>
+              <div class="metric-description">2023 – menos de 1% da receita estadual</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">Doutores Ativos</div>
+              <div><span class="metric-value">8.200+</span><span class="metric-unit">pesq.</span></div>
+              <div class="metric-description">Plataforma Lattes – CNPq 2023</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">Spin-offs Universitários</div>
+              <div><span class="metric-value">90+</span><span class="metric-unit">empresas</span></div>
+              <div class="metric-description">Originadas em universidades mineiras</div>
+            </div>
+          </div>
+        </section>
+
+        <section id="desafios" class="content-section fade-in-section">
+          <div class="section-label">03</div>
+          <h2>Desafios Estruturais</h2>
+          <ul>
+            <li>
+              <strong>Subfinanciamento crônico da FAPEMIG</strong> — A fundação estadual de fomento científico opera com orçamento equivalente a cerca de 0,04% do PIB mineiro, muito abaixo das FAPs de São Paulo (FAPESP: 1% da receita estadual por lei) e do Paraná. A escassez de recursos limita bolsas, infraestrutura laboratorial e parcerias internacionais, forçando pesquisadores a depender quase exclusivamente do CNPq federal.
+            </li>
+            <li>
+              <strong>Transferência de tecnologia ineficaz</strong> — Os NITs das universidades mineiras carecem de pessoal especializado em propriedade intelectual, licenciamento e negociação comercial. A burocracia interna para formalizar parcerias universidade-empresa pode superar dois anos, inviabilizando colaborações em setores de ciclo tecnológico curto como software e biotecnologia.
+            </li>
+            <li>
+              <strong>Fuga de talentos para outros estados</strong> — Minas Gerais forma uma parcela expressiva dos doutores brasileiros, mas enfrenta dificuldades em retê-los. A concentração de oportunidades de pesquisa aplicada e de empregos de alta remuneração em São Paulo, Rio de Janeiro e no exterior produz um fluxo contínuo de emigração de capital humano qualificado, enfraquecendo a capacidade local de inovação.
+            </li>
+            <li>
+              <strong>Baixa cooperação academia-indústria</strong> — O índice de co-publicações entre pesquisadores de universidades e empresas privadas em Minas Gerais é de apenas 8%, contra 22% em São Paulo e 35% em estados alemães. A cultura acadêmica ainda valoriza mais a publicação científica do que a geração de impacto econômico, e as empresas frequentemente desconhecem as competências disponíveis nas universidades.
+            </li>
+            <li>
+              <strong>Infraestrutura laboratorial desatualizada</strong> — Grande parte dos laboratórios universitários mineiros opera com equipamentos com mais de dez anos de uso. A ausência de manutenção preventiva e de contratos de atualização tecnológica compromete a capacidade de realizar pesquisas de fronteira, especialmente em áreas como bioinformática, nanomateriais e inteligência artificial.
+            </li>
+          </ul>
+
+          <div class="callout callout-warning">
+            <span class="callout-icon"><i data-lucide="alert-triangle"></i></span>
+            <p><strong>Ponto crítico:</strong> Se a FAPEMIG não tiver seu orçamento vinculado por lei a um percentual mínimo da receita estadual — como a FAPESP em São Paulo — continuará sujeita aos ciclos políticos e fiscais, impossibilitando o planejamento científico de longo prazo essencial para pesquisa de fronteira.</p>
+          </div>
+        </section>
+
+        <section id="oportunidades" class="content-section fade-in-section">
+          <div class="section-label">04</div>
+          <h2>Oportunidades</h2>
+          <ul>
+            <li>
+              <strong>Inteligência Artificial e ciência de dados</strong> — A UFMG possui um dos mais fortes grupos de pesquisa em IA do Brasil, com produção científica reconhecida internacionalmente. O crescimento acelerado da demanda global por sistemas de IA cria uma janela para transformar essa competência acadêmica em um polo industrial de desenvolvimento de soluções tecnológicas, especialmente em saúde digital, agronegócio de precisão e cidades inteligentes.
+            </li>
+            <li>
+              <strong>Bioeconomia e biotecnologia do Cerrado</strong> — A biodiversidade do Cerrado mineiro representa um banco genético de valor inestimável para a biotecnologia farmacêutica, cosmética e alimentar. As universidades mineiras têm competência consolidada em bioprospecção e química de produtos naturais — uma vantagem comparativa única que, aliada a marcos regulatórios adequados, pode gerar uma indústria biotecnológica de alto valor agregado.
+            </li>
+            <li>
+              <strong>Mineração científica e materiais avançados</strong> — Minas Gerais é um laboratório natural para geociências, mineralogia e desenvolvimento de materiais avançados. A proposta de criação de um Laboratório Nacional de Ciências da Terra no Estado capitalizaria essa vantagem, atraindo pesquisadores internacionais e consolidando o Estado como referência global em geotecnologia e materiais críticos para a transição energética.
+            </li>
+            <li>
+              <strong>Internacionalização da pós-graduação</strong> — As universidades mineiras têm acordos de cooperação com mais de 300 instituições estrangeiras, mas a formalização de programas de dupla titulação e a atração de estudantes internacionais ainda são limitadas. A expansão da pós-graduação internacionalizada pode aumentar a visibilidade global do sistema científico mineiro e gerar novas redes de colaboração produtiva.
+            </li>
+            <li>
+              <strong>Nearshoring de P&amp;D</strong> — Com a reconfiguração das cadeias globais de valor pós-pandemia, empresas multinacionais estão distribuindo centros de P&amp;D por regiões com talento científico qualificado e custo competitivo. Minas Gerais tem condições de atrair laboratórios corporativos de empresas dos setores farmacêutico, automotivo e de tecnologia, criando um ecossistema de pesquisa aplicada de alta densidade.
+            </li>
+          </ul>
+        </section>
+
+        <section id="benchmarking" class="content-section fade-in-section">
+          <div class="section-label">05</div>
+          <h2>Benchmarking Internacional</h2>
+          <p>Regiões que transformaram sistemas universitários em motores de desenvolvimento econômico oferecem modelos valiosos para a estratégia científica de Minas Gerais.</p>
+
+          <table class="bench-table">
+            <thead>
+              <tr>
+                <th>Região / País</th>
+                <th>Investimento P&amp;D / PIB</th>
+                <th>Estratégia-chave</th>
+                <th>Lição para Minas</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="td-highlight">MIT / Estados Unidos</td>
+                <td class="td-accent">3,4% (EUA)</td>
+                <td>Ecossistema de transferência tecnológica integrado: TLO (Technology Licensing Office) com 70+ licenciamentos por ano e mais de 700 spin-offs acumuladas. Financiamento federal massivo via DARPA, NIH e NSF.</td>
+                <td>Criar um escritório de transferência tecnológica estadual centralizado, com pessoal especializado e metas de licenciamento anuais vinculadas ao fomento da FAPEMIG.</td>
+              </tr>
+              <tr>
+                <td class="td-highlight">Emília-Romagna (Itália)</td>
+                <td class="td-accent">2,1%</td>
+                <td>Triângulo tecnológico Bolonha-Módena-Reggio Emilia: forte integração entre PMEs industriais e a Universidade de Bolonha. Rede de centros tecnológicos setoriais (packaging, automação, alimentos) financiados por consórcios público-privados.</td>
+                <td>Criar centros tecnológicos setoriais — cerâmica (regiões Norte de MG), metalmecânica (Vale do Aço) e cafeicultura (Sul de Minas) — com gestão público-privada e vínculo formal com grupos de pesquisa universitários.</td>
+              </tr>
+              <tr>
+                <td class="td-highlight">Singapura</td>
+                <td class="td-accent">2,2%</td>
+                <td>Estratégia de atração de talentos científicos globais via A*STAR (Agency for Science, Technology and Research). Programas de bolsas internacionais e salários competitivos para pesquisadores estrangeiros. Foco em biotecnologia, semicondutores e IA.</td>
+                <td>Criar o "Programa Minas Research Fellows": bolsas de atração de pesquisadores-doutores do exterior com contrapartida de 5 anos de atividade em instituições mineiras, especialmente em áreas estratégicas da bioeconomia e geotecnologia.</td>
+              </tr>
+              <tr>
+                <td class="td-highlight">Minas vs. São Paulo (Brasil)</td>
+                <td class="td-accent">MG: 0,7% vs. SP: 1,5%</td>
+                <td>São Paulo opera com a FAPESP financiada por 1% da receita tributária estadual por mandato constitucional. Resultado: mais de 30.000 bolsas ativas simultâneas, 5.000+ projetos de pesquisa e o maior volume de publicações científicas do hemisfério sul.</td>
+                <td>Emendas constitucionais para vincular 1% da receita tributária de MG à FAPEMIG seria a medida isolada de maior impacto para o ecossistema científico mineiro, com efeito comprovado em São Paulo nos últimos 30 anos.</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section id="objetivos" class="content-section fade-in-section">
+          <div class="section-label">06</div>
+          <h2>Objetivos 2035</h2>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-year">2026–2028</div>
+              <div class="timeline-title">Consolidação do marco legal e institucional</div>
+              <div class="timeline-desc">Aprovação de emenda constitucional vinculando 0,5% da receita tributária à FAPEMIG (meta: chegar a 1% até 2032). Modernização dos NITs de todas as universidades estaduais e federais com sede em MG. Lançamento da plataforma digital de gestão de propriedade intelectual universitária.</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-year">2028–2030</div>
+              <div class="timeline-title">Expansão da infraestrutura científica</div>
+              <div class="timeline-desc">Instalação do Laboratório Nacional de Ciências da Terra em parceria com o MCTI. Criação do Centro de IA Aplicada da UFMG com financiamento público-privado. Lançamento do Programa de Atração de Pesquisadores com 500 bolsas de excelência para doutores brasileiros e estrangeiros.</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-year">2030–2033</div>
+              <div class="timeline-title">Escalada de spin-offs e transferência tecnológica</div>
+              <div class="timeline-desc">Meta de 300 spin-offs universitárias ativas (triplicando o número atual). Pelo menos 10 licenciamentos de patentes por universidade por ano. Criação do Fundo de Co-Investimento Ciência-Indústria MG, com R$ 500 milhões em capital público alavancando capital privado.</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-year">2033–2035</div>
+              <div class="timeline-title">Minas como polo científico latino-americano</div>
+              <div class="timeline-desc">Investimento em P&amp;D acima de 1,5% do PIB estadual. Pelo menos 3 programas de pós-graduação mineiros no top-100 mundial em suas especialidades. Posicionamento de MG como referência regional em biotecnologia, geotecnologia e inteligência artificial aplicada.</div>
+            </div>
+          </div>
+        </section>
+
+        <section id="metas" class="content-section fade-in-section">
+          <div class="section-label">07</div>
+          <h2>Metas 2050</h2>
+          <ol>
+            <li>Investimento em P&amp;D (público + privado) acima de 3% do PIB estadual, equiparando Minas Gerais a economias inovadoras da OCDE como a Coreia do Sul e a Suécia.</li>
+            <li>Pelo menos 1.000 spin-offs universitárias ativas, com geração de mais de 50.000 empregos de alto valor em setores de base tecnológica e científica.</li>
+            <li>UFMG e UFV figurando consistentemente no top-50 mundial em suas especialidades de destaque, consolidando Minas como destino de pós-graduação internacional.</li>
+            <li>Triplicar o número de pesquisadores doutores por 10.000 habitantes, saindo do patamar atual de 4,0 para mais de 12,0 — comparável às regiões mais inovadoras da Europa.</li>
+            <li>Mais de 5.000 patentes depositadas por ano por instituições mineiras, com taxa de comercialização acima de 25% — referência de regiões como Baden-Württemberg.</li>
+            <li>Minas Gerais como primeiro estado brasileiro a criar um Laboratório Nacional de Bioeconomia do Cerrado, com reconhecimento da UNESCO como patrimônio científico global.</li>
+            <li>Renda gerada por propriedade intelectual e licenciamento tecnológico superior a R$ 2 bilhões anuais, constituindo fonte relevante de receita para universidades e o Estado.</li>
+          </ol>
+        </section>
+
+        <section id="projetos" class="content-section fade-in-section">
+          <div class="section-label">08</div>
+          <h2>Projetos Estratégicos</h2>
+
+          <div style="display: flex; flex-direction: column; gap: var(--sp-4);">
+            <div class="project-card">
+              <div>
+                <h4>Laboratório Nacional de Ciências da Terra em MG</h4>
+                <p>Criação de um laboratório nacional de referência em geociências, mineralogia, geoquímica e ciências ambientais, sediado em Minas Gerais aproveitando a rica geodiversidade do Estado. O lab seria estruturado em consórcio UFMG–UFOP–UNIFEI com financiamento federal via MCTI e parcerias com empresas de mineração para pesquisa em extração sustentável, materiais avançados e tecnologias de remediação ambiental. Capacidade de receber 200 pesquisadores residentes e servir como hub para colaborações com laboratórios internacionais em 20 países.</p>
+              </div>
+              <span class="project-status status-proposal">Proposta</span>
+            </div>
+            <div class="project-card">
+              <div>
+                <h4>Centro de IA Aplicada – UFMG</h4>
+                <p>Expansão e formalização do Centro de Inteligência Artificial da UFMG como hub nacional de pesquisa em IA para aplicações industriais, agrícolas e de saúde pública. Com financiamento de R$ 200 milhões em cinco anos (50% público, 50% privado via IBM, Google e empresas mineiras), o centro reuniria 150 pesquisadores sênior, 500 pós-graduandos e infraestrutura de computação de alto desempenho. Metas: 500 publicações internacionais/ano e 20 spin-offs de IA até 2030.</p>
+              </div>
+              <span class="project-status status-active">Em desenvolvimento</span>
+            </div>
+            <div class="project-card">
+              <div>
+                <h4>FAPEMIG 2.0 – Vinculação Constitucional e Modernização</h4>
+                <p>Proposta de emenda à Constituição do Estado de Minas Gerais para vincular 1% da Receita Tributária Estadual à FAPEMIG, replicando o modelo FAPESP que transformou o ecossistema científico paulista. Prevê também a modernização administrativa da fundação com adoção de gestão por resultados, painéis de acompanhamento em tempo real, processos 100% digitais e criação de uma reserva estratégica para pesquisa de risco (FAPEMIG de Fronteira) focada em temas transformadores de 10 a 20 anos de maturação.</p>
+              </div>
+              <span class="project-status status-study">Em estudo</span>
+            </div>
+            <div class="project-card">
+              <div>
+                <h4>Programa Minas Research Fellows – Atração de Pesquisadores</h4>
+                <p>Programa estadual de bolsas de excelência para atração de pesquisadores brasileiros e estrangeiros de alto impacto (h-index ≥ 15) para se instalarem em universidades e institutos mineiros por períodos mínimos de 5 anos. As bolsas cobrirão salário competitivo (até R$ 25.000/mês), infraestrutura de pesquisa e custeio de grupo. Em parceria com municípios, serão oferecidos incentivos habitacionais e de qualidade de vida. Meta inicial: 500 fellows até 2030, com avaliação de impacto quinquenal.</p>
+              </div>
+              <span class="project-status status-proposal">Proposta</span>
+            </div>
+          </div>
+        </section>
+
+        <section id="indicadores" class="content-section fade-in-section">
+          <div class="section-label">09</div>
+          <h2>Indicadores-Chave (KPIs)</h2>
+          <div class="metric-grid">
+            <div class="metric-card">
+              <div class="metric-label">Investimento P&amp;D / PIB</div>
+              <div><span class="metric-value">1,5</span><span class="metric-unit">%</span></div>
+              <div class="metric-description">Meta 2035 · atual: 0,7% · referência OCDE: 2,7%</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">Artigos Indexados / ano</div>
+              <div><span class="metric-value">55</span><span class="metric-unit">mil</span></div>
+              <div class="metric-description">Meta 2035 · atual: 32 mil · crescimento: 72%</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">Patentes Comercializadas</div>
+              <div><span class="metric-value">25</span><span class="metric-unit">%</span></div>
+              <div class="metric-description">Taxa de comercialização · atual: 6% · meta: 4× maior</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">Doutores / 10 mil hab.</div>
+              <div><span class="metric-value">6,0</span><span class="metric-unit">/10mil</span></div>
+              <div class="metric-description">Meta 2035 · atual: 4,0 · meta 2050: 12,0</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">Spin-offs Universitárias</div>
+              <div><span class="metric-value">300+</span><span class="metric-unit">empresas</span></div>
+              <div class="metric-description">Meta 2035 · atual: 90+ · crescimento: 3×</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">Bolsas FAPEMIG Ativas</div>
+              <div><span class="metric-value">15</span><span class="metric-unit">mil</span></div>
+              <div class="metric-description">Meta 2035 · atual: ~4 mil · depende da vinculação constitucional</div>
+            </div>
+          </div>
+        </section>
+
+        <section id="debate" class="content-section fade-in-section">
+          <div class="section-label">10</div>
+          <h2>Questões para Debate Público</h2>
+          <ol>
+            <li>A vinculação constitucional de 1% da receita estadual à FAPEMIG é politicamente viável no contexto de restrição fiscal de Minas Gerais? Quais são os mecanismos de transição possíveis?</li>
+            <li>Como evitar que a concentração de investimentos científicos em Belo Horizonte e cidades-sede das federais aprofunde as desigualdades regionais já existentes no Estado?</li>
+            <li>O modelo de transferência tecnológica baseado em licenciamento de patentes é adequado para a realidade brasileira, ou seria mais eficaz priorizar a criação direta de empresas spin-off pelas universidades?</li>
+            <li>Como o Estado pode induzir empresas privadas a co-investirem em P&amp;D com universidades mineiras, dado o baixo histórico de parceria academia-indústria no Brasil?</li>
+            <li>A Embrapa e os institutos federais de pesquisa agropecuária devem ter papel mais central no ecossistema de inovação científica mineiro, além da pesquisa agrária, expandindo para biotecnologia e bioeconomia?</li>
+            <li>Como os NITs (Núcleos de Inovação Tecnológica) das universidades podem ser modernizados sem transformar sua lógica em pura comercialização, preservando a pesquisa básica de longo prazo?</li>
+            <li>Qual é o papel das empresas mineiras de mineração (Vale, Usiminas, Samarco) no financiamento da pesquisa científica do Estado, considerando os impactos ambientais e sociais de suas atividades?</li>
+          </ol>
+          <div style="margin-top: var(--sp-8);">
+            <a href="../participar.html" class="btn btn-primary" id="btn-cien-debate">Participar do Debate</a>
+          </div>
+        </section>
+
+        <section id="referencias" class="content-section fade-in-section">
+          <div class="section-label">11</div>
+          <h2>Referências Bibliográficas</h2>
+          <div class="reference-list">
+            <div class="reference-item">
+              <span class="reference-num">01</span>
+              <span>CAPES – Coordenação de Aperfeiçoamento de Pessoal de Nível Superior. <em>Relatório de Avaliação da Pós-Graduação – Quadriênio 2021</em>. Brasília: CAPES, 2022.</span>
+            </div>
+            <div class="reference-item">
+              <span class="reference-num">02</span>
+              <span>CNPq – Conselho Nacional de Desenvolvimento Científico e Tecnológico. <em>Painel de Investimentos em Ciência, Tecnologia e Inovação 2023</em>. Brasília: CNPq, 2023.</span>
+            </div>
+            <div class="reference-item">
+              <span class="reference-num">03</span>
+              <span>FAPEMIG – Fundação de Amparo à Pesquisa do Estado de Minas Gerais. <em>Relatório Anual de Atividades 2022</em>. Belo Horizonte: FAPEMIG, 2023.</span>
+            </div>
+            <div class="reference-item">
+              <span class="reference-num">04</span>
+              <span>INPI – Instituto Nacional da Propriedade Industrial. <em>Boletim Anual de Propriedade Intelectual 2023</em>. Rio de Janeiro: INPI, 2023.</span>
+            </div>
+            <div class="reference-item">
+              <span class="reference-num">05</span>
+              <span>OCDE. <em>Main Science and Technology Indicators 2023</em>. Paris: OECD Publishing, 2023.</span>
+            </div>
+            <div class="reference-item">
+              <span class="reference-num">06</span>
+              <span>QS WORLD UNIVERSITY RANKINGS. <em>Latin America University Rankings 2024</em>. London: Quacquarelli Symonds, 2023.</span>
+            </div>
+            <div class="reference-item">
+              <span class="reference-num">07</span>
+              <span>MCTIC – Ministério da Ciência, Tecnologia, Inovações e Comunicações. <em>Estratégia Nacional de Ciência, Tecnologia e Inovação 2022–2026</em>. Brasília: MCTIC, 2022.</span>
+            </div>
+            <div class="reference-item">
+              <span class="reference-num">08</span>
+              <span>GOVERNO DE MINAS GERAIS / SECTES. <em>Política Estadual de Ciência, Tecnologia e Inovação de Minas Gerais 2020–2030</em>. Belo Horizonte: SECTES, 2020.</span>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
   <footer class="site-footer">
-    <p>&copy; 2026 Projeto Minas 2035 – Todos os direitos reservados.</p>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="navbar-brand">
+            <svg class="navbar-logo" viewBox="0 0 36 36" fill="none">
+              <rect width="36" height="36" rx="8" fill="url(#grad-footer-cien)"/>
+              <path d="M10 24 L10 13 L18 20 L26 13 L26 24" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              <defs><linearGradient id="grad-footer-cien" x1="0" y1="0" x2="36" y2="36" gradientUnits="userSpaceOnUse"><stop stop-color="#00E5FF"/><stop offset="1" stop-color="#4F46E5"/></linearGradient></defs>
+            </svg>
+            <span class="navbar-name">Minas <span>2035</span></span>
+          </a>
+          <p>Plataforma independente de estudos para o desenvolvimento de Minas Gerais com visão de longo prazo.</p>
+        </div>
+        <div class="footer-col"><h5>Projeto</h5><ul><li><a href="../sobre.html">Sobre</a></li><li><a href="../manifesto.html">Manifesto</a></li><li><a href="../pilares.html">Pilares</a></li><li><a href="../participar.html">Participar</a></li></ul></div>
+        <div class="footer-col"><h5>Outras Áreas</h5><ul><li><a href="economia.html">Economia</a></li><li><a href="educacao.html">Educação</a></li><li><a href="industria.html">Indústria</a></li><li><a href="agricultura.html">Agronegócio</a></li></ul></div>
+        <div class="footer-col"><h5>Legal</h5><ul><li><a href="#">Política de privacidade</a></li><li><a href="#">Licença de uso</a></li><li><a href="#">Contato</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Projeto Minas 2035. Fontes: CAPES, CNPq, FAPEMIG, INPI, OCDE.</p>
+        <a href="../manifesto.html">Manifesto →</a>
+      </div>
+    </div>
   </footer>
+
+  <script>lucide.createIcons();</script>
 </body>
 </html>
