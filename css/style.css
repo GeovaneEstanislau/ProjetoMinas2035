@@ -1,11 +1,8 @@
-/* ------------------------------------------------------------
-   STYLE – Base layout and global styles (RFC‑0003)
-   ------------------------------------------------------------ */
+/* ============================================================
+   STYLE – Reset, Base & Global Layout
+   ============================================================ */
 
-/* Reset & box‑sizing */
-*,
-*::before,
-*::after {
+*, *::before, *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -13,167 +10,119 @@
 
 html {
   scroll-behavior: smooth;
-  font-family: var(--font-primary);
-  font-size: var(--font-size-base);
-  line-height: var(--line-height-base);
-  color: var(--color-text-primary);
-  background-color: var(--color-background);
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
+  font-family: var(--font-body);
+  background-color: var(--bg);
+  color: var(--text-primary);
+  line-height: 1.7;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  background: var(--color-background);
+  overflow-x: hidden;
 }
 
-/* Typography helpers */
+/* ── Typography ─────────────────────────────────────────── */
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 600;
-  line-height: 1.2;
-  color: var(--color-text-primary);
-  margin-bottom: var(--space-3);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
 }
 
-h1 {
-  font-size: var(--font-size-xl);
-}
-
-h2 {
-  font-size: var(--font-size-lg);
-}
+h1 { font-size: var(--text-5xl); }
+h2 { font-size: var(--text-4xl); }
+h3 { font-size: var(--text-2xl); }
+h4 { font-size: var(--text-xl); }
 
 p {
-  margin-bottom: var(--space-3);
-  color: var(--color-text-secondary);
+  color: var(--text-secondary);
+  line-height: 1.75;
+  font-size: var(--text-base);
 }
 
 a {
-  color: var(--color-primary);
+  color: var(--accent-cyan);
   text-decoration: none;
-  transition: color var(--transition-medium);
+  transition: color var(--trans-fast);
 }
 
-a:hover {
-  color: var(--color-primary-light);
+a:hover { color: #fff; }
+
+ul { list-style: none; }
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
 }
 
-/* Layout containers */
+/* ── Container ──────────────────────────────────────────── */
 .container {
   width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: var(--space-4) var(--space-2);
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: var(--sp-4);
 }
 
-header.site-header {
-  background: var(--color-surface);
-  padding: var(--space-3) var(--space-2);
-  box-shadow: var(--shadow-elev-1);
+/* ── Section Padding ────────────────────────────────────── */
+.section {
+  padding-block: var(--sp-24);
 }
 
-main {
-  flex: 1 0 auto;
-  padding: var(--space-5) var(--space-2);
-}
-
-footer.site-footer {
-  background: var(--color-surface-dark, hsl(0,0%,8%));
-  color: var(--color-text-secondary);
-  text-align: center;
-  padding: var(--space-3);
-  margin-top: var(--space-6);
-  box-shadow: var(--shadow-elev-1);
-}
-
-/* Utility classes */
-.mt-1 { margin-top: var(--space-1); }
-.mt-2 { margin-top: var(--space-2); }
-.mb-1 { margin-bottom: var(--space-1); }
-.mb-2 { margin-bottom: var(--space-2); }
-.text-center { text-align: center; }
-
-/* Scrollbar (premium dark style) */
-::-webkit-scrollbar {
-  width: 8px;
-}
-::-webkit-scrollbar-track {
-  background: var(--color-surface);
-}
-::-webkit-scrollbar-thumb {
-  background-color: var(--color-primary);
-  border-radius: var(--radius-sm);
-}
-
-/* ------------------------------------------------------------
-   PREMIUM VISUAL ENHANCEMENTS – Glassmorphism & Hero Overlay
-   ------------------------------------------------------------ */
-
-/* Header & Footer Glass Effect */
-.site-header,
-.site-footer {
-  background: rgba(255, 255, 255, 0.12);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  box-shadow: var(--shadow-elev-2);
-}
-
-/* Hero Image Overlay */
-.hero-image {
-  position: relative;
-  height: 70vh;
-  overflow: hidden;
-}
-.hero-image picture,
-.hero-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.hero-image::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.6));
-}
-.hero-image h1,
-.hero-image p {
-  position: absolute;
-  color: #fff;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-/* CTA Buttons – Glass Style */
-.cta-btn {
-  display: inline-block;
-  padding: var(--space-2) var(--space-4);
-  background: rgba(255,255,255,0.2);
-  border: 1px solid rgba(255,255,255,0.3);
-  border-radius: var(--radius-md);
-  color: #fff;
+/* ── Section Labels ─────────────────────────────────────── */
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  font-family: var(--font-heading);
+  font-size: var(--text-xs);
   font-weight: 600;
-  text-decoration: none;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  transition: background var(--transition-medium), transform var(--transition-medium);
-}
-.cta-btn:hover {
-  background: rgba(255,255,255,0.3);
-  transform: translateY(-2px);
-}
-.cta-btn.secondary {
-  background: rgba(255,255,255,0.1);
-  border-color: rgba(255,255,255,0.2);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-cyan);
+  margin-bottom: var(--sp-4);
 }
 
-/* Scrollbar – Refined */
-::-webkit-scrollbar-track {
-  background: rgba(255,255,255,0.05);
+.section-label::before {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 1px;
+  background: var(--accent-cyan);
 }
+
+/* ── Section Heading ────────────────────────────────────── */
+.section-heading {
+  font-size: var(--text-4xl);
+  font-weight: 700;
+  margin-bottom: var(--sp-6);
+  background: linear-gradient(135deg, #fff 40%, var(--text-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Gradient Text ──────────────────────────────────────── */
+.text-gradient {
+  background: var(--accent-grad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Scrollbar ──────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-surface); }
 ::-webkit-scrollbar-thumb {
-  background-color: rgba(255,255,255,0.25);
+  background: linear-gradient(var(--accent-cyan), var(--accent-indigo));
+  border-radius: var(--radius-full);
+}
+
+/* ── Selection ──────────────────────────────────────────── */
+::selection {
+  background: rgba(0, 229, 255, 0.2);
+  color: #fff;
 }

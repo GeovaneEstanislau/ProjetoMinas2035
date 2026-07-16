@@ -1,44 +1,140 @@
-/* ------------------------------------------------------------
-   RESPONSIVE – Grid layout for card sections (glassmorphism compatible)
-   ------------------------------------------------------------ */
+/* ============================================================
+   RESPONSIVE – Breakpoints & Mobile Adjustments
+   ============================================================ */
 
-/* Generic card grid – used in "Nossos Princípios" and other sections */
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: var(--space-4);
-  width: 100%;
+/* ── Tablet: max 1024px ─────────────────────────────────── */
+@media (max-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--sp-10);
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cycle-wrap {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stat-bar .container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--sp-8);
+  }
+
+  .stat-item:not(:last-child)::after {
+    display: none;
+  }
 }
 
-/* Specific grid for large "Grandes Áreas" cards (area-card) */
-.card-grid-sm {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: var(--space-3);
-  width: 100%;
+/* ── Mobile: max 768px ──────────────────────────────────── */
+@media (max-width: 768px) {
+  :root {
+    --navbar-h: 64px;
+  }
+
+  h1 { font-size: var(--text-4xl); }
+  h2 { font-size: var(--text-3xl); }
+
+  /* Navbar */
+  .navbar-nav,
+  .navbar-cta {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .navbar-nav.open {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: var(--navbar-h);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(5, 8, 22, 0.97);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    z-index: 99;
+    padding: var(--sp-10) var(--sp-6);
+    gap: var(--sp-6);
+    align-items: flex-start;
+    border-top: 1px solid var(--border);
+  }
+
+  .navbar-nav.open a {
+    font-size: var(--text-2xl);
+    color: var(--text-primary);
+  }
+
+  /* Hero */
+  .hero-title {
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+
+  .hero-subtitle {
+    font-size: var(--text-base);
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Stats */
+  .stat-bar .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stat-number {
+    font-size: var(--text-3xl);
+  }
+
+  /* Cards */
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .area-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Cycle */
+  .cycle-wrap {
+    grid-template-columns: 1fr;
+  }
+
+  /* Footer */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: var(--sp-8);
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* Section padding */
+  .section {
+    padding-block: var(--sp-16);
+  }
 }
 
-/* Ensure area cards fill the grid cell and have consistent styling */
-.area-card {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: var(--space-3);
-  background: var(--color-surface);
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-elev-1);
-  transition: box-shadow var(--transition-medium), transform var(--transition-medium);
-}
+/* ── Small Mobile: max 480px ────────────────────────────── */
+@media (max-width: 480px) {
+  .area-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-.area-card:hover {
-  box-shadow: var(--shadow-elev-2);
-  transform: translateY(-4px);
-}
-
-/* Adjust heading spacing on small screens */
-@media (max-width: 640px) {
-  .section h2 {
-    font-size: var(--font-size-lg);
+  .stat-bar .container {
+    grid-template-columns: 1fr 1fr;
   }
 }

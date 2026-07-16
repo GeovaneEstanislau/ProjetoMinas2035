@@ -3,204 +3,479 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Projeto Minas 2035 – Plataforma de estudos e propostas para o desenvolvimento econômico, social e tecnológico de Minas Gerais." />
+  <meta name="theme-color" content="#050816" />
   <title>Projeto Minas 2035 – Observatório de Futuro</title>
+
+  <!-- Google Fonts (preload) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- CSS -->
   <link rel="stylesheet" href="css/variables.css" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/components.css" />
-  <link rel="stylesheet" href="css/responsive.css" />
   <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+
+  <!-- Scripts -->
   <script defer src="js/app.js"></script>
   <script defer src="js/menu.js"></script>
   <script defer src="js/animations.js"></script>
-  <script defer src="js/charts.js"></script>
+  <script defer src="js/counters.js"></script>
+  <script defer src="js/hero.js"></script>
 </head>
 <body>
-  <!-- Header / Hero -->
-  <header class="site-header hero-section">
+
+  <!-- ======================================================
+       NAVBAR
+  ====================================================== -->
+  <header class="navbar" id="navbar">
     <div class="container">
-      <img src="assets/logo.svg" alt="Projeto Minas 2035" class="logo" />
-      <h1>Projeto Minas 2035</h1>
-      <p class="tagline">Pensando hoje o futuro de Minas Gerais</p>
-      <div class="hero-cta">
-        <a href="#sobre" class="btn btn-primary">Conheça o Projeto</a>
-        <a href="#areas" class="btn btn-outline">Explorar Estudos</a>
+      <a href="/" class="navbar-brand" aria-label="Projeto Minas 2035 – Página Inicial">
+        <svg class="navbar-logo" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="36" height="36" rx="8" fill="url(#grad-logo)"/>
+          <path d="M10 24 L10 13 L18 20 L26 13 L26 24" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <defs>
+            <linearGradient id="grad-logo" x1="0" y1="0" x2="36" y2="36" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#00E5FF"/>
+              <stop offset="1" stop-color="#4F46E5"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <span class="navbar-name">Minas <span>2035</span></span>
+      </a>
+
+      <nav class="navbar-nav" id="main-nav" aria-label="Navegação principal">
+        <a href="#sobre">O Projeto</a>
+        <a href="#areas">Áreas</a>
+        <a href="#principios">Princípios</a>
+        <a href="#numeros">Indicadores</a>
+        <a href="manifesto.html">Manifesto</a>
+      </nav>
+
+      <div class="navbar-cta">
+        <a href="participar.html" class="btn btn-outline">Participar</a>
+        <a href="#areas" class="btn btn-primary">Explorar</a>
       </div>
+
+      <button class="hamburger" id="hamburger-btn" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </header>
 
-  <!-- Panorama Image -->
-  <section class="panorama">
-    <div class="container">
-      <picture>
-        <source media="(min-width: 960px)" srcset="assets/panorama-wide.jpg" />
-        <img src="assets/panorama-mobile.jpg" alt="Panorama de Minas Gerais – Serra do Curral, Inhotim, Praça da Liberdade, Ouro Preto" class="responsive-img" />
-      </picture>
+
+  <!-- ======================================================
+       HERO
+  ====================================================== -->
+  <section class="hero" id="hero" aria-label="Seção principal">
+    <!-- Background layers -->
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-grid" aria-hidden="true"></div>
+    <canvas class="hero-canvas" id="hero-canvas" aria-hidden="true"></canvas>
+
+    <!-- Glow orbs -->
+    <div class="glow-orb glow-orb-1" aria-hidden="true"></div>
+    <div class="glow-orb glow-orb-2" aria-hidden="true"></div>
+
+    <!-- Content -->
+    <div class="hero-content">
+      <div class="hero-eyebrow" aria-label="Status do projeto">
+        Observatório de Futuro · 2035
+      </div>
+
+      <h1 class="hero-title">
+        O futuro de Minas Gerais
+        <span class="line-accent">começa aqui.</span>
+      </h1>
+
+      <p class="hero-subtitle">
+        Uma plataforma de estudos, dados e propostas para pensar o desenvolvimento
+        econômico, social e tecnológico de Minas Gerais com visão de longo prazo.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#sobre" class="btn btn-primary btn-lg" id="hero-cta-primary">Conhecer o Projeto</a>
+        <a href="#areas" class="btn btn-outline btn-lg" id="hero-cta-secondary">Explorar Áreas</a>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="hero-scroll" aria-hidden="true">
+      <span>Role para explorar</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M12 5v14M5 12l7 7 7-7"/>
+      </svg>
     </div>
   </section>
 
-  <!-- Section 1 – O Projeto -->
-  <section id="sobre" class="section section-1 fade-in-section">
-    <div class="container">
-      <h2>O Projeto</h2>
-      <p>O Projeto Minas 2035 nasceu da ideia de reunir conhecimento, experiências e estudos capazes de estimular reflexões sobre o desenvolvimento econômico, social, científico e tecnológico de Minas Gerais.</p>
-      <h3>O futuro é construído antes de acontecer.</h3>
-      <p>Mais do que apresentar respostas prontas, a plataforma busca organizar perguntas importantes:</p>
-      <ul>
-        <li>Como gerar mais oportunidades?</li>
-        <li>Como tornar nossas cidades mais competitivas?</li>
-        <li>Como fortalecer universidades?</li>
-        <li>Como incentivar inovação?</li>
-        <li>Como transformar riqueza natural em prosperidade para toda a população?</li>
-      </ul>
-      <p>Estas páginas reúnem ideias abertas à discussão, fundamentadas em planejamento de longo prazo e inspiradas em experiências nacionais e internacionais. O objetivo é construir conhecimento.</p>
-    </div>
-  </section>
 
-  <!-- Section 2 – Nossos Princípios -->
-  <section id="principios" class="section section-2 fade-in-section">
+  <!-- ======================================================
+       STAT BAR – Minas em Números
+  ====================================================== -->
+  <div class="stat-bar fade-in-section" id="numeros" aria-label="Indicadores de Minas Gerais">
     <div class="container">
-      <h2>Nossos Princípios</h2>
-      <div class="card-grid">
-        <div class="card">
-          <h3>Desenvolvimento baseado em evidências</h3>
-          <p>As ideias apresentadas procuram dialogar com dados, pesquisas e experiências práticas.</p>
+      <div class="stat-item">
+        <div>
+          <span class="stat-number counter" data-target="21" id="stat-pop">0</span>
+          <span class="stat-suffix">M</span>
         </div>
+        <span class="stat-label">Habitantes</span>
+      </div>
+      <div class="stat-item">
+        <div>
+          <span class="stat-number counter" data-target="853" id="stat-mun">0</span>
+        </div>
+        <span class="stat-label">Municípios</span>
+      </div>
+      <div class="stat-item">
+        <div>
+          <span class="stat-number counter" data-target="9" id="stat-pib">0</span>
+          <span class="stat-suffix">%</span>
+        </div>
+        <span class="stat-label">do PIB Nacional</span>
+      </div>
+      <div class="stat-item">
+        <div>
+          <span class="stat-number counter" data-target="587" id="stat-km">0</span>
+          <span class="stat-suffix">mil km²</span>
+        </div>
+        <span class="stat-label">Extensão territorial</span>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ======================================================
+       SECTION 1 – O Projeto
+  ====================================================== -->
+  <section id="sobre" class="section fade-in-section" aria-labelledby="sobre-heading">
+    <div class="container">
+      <div class="feature-grid">
+        <div class="feature-text">
+          <div class="section-label">O Projeto</div>
+          <h2 id="sobre-heading">
+            Parece um instituto de pesquisa.<br/>
+            <span class="text-gradient">Porque é.</span>
+          </h2>
+          <p>
+            O Projeto Minas 2035 nasceu da ideia de reunir conhecimento, experiências
+            e estudos capazes de estimular reflexões sobre o desenvolvimento de Minas Gerais.
+            Mais do que apresentar respostas prontas, a plataforma busca organizar
+            <strong style="color: var(--text-primary);">as perguntas certas</strong>.
+          </p>
+          <div class="feature-list">
+            <div class="feature-item">
+              <div class="feature-item-dot"></div>
+              <div class="feature-item-text">
+                <strong>Embasado em evidências</strong>
+                Dados, pesquisas e referências nacionais e internacionais.
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-item-dot"></div>
+              <div class="feature-item-text">
+                <strong>Visão de longo prazo</strong>
+                Planejamento estratégico além dos ciclos eleitorais.
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-item-dot"></div>
+              <div class="feature-item-text">
+                <strong>Aberto ao debate</strong>
+                Ideias como convite ao diálogo e à construção coletiva.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Visual panel -->
+        <div class="glass-panel" style="padding: var(--sp-8); display: flex; flex-direction: column; gap: var(--sp-6);" aria-hidden="true">
+          <blockquote style="font-family: var(--font-heading); font-size: var(--text-2xl); font-weight: 700; color: var(--text-primary); line-height: 1.3; letter-spacing: -0.02em;">
+            "O futuro é construído antes de acontecer."
+          </blockquote>
+          <div style="display: flex; flex-direction: column; gap: var(--sp-3);">
+            <p style="font-size: var(--text-sm); color: var(--text-muted);">Como gerar mais oportunidades?</p>
+            <div class="glow-line" aria-hidden="true"></div>
+            <p style="font-size: var(--text-sm); color: var(--text-muted);">Como tornar nossas cidades mais competitivas?</p>
+            <div class="glow-line" aria-hidden="true"></div>
+            <p style="font-size: var(--text-sm); color: var(--text-muted);">Como transformar riqueza natural em prosperidade?</p>
+            <div class="glow-line" aria-hidden="true"></div>
+            <p style="font-size: var(--text-sm); color: var(--text-muted);">Como fortalecer universidades e incentivar inovação?</p>
+          </div>
+          <a href="sobre.html" class="btn btn-outline" style="align-self: flex-start;" id="btn-saiba-mais">Saiba mais →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ======================================================
+       SECTION 2 – Grandes Áreas
+  ====================================================== -->
+  <section id="areas" class="section fade-in-section" style="background: var(--bg-surface);" aria-labelledby="areas-heading">
+    <div class="container">
+      <div style="text-align: center; max-width: 600px; margin-inline: auto; margin-bottom: var(--sp-12);">
+        <div class="section-label" style="justify-content: center;">Áreas de estudo</div>
+        <h2 id="areas-heading" class="section-heading">Grandes Áreas</h2>
+        <p>Catorze eixos temáticos que cobrem os principais vetores de desenvolvimento de Minas Gerais.</p>
+      </div>
+
+      <div class="area-grid stagger-children" role="list">
+        <a href="pages/economia.html" class="area-card" role="listitem" aria-label="Área de Economia">
+          <span class="area-card-icon" aria-hidden="true">📈</span>
+          Economia
+        </a>
+        <a href="pages/educacao.html" class="area-card" role="listitem" aria-label="Área de Educação">
+          <span class="area-card-icon" aria-hidden="true">🎓</span>
+          Educação
+        </a>
+        <a href="pages/infraestrutura.html" class="area-card" role="listitem" aria-label="Área de Infraestrutura">
+          <span class="area-card-icon" aria-hidden="true">🏗️</span>
+          Infraestrutura
+        </a>
+        <a href="pages/ciencia.html" class="area-card" role="listitem" aria-label="Área de Ciência">
+          <span class="area-card-icon" aria-hidden="true">🔬</span>
+          Ciência
+        </a>
+        <a href="pages/tecnologia.html" class="area-card" role="listitem" aria-label="Área de Tecnologia">
+          <span class="area-card-icon" aria-hidden="true">💡</span>
+          Tecnologia
+        </a>
+        <a href="pages/industria.html" class="area-card" role="listitem" aria-label="Área de Indústria">
+          <span class="area-card-icon" aria-hidden="true">🏭</span>
+          Indústria
+        </a>
+        <a href="pages/agricultura.html" class="area-card" role="listitem" aria-label="Área de Agricultura">
+          <span class="area-card-icon" aria-hidden="true">🌱</span>
+          Agricultura
+        </a>
+        <a href="pages/trabalho.html" class="area-card" role="listitem" aria-label="Área de Trabalho">
+          <span class="area-card-icon" aria-hidden="true">👷</span>
+          Trabalho
+        </a>
+        <a href="pages/saude.html" class="area-card" role="listitem" aria-label="Área de Saúde">
+          <span class="area-card-icon" aria-hidden="true">❤️</span>
+          Saúde
+        </a>
+        <a href="pages/energia.html" class="area-card" role="listitem" aria-label="Área de Energia">
+          <span class="area-card-icon" aria-hidden="true">⚡</span>
+          Energia
+        </a>
+        <a href="pages/meio-ambiente.html" class="area-card" role="listitem" aria-label="Área de Meio Ambiente">
+          <span class="area-card-icon" aria-hidden="true">🌿</span>
+          Meio Ambiente
+        </a>
+        <a href="pages/turismo.html" class="area-card" role="listitem" aria-label="Área de Turismo">
+          <span class="area-card-icon" aria-hidden="true">🗺️</span>
+          Turismo
+        </a>
+        <a href="pages/seguranca-juridica.html" class="area-card" role="listitem" aria-label="Área de Segurança Jurídica">
+          <span class="area-card-icon" aria-hidden="true">⚖️</span>
+          Segurança Jurídica
+        </a>
+        <a href="pages/governo-digital.html" class="area-card" role="listitem" aria-label="Área de Governo Digital">
+          <span class="area-card-icon" aria-hidden="true">🖥️</span>
+          Governo Digital
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ======================================================
+       SECTION 3 – Nossos Princípios
+  ====================================================== -->
+  <section id="principios" class="section fade-in-section" aria-labelledby="principios-heading">
+    <div class="container">
+      <div style="text-align: center; max-width: 600px; margin-inline: auto; margin-bottom: var(--sp-12);">
+        <div class="section-label" style="justify-content: center;">Princípios</div>
+        <h2 id="principios-heading" class="section-heading">Nossa filosofia de desenvolvimento</h2>
+        <p>Os valores que orientam o conteúdo e a curadoria do Projeto Minas 2035.</p>
+      </div>
+
+      <div class="card-grid stagger-children">
         <div class="card">
+          <div class="card-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19v-6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2zm0 0V9a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v10m-6 0a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2m0 0V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2z"/></svg>
+          </div>
+          <h3>Baseado em evidências</h3>
+          <p>As ideias apresentadas dialogam com dados, pesquisas e experiências práticas nacionais e internacionais.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
           <h3>Planejamento de longo prazo</h3>
-          <p>Grandes transformações exigem continuidade e visão estratégica.</p>
+          <p>Grandes transformações exigem continuidade, visão estratégica e compromisso com o tempo.</p>
         </div>
+
         <div class="card">
-          <h3>Desenvolvimento Regional</h3>
-          <p>Cada região possui características próprias que merecem soluções específicas.</p>
+          <div class="card-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <h3>Desenvolvimento regional</h3>
+          <p>Cada região possui características próprias que merecem soluções específicas e contextualizadas.</p>
         </div>
+
         <div class="card">
-          <h3>Conhecimento</h3>
-          <p>Educação, ciência e tecnologia são pilares para o desenvolvimento sustentável.</p>
+          <div class="card-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          </div>
+          <h3>Conhecimento como base</h3>
+          <p>Educação, ciência e tecnologia são os pilares que sustentam qualquer modelo de desenvolvimento sustentável.</p>
         </div>
+
         <div class="card">
-          <h3>Inovação</h3>
-          <p>O crescimento econômico depende da capacidade de criar novas soluções.</p>
+          <div class="card-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          </div>
+          <h3>Inovação estruturante</h3>
+          <p>O crescimento econômico de qualidade depende da capacidade de criar, adaptar e escalar novas soluções.</p>
         </div>
+
         <div class="card">
-          <h3>Qualidade de Vida</h3>
-          <p>O desenvolvimento deve refletir na melhoria das condições de vida das pessoas.</p>
+          <div class="card-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+          <h3>Qualidade de vida</h3>
+          <p>Todo desenvolvimento deve se traduzir em melhoria concreta e mensurável nas condições de vida das pessoas.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Section 3 – Grandes Áreas -->
-  <section id="areas" class="section section-3 fade-in-section">
+
+  <!-- ======================================================
+       SECTION 4 – Como pensamos o desenvolvimento
+  ====================================================== -->
+  <section id="ciclo" class="section fade-in-section" style="background: var(--bg-surface);" aria-labelledby="ciclo-heading">
     <div class="container">
-      <h2>Grandes Áreas</h2>
-      <div class="card-grid">
-        <a href="pages/economia.html" class="card area-card">Economia</a>
-        <a href="pages/educacao.html" class="card area-card">Educação</a>
-        <a href="pages/infraestrutura.html" class="card area-card">Infraestrutura</a>
-        <a href="pages/ciencia.html" class="card area-card">Ciência</a>
-        <a href="pages/tecnologia.html" class="card area-card">Tecnologia</a>
-        <a href="pages/industria.html" class="card area-card">Indústria</a>
-        <a href="pages/agricultura.html" class="card area-card">Agricultura</a>
-        <a href="pages/trabalho.html" class="card area-card">Trabalho</a>
-        <a href="pages/saude.html" class="card area-card">Saúde</a>
-        <a href="pages/energia.html" class="card area-card">Energia</a>
-        <a href="pages/meio-ambiente.html" class="card area-card">Meio Ambiente</a>
-        <a href="pages/turismo.html" class="card area-card">Turismo</a>
-        <a href="pages/seguranca-juridica.html" class="card area-card">Segurança Jurídica</a>
-        <a href="pages/governo-digital.html" class="card area-card">Governo Digital</a>
+      <div style="text-align: center; max-width: 600px; margin-inline: auto; margin-bottom: var(--sp-12);">
+        <div class="section-label" style="justify-content: center;">Método</div>
+        <h2 id="ciclo-heading" class="section-heading">Como pensamos o desenvolvimento</h2>
+        <p>Um ciclo virtuoso que conecta conhecimento à prosperidade real.</p>
+      </div>
+
+      <div class="cycle-wrap stagger-children">
+        <div class="cycle-step">
+          <span class="cycle-step-num">01</span>
+          <h4>Conhecimento</h4>
+          <p>Pesquisa, ciência e formação como base de tudo.</p>
+        </div>
+        <div class="cycle-step">
+          <span class="cycle-step-num">02</span>
+          <h4>Inovação</h4>
+          <p>Transformar conhecimento em soluções reais e escaláveis.</p>
+        </div>
+        <div class="cycle-step">
+          <span class="cycle-step-num">03</span>
+          <h4>Empresas</h4>
+          <p>Ecossistema produtivo que converte inovação em valor econômico.</p>
+        </div>
+        <div class="cycle-step">
+          <span class="cycle-step-num">04</span>
+          <h4>Empregos & Renda</h4>
+          <p>Crescimento que gera trabalho de qualidade e distribuição de renda.</p>
+        </div>
+        <div class="cycle-step">
+          <span class="cycle-step-num">05</span>
+          <h4>Qualidade de vida</h4>
+          <p>Resultado final: saúde, educação, segurança e bem-estar.</p>
+        </div>
+        <div class="cycle-step">
+          <span class="cycle-step-num">→</span>
+          <h4>Reinvestimento</h4>
+          <p>Mais qualidade de vida gera mais educação e mais conhecimento. O ciclo continua.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Section 4 – Como pensamos o desenvolvimento -->
-  <section id="ciclo" class="section section-4 fade-in-section">
-    <div class="container">
-      <h2>Como pensamos o desenvolvimento</h2>
-      <pre class="flowchart">
-Conhecimento
-↓
-Pesquisa
-↓
-Inovação
-↓
-Empresas
-↓
-Empregos
-↓
-Renda
-↓
-Qualidade de Vida
-↓
-Mais Educação
-↓
-Mais Conhecimento
-      </pre>
-    </div>
-  </section>
 
-  <!-- Section 5 – Minas em números -->
-  <section id="numeros" class="section section-5 fade-in-section">
+  <!-- ======================================================
+       SECTION 5 – Quote / Manifesto
+  ====================================================== -->
+  <section class="quote-section fade-in-section" aria-label="Citação do manifesto">
     <div class="container">
-      <h2>Minas em números</h2>
-      <div class="card-grid">
-        <div class="card placeholder">População</div>
-        <div class="card placeholder">Municípios</div>
-        <div class="card placeholder">Participação no PIB nacional</div>
-        <div class="card placeholder">Extensão territorial</div>
-        <div class="card placeholder">Principais setores econômicos</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Section 6 – Como o portal está organizado -->
-  <section id="organizacao" class="section section-6 fade-in-section">
-    <div class="container">
-      <h2>Como o portal está organizado</h2>
-      <pre class="tree">
-Projeto Minas 2035
-│
-├── Economia
-├── Educação
-├── Saúde
-├── Tecnologia
-├── Indústria
-├── Agricultura
-├── Infraestrutura
-├── Ciência
-├── Trabalho
-├── Governo Digital
-└── Desenvolvimento Regional
-      </pre>
-    </div>
-  </section>
-
-  <!-- Section 7 – Laboratório de Ideias -->
-  <section id="laboratorio" class="section section-7 fade-in-section">
-    <div class="container">
-      <h2>Laboratório de Ideias</h2>
       <blockquote>
-        “Toda grande transformação começa como uma ideia.”
+        <span class="quote-mark" aria-hidden="true">"</span>
+        Toda grande transformação começa como uma ideia. Este projeto é um convite ao diálogo, ao aperfeiçoamento e à construção coletiva.
       </blockquote>
-      <p>O Projeto Minas 2035 não pretende apresentar verdades definitivas. Seu propósito é reunir propostas, experiências, pesquisas e cenários que possam inspirar discussões qualificadas sobre o futuro de Minas Gerais.</p>
-      <p>As ideias aqui publicadas são convites ao diálogo, ao aperfeiçoamento e à construção coletiva.</p>
+      <p class="quote-source">— Projeto Minas 2035 · Manifesto</p>
+      <div style="margin-top: var(--sp-8);">
+        <a href="manifesto.html" class="btn btn-outline" id="btn-manifesto">Ler o Manifesto →</a>
+      </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="site-footer">
+
+  <!-- ======================================================
+       FOOTER
+  ====================================================== -->
+  <footer class="site-footer" aria-label="Rodapé do site">
     <div class="container">
-      <nav class="footer-nav">
-        <a href="sobre.html">Sobre o Projeto</a>
-        <a href="manifesto.html">Manifesto</a>
-        <a href="#areas">Áreas de estudo</a>
-        <a href="indicadores.html">Indicadores</a>
-        <a href="#principios">Princípios</a>
-        <a href="#contact">Contato</a>
-        <a href="#privacy">Política de Privacidade</a>
-        <a href="#license">Licença de uso</a>
-      </nav>
-      <p class="footer-note">© 2026 Projeto Minas 2035 – Todos os direitos reservados. O conteúdo representa estudos e ideias para debate público e citará fontes quando utilizar dados estatísticos ou pesquisas.</p>
+      <div class="footer-grid">
+
+        <!-- Brand -->
+        <div class="footer-brand">
+          <a href="/" class="navbar-brand" aria-label="Página inicial">
+            <svg class="navbar-logo" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect width="36" height="36" rx="8" fill="url(#grad-footer)"/>
+              <path d="M10 24 L10 13 L18 20 L26 13 L26 24" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              <defs>
+                <linearGradient id="grad-footer" x1="0" y1="0" x2="36" y2="36" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#00E5FF"/>
+                  <stop offset="1" stop-color="#4F46E5"/>
+                </linearGradient>
+              </defs>
+            </svg>
+            <span class="navbar-name">Minas <span>2035</span></span>
+          </a>
+          <p>Plataforma independente de estudos para o desenvolvimento de Minas Gerais com visão de longo prazo.</p>
+        </div>
+
+        <!-- Col 1 -->
+        <div class="footer-col">
+          <h5>Projeto</h5>
+          <ul>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="manifesto.html">Manifesto</a></li>
+            <li><a href="pilares.html">Pilares</a></li>
+            <li><a href="participar.html">Participar</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 2 -->
+        <div class="footer-col">
+          <h5>Áreas</h5>
+          <ul>
+            <li><a href="pages/economia.html">Economia</a></li>
+            <li><a href="pages/educacao.html">Educação</a></li>
+            <li><a href="pages/tecnologia.html">Tecnologia</a></li>
+            <li><a href="pages/saude.html">Saúde</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3 -->
+        <div class="footer-col">
+          <h5>Legal</h5>
+          <ul>
+            <li><a href="#">Política de privacidade</a></li>
+            <li><a href="#">Licença de uso</a></li>
+            <li><a href="#">Contato</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Projeto Minas 2035. O conteúdo representa estudos e ideias para debate público.</p>
+        <a href="manifesto.html">Manifesto →</a>
+      </div>
     </div>
   </footer>
+
 </body>
 </html>
