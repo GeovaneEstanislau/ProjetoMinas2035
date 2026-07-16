@@ -1,477 +1,1431 @@
-﻿<!DOCTYPE html>
+?<!DOCTYPE html>
+
+
 <html lang="pt-BR">
+
+
 <head>
+
+
   <meta charset="UTF-8" />
+
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />  <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+
   <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' https://unpkg.com 'unsafe-inline'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https:; object-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self';" />
-  <meta name="description" content="Centro de Energia e TransiÃ§Ã£o Verde â€“ DiagnÃ³sticos, estratÃ©gias e projetos para liderar a transiÃ§Ã£o energÃ©tica e posicionar Minas Gerais como referÃªncia em energia limpa atÃ© 2035." />
-  <title>Energia e TransiÃ§Ã£o Verde â€“ Projeto Minas 2035</title>
+
+
+  <meta name="description" content="Centro de Energia e Transição Verde — Diagn—sticos, estratégias e projetos para liderar a transição energética e posicionar Minas Gerais como referência em energia limpa até 2035." />
+
+
+  <title>Energia e Transição Verde — Projeto Minas 2035</title>
+
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+
   <link rel="stylesheet" href="../css/variables.css" />
+
+
   <link rel="stylesheet" href="../css/style.css" />
+
+
   <link rel="stylesheet" href="../css/components.css" />
+
+
   <link rel="stylesheet" href="../css/animations.css" />
+
+
   <link rel="stylesheet" href="../css/responsive.css" />
+
+
   <link rel="stylesheet" href="../css/pages.css" />
+
+
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+
   <script defer src="../js/app.js"></script>
+
+
   <script defer src="../js/menu.js"></script>
+
+
   <script defer src="../js/animations.js"></script>
+
+
   <script defer src="../js/counters.js"></script>
+
+
 </head>
+
+
 <body>
 
+
+
+
+
   <header class="navbar" id="navbar">
+
+
     <div class="container">
+
+
       <a href="../index.html" class="navbar-brand">
+
+
         <svg class="navbar-logo" viewBox="0 0 36 36" fill="none">
+
+
           <rect width="36" height="36" rx="8" fill="url(#grad-nav-ener)"/>
+
+
           <path d="M10 24 L10 13 L18 20 L26 13 L26 24" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+
           <defs><linearGradient id="grad-nav-ener" x1="0" y1="0" x2="36" y2="36" gradientUnits="userSpaceOnUse"><stop stop-color="#00E5FF"/><stop offset="1" stop-color="#4F46E5"/></linearGradient></defs>
+
+
         </svg>
+
+
         <span class="navbar-name">Minas <span>2035</span></span>
+
+
       </a>
+
+
       <nav class="navbar-nav" id="main-nav">
+
+
         <a href="../index.html#sobre">O Projeto</a>
-        <a href="../index.html#areas">Ãreas</a>
-        <a href="../index.html#principios">PrincÃ­pios</a>
+
+
+        <a href="../index.html#areas">Áreas</a>
+
+
+        <a href="../index.html#principios">Princípios</a>
+
+
         <a href="../indicadores.html">Indicadores</a>
+
+
         <a href="../manifesto.html">Manifesto</a>
+
+
       </nav>
+
+
       <div class="navbar-cta">
+
+
         <a href="../participar.html" class="btn btn-outline">Participar</a>
+
+
         <a href="../index.html#areas" class="btn btn-primary">Explorar</a>
+
+
       </div>
+
+
       <button class="hamburger" id="hamburger-btn" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav">
+
+
         <span></span><span></span><span></span>
+
+
       </button>
+
+
     </div>
+
+
   </header>
 
+
+
+
+
   <!-- PAGE HERO -->
+
+
   <section class="page-hero">
+
+
     <div class="page-hero-grid"></div>
+
+
     <div class="container">
+
+
       <div class="page-hero-content fade-in-section">
+
+
         <div class="breadcrumb">
-          <a href="../index.html">InÃ­cio</a>
+
+
+          <a href="../index.html">Início</a>
+
+
           <span class="breadcrumb-sep">/</span>
-          <a href="../index.html#areas">Ãreas</a>
+
+
+          <a href="../index.html#areas">Áreas</a>
+
+
           <span class="breadcrumb-sep">/</span>
+
+
           <span class="breadcrumb-current">Energia</span>
+
+
         </div>
-        <div class="section-label">Centro TemÃ¡tico</div>
-        <h1>Centro de Energia e TransiÃ§Ã£o Verde</h1>
+
+
+        <div class="section-label">Centro Temático</div>
+
+
+        <h1>Centro de Energia e Transição Verde</h1>
+
+
         <p class="page-subtitle">
-          DiagnÃ³sticos, estratÃ©gias e projetos para liderar a transiÃ§Ã£o energÃ©tica brasileira,
-          aproveitando o imenso potencial renovÃ¡vel de Minas Gerais e posicionando o estado
-          como referÃªncia global em energia limpa atÃ© 2035.
+
+
+          Diagn—sticos, estratégias e projetos para liderar a transição energética brasileira,
+
+
+          aproveitando o imenso potencial renov—vel de Minas Gerais e posicionando o estado
+
+
+          como referência global em energia limpa até 2035.
+
+
         </p>
+
+
         <div class="page-stats">
+
+
           <div class="page-stat">
+
+
             <span class="page-stat-value">96%</span>
-            <span class="page-stat-label">energia renovÃ¡vel na matriz MG</span>
+
+
+            <span class="page-stat-label">energia renov—vel na matriz MG</span>
+
+
           </div>
+
+
           <div class="page-stat-divider"></div>
+
+
           <div class="page-stat">
-            <span class="page-stat-value">4Â°</span>
-            <span class="page-stat-label">maior produtor eÃ³lico do BR</span>
+
+
+            <span class="page-stat-value">4—</span>
+
+
+            <span class="page-stat-label">maior produtor eólico do BR</span>
+
+
           </div>
+
+
           <div class="page-stat-divider"></div>
+
+
           <div class="page-stat">
+
+
             <span class="page-stat-value">50GW</span>
+
+
             <span class="page-stat-label">potencial solar identificado</span>
+
+
           </div>
+
+
         </div>
+
+
         <div class="tag-list" style="margin-top: var(--sp-6);">
+
+
           <span class="tag">Energia Solar</span>
-          <span class="tag">EÃ³lica</span>
-          <span class="tag">HidrelÃ©trica</span>
-          <span class="tag">HidrogÃªnio Verde</span>
-          <span class="tag">TransiÃ§Ã£o EnergÃ©tica</span>
+
+
+          <span class="tag">E—lica</span>
+
+
+          <span class="tag">Hidrelétrica</span>
+
+
+          <span class="tag">Hidrog—nio Verde</span>
+
+
+          <span class="tag">Transição Energ—tica</span>
+
+
           <span class="tag">CEMIG</span>
+
+
         </div>
+
+
       </div>
+
+
     </div>
+
+
   </section>
 
+
+
+
+
   <!-- MAIN -->
+
+
   <div class="container">
+
+
     <div class="page-layout">
 
+
+
+
+
       <!-- TOC -->
+
+
       <aside>
-        <nav class="toc" aria-label="Ãndice do conteÃºdo">
+
+
+        <nav class="toc" aria-label="Índice do conteúdo">
+
+
           <div class="toc-title">Neste Centro</div>
+
+
           <ul class="toc-list">
-            <li><a href="#resumo">01 Â· Resumo Executivo</a></li>
-            <li><a href="#situacao">02 Â· SituaÃ§Ã£o Atual</a></li>
-            <li><a href="#desafios">03 Â· Desafios Estruturais</a></li>
-            <li><a href="#oportunidades">04 Â· Oportunidades</a></li>
-            <li><a href="#benchmarking">05 Â· Benchmarking Internacional</a></li>
-            <li><a href="#objetivos">06 Â· Objetivos 2035</a></li>
-            <li><a href="#metas">07 Â· Metas 2050</a></li>
-            <li><a href="#projetos">08 Â· Projetos EstratÃ©gicos</a></li>
-            <li><a href="#indicadores">09 Â· Indicadores-Chave</a></li>
-            <li><a href="#debate">10 Â· QuestÃµes para Debate</a></li>
-            <li><a href="#referencias">11 Â· ReferÃªncias</a></li>
+
+
+            <li><a href="#resumo">01 — Resumo Executivo</a></li>
+
+
+            <li><a href="#situacao">02 — Situação Atual</a></li>
+
+
+            <li><a href="#desafios">03 — Desafios Estruturais</a></li>
+
+
+            <li><a href="#oportunidades">04 — Oportunidades</a></li>
+
+
+            <li><a href="#benchmarking">05 — Benchmarking Internacional</a></li>
+
+
+            <li><a href="#objetivos">06 — Objetivos 2035</a></li>
+
+
+            <li><a href="#metas">07 — Metas 2050</a></li>
+
+
+            <li><a href="#projetos">08 — Projetos Estratégicos</a></li>
+
+
+            <li><a href="#indicadores">09 — Indicadores-Chave</a></li>
+
+
+            <li><a href="#debate">10 — Questões para Debate</a></li>
+
+
+            <li><a href="#referencias">11 — Referências</a></li>
+
+
           </ul>
+
+
         </nav>
+
+
       </aside>
 
+
+
+
+
       <!-- ARTICLE -->
+
+
       <article class="article-content">
 
+
+
+
+
         <section id="resumo" class="content-section fade-in-section">
+
+
           <div class="section-label">01</div>
+
+
           <h2>Resumo Executivo</h2>
-          <p>Minas Gerais ocupa uma posiÃ§Ã£o privilegiada na transiÃ§Ã£o energÃ©tica brasileira. Com 96% de sua matriz elÃ©trica composta por fontes renovÃ¡veis â€” predominantemente hidrelÃ©tricas operadas pela CEMIG (Companhia EnergÃ©tica de Minas Gerais) e suas parceiras â€”, o estado jÃ¡ caminha na direÃ§Ã£o certa. Mas Ã© a combinaÃ§Ã£o desse legado hidrelÃ©trico com um potencial solar e eÃ³lico extraordinÃ¡rio que posiciona Minas como um territÃ³rio estratÃ©gico para a prÃ³xima fase da descarbonizaÃ§Ã£o global.</p>
-          <p>O Norte de Minas abriga uma das melhores irradiÃ¢ncias solares do Brasil â€” comparÃ¡vel Ã  do Nordeste â€”, com mÃ©dia de 6,0 kWh/mÂ²/dia. A Serra do EspinhaÃ§o e o planalto mineiro concentram ventos com capacidade de geraÃ§Ã£o eÃ³lica ainda pouco explorada. Estudos da ANEEL (AgÃªncia Nacional de Energia ElÃ©trica) estimam um potencial tÃ©cnico-econÃ´mico de ao menos 50 GW de capacidade solar instalÃ¡vel em Minas, o que representaria multiplicar por 20 a capacidade atual de geraÃ§Ã£o solar do estado.</p>
-          <p>O Projeto Minas 2035 propÃµe que o estado lidere nÃ£o apenas a geraÃ§Ã£o renovÃ¡vel, mas tambÃ©m o desenvolvimento de toda a cadeia do valor da energia limpa: do hidrogÃªnio verde Ã  fabricaÃ§Ã£o de baterias com lÃ­tio mineiro, passando pela minigeraÃ§Ã£o distribuÃ­da rural e pela atraÃ§Ã£o de indÃºstrias eletrointensivas que buscam energia 100% verde. A CEMIG, como empresa de referÃªncia do setor, tem papel central nessa transformaÃ§Ã£o.</p>
+
+
+          <p>Minas Gerais ocupa uma posi——o privilegiada na transição energética brasileira. Com 96% de sua matriz elétrica composta por fontes renov—veis — predominantemente hidrelétricas operadas pela CEMIG (Companhia Energ—tica de Minas Gerais) e suas parceiras —, o estado já caminha na dire——o certa. Mas — a combinação desse legado hidrel—trico com um potencial solar e eólico extraordin—rio que posiciona Minas como um territ—rio estratégico para a pr—xima fase da descarbonização global.</p>
+
+
+          <p>O Norte de Minas abriga uma das melhores irradi—ncias solares do Brasil — compar—vel — do Nordeste —, com média de 6,0 kWh/m—/dia. A Serra do Espinhação e o planalto mineiro concentram ventos com capacidade de geração eólica ainda pouco explorada. Estudos da ANEEL (Ag—ncia Nacional de Energia El—trica) estimam um potencial t—cnico-econômico de ao menos 50 GW de capacidade solar instal—vel em Minas, o que representaria multiplicar por 20 a capacidade atual de geração solar do estado.</p>
+
+
+          <p>O Projeto Minas 2035 propõe que o estado lidere não apenas a geração renov—vel, mas tamb—m o desenvolvimento de toda a cadeia do valor da energia limpa: do hidrogênio verde — fabricação de baterias com l—tio mineiro, passando pela minigeração distribu—da rural e pela atração de indústrias eletrointensivas que buscam energia 100% verde. A CEMIG, como empresa de referência do setor, tem papel central nessa transformação.</p>
+
+
+
+
 
           <div class="quote-block">
-            <blockquote>"O potencial energÃ©tico renovÃ¡vel de Minas Gerais Ã© um ativo estratÃ©gico nacional. AproveitÃ¡-lo bem pode transformar o estado no coraÃ§Ã£o da transiÃ§Ã£o energÃ©tica do Brasil."</blockquote>
-            <cite>â€” ANEEL â€“ AgÃªncia Nacional de Energia ElÃ©trica, Atlas de Energia ElÃ©trica do Brasil, 2022</cite>
+
+
+            <blockquote>"O potencial energ—tico renov—vel de Minas Gerais — um ativo estratégico nacional. Aproveit—-lo bem pode transformar o estado no coração da transição energética do Brasil."</blockquote>
+
+
+            <cite>— ANEEL — Ag—ncia Nacional de Energia El—trica, Atlas de Energia El—trica do Brasil, 2022</cite>
+
+
           </div>
+
+
         </section>
+
+
+
+
 
         <section id="situacao" class="content-section fade-in-section">
+
+
           <div class="section-label">02</div>
-          <h2>SituaÃ§Ã£o Atual de Minas Gerais</h2>
-          <p>A CEMIG Ã© a maior distribuidora de energia do Brasil em nÃºmero de municÃ­pios atendidos (774 municÃ­pios) e uma das maiores empresas de energia elÃ©trica da AmÃ©rica Latina. Com participaÃ§Ã£o do Governo de Minas Gerais como acionista controlador, a empresa opera usinas hidrelÃ©tricas, termelÃ©tricas, pequenas centrais hidrelÃ©tricas (PCHs), parques eÃ³licos e solares, alÃ©m de gerir toda a infraestrutura de distribuiÃ§Ã£o e transmissÃ£o estadual. Em 2023, a CEMIG investiu R$ 5,2 bilhÃµes em expansÃ£o e modernizaÃ§Ã£o do sistema.</p>
-          <p>A matriz elÃ©trica de Minas Ã© dominada pela geraÃ§Ã£o hidrelÃ©trica (82% da capacidade instalada), complementada por eÃ³lica (9%), solar (4%) e outras fontes (5%). Contudo, essa dependÃªncia hÃ­drica representa tambÃ©m uma vulnerabilidade: os ciclos de seca â€” cada vez mais intensos em funÃ§Ã£o das mudanÃ§as climÃ¡ticas â€” elevam os riscos de desabastecimento e de acionamento de tÃ©rmicas mais caras e poluentes. A diversificaÃ§Ã£o para solar e eÃ³lica Ã©, portanto, uma estratÃ©gia de resiliÃªncia alÃ©m de um imperativo climÃ¡tico.</p>
+
+
+          <h2>Situação Atual de Minas Gerais</h2>
+
+
+          <p>A CEMIG — a maior distribuidora de energia do Brasil em n—mero de municípios atendidos (774 municípios) e uma das maiores empresas de energia elétrica da América Latina. Com participação do Governo de Minas Gerais como acionista controlador, a empresa opera usinas hidrelétricas, termelétricas, pequenas centrais hidrelétricas (PCHs), parques eólicos e solares, al—m de gerir toda a infraestrutura de distribui——o e transmissão estadual. Em 2023, a CEMIG investiu R$ 5,2 bilhões em expansão e modernização do sistema.</p>
+
+
+          <p>A matriz elétrica de Minas — dominada pela geração hidrelétrica (82% da capacidade instalada), complementada por eólica (9%), solar (4%) e outras fontes (5%). Contudo, essa depend—ncia h—drica representa tamb—m uma vulnerabilidade: os ciclos de seca — cada vez mais intensos em fun——o das mudan—as clim—ticas — elevam os riscos de desabastecimento e de acionamento de t—rmicas mais caras e poluentes. A diversificação para solar e eólica —, portanto, uma estratégia de resili—ncia al—m de um imperativo clim—tico.</p>
+
+
+
+
 
           <div class="metric-grid">
+
+
             <div class="metric-card">
+
+
               <div class="metric-label">Capacidade Instalada MG</div>
+
+
               <div><span class="metric-value">14</span><span class="metric-unit">GW</span></div>
-              <div class="metric-description">Total de geraÃ§Ã£o elÃ©trica â€“ ANEEL 2023</div>
+
+
+              <div class="metric-description">Total de geração elétrica — ANEEL 2023</div>
+
+
             </div>
+
+
             <div class="metric-card">
-              <div class="metric-label">Energia RenovÃ¡vel</div>
+
+
+              <div class="metric-label">Energia Renov—vel</div>
+
+
               <div><span class="metric-value">96</span><span class="metric-unit">%</span></div>
-              <div class="metric-description">Da matriz elÃ©trica de Minas Gerais</div>
+
+
+              <div class="metric-description">Da matriz elétrica de Minas Gerais</div>
+
+
             </div>
+
+
             <div class="metric-card">
+
+
               <div class="metric-label">Capacidade Solar Atual</div>
+
+
               <div><span class="metric-value">2,5</span><span class="metric-unit">GW</span></div>
-              <div class="metric-description">Potencial tÃ©cnico: 50 GW â€“ crescimento de 40% a.a.</div>
+
+
+              <div class="metric-description">Potencial t—cnico: 50 GW — crescimento de 40% a.a.</div>
+
+
             </div>
+
+
             <div class="metric-card">
+
+
               <div class="metric-label">Investimento CEMIG 2023</div>
+
+
               <div><span class="metric-value">R$ 5,2</span><span class="metric-unit">bi</span></div>
-              <div class="metric-description">ExpansÃ£o e modernizaÃ§Ã£o do sistema elÃ©trico</div>
+
+
+              <div class="metric-description">Expansão e modernização do sistema el—trico</div>
+
+
             </div>
+
+
             <div class="metric-card">
-              <div class="metric-label">MinigeraÃ§Ã£o DistribuÃ­da</div>
+
+
+              <div class="metric-label">Minigeração Distribu—da</div>
+
+
               <div><span class="metric-value">350</span><span class="metric-unit">mil</span></div>
-              <div class="metric-description">Unidades com geraÃ§Ã£o prÃ³pria â€“ crescimento acelerado</div>
+
+
+              <div class="metric-description">Unidades com geração pr—pria — crescimento acelerado</div>
+
+
             </div>
+
+
             <div class="metric-card">
+
+
               <div class="metric-label">Empregos no Setor</div>
+
+
               <div><span class="metric-value">85</span><span class="metric-unit">mil</span></div>
-              <div class="metric-description">Diretos e indiretos â€“ potencial de dobrar atÃ© 2035</div>
+
+
+              <div class="metric-description">Diretos e indiretos — potencial de dobrar até 2035</div>
+
+
             </div>
+
+
           </div>
+
+
         </section>
+
+
+
+
 
         <section id="desafios" class="content-section fade-in-section">
+
+
           <div class="section-label">03</div>
+
+
           <h2>Desafios Estruturais</h2>
+
+
           <ul>
+
+
             <li>
-              <strong>Vulnerabilidade hÃ­drica da matriz elÃ©trica</strong> â€” A concentraÃ§Ã£o de 82% da capacidade instalada em hidrelÃ©tricas torna Minas Gerais altamente vulnerÃ¡vel aos perÃ­odos de estiagem. Com as mudanÃ§as climÃ¡ticas projetando reduÃ§Ãµes de atÃ© 20% no volume de chuvas na bacia do Rio SÃ£o Francisco atÃ© 2050, a dependÃªncia hÃ­drica Ã© um risco estratÃ©gico para a seguranÃ§a energÃ©tica do estado e da regiÃ£o.
+
+
+              <strong>Vulnerabilidade h—drica da matriz elétrica</strong> — A concentração de 82% da capacidade instalada em hidrelétricas torna Minas Gerais altamente vulner—vel aos per—odos de estiagem. Com as mudan—as clim—ticas projetando redu——es de até 20% no volume de chuvas na bacia do Rio São Francisco até 2050, a depend—ncia h—drica — um risco estratégico para a segurança energética do estado e da região.
+
+
             </li>
+
+
             <li>
-              <strong>Gargalos na infraestrutura de transmissÃ£o</strong> â€” O imenso potencial solar do Norte de Minas e eÃ³lico da Serra do EspinhaÃ§o esbarra em um gargalo crÃ­tico: a insuficiÃªncia de linhas de transmissÃ£o para escoar a energia gerada nesses territÃ³rios atÃ© os grandes centros de consumo. Investimentos em novas linhas de alta tensÃ£o sÃ£o urgentes para viabilizar o aproveitamento desse potencial.
+
+
+              <strong>Gargalos na infraestrutura de transmissão</strong> — O imenso potencial solar do Norte de Minas e eólico da Serra do Espinhação esbarra em um gargalo cr—tico: a insuficiência de linhas de transmissão para escoar a energia gerada nesses territ—rios até os grandes centros de consumo. Investimentos em novas linhas de alta tensão são urgentes para viabilizar o aproveitamento desse potencial.
+
+
             </li>
+
+
             <li>
-              <strong>Baixo aproveitamento da minigeraÃ§Ã£o rural</strong> â€” Apesar do avanÃ§o da energia solar distribuÃ­da nas zonas urbanas, o meio rural â€” que concentra 15% da populaÃ§Ã£o mineira â€” ainda tem acesso limitado a programas de financiamento e assistÃªncia tÃ©cnica para instalaÃ§Ã£o de painÃ©is fotovoltaicos. A democratizaÃ§Ã£o da geraÃ§Ã£o prÃ³pria pode reduzir custos para agricultores familiares e diversificar a matriz energÃ©tica local.
+
+
+              <strong>Baixo aproveitamento da minigeração rural</strong> — Apesar do avanão da energia solar distribu—da nas zonas urbanas, o meio rural — que concentra 15% da população mineira — ainda tem acesso limitado a programas de financiamento e assist—ncia técnica para instalação de pain—is fotovoltaicos. A democratização da geração pr—pria pode reduzir custos para agricultores familiares e diversificar a matriz energética local.
+
+
             </li>
+
+
             <li>
-              <strong>HidrogÃªnio verde: oportunidade sem polÃ­tica pÃºblica estruturada</strong> â€” O Brasil Ã© reconhecido globalmente como um potencial lÃ­der na produÃ§Ã£o de hidrogÃªnio verde (H2V), graÃ§as Ã  energia elÃ©trica renovÃ¡vel abundante e ao custo competitivo. Minas Gerais, com sua CEMIG e seu parque industrial, tem condiÃ§Ãµes Ãºnicas de se tornar um hub de H2V, mas ainda carece de marco regulatÃ³rio estadual, infraestrutura de P&D e financiamento estruturado para atrair investimentos.
+
+
+              <strong>Hidrog—nio verde: oportunidade sem pol—tica pública estruturada</strong> — O Brasil — reconhecido globalmente como um potencial l—der na produção de hidrogênio verde (H2V), gra—as — energia elétrica renov—vel abundante e ao custo competitivo. Minas Gerais, com sua CEMIG e seu parque industrial, tem condições —nicas de se tornar um hub de H2V, mas ainda carece de marco regulatério estadual, infraestrutura de P&D e financiamento estruturado para atrair investimentos.
+
+
             </li>
+
+
             <li>
-              <strong>PreÃ§o da energia e competitividade industrial</strong> â€” As tarifas de energia elÃ©trica no Brasil estÃ£o entre as mais altas do mundo em termos de paridade de poder de compra. Para a indÃºstria mineira â€” intensiva em energia nos setores de mineraÃ§Ã£o, metalurgia e papel e celulose â€”, os custos energÃ©ticos elevados sÃ£o um fator de perda de competitividade internacional que precisa ser endereÃ§ado com criatividade regulatÃ³ria e investimento em eficiÃªncia energÃ©tica.
+
+
+              <strong>Pre—o da energia e competitividade industrial</strong> — As tarifas de energia elétrica no Brasil est—o entre as mais altas do mundo em termos de paridade de poder de compra. Para a indústria mineira — intensiva em energia nos setores de mineração, metalurgia e papel e celulose —, os custos energ—ticos elevados são um fator de perda de competitividade internacional que precisa ser endere—ado com criatividade regulatéria e investimento em eficiência energética.
+
+
             </li>
+
+
           </ul>
+
+
+
+
 
           <div class="callout callout-warning">
+
+
             <span class="callout-icon"><i data-lucide="zap"></i></span>
-            <p><strong>Ponto crÃ­tico:</strong> Sem expansÃ£o acelerada da capacidade de transmissÃ£o e sem polÃ­ticas especÃ­ficas para hidrogÃªnio verde e minigeraÃ§Ã£o rural, Minas Gerais perderÃ¡ a janela histÃ³rica de se tornar protagonista da transiÃ§Ã£o energÃ©tica, convertendo um recurso natural extraordinÃ¡rio em uma oportunidade perdida.</p>
+
+
+            <p><strong>Ponto cr—tico:</strong> Sem expansão acelerada da capacidade de transmissão e sem políticas específicas para hidrogênio verde e minigeração rural, Minas Gerais perder— a janela hist—rica de se tornar protagonista da transição energética, convertendo um recurso natural extraordin—rio em uma oportunidade perdida.</p>
+
+
           </div>
+
+
         </section>
+
+
+
+
 
         <section id="oportunidades" class="content-section fade-in-section">
+
+
           <div class="section-label">04</div>
+
+
           <h2>Oportunidades</h2>
+
+
           <ul>
+
+
             <li>
-              <strong>Polo Solar no Norte de Minas</strong> â€” O Norte de Minas apresenta irradiÃ¢ncia solar mÃ©dia de 6,0 kWh/mÂ²/dia, entre as mais altas do Brasil. Com preÃ§os de mÃ³dulos fotovoltaicos em queda de 90% na Ãºltima dÃ©cada, a viabilidade econÃ´mica de grandes parques solares nessa regiÃ£o Ã© incontestÃ¡vel. Um polo solar estruturado pode atrair investimentos privados superiores a R$ 20 bilhÃµes e gerar mais de 30 mil empregos diretos na construÃ§Ã£o e operaÃ§Ã£o dos parques.
+
+
+              <strong>Polo Solar no Norte de Minas</strong> — O Norte de Minas apresenta irradi—ncia solar média de 6,0 kWh/m—/dia, entre as mais altas do Brasil. Com pre—os de m—dulos fotovoltaicos em queda de 90% na —ltima d—cada, a viabilidade econ—mica de grandes parques solares nessa região — incontest—vel. Um polo solar estruturado pode atrair investimentos privados superiores a R$ 20 bilhões e gerar mais de 30 mil empregos diretos na construção e operação dos parques.
+
+
             </li>
+
+
             <li>
-              <strong>Hub de hidrogÃªnio verde BHâ€“Sete Lagoas</strong> â€” O corredor industrial entre Belo Horizonte e Sete Lagoas concentra consumidores industriais de hidrogÃªnio (siderurgia, quÃ­mica, fertilizantes) que hoje utilizam H2 de origem fÃ³ssil. A proximidade com fontes renovÃ¡veis de energia e com o porto seco de BH cria condiÃ§Ãµes Ãºnicas para a criaÃ§Ã£o do primeiro hub de hidrogÃªnio verde do Centro-Sul do Brasil.
+
+
+              <strong>Hub de hidrogênio verde BH?Sete Lagoas</strong> — O corredor industrial entre Belo Horizonte e Sete Lagoas concentra consumidores industriais de hidrogênio (siderurgia, química, fertilizantes) que hoje utilizam H2 de origem f—ssil. A proximidade com fontes renov—veis de energia e com o porto seco de BH cria condições —nicas para a criação do primeiro hub de hidrogênio verde do Centro-Sul do Brasil.
+
+
             </li>
+
+
             <li>
-              <strong>LÃ­tio e cadeia de baterias</strong> â€” Minas Gerais detÃ©m as maiores reservas de lÃ­tio da AmÃ©rica do Sul, concentradas no Vale do Jequitinhonha (AraÃ§uaÃ­, Itinga, Coronel Murta). Com a explosÃ£o global da demanda por baterias para veÃ­culos elÃ©tricos e armazenamento de energia renovÃ¡vel, o estado tem a oportunidade Ãºnica de nÃ£o apenas exportar o mineral bruto, mas de desenvolver toda a cadeia de valor â€” do refino ao componentes de baterias â€” criando empregos qualificados e valor agregado local.
+
+
+              <strong>L—tio e cadeia de baterias</strong> — Minas Gerais detêm as maiores reservas de l—tio da América do Sul, concentradas no Vale do Jequitinhonha (Ara—ua—, Itinga, Coronel Murta). Com a explosão global da demanda por baterias para ve—culos elétricos e armazenamento de energia renov—vel, o estado tem a oportunidade —nica de não apenas exportar o mineral bruto, mas de desenvolver toda a cadeia de valor — do refino ao componentes de baterias — criando empregos qualificados e valor agregado local.
+
+
             </li>
+
+
             <li>
-              <strong>DigitalizaÃ§Ã£o da CEMIG e smart grid</strong> â€” A modernizaÃ§Ã£o da infraestrutura elÃ©trica com redes inteligentes (smart grids) pode reduzir perdas tÃ©cnicas (atualmente em 7% da energia distribuÃ­da), integrar melhor a geraÃ§Ã£o distribuÃ­da, otimizar o despacho de energia e criar novos modelos de negÃ³cio baseados em dados. A CEMIG, em seu processo de transformaÃ§Ã£o digital, Ã© o vetor natural dessa modernizaÃ§Ã£o.
+
+
+              <strong>Digitalização da CEMIG e smart grid</strong> — A modernização da infraestrutura elétrica com redes inteligentes (smart grids) pode reduzir perdas técnicas (atualmente em 7% da energia distribu—da), integrar melhor a geração distribu—da, otimizar o despacho de energia e criar novos modelos de neg—cio baseados em dados. A CEMIG, em seu processo de transformação digital, — o vetor natural dessa modernização.
+
+
             </li>
+
+
             <li>
-              <strong>Turismo e educaÃ§Ã£o em energias renovÃ¡veis</strong> â€” O crescente interesse global em sustentabilidade abre oportunidades para posicionar Minas Gerais como destino de turismo cientÃ­fico e educacional em energia limpa. Centros de visitaÃ§Ã£o em parques solares e eÃ³licos, programas de intercÃ¢mbio com universidades estrangeiras e eventos internacionais do setor podem gerar receitas e fortalecer a imagem do estado.
+
+
+              <strong>Turismo e educação em energias renov—veis</strong> — O crescente interesse global em sustentabilidade abre oportunidades para posicionar Minas Gerais como destino de turismo cient—fico e educacional em energia limpa. Centros de visitação em parques solares e eólicos, programas de intercâmbio com universidades estrangeiras e eventos internacionais do setor podem gerar receitas e fortalecer a imagem do estado.
+
+
             </li>
+
+
           </ul>
+
+
         </section>
+
+
+
+
 
         <section id="benchmarking" class="content-section fade-in-section">
+
+
           <div class="section-label">05</div>
+
+
           <h2>Benchmarking Internacional</h2>
-          <p>RegiÃµes que lideraram a transiÃ§Ã£o energÃ©tica oferecem liÃ§Ãµes valiosas sobre polÃ­ticas pÃºblicas, modelos de financiamento e estratÃ©gias de inserÃ§Ã£o na cadeia global de valor das energias limpas.</p>
+
+
+          <p>Regi—es que lideraram a transição energética oferecem li——es valiosas sobre políticas públicas, modelos de financiamento e estratégias de inser——o na cadeia global de valor das energias limpas.</p>
+
+
+
+
 
           <table class="bench-table">
+
+
             <thead>
+
+
               <tr>
-                <th>RegiÃ£o / PaÃ­s</th>
+
+
+                <th>Regi—o / País</th>
+
+
                 <th>Indicador de Destaque</th>
-                <th>EstratÃ©gia-chave</th>
-                <th>LiÃ§Ã£o para Minas</th>
+
+
+                <th>Estratégia-chave</th>
+
+
+                <th>Lição para Minas</th>
+
+
               </tr>
+
+
             </thead>
+
+
             <tbody>
+
+
               <tr>
+
+
                 <td class="td-highlight">Dinamarca</td>
-                <td class="td-accent">57% de eÃ³lica na matriz</td>
-                <td>LÃ­der mundial em energia eÃ³lica onshore e offshore. PolÃ­ticas de longo prazo com metas vinculantes, tarifas feed-in estÃ¡veis por 20 anos e forte P&D nacional (Vestas, Ã˜rsted). ExportaÃ§Ã£o de tecnologia e know-how como ativo econÃ´mico.</td>
-                <td>Criar um marco regulatÃ³rio estÃ¡vel de longo prazo para energias renovÃ¡veis, com contratos de longo prazo (PPAs) que reduzam o risco regulatÃ³rio e atraiam investimento privado de grande porte.</td>
+
+
+                <td class="td-accent">57% de eólica na matriz</td>
+
+
+                <td>L—der mundial em energia eólica onshore e offshore. Políticas de longo prazo com metas vinculantes, tarifas feed-in est—veis por 20 anos e forte P&D nacional (Vestas, —?rsted). Exportação de tecnologia e know-how como ativo econômico.</td>
+
+
+                <td>Criar um marco regulatério est—vel de longo prazo para energias renov—veis, com contratos de longo prazo (PPAs) que reduzam o risco regulatério e atraiam investimento privado de grande porte.</td>
+
+
               </tr>
+
+
               <tr>
+
+
                 <td class="td-highlight">Chile</td>
-                <td class="td-accent">H2V: meta 5 Mt/ano atÃ© 2030</td>
-                <td>LÃ­der latino-americano em solar no Atacama (irradiÃ¢ncia mundial mais alta) e pioneiro em hidrogÃªnio verde. EstratÃ©gia nacional de H2V com zonas especiais, subsÃ­dios Ã  P&D e acordos com UE e JapÃ£o para exportaÃ§Ã£o futura.</td>
-                <td>Desenvolver estratÃ©gia estadual de hidrogÃªnio verde com zonas prioritÃ¡rias de produÃ§Ã£o, marco regulatÃ³rio prÃ³prio e acordos de exportaÃ§Ã£o de longo prazo com mercados europeus e asiÃ¡ticos.</td>
+
+
+                <td class="td-accent">H2V: meta 5 Mt/ano até 2030</td>
+
+
+                <td>L—der latino-americano em solar no Atacama (irradi—ncia mundial mais alta) e pioneiro em hidrogênio verde. Estratégia nacional de H2V com zonas especiais, subs—dios — P&D e acordos com UE e Jap—o para exportação futura.</td>
+
+
+                <td>Desenvolver estratégia estadual de hidrogênio verde com zonas priorit—rias de produção, marco regulatério pr—prio e acordos de exportação de longo prazo com mercados europeus e asi—ticos.</td>
+
+
               </tr>
+
+
               <tr>
+
+
                 <td class="td-highlight">Rio Grande do Norte (Brasil)</td>
-                <td class="td-accent">1Â° estado em energia eÃ³lica BR</td>
-                <td>CombinaÃ§Ã£o de polÃ­ticas estaduais de atraÃ§Ã£o de investimento, aproveitamento de ventos excepcionais e integraÃ§Ã£o com programas federais (Proinfa, leilÃµes ANEEL). CriaÃ§Ã£o de parque industrial eÃ³lico com fabricaÃ§Ã£o local de componentes.</td>
-                <td>Replicar modelo de polo industrial integrado (geraÃ§Ã£o + fabricaÃ§Ã£o de componentes) no Norte de Minas para energia solar, criando encadeamentos produtivos locais alÃ©m da simples geraÃ§Ã£o de energia.</td>
+
+
+                <td class="td-accent">1— estado em energia eólica BR</td>
+
+
+                <td>Combinação de políticas estaduais de atração de investimento, aproveitamento de ventos excepcionais e integração com programas federais (Proinfa, leil—es ANEEL). Criação de parque industrial eólico com fabricação local de componentes.</td>
+
+
+                <td>Replicar modelo de polo industrial integrado (geração + fabricação de componentes) no Norte de Minas para energia solar, criando encadeamentos produtivos locais al—m da simples geração de energia.</td>
+
+
               </tr>
+
+
               <tr>
+
+
                 <td class="td-highlight">Noruega</td>
-                <td class="td-accent">98% renovÃ¡vel (hidro + eÃ³lica)</td>
-                <td>TransiÃ§Ã£o energÃ©tica como modelo: 98% de matriz renovÃ¡vel, fundo soberano capitalizado com petrÃ³leo reinvestindo em tecnologias limpas. EletrificaÃ§Ã£o dos transportes (80% dos novos carros elÃ©tricos) e exportaÃ§Ã£o de expertise em offshore wind.</td>
-                <td>Criar fundo estadual de transiÃ§Ã£o energÃ©tica capitalizado com royalties da mineraÃ§Ã£o e dividendos da CEMIG, destinado a financiar P&D em energias renovÃ¡veis e a acelerar a eletrificaÃ§Ã£o do transporte pÃºblico mineiro.</td>
+
+
+                <td class="td-accent">98% renov—vel (hidro + eólica)</td>
+
+
+                <td>Transição energética como modelo: 98% de matriz renov—vel, fundo soberano capitalizado com petr—leo reinvestindo em tecnologias limpas. Eletrificação dos transportes (80% dos novos carros elétricos) e exportação de expertise em offshore wind.</td>
+
+
+                <td>Criar fundo estadual de transição energética capitalizado com royalties da mineração e dividendos da CEMIG, destinado a financiar P&D em energias renov—veis e a acelerar a eletrificação do transporte público mineiro.</td>
+
+
               </tr>
+
+
             </tbody>
+
+
           </table>
+
+
         </section>
+
+
+
+
 
         <section id="objetivos" class="content-section fade-in-section">
+
+
           <div class="section-label">06</div>
+
+
           <h2>Objetivos 2035</h2>
+
+
           <div class="timeline">
+
+
             <div class="timeline-item">
+
+
               <div class="timeline-dot"></div>
-              <div class="timeline-year">2026â€“2028</div>
-              <div class="timeline-title">ExpansÃ£o acelerada de solar e infraestrutura de transmissÃ£o</div>
-              <div class="timeline-desc">LanÃ§amento do Programa MG Solar Rural (100 mil unidades de minigeraÃ§Ã£o para agricultores familiares), inÃ­cio das obras de expansÃ£o de transmissÃ£o no Norte de Minas e aprovaÃ§Ã£o do marco regulatÃ³rio estadual para energias renovÃ¡veis e hidrogÃªnio verde.</div>
+
+
+              <div class="timeline-year">2026?2028</div>
+
+
+              <div class="timeline-title">Expansão acelerada de solar e infraestrutura de transmissão</div>
+
+
+              <div class="timeline-desc">Lan—amento do Programa MG Solar Rural (100 mil unidades de minigeração para agricultores familiares), in—cio das obras de expansão de transmissão no Norte de Minas e aprovação do marco regulatério estadual para energias renov—veis e hidrogênio verde.</div>
+
+
             </div>
+
+
             <div class="timeline-item">
+
+
               <div class="timeline-dot"></div>
-              <div class="timeline-year">2028â€“2030</div>
-              <div class="timeline-title">EstruturaÃ§Ã£o do hub de hidrogÃªnio verde e polo solar</div>
-              <div class="timeline-desc">ImplantaÃ§Ã£o do Hub de H2V BH-Sete Lagoas com as primeiras plantas-piloto, lanÃ§amento do Polo Solar Norte de Minas com capacidade instalada de 5 GW e inÃ­cio da eletrificaÃ§Ã£o da frota de Ã´nibus urbanos das principais cidades mineiras.</div>
+
+
+              <div class="timeline-year">2028?2030</div>
+
+
+              <div class="timeline-title">Estruturação do hub de hidrogênio verde e polo solar</div>
+
+
+              <div class="timeline-desc">Implantação do Hub de H2V BH-Sete Lagoas com as primeiras plantas-piloto, lan—amento do Polo Solar Norte de Minas com capacidade instalada de 5 GW e in—cio da eletrificação da frota de —nibus urbanos das principais cidades mineiras.</div>
+
+
             </div>
+
+
             <div class="timeline-item">
+
+
               <div class="timeline-dot"></div>
-              <div class="timeline-year">2030â€“2033</div>
-              <div class="timeline-title">LideranÃ§a em renovÃ¡veis e cadeia do lÃ­tio</div>
-              <div class="timeline-desc">Minas Gerais entre os trÃªs maiores estados em capacidade solar instalada do Brasil. InÃ­cio da produÃ§Ã£o industrial de componentes de baterias com lÃ­tio mineiro processado localmente. CEMIG com 100% de geraÃ§Ã£o prÃ³pria renovÃ¡vel e smart grid cobrindo as trÃªs maiores regiÃµes metropolitanas.</div>
+
+
+              <div class="timeline-year">2030?2033</div>
+
+
+              <div class="timeline-title">Lideran—a em renov—veis e cadeia do l—tio</div>
+
+
+              <div class="timeline-desc">Minas Gerais entre os três maiores estados em capacidade solar instalada do Brasil. Início da produção industrial de componentes de baterias com l—tio mineiro processado localmente. CEMIG com 100% de geração pr—pria renov—vel e smart grid cobrindo as três maiores regiões metropolitanas.</div>
+
+
             </div>
+
+
             <div class="timeline-item">
+
+
               <div class="timeline-dot"></div>
-              <div class="timeline-year">2033â€“2035</div>
-              <div class="timeline-title">ReferÃªncia nacional em energia limpa e exportaÃ§Ã£o de H2V</div>
-              <div class="timeline-desc">ExportaÃ§Ã£o das primeiras toneladas de hidrogÃªnio verde para mercados europeus. Capacidade solar de 15 GW instalados. EmissÃµes de CO2 do setor elÃ©trico mineiro zeradas. MG posicionado como hub global de energia limpa com 150 mil empregos diretos no setor.</div>
+
+
+              <div class="timeline-year">2033?2035</div>
+
+
+              <div class="timeline-title">Refer—ncia nacional em energia limpa e exportação de H2V</div>
+
+
+              <div class="timeline-desc">Exportação das primeiras toneladas de hidrogênio verde para mercados europeus. Capacidade solar de 15 GW instalados. Emiss—es de CO2 do setor el—trico mineiro zeradas. MG posicionado como hub global de energia limpa com 150 mil empregos diretos no setor.</div>
+
+
             </div>
+
+
           </div>
+
+
         </section>
+
+
+
+
 
         <section id="metas" class="content-section fade-in-section">
+
+
           <div class="section-label">07</div>
+
+
           <h2>Metas 2050</h2>
+
+
           <ol>
-            <li>Atingir capacidade de 30 GW de energia solar instalada em Minas Gerais, tornando o estado o maior polo solar da AmÃ©rica Latina e contribuindo para a seguranÃ§a energÃ©tica nacional.</li>
-            <li>Produzir e exportar ao menos 1 milhÃ£o de toneladas de hidrogÃªnio verde por ano, com cadeias produtivas completas localizadas no estado â€” da eletrolisaÃ§Ã£o ao armazenamento e logÃ­stica.</li>
-            <li>Eliminar completamente as emissÃµes de gases de efeito estufa do setor elÃ©trico e de transportes de Minas Gerais, com 100% dos Ã´nibus urbanos e 50% dos veÃ­culos leves eletrificados.</li>
-            <li>Tornar a CEMIG a primeira grande distribuidora de energia do Brasil com rede 100% inteligente (smart grid), com perdas tÃ©cnicas inferiores a 3% e zero interrupÃ§Ãµes programadas superiores a 4 horas.</li>
-            <li>Criar 200 mil empregos diretos no setor de energia limpa â€” geraÃ§Ã£o, transmissÃ£o, fabricaÃ§Ã£o de componentes, P&D e serviÃ§os especializados â€” prioritariamente nas regiÃµes menos desenvolvidas do estado.</li>
-            <li>Processar 100% do lÃ­tio extraÃ­do em Minas Gerais localmente, antes da exportaÃ§Ã£o, criando pelo menos trÃªs grandes plantas de fabricaÃ§Ã£o de componentes de bateria no Vale do Jequitinhonha.</li>
+
+
+            <li>Atingir capacidade de 30 GW de energia solar instalada em Minas Gerais, tornando o estado o maior polo solar da América Latina e contribuindo para a segurança energética nacional.</li>
+
+
+            <li>Produzir e exportar ao menos 1 milh—o de toneladas de hidrogênio verde por ano, com cadeias produtivas completas localizadas no estado — da eletrolisação ao armazenamento e logística.</li>
+
+
+            <li>Eliminar completamente as emissões de gases de efeito estufa do setor el—trico e de transportes de Minas Gerais, com 100% dos —nibus urbanos e 50% dos ve—culos leves eletrificados.</li>
+
+
+            <li>Tornar a CEMIG a primeira grande distribuidora de energia do Brasil com rede 100% inteligente (smart grid), com perdas técnicas inferiores a 3% e zero interrup——es programadas superiores a 4 horas.</li>
+
+
+            <li>Criar 200 mil empregos diretos no setor de energia limpa — geração, transmissão, fabricação de componentes, P&D e serviços especializados — prioritariamente nas regiões menos desenvolvidas do estado.</li>
+
+
+            <li>Processar 100% do l—tio extra—do em Minas Gerais localmente, antes da exportação, criando pelo menos três grandes plantas de fabricação de componentes de bateria no Vale do Jequitinhonha.</li>
+
+
           </ol>
+
+
         </section>
+
+
+
+
 
         <section id="projetos" class="content-section fade-in-section">
+
+
           <div class="section-label">08</div>
-          <h2>Projetos EstratÃ©gicos</h2>
+
+
+          <h2>Projetos Estratégicos</h2>
+
+
+
+
 
           <div style="display: flex; flex-direction: column; gap: var(--sp-4);">
+
+
             <div class="project-card">
+
+
               <div>
+
+
                 <h4>Polo Solar Norte de Minas</h4>
-                <p>CriaÃ§Ã£o de um polo de geraÃ§Ã£o solar de grande escala no Norte de Minas Gerais, aproveitando a irradiÃ¢ncia solar mÃ©dia de 6,0 kWh/mÂ²/dia â€” entre as mais altas do Brasil. O projeto prevÃª a instalaÃ§Ã£o de parques solares com capacidade total de 10 GW atÃ© 2033, com investimentos privados estimados em R$ 40 bilhÃµes, atraÃ­dos por leilÃµes de energia e contratos de longo prazo (PPAs) garantidos pelo governo estadual. O polo incluirÃ¡ um polo industrial de fabricaÃ§Ã£o de mÃ³dulos fotovoltaicos, criando encadeamentos produtivos locais e gerando 50 mil empregos diretos e indiretos na regiÃ£o do Norte de Minas.</p>
+
+
+                <p>Criação de um polo de geração solar de grande escala no Norte de Minas Gerais, aproveitando a irradi—ncia solar média de 6,0 kWh/m—/dia — entre as mais altas do Brasil. O projeto prev— a instalação de parques solares com capacidade total de 10 GW até 2033, com investimentos privados estimados em R$ 40 bilhões, atra—dos por leil—es de energia e contratos de longo prazo (PPAs) garantidos pelo governo estadual. O polo incluir— um polo industrial de fabricação de m—dulos fotovoltaicos, criando encadeamentos produtivos locais e gerando 50 mil empregos diretos e indiretos na região do Norte de Minas.</p>
+
+
               </div>
+
+
               <span class="project-status status-study">Em estudo</span>
+
+
             </div>
+
+
             <div class="project-card">
+
+
               <div>
-                <h4>Hub de HidrogÃªnio Verde BHâ€“Sete Lagoas</h4>
-                <p>EstruturaÃ§Ã£o do primeiro hub de hidrogÃªnio verde do Centro-Sul do Brasil no corredor industrial entre Belo Horizonte e Sete Lagoas. O projeto aproveitarÃ¡ a energia elÃ©trica renovÃ¡vel da CEMIG para alimentar plantas de eletrÃ³lise que produzirÃ£o H2V para consumo industrial local (siderurgia, quÃ­mica, fertilizantes) e, futuramente, para exportaÃ§Ã£o via porto seco de BH. A iniciativa inclui parceria com universidades (UFMG, CEFET-MG) para P&D em tecnologias de eletrÃ³lise, armazenamento e transporte de hidrogÃªnio, e com empresas Ã¢ncoras do setor industrial para garantia de demanda.</p>
+
+
+                <h4>Hub de Hidrog—nio Verde BH?Sete Lagoas</h4>
+
+
+                <p>Estruturação do primeiro hub de hidrogênio verde do Centro-Sul do Brasil no corredor industrial entre Belo Horizonte e Sete Lagoas. O projeto aproveitar— a energia elétrica renov—vel da CEMIG para alimentar plantas de eletr—lise que produzir—o H2V para consumo industrial local (siderurgia, química, fertilizantes) e, futuramente, para exportação via porto seco de BH. A iniciativa inclui parceria com universidades (UFMG, CEFET-MG) para P&D em tecnologias de eletr—lise, armazenamento e transporte de hidrogênio, e com empresas —ncoras do setor industrial para garantia de demanda.</p>
+
+
               </div>
+
+
               <span class="project-status status-proposal">Proposta</span>
+
+
             </div>
+
+
             <div class="project-card">
+
+
               <div>
+
+
                 <h4>Programa MG Solar Rural</h4>
-                <p>Programa de democratizaÃ§Ã£o da geraÃ§Ã£o solar para agricultores familiares e comunidades rurais de Minas Gerais, com foco nas regiÃµes do Norte de Minas, Jequitinhonha e Mucuri. O programa oferece financiamento subsidiado (taxa de juros de 2% a.a.), assistÃªncia tÃ©cnica gratuita para instalaÃ§Ã£o e manutenÃ§Ã£o de sistemas fotovoltaicos e isenÃ§Ã£o de ICMS sobre a energia gerada. Meta: 100 mil unidades instaladas atÃ© 2028, reduzindo a conta de luz de produtores rurais em atÃ© 80% e aumentando a resiliÃªncia energÃ©tica do campo mineiro.</p>
+
+
+                <p>Programa de democratização da geração solar para agricultores familiares e comunidades rurais de Minas Gerais, com foco nas regiões do Norte de Minas, Jequitinhonha e Mucuri. O programa oferece financiamento subsidiado (taxa de juros de 2% a.a.), assist—ncia técnica gratuita para instalação e manuten——o de sistemas fotovoltaicos e isen——o de ICMS sobre a energia gerada. Meta: 100 mil unidades instaladas até 2028, reduzindo a conta de luz de produtores rurais em até 80% e aumentando a resili—ncia energética do campo mineiro.</p>
+
+
               </div>
-              <span class="project-status status-active">Em implementaÃ§Ã£o</span>
+
+
+              <span class="project-status status-active">Em implementação</span>
+
+
             </div>
+
+
             <div class="project-card">
+
+
               <div>
-                <h4>CEMIG 2035 â€“ TransformaÃ§Ã£o Digital</h4>
-                <p>Programa de modernizaÃ§Ã£o tecnolÃ³gica da CEMIG que inclui a implantaÃ§Ã£o de smart grid nas trÃªs regiÃµes metropolitanas de Minas (BH, UberlÃ¢ndia, Juiz de Fora), digitalizaÃ§Ã£o completa de 8 milhÃµes de medidores com tecnologia de mediÃ§Ã£o inteligente (AMI), plataforma de dados abertos para inovaÃ§Ã£o no setor energÃ©tico e desenvolvimento de um sistema de gestÃ£o preditiva de manutenÃ§Ã£o da rede com inteligÃªncia artificial. O programa visa reduzir perdas tÃ©cnicas de 7% para menos de 4%, melhorar a qualidade do fornecimento e posicionar a CEMIG como empresa de referÃªncia em inovaÃ§Ã£o digital no setor elÃ©trico latino-americano.</p>
+
+
+                <h4>CEMIG 2035 — Transformação Digital</h4>
+
+
+                <p>Programa de modernização tecnológica da CEMIG que inclui a implantação de smart grid nas três regiões metropolitanas de Minas (BH, Uberl—ndia, Juiz de Fora), digitalização completa de 8 milhões de medidores com tecnologia de medi——o inteligente (AMI), plataforma de dados abertos para inovação no setor energ—tico e desenvolvimento de um sistema de gestão preditiva de manuten——o da rede com inteligência artificial. O programa visa reduzir perdas técnicas de 7% para menos de 4%, melhorar a qualidade do fornecimento e posicionar a CEMIG como empresa de referência em inovação digital no setor el—trico latino-americano.</p>
+
+
               </div>
+
+
               <span class="project-status status-active">Em desenvolvimento</span>
+
+
             </div>
+
+
           </div>
+
+
         </section>
+
+
+
+
 
         <section id="indicadores" class="content-section fade-in-section">
+
+
           <div class="section-label">09</div>
+
+
           <h2>Indicadores-Chave (KPIs)</h2>
+
+
           <div class="metric-grid">
+
+
             <div class="metric-card">
-              <div class="metric-label">ParticipaÃ§Ã£o RenovÃ¡vel 2035</div>
+
+
+              <div class="metric-label">Participação Renov—vel 2035</div>
+
+
               <div><span class="metric-value">99</span><span class="metric-unit">%</span></div>
-              <div class="metric-description">Meta para a matriz elÃ©trica Â· atual: 96%</div>
+
+
+              <div class="metric-description">Meta para a matriz elétrica — atual: 96%</div>
+
+
             </div>
+
+
             <div class="metric-card">
+
+
               <div class="metric-label">Capacidade Solar 2035</div>
+
+
               <div><span class="metric-value">15</span><span class="metric-unit">GW</span></div>
-              <div class="metric-description">Meta instalada Â· atual: 2,5 GW Â· crescimento 6x</div>
+
+
+              <div class="metric-description">Meta instalada — atual: 2,5 GW — crescimento 6x</div>
+
+
             </div>
+
+
             <div class="metric-card">
+
+
               <div class="metric-label">Empregos no Setor</div>
+
+
               <div><span class="metric-value">150</span><span class="metric-unit">mil</span></div>
-              <div class="metric-description">Meta 2035 Â· atual: 85 mil Â· diretos e indiretos</div>
+
+
+              <div class="metric-description">Meta 2035 — atual: 85 mil — diretos e indiretos</div>
+
+
             </div>
+
+
             <div class="metric-card">
-              <div class="metric-label">PreÃ§o MÃ©dio Energia</div>
+
+
+              <div class="metric-label">Pre—o M—dio Energia</div>
+
+
               <div><span class="metric-value">-15</span><span class="metric-unit">%</span></div>
-              <div class="metric-description">ReduÃ§Ã£o tarifÃ¡ria real 2026â€“2035 via eficiÃªncia</div>
+
+
+              <div class="metric-description">Redução tarif—ria real 2026?2035 via eficiência</div>
+
+
             </div>
+
+
             <div class="metric-card">
-              <div class="metric-label">EmissÃµes COâ‚‚ Setor ElÃ©trico</div>
+
+
+              <div class="metric-label">Emiss—es CO—?— Setor El—trico</div>
+
+
               <div><span class="metric-value">0</span><span class="metric-unit">Mt</span></div>
-              <div class="metric-description">Meta 2035 Â· eliminaÃ§Ã£o total de termelÃ©tricas fÃ³sseis</div>
+
+
+              <div class="metric-description">Meta 2035 — eliminação total de termelétricas f—sseis</div>
+
+
             </div>
+
+
             <div class="metric-card">
+
+
               <div class="metric-label">Investimentos Privados</div>
+
+
               <div><span class="metric-value">R$ 80</span><span class="metric-unit">bi</span></div>
-              <div class="metric-description">Meta 2026â€“2035 em energia renovÃ¡vel no estado</div>
+
+
+              <div class="metric-description">Meta 2026?2035 em energia renov—vel no estado</div>
+
+
             </div>
+
+
           </div>
+
+
         </section>
+
+
+
+
 
         <section id="debate" class="content-section fade-in-section">
+
+
           <div class="section-label">10</div>
-          <h2>QuestÃµes para Debate PÃºblico</h2>
+
+
+          <h2>Questões para Debate P—blico</h2>
+
+
           <ol>
-            <li>Como garantir que os benefÃ­cios econÃ´micos da expansÃ£o solar no Norte de Minas â€” royalties, empregos, infraestrutura â€” sejam retidos e reinvestidos localmente, evitando o "enclave" energÃ©tico que ocorreu com a mineraÃ§Ã£o?</li>
-            <li>Qual deve ser o papel da CEMIG na transiÃ§Ã£o energÃ©tica: apenas distribuidora de energia renovÃ¡vel, ou tambÃ©m protagonista na produÃ§Ã£o de hidrogÃªnio verde e fabricaÃ§Ã£o de componentes de baterias?</li>
-            <li>Como equilibrar a necessidade de expansÃ£o de grandes parques solares e eÃ³licos com a preservaÃ§Ã£o do Cerrado e das Ã¡reas de recarga hÃ­drica que abrigam esses mesmos territÃ³rios?</li>
-            <li>A privatizaÃ§Ã£o parcial ou total da CEMIG seria um catalisador ou um obstÃ¡culo para os investimentos necessÃ¡rios na transiÃ§Ã£o energÃ©tica mineira?</li>
-            <li>Como criar um modelo de minigeraÃ§Ã£o distribuÃ­da que alcance efetivamente as comunidades rurais mais isoladas de Minas, sem que o programa se concentre nos agricultores jÃ¡ mais capitalizados?</li>
-            <li>Qual a estratÃ©gia de Minas Gerais para posicionar o lÃ­tio do Jequitinhonha na cadeia global de baterias, competindo com paÃ­ses como Chile e AustrÃ¡lia que jÃ¡ tÃªm vantagens estabelecidas?</li>
-            <li>Como Minas pode atrair empresas intensivas em energia (datacenter, siderurgia verde, indÃºstria quÃ­mica) que buscam energia 100% renovÃ¡vel, sem criar uma nova dependÃªncia de setores com risco de volatilidade?</li>
+
+
+            <li>Como garantir que os benef—cios econômicos da expansão solar no Norte de Minas — royalties, empregos, infraestrutura — sejam retidos e reinvestidos localmente, evitando o "enclave" energ—tico que ocorreu com a mineração?</li>
+
+
+            <li>Qual deve ser o papel da CEMIG na transição energética: apenas distribuidora de energia renov—vel, ou tamb—m protagonista na produção de hidrogênio verde e fabricação de componentes de baterias?</li>
+
+
+            <li>Como equilibrar a necessidade de expansão de grandes parques solares e eólicos com a preservação do Cerrado e das —reas de recarga h—drica que abrigam esses mesmos territ—rios?</li>
+
+
+            <li>A privatização parcial ou total da CEMIG seria um catalisador ou um obst—culo para os investimentos necess—rios na transição energética mineira?</li>
+
+
+            <li>Como criar um modelo de minigeração distribu—da que alcance efetivamente as comunidades rurais mais isoladas de Minas, sem que o programa se concentre nos agricultores já mais capitalizados?</li>
+
+
+            <li>Qual a estratégia de Minas Gerais para posicionar o l—tio do Jequitinhonha na cadeia global de baterias, competindo com países como Chile e Austr—lia que já têm vantagens estabelecidas?</li>
+
+
+            <li>Como Minas pode atrair empresas intensivas em energia (datacenter, siderurgia verde, indústria química) que buscam energia 100% renov—vel, sem criar uma nova depend—ncia de setores com risco de volatilidade?</li>
+
+
           </ol>
+
+
           <div style="margin-top: var(--sp-8);">
+
+
             <a href="../participar.html" class="btn btn-primary" id="btn-ener-debate">Participar do Debate</a>
+
+
           </div>
+
+
         </section>
+
+
+
+
 
         <section id="referencias" class="content-section fade-in-section">
+
+
           <div class="section-label">11</div>
-          <h2>ReferÃªncias BibliogrÃ¡ficas</h2>
+
+
+          <h2>Referências Bibliogr—ficas</h2>
+
+
           <div class="reference-list">
+
+
             <div class="reference-item">
+
+
               <span class="reference-num">01</span>
-              <span>ANEEL â€“ AgÃªncia Nacional de Energia ElÃ©trica. <em>Atlas de Energia ElÃ©trica do Brasil â€“ 4Âª ediÃ§Ã£o</em>. BrasÃ­lia: ANEEL, 2022.</span>
+
+
+              <span>ANEEL — Ag—ncia Nacional de Energia El—trica. <em>Atlas de Energia El—trica do Brasil — 4— edi——o</em>. Brasília: ANEEL, 2022.</span>
+
+
             </div>
+
+
             <div class="reference-item">
+
+
               <span class="reference-num">02</span>
-              <span>CEMIG â€“ Companhia EnergÃ©tica de Minas Gerais. <em>RelatÃ³rio Anual e de Sustentabilidade 2023</em>. Belo Horizonte: CEMIG, 2024.</span>
+
+
+              <span>CEMIG — Companhia Energ—tica de Minas Gerais. <em>Relatério Anual e de Sustentabilidade 2023</em>. Belo Horizonte: CEMIG, 2024.</span>
+
+
             </div>
+
+
             <div class="reference-item">
+
+
               <span class="reference-num">03</span>
-              <span>EPE â€“ Empresa de Pesquisa EnergÃ©tica. <em>Plano Decenal de Energia 2032</em>. BrasÃ­lia: MME/EPE, 2023.</span>
+
+
+              <span>EPE — Empresa de Pesquisa Energ—tica. <em>Plano Decenal de Energia 2032</em>. Brasília: MME/EPE, 2023.</span>
+
+
             </div>
+
+
             <div class="reference-item">
+
+
               <span class="reference-num">04</span>
-              <span>IRENA â€“ International Renewable Energy Agency. <em>Renewable Power Generation Costs in 2022</em>. Abu Dhabi: IRENA, 2023.</span>
+
+
+              <span>IRENA — International Renewable Energy Agency. <em>Renewable Power Generation Costs in 2022</em>. Abu Dhabi: IRENA, 2023.</span>
+
+
             </div>
+
+
             <div class="reference-item">
+
+
               <span class="reference-num">05</span>
-              <span>GOVERNO DE MINAS GERAIS / FAPEMIG. <em>Mapeamento do Potencial de HidrogÃªnio Verde em Minas Gerais</em>. Belo Horizonte: FAPEMIG, 2023.</span>
+
+
+              <span>GOVERNO DE MINAS GERAIS / FAPEMIG. <em>Mapeamento do Potencial de Hidrog—nio Verde em Minas Gerais</em>. Belo Horizonte: FAPEMIG, 2023.</span>
+
+
             </div>
+
+
             <div class="reference-item">
+
+
               <span class="reference-num">06</span>
-              <span>IEA â€“ International Energy Agency. <em>World Energy Outlook 2023</em>. Paris: IEA, 2023.</span>
+
+
+              <span>IEA — International Energy Agency. <em>World Energy Outlook 2023</em>. Paris: IEA, 2023.</span>
+
+
             </div>
+
+
             <div class="reference-item">
+
+
               <span class="reference-num">07</span>
-              <span>ABDI â€“ AgÃªncia Brasileira de Desenvolvimento Industrial. <em>LÃ­tio no Brasil: oportunidades e desafios na cadeia de baterias</em>. BrasÃ­lia: ABDI, 2023.</span>
+
+
+              <span>ABDI — Ag—ncia Brasileira de Desenvolvimento Industrial. <em>L—tio no Brasil: oportunidades e desafios na cadeia de baterias</em>. Brasília: ABDI, 2023.</span>
+
+
             </div>
+
+
             <div class="reference-item">
+
+
               <span class="reference-num">08</span>
-              <span>TOLMASQUIM, MaurÃ­cio T. <em>Energia RenovÃ¡vel: HidrÃ¡ulica, Biomassa, EÃ³lica, Solar, OceÃ¢nica</em>. Rio de Janeiro: EPE, 2016.</span>
+
+
+              <span>TOLMASQUIM, Maur—cio T. <em>Energia Renov—vel: Hidr—ulica, Biomassa, E—lica, Solar, Oce—nica</em>. Rio de Janeiro: EPE, 2016.</span>
+
+
             </div>
+
+
           </div>
+
+
         </section>
 
+
+
+
+
       </article>
+
+
     </div>
+
+
   </div>
 
+
+
+
+
   <!-- FOOTER -->
+
+
   <footer class="site-footer">
+
+
     <div class="container">
+
+
       <div class="footer-grid">
+
+
         <div class="footer-brand">
+
+
           <a href="../index.html" class="navbar-brand">
+
+
             <svg class="navbar-logo" viewBox="0 0 36 36" fill="none">
+
+
               <rect width="36" height="36" rx="8" fill="url(#grad-footer-ener)"/>
+
+
               <path d="M10 24 L10 13 L18 20 L26 13 L26 24" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+
               <defs><linearGradient id="grad-footer-ener" x1="0" y1="0" x2="36" y2="36" gradientUnits="userSpaceOnUse"><stop stop-color="#00E5FF"/><stop offset="1" stop-color="#4F46E5"/></linearGradient></defs>
+
+
             </svg>
+
+
             <span class="navbar-name">Minas <span>2035</span></span>
+
+
           </a>
-          <p>Plataforma independente de estudos para o desenvolvimento de Minas Gerais com visÃ£o de longo prazo.</p>
+
+
+          <p>Plataforma independente de estudos para o desenvolvimento de Minas Gerais com visão de longo prazo.</p>
+
+
         </div>
+
+
         <div class="footer-col"><h5>Projeto</h5><ul><li><a href="../sobre.html">Sobre</a></li><li><a href="../manifesto.html">Manifesto</a></li><li><a href="../pilares.html">Pilares</a></li><li><a href="../participar.html">Participar</a></li></ul></div>
-        <div class="footer-col"><h5>Outras Ãreas</h5><ul><li><a href="economia.html">Economia</a></li><li><a href="trabalho.html">Trabalho</a></li><li><a href="meio-ambiente.html">Meio Ambiente</a></li><li><a href="educacao.html">EducaÃ§Ã£o</a></li></ul></div>
-        <div class="footer-col"><h5>Legal</h5><ul><li><a href="#">PolÃ­tica de privacidade</a></li><li><a href="#">LicenÃ§a de uso</a></li><li><a href="#">Contato</a></li></ul></div>
+
+
+        <div class="footer-col"><h5>Outras Áreas</h5><ul><li><a href="economia.html">Economia</a></li><li><a href="trabalho.html">Trabalho</a></li><li><a href="meio-ambiente.html">Meio Ambiente</a></li><li><a href="educacao.html">Educação</a></li></ul></div>
+
+
+        <div class="footer-col"><h5>Legal</h5><ul><li><a href="#">Política de privacidade</a></li><li><a href="#">Licença de uso</a></li><li><a href="#">Contato</a></li></ul></div>
+
+
       </div>
+
+
       <div class="footer-bottom">
-        <p>Â© 2026 Projeto Minas 2035. Fontes: ANEEL, CEMIG, EPE, IEA, IRENA, FAPEMIG.</p>
-        <a href="../manifesto.html">Manifesto â†’</a>
+
+
+        <p>— 2026 Projeto Minas 2035. Fontes: ANEEL, CEMIG, EPE, IEA, IRENA, FAPEMIG.</p>
+
+
+        <a href="../manifesto.html">Manifesto —</a>
+
+
       </div>
+
+
     </div>
+
+
   </footer>
 
+
+
+
+
   <script>lucide.createIcons();</script>
+
+
 </body>
+
+
 </html>
+
+
+
+
 
